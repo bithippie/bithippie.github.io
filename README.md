@@ -1,2 +1,1 @@
-# bithippie.github.io
-The BitHippie Website
+## It Works!
