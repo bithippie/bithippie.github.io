@@ -18,21 +18,30 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: BitHippie
-email: anthony@bithippie.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >- # this means to ignore newlines until "domain:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
+
+author: Anthony Torres
+email: anthony@bithippie.com
+
 domain: bithippie.com
-baseurl: "" # the subpath of your site, e.g. /blog
 url: https://www.bithippie.com # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+
+repository: bithippie/bithippie.github.io
 twitter_username: BitHippie
 github_username:  bithippie
 
 # Build settings
-theme: minima
+# https://github.blog/2017-11-29-use-any-theme-with-github-pages/
+# https://github.com/mmistakes/minimal-mistakes#remote-theme-method
+remote_theme: mmistakes/minimal-mistakes@4.24.0
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
