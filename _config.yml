@@ -18,6 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: BitHippie
+logo: assets/images/website/logo.png
 description: >- # this means to ignore newlines until "domain:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -42,6 +43,19 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
+permalink: /posts/:categories/:year/:month/:day/:title:output_ext
+defaults:
+  # applies to _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
