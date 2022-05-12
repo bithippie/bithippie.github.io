@@ -44,6 +44,7 @@ plugins:
   - jekyll-include-cache
 
 permalink: /posts/:categories/:year/:month/:day/:title:output_ext
+include: ["_pages"]
 defaults:
   # applies to _posts
   - scope:
@@ -55,7 +56,7 @@ defaults:
       read_time: true
       comments: true
       share: true
-      related: true
+      related: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.

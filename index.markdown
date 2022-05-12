@@ -17,20 +17,20 @@ feature_row:
     title: "Technology"
     excerpt: "Musings about Technology"
     url: "#test-link"
-    btn_label: "Read More"
+    btn_label: "Coming Soon"
     btn_class: "btn--inverse"
   - image_path: /assets/images/website/plant_growth.jpg
     alt: "Personal Development Tile"
     title: "Personal Development"
     excerpt: "Health & Wellness, Finances, Growth"
     url: "#test-link"
-    btn_label: "Read More"
+    btn_label: "Coming Soon"
     btn_class: "btn--inverse"
   - image_path: /assets/images/website/earth.jpg
     title: "Sustainability"
     excerpt: "Ways to become self-reliant; "
     url: "#test-link"
-    btn_label: "Read More"
+    btn_label: "Coming Soon"
     btn_class: "btn--inverse"
 --- 
 
