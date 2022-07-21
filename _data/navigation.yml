@@ -1,4 +1,6 @@
 main:
+  - title: "Serendipity"
+    url: /serendipity/
   - title: "Values"
     url: /values/
   - title: "LinkedIn"
