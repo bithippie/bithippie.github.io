@@ -1,12 +1,10 @@
 ---
-title: Values
+title: BitHippie Core Values
 layout: single
 classes: 
     - wide
 permalink: /values/
 ---
-
-# BitHippie Core Values
 
 A guide for empowering BitHippies
 
