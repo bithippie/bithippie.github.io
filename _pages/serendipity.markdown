@@ -14,7 +14,7 @@ Before reading any further, please first head over to my [values](/values) page.
 
 ## My mission in life is actually pretty simple. 
 
-* I want to be happy and healthy and freely help anyone interested achieving the same.
+* I want to be happy and healthy. I will freely help anyone interested achieving the same.
 * I want to have a positive impact on the lives and ecosystems in which I operate.
 * I want to build useful things in a sustainable fashion.
 * I want to make the most out of my short time on this delicate blue marble floating about space. 
@@ -32,7 +32,8 @@ To that end, I'm giving it a shot 🚀
 * How might we sustainably improve the quality and diversity of ecosystems without requiring massive external inputs?
 * How might we remove the vast amount of [macro and micro] plastic in our water?
 * How might we decentralize farming and make it easy for hobbyists to provide nutritious food to their households and local communities?
-* How might we make it a human right to explore the richness that is our world?
+* How might we combat climate change? 
+* How might we make it affordable for people to explore the richness of our world?
 
 ## Here are some of my bucket list items in no particular order.
 * 🥇 Complete my first Half Ironman. I currently have my eyes set on [Melbourne](https://www.ironman.com/im703-melbourne).
@@ -45,12 +46,14 @@ To that end, I'm giving it a shot 🚀
 ## Here are some things I could use help with.
 * A better BitHippie Logo.
 * I would love to connect with a naturopath to optimize my personal health plan.  
+* An experienced triathlete coach, or buddy, to help make my Ironman dream a reality.
+* I want to build a 3d puzzle box using CNC.
 * Someone semi-local with equipment to turn my milled cherry slabs into an epoxy desktop.
 * ... guess I don't need much right now.
 
 ## What I can offer you.
-* My software related accolades can be found on my [LinkedIn](https://www.linkedin.com/in/bithippie/) profile. If you need a technical sounding board, I have a wide breadth of experience in the hard and soft skills surrounding software engineering & leadership skills. 
-* I'm really good at spending little to accomplishing much. For example running this entire website cost me $12/year plus tax. I'm learning how to use Amazon Affiliate links,to cover those domain name cost. If you're thinking about starting a business and need some technical consultation, I'll happily gift anyone an hour of my time to talk.
+* My software related accolades can be found on my [LinkedIn](https://www.linkedin.com/in/bithippie/) profile. If you need a technical sounding board, I have a wide breadth of experience in the hard and soft skills surrounding Software, Data, and Cloud Platform Engineering & leadership skills. 
+* I'm really good at spending little to accomplishing much. For example running this entire website cost me $12/year plus tax. I'm learning how to use Amazon Affiliate links to cover those domain name cost. If you're thinking about starting a business and need some technical consultation, I'll happily gift anyone an hour of my time to get you pointed in the right direction.
 * I've recently overhauled large areas of my life, including my health, my relationship with my spouse, how I treat my work, and being alcohol free for 3+ years. If you need an accountability buddy, I'm here to help.
 * My wife tells me "You have figured out how to be a functional partner.", "You're a great dad.", "Your kids love it when you're around". If you want to chat kids, I'm by no means an expert, but I may be able to provide a different perspective, or just lend an ear.
 * I have a plan to achieve F.I.R.E. by 2028. If financial freedom is important to you, especially younger folks who aren't sure where to start, I'd love to chat. There's no magic bullet here, it's a slow, methodical process. It takes investing in your future self; it takes sacrificing immediate gratitude; it takes consistency over long periods of time; and most importantly it's achievable to anyone willing to put in the reps. 
