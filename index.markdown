@@ -15,9 +15,9 @@ feature_row:
   - image_path: /assets/images/website/laptop.jpg
     alt: "Technology Tile"
     title: "Technology"
-    excerpt: "Musings about Technology"
-    url: "#test-link"
-    btn_label: "Coming Soon"
+    excerpt: "Prototypes, Tips & Tricks, and More."
+    url: "technology"
+    btn_label: "More"
     btn_class: "btn--inverse"
   - image_path: /assets/images/website/plant_growth.jpg
     alt: "Personal Development Tile"
@@ -28,7 +28,7 @@ feature_row:
     btn_class: "btn--inverse"
   - image_path: /assets/images/website/earth.jpg
     title: "Sustainability"
-    excerpt: "Ways to become self-reliant; "
+    excerpt: "Ways to become self-reliant."
     url: "#test-link"
     btn_label: "Coming Soon"
     btn_class: "btn--inverse"
