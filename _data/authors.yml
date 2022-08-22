@@ -3,6 +3,6 @@ Anthony Torres:
   bio: At the intersection of technology, personal development, and sustainability.
   avatar: "/assets/images/authors/anthony.jpeg"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:anthony@bithippie.com"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/bithippie/"

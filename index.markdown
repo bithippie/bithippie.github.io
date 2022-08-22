@@ -17,7 +17,7 @@ feature_row:
     title: "Technology"
     excerpt: "Prototypes, Tips & Tricks, and More."
     url: "technology"
-    btn_label: "More"
+    btn_label: "Read Technology Posts"
     btn_class: "btn--inverse"
   - image_path: /assets/images/website/plant_growth.jpg
     alt: "Personal Development Tile"
