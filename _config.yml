@@ -40,10 +40,8 @@ github_username:  bithippie
 # https://github.com/mmistakes/minimal-mistakes#remote-theme-method
 remote_theme: mmistakes/minimal-mistakes@4.24.0
 
-# Outputting
+# Output
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
 
 plugins:
   - jekyll-feed
