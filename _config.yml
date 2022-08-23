@@ -39,24 +39,34 @@ github_username:  bithippie
 # https://github.blog/2017-11-29-use-any-theme-with-github-pages/
 # https://github.com/mmistakes/minimal-mistakes#remote-theme-method
 remote_theme: mmistakes/minimal-mistakes@4.24.0
+
+# Output
+permalink: /:categories/:title/
+
 plugins:
   - jekyll-feed
   - jekyll-include-cache
 
-permalink: /posts/:categories/:year/:month/:day/:title:output_ext
+# group pages into three categories listed on homepage.
+collections:
+  technology:
+    output: true
+    permalink: /:collection/:title/
+  personal_development:
+    output: true
+  sustainability:
+    output: true
+
 include: ["_pages"]
 defaults:
-  # applies to _posts
+  # _technology
   - scope:
       path: ""
-      type: posts
+      type: technology
     values:
       layout: single
-      author_profile: true
-      read_time: true
-      comments: true
+      author_profile: false
       share: true
-      related: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.

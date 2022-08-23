@@ -23,6 +23,8 @@ gem "github-pages", "~> 225", group: :jekyll_plugins
 # https://github.com/github/pages-gem/issues/752
 gem "webrick", "~> 1.7"
 
+gem 'eventmachine', "~> 1.2.7", :platforms => :ruby
+
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
