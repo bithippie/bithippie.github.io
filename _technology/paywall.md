@@ -167,6 +167,6 @@ Admittedly, this is far from automation, but I'm actually very happy with the so
 
 Typing `paywall` requires little effort on my part. It allows me to be selective about who must overcome the additional friction. It works across my phone, tablet, and laptop. It can be used with SMS, Outlook, Gmail, LinkedIn, Facebook, and other social media platforms. Lastly, it reduces the noise in my inbox! When you ignore a message, solicitors typically follow up at least once, sometimes as much as 4 or 5 times! By sending this 2 second reply, the additional pings have seemingly disappeared 😉. 
 
-I really hope you get some value out of this read, and can apply this to your individual situations. If you have any other ideas for how to use text replacements, please head over to Reddit for further discussion.
+I really hope you get some value out of this read, and can apply this to your individual situations. If you have any other ideas for how to use text replacements, please [head over to Reddit for further discussion](https://www.reddit.com/r/bithippie/comments/ww0mkf/how_i_protect_my_time_and_you_can_too/).
 
 ✌️
