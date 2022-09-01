@@ -1,5 +1,5 @@
 ---
-title: "Tell your spouse you love them."
+title: "Tell your spouse why you love them."
 excerpt_separator: "<!--more-->"
 category: personal-development
 classes: wide
