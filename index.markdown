@@ -23,8 +23,8 @@ feature_row:
     alt: "Personal Development Tile"
     title: "Personal Development"
     excerpt: "Health & Wellness, Finances, Growth"
-    url: "#test-link"
-    btn_label: "Coming Soon"
+    url: "personal-development"
+    btn_label: "Read Personal Development Posts"
     btn_class: "btn--inverse"
   - image_path: /assets/images/website/earth.jpg
     title: "Sustainability"

@@ -52,8 +52,9 @@ collections:
   technology:
     output: true
     permalink: /:collection/:title/
-  personal_development:
+  personal-development:
     output: true
+    permalink: /:collection/:title/
   sustainability:
     output: true
 
@@ -63,6 +64,13 @@ defaults:
   - scope:
       path: ""
       type: technology
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  - scope:
+      path: ""
+      type: personal-development
     values:
       layout: single
       author_profile: false
