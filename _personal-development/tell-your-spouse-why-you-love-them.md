@@ -40,6 +40,6 @@ And just like that, all feels right. It was like a light switch. The important t
 
 For those reading this - I challenge you to stop what you're doing and tell your significant other all the reasons you love them . **Be specific!**  They want to hear it. And, it'll make you feel better too.
 
-If you're willing, let me know how it worked out for you in [this Reddit discussion](#).
+If you're willing, let me know how it worked out for you in [this Reddit discussion](https://www.reddit.com/r/bithippie/comments/x381qh/tell_your_spouse_why_you_love_them/).
 
 ✌️
