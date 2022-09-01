@@ -21,16 +21,16 @@ Quick Aside: If you looking to be a better father, husband, son, or leader, I ca
 
 I’ve been in a funk these last few days. Overall, everything is going mostly well. There’s these few nagging problems in the background pecking at my attention, making me doubt myself. Julie has really been picking up my slack with the family these last few days. She’s the one keeping the positive energy in our house. I wish I could say I tried to make it better, but I barely did. 
 
-Today, I broke this faux stained glass Capri’s had made. She knew the consequences if she jumped on the couch again. "If you break something of mine, I'm going to break something of yours." Of course she was going to jump on the couch again, that's what threenagers do. One-sided Hammurabi's code definitely wasn't the right move in this situation. Regardless, she backed me up. 
+Today, I broke this faux stained glass Capri’s had made. She knew the consequences if she jumped on the couch again. "If you break something of mine, I'm going to break something of yours." Of course she was going to jump on the couch again, that's what three-nagers do. One-sided Hammurabi's code definitely wasn't the right move in this situation. Regardless, Julie backed me up. 
 
-Getting back to the text message, Julie is currently at the county fair with both girls. I was invited, but I had said I didn't want to go. She knew I needed some space, so we packed up both girls and off to the fair they went. 
+Getting back to the text message, Julie is currently at the county fair with both girls. I was invited, but I had said I didn't want to go. She knew I needed some space, so we packed up both girls and off to the fair they went.
 
 She's Wonder Woman.
 
-Some time had passed since I sent that message, finally, a response!
+Some time had passed since I sent that message. Finally, a response!
 
 ![I love everything about that message. It means the world! I love you too!! We are on our way. Can you do the veggies please 😘😘😘](/assets/images/posts/tell_your_spouse_you_love_them/it_means_the_world.png)
 
 And just like that, all feels right. It was like a light switch. The important things are going right. The nagging problems feel less powerful. I can’t wait for the family to get home from the fair. 
 
-Tell your spouse all the reasons you love them . **Be specific!**  They want to hear it. And, it'll make you feel better too.
+For those reading this - I challenge you to stop what you're doing and tell your spouse all the reasons you love them . **Be specific!**  They want to hear it. And, it'll make you feel better too.
