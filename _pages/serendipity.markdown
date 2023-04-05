@@ -1,5 +1,5 @@
 ---
-title: Let's Help Each Other
+title: Let's Help Each Other 🤝
 layout: splash
 permalink: /serendipity/
 header:
@@ -7,7 +7,8 @@ header:
   overlay_color: "#000"
   overlay_filter: 0.5
 excerpt: >-
-  A social experiment to rethinking how I show up in the world.
+  A social experiment to rethink how value is measured.
+
 ---
 
 Before reading any further, please first head over to my [values](/values) page. Once you understand where I'm coming from, the rest of this page is going to make way more sense.
