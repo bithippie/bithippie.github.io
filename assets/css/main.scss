@@ -1,0 +1,33 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+$bh_green: #8a9f53 !default;
+$bh_brown: #a65a36 !default;
+
+a.site-title{
+    color: $bh_green !important;
+}
+.site-subtitle {
+    color: $bh_brown;
+}
+.site-logo img{
+    height: 80px;
+    width: 80px;
+    max-height: fit-content;
+}
+
+#logo-shoutout{
+    font-size: 12px;
+}
+#logo-shoutout a{
+    display: inline;
+    color: $link-color;
+    margin: 0;
+}

@@ -18,7 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: BitHippie
-logo: assets/images/website/logo.png
+subtitle: At the intersection of sustainability, wellness, and technology.
+logo: assets/images/website/logos/logo_by_suzanne_andrews.png
 description: >- # this means to ignore newlines until "domain:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
