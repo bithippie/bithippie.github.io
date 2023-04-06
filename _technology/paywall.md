@@ -28,7 +28,7 @@ An expression that helped me understand what's happening when I sign up for that
 
 This gave me an idea. If companies are going to sell my information to marketers, then I should be able to put up a paywall between me and those seeking to gain my attention.
 
-I shared my harebrained scheme to shield my inboxes behind a paywall with a friend. He pointed me to an excerpt from Cal Newport's [Deep Work](https://amzn.to/3AjXJIg) <small>(Affiliate Link)</small>.
+I shared my harebrained scheme to shield my inboxes behind a paywall with a friend. He pointed me to an excerpt from Cal Newport's [Deep Work](https://www.amazon.com/Deep-Work-Focused-Success-Distracted-ebook/dp/B00X47ZVXM)
 
 > Consider consultant Clay Herbert, who is an expert in running crowd-funding campaigns for technology start-ups: a specialty that attracts a lot of correspondents hoping to glean some helpful advice. As a Forbes.com article on sender filters reports, “At some point, the number of people reaching out exceeded [Herbert’s] capacity, so he created filters that put the onus on the person asking for help.”
 >
