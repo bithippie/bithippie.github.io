@@ -116,7 +116,7 @@ However, there are some very obvious issues with this particular implementation.
 1. Messages from _all_ unknown senders are treated as solicitation emails. Given the lack of intelligence in how messages are partitioned, I would still have to open up that `Filtered` Inbox periodically to make sure I wasn't missing important communications. This negates the efficacy of the separate inbox. Now I have to go two places instead of one.
 2. It only works with Gmail accounts. The above solution won't work for any of my other inboxes.
 3. I'm auto-replying a paywall to _everybody_ who is not in my contact list. An approach like this can work for some, but the shotgun approach lacks the polish I expect of myself.
-4. On my [serendipity](/serendipity) page, I say that I'm interested in hearing from people. A paywall feels antithetical to that message. I need to add intelligence to the process, the paywall is primarily intended for solicitors.
+4. On my [collaboration](/collaboration) page, I say that I'm interested in hearing from people. A paywall feels antithetical to that message. I need to add intelligence to the process, the paywall is primarily intended for solicitors.
 
 With all that in mind, I deleted all the Google App Scripts and I reverted my Gmail Inbox back to `Default` settings.
 

@@ -1,9 +1,9 @@
 ---
 title: Let's Help Each Other 🤝
 layout: splash
-permalink: /serendipity/
+permalink: /collaboration/
 header:
-  overlay_image: /assets/images/website/desktop.jpg
+  overlay_image: /assets/images/website/go_far_together.jpg
   overlay_color: "#000"
   overlay_filter: 0.5
 excerpt: >-
