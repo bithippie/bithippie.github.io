@@ -7,11 +7,9 @@ header:
   overlay_color: "#000"
   overlay_filter: 0.5
 excerpt: >-
-  A social experiment to rethink how value is measured.
+  A social experiment to rethink how [value](/values){:target="_blank"} is measured.
 
 ---
-
-Before reading any further, please first head over to my [values](/values){:target="_blank"} page.
 
 ## My mission in life is actually pretty simple. 
 
