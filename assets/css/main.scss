@@ -11,9 +11,10 @@ search: false
 $bh_green: #8a9f53 !default;
 $bh_brown: #a65a36 !default;
 
-a.site-title{
-    color: $bh_green !important;
+#bithippie-text {
+    width:200px;
 }
+
 .site-subtitle {
     color: $bh_brown;
 }
