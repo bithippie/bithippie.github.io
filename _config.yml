@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 title: BitHippie
 subtitle: At the intersection of sustainability, wellness, and technology.
-logo: assets/images/website/logos/logo_by_suzanne_andrews.png
+logo: assets/images/website/logos/logo_by_suzanne_andrews_200x200.png
 description: >- # this means to ignore newlines until "domain:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
