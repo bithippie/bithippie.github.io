@@ -42,40 +42,22 @@ github_username:  bithippie
 remote_theme: mmistakes/minimal-mistakes@4.24.0
 
 # Output
-permalink: /:categories/:title/
+permalink: /posts/:title/
 
 plugins:
   - jekyll-feed
   - jekyll-include-cache
 
-# group pages into three categories listed on homepage.
-collections:
-  technology:
-    output: true
-    permalink: /:collection/:title/
-  personal-development:
-    output: true
-    permalink: /:collection/:title/
-  sustainability:
-    output: true
-
 include: ["_pages"]
+
 defaults:
-  # _technology
+  # _posts
   - scope:
       path: ""
-      type: technology
+      type: posts
     values:
-      layout: single
-      author_profile: false
-      share: true
-  - scope:
-      path: ""
-      type: personal-development
-    values:
-      layout: single
-      author_profile: false
-      share: true
+      layout: posts
+      show_date: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

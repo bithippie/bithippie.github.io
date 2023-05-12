@@ -1,8 +1,6 @@
 ---
 title: BitHippie Core Values
 layout: single
-classes: 
-    - wide
 permalink: /values/
 ---
 

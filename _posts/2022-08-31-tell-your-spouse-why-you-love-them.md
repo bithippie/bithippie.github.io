@@ -1,7 +1,7 @@
 ---
-title: "Tell your spouse why you love them."
+title: "Tell your significant other why you love them."
 excerpt_separator: "<!--more-->"
-category: personal-development
+tags: personal-development
 classes: wide
 author_profile: true
 tagline: ""
