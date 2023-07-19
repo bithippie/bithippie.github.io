@@ -12,28 +12,28 @@ excerpt: >-
   At the intersection of environmental sustainability, <br/>
   personal development, and technology!
 feature_row:
-  - image_path: /assets/images/website/blog.jpg
-    alt: "Photo of the word Blog"
-    title: "Thoughts"
-    excerpt: "Ramblings from an engineer with way too many interests."
-    url: "posts"
-    btn_label: "Read Posts"
-    btn_class: "btn--inverse"
-
-  - image_path: /assets/images/website/climbing.jpg
-    alt: "Photo by 'Jonathan Bell' on Unsplash"
-    title: "Accountability"
-    excerpt: "There are ways to do it all without sacrificing what's important."
-    url: "pq"
-    btn_label: "Do life with quality company."
-    btn_class: "btn--inverse"
-
   - image_path: /assets/images/website/together_we_create.jpg
     alt: "Photo by 'My Life Through A Lens' on Unsplash"
     title: "Let's Collaborate"
     excerpt: "If there is anything I can do to help you achieve your goals, let's talk!"
     url: "collaboration"
     btn_label: "Connect with me"
+    btn_class: "btn--inverse"
+
+  - image_path: /assets/images/website/climbing.jpg
+    alt: "Photo by 'Jonathan Bell' on Unsplash"
+    title: "Discover PQ (Peak You)"
+    excerpt: "There are ways to do it all without sacrificing what's important."
+    url: "pq"
+    btn_label: "Do life with quality company"
+    btn_class: "btn--inverse"
+  
+  - image_path: /assets/images/website/good_vibes.jpg
+    alt: "Photo by MARK ADRIANE on Unsplash"
+    title: "About me."
+    excerpt: "Learn a bit about what motivates me as a BitHippie."
+    url: "values"
+    btn_label: "View Core Values"
     btn_class: "btn--inverse"
 --- 
 
