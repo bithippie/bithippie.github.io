@@ -33,7 +33,7 @@ To that end, I'm giving it a shot 🚀
 
 ## Bucket list items in no particular order.
 
-* 🥇 Complete my first Half Iron-man. I currently have my eyes set on [70.3 Musselman](https://www.ironman.com/im703-musselman){:target="_blank"}.
+* 🥇 ~~Complete my first Half Iron-man.~~  Just finished [Musselman 70.3!](https://www.ironman.com/im703-musselman){:target="_blank"}
 * 🛸 Take a commercial space flight.
 * 🤿 Go scuba diving in vibrant locations.
 * 🐈‍⬛ Own a big kitty, probably a Savannah Cat.
@@ -45,8 +45,9 @@ To that end, I'm giving it a shot 🚀
     
     Thanks again, Suzi! Check out [her work](https://suzanneandrewsfineart.com/){:target="_blank"}, there's so much beautiful artwork to see.
 * I would love to connect with a naturopath to optimize my personal health plan.
-    I just go on the waitlist for [https://www.functionhealth.com/](https://www.functionhealth.com/) (no affiliation). Seems like a place to start 🤷‍♂️.
-* An experienced triathlete coach, or buddy, to help make my Iron-man dream a reality.
+* ✅ ~~An experienced triathlete coach, or buddy, to help make my Iron-man dream a reality.~~
+
+    I recently joined a Tri Club and they paired me with a mentor who has been amazing!
 * I want to learn how to design and build 3d puzzle boxes.
 * Someone semi-local with equipment to turn my milled cherry slabs into an epoxy desktop.
 * Looking for recommendations on ways to store the most relational/transactional data for the least money.
@@ -56,7 +57,7 @@ To that end, I'm giving it a shot 🚀
 * 🤓 My career related accolades can be found on [LinkedIn](https://www.linkedin.com/in/bithippie/){:target="_blank"}.
 * 💰 I'm really good at spending little to accomplishing much. For example running this website cost me ~$12/year.
 * 💻 I can help you rapidly prototype an idea and provide longer-term technical guidance.
-* ❤️ I've recently overhauled large areas of my life from my health, to many of my relationships, how I think about work, and being alcohol free for 3+ years. If you need an accountability buddy, I can help.
+* ❤️ I've recently overhauled large areas of my life from my health, to many of my relationships, how I think about work, and being alcohol free for 4+ years. If you need an accountability buddy, I can help.
 * 🏠 My wife tells me "You have figured out how to be a functional partner.", "You're a great dad.", "Your kids love it when you're around". If you want to chat kids, I'm by no means an expert, but I may be able to provide a different perspective, or just lend an ear.
 * 🔥 I have a plan to achieve F.I.R.E. by 2028 through a combination of income streams. If financial freedom is important to you, especially younger folks who aren't sure where to start, I'd love to chat. 
 
