@@ -1,9 +1,18 @@
 main:
-  - title: "Collaboration"
+  - title: Collaboration
     url: /collaboration/
-  - title: "PQ (Peak You)"
-    url: /pq/
-  - title: "Values"
+  - title: Products & Services
+    url: javascript:void(0)
+    menu:
+    - title: PQ (Peak You)
+      url: /pq/
+    - title: Brainwave Exchange
+      target: _blank
+      url: https://www.youtube.com/@BrainwaveExchange
+    # - title: <span style="text-decoration:line-through">Dev</span> Dive Shop
+    #   url: /dev-shop/
+  - title: Values
     url: /values/
-  - title: "LinkedIn"
-    url: https://www.linkedin.com/in/bithippie/
+  - title: LinkedIn
+    target: _blank
+    url: https://www.linkedin.com/company/bithippie/

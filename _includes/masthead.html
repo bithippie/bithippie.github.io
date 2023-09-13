@@ -12,12 +12,22 @@
                 <img id="bithippie-text" src="/assets/images/website/logos/bithippie_200x57.png">
                 {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
             </a>
-            <span id="logo-shoutout">Logo generously donated by <a href="https://suzanneandrewsfineart.com/" target="_blank">Suzanne Andrews.</a></span>
+            <span id="logo-shoutout">Logo by <a href="https://suzanneandrewsfineart.com/" target="_blank">Suzanne Andrews.</a></span>
         </div>
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
             <li class="masthead__menu-item">
-              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+                <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}{% if link.target %} target="{{ link.target }}"{% endif %}>
+                  {{ link.title }}
+                </a>
+
+              {% if link.menu != null %}
+                <ul class="masthead__menu-submenu">
+                  {% for sub_item in link.menu %}
+                  <li><a href="{{ sub_item.url | relative_url}}"{% if sub_item.target %} target="{{ sub_item.target }}"{% endif %}>{{ sub_item.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
             </li>
           {%- endfor -%}
         </ul>
