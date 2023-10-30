@@ -9,8 +9,8 @@ main:
     - title: Brainwave Exchange
       target: _blank
       url: https://www.youtube.com/@BrainwaveExchange
-    # - title: <span style="text-decoration:line-through">Dev</span> Dive Shop
-    #   url: /dev-shop/
+    - title: Tech Consulting
+      url: /consulting/
   - title: Values
     url: /values/
   - title: LinkedIn

@@ -34,6 +34,12 @@ $bh_brown: #a65a36 !default;
     color: $link-color;
     margin: 0;
 }
+
+.page__hero--overlay .page__lead {
+    max-width:1024px;
+}
+
+
 .greedy-nav {
     .visible-links {
         overflow: visible;
@@ -69,6 +75,29 @@ $bh_brown: #a65a36 !default;
         }
     }
 }
+
+
+.intro {
+    border-left: 5px solid $bh_green;
+    font-size: .6em;
+    margin: 1em 0;
+    padding: 1em 0 1em 1em;
+    position: relative;
+
+    h3 {
+        padding: 0;
+        margin: 0 0 1em;
+    }
+
+    .close-btn {
+        cursor: pointer;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+    }
+}
+
+
 
 #life_sheet_goals {
     .archive__item {
