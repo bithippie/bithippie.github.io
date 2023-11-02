@@ -5,8 +5,7 @@ permalink: /consulting/apis
 
 header:
   overlay_image: /assets/images/website/apis.jpg
-  image: /assets/images/website/apis.jpg
-  teaser: /assets/images/website/apis.jpg
+
   overlay_color: "#000"
   overlay_filter: 0.5
 

@@ -5,8 +5,6 @@ permalink: /consulting/bootstrapping
 
 header:
   overlay_image: /assets/images/website/bootstrapping.jpg
-  image: /assets/images/website/bootstrapping.jpg
-  teaser: /assets/images/website/bootstrapping.jpg
   overlay_color: "#000"
   overlay_filter: 0.5
 

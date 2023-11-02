@@ -4,7 +4,6 @@ layout: splash
 
 header:
   overlay_image: /assets/images/website/prototyping.jpg
-  teaser: /assets/images/website/prototyping.jpg
   overlay_color: "#000"
   overlay_filter: 0.5
 

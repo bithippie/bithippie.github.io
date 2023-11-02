@@ -5,8 +5,6 @@ permalink: /consulting/architecting
 
 header:
   overlay_image: /assets/images/website/architecting.jpg
-  # image: /assets/images/website/architecting.jpg
-  teaser: /assets/images/website/architecting.jpg
   overlay_color: "#000"
   overlay_filter: 0.5
 

@@ -5,7 +5,6 @@ permalink: /consulting/experience
 
 header:
   overlay_image: /assets/images/website/data.jpg
-  teaser: /assets/images/website/data.jpg
   overlay_color: "#000"
   overlay_filter: 0.5
 

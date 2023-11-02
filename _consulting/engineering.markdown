@@ -5,8 +5,6 @@ permalink: /consulting/engineering
 
 header:
   overlay_image: /assets/images/website/engineering.jpg
-  image: /assets/images/website/engineering.jpg
-  teaser: /assets/images/website/engineering.jpg
   overlay_color: "#000"
   overlay_filter: 0.5
 
