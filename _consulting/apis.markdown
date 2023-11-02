@@ -11,7 +11,7 @@ header:
   overlay_filter: 0.5
 
 excerpt: >-
-    Unlocking the Power of Data with Custom API Solutions.
+    Elevate Your Data Integration with Our API Expertise.
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Business Bootstrapping
 layout: splash
-permalink: /consulting/business-bootstrapping
+permalink: /consulting/bootstrapping
 
 header:
   overlay_image: /assets/images/website/bootstrapping.jpg
