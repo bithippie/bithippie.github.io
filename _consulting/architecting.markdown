@@ -15,7 +15,7 @@ excerpt: >-
 
 ---
 
- Our expert team is dedicated to helping you leverage the power of cloud technology to streamline operations, reduce costs, and drive innovation. Whether you're just beginning your cloud journey or looking to optimize your existing infrastructure, we're here to provide tailored solutions that align with your unique goals and objectives.
+ Our expert team is dedicated to helping you leverage the power of AWS or GCP to streamline operations, reduce costs, and drive innovation. Whether you're just beginning your cloud journey or looking to optimize your existing infrastructure, we're here to provide tailored solutions that align with your unique goals and objectives.
 
  We are your trusted partner in the ever-evolving world of cloud computing. We offer a comprehensive suite of services, from cloud migration and architecture design to security enhancements and ongoing management. Our team of experts utilizes the latest industry best practices to ensure your data remains secure, your applications perform at their peak, and your team can focus on what they do best - driving your business forward.
 
