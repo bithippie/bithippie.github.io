@@ -4,13 +4,13 @@ main:
   - title: Products & Services
     url: javascript:void(0)
     menu:
-    - title: PQ (Peak You)
-      url: /pq/
+    - title: Tech Consulting
+      url: /consulting/
     - title: Brainwave Exchange
       target: _blank
       url: https://www.youtube.com/@BrainwaveExchange
-    - title: Tech Consulting
-      url: /consulting/
+    - title: PQ (Peak You)
+      url: /pq/
   - title: Values
     url: /values/
   - title: LinkedIn
