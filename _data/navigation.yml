@@ -11,6 +11,8 @@ main:
       url: https://www.youtube.com/@BrainwaveExchange
     - title: Tech Consulting
       url: /consulting/
+    # - title: <span style="text-decoration:line-through">Dev</span> Dive Shop
+    #   url: /dev-shop/
   - title: Values
     url: /values/
   - title: LinkedIn
