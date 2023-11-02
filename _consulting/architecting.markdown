@@ -20,3 +20,5 @@ excerpt: >-
  We are your trusted partner in the ever-evolving world of cloud computing. We offer a comprehensive suite of services, from cloud migration and architecture design to security enhancements and ongoing management. Our team of experts utilizes the latest industry best practices to ensure your data remains secure, your applications perform at their peak, and your team can focus on what they do best - driving your business forward.
 
  We understand that every business is different. That's why we take a personalized approach to every client engagement. We collaborate closely with you to identify your specific needs, tailoring strategies that are not only cost-effective but also scalable for the long term.
+
+ {% include contact_box %}
