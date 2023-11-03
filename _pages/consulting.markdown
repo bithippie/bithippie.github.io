@@ -16,7 +16,7 @@ feature_row:
   - image_path: /assets/images/website/architecting.jpg
     alt: "Photo of hands holding a frame over clouds"
     title: "Cloud Architecting"
-    excerpt: "Your Cloud, Your Success, Our Expertise"
+    excerpt: "Your Cloud, Right Sized, Designed for Scale"
     url: "/consulting/architecting"
     btn_label: "Learn More"
     btn_class: "btn--inverse"

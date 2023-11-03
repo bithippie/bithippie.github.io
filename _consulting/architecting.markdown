@@ -9,14 +9,30 @@ header:
   overlay_filter: 0.5
 
 excerpt: >-
-    Your Cloud, Your Success, Our Expertise.
+    Your Cloud, Right Sized, Designed for Scale.
 
 ---
 
- Our expert team is dedicated to helping you leverage the power of AWS or GCP to streamline operations, reduce costs, and drive innovation. Whether you're just beginning your cloud journey or looking to optimize your existing infrastructure, we're here to provide tailored solutions that align with your unique goals and objectives.
+## Today
 
- We are your trusted partner in the ever-evolving world of cloud computing. We offer a comprehensive suite of services, from cloud migration and architecture design to security enhancements and ongoing management. Our team of experts utilizes the latest industry best practices to ensure your data remains secure, your applications perform at their peak, and your team can focus on what they do best - driving your business forward.
+It's commonplace for startups to leverage the cloud, in fact it's expected. Why take on the burden of managing the hardware, software, personnel, and real estate yourself? It's the smart move. If you and I know it, the Cloud Providers know it too.
 
- We understand that every business is different. That's why we take a personalized approach to every client engagement. We collaborate closely with you to identify your specific needs, tailoring strategies that are not only cost-effective but also scalable for the long term.
+The baseline price of operating in the cloud has been climbing 📈. Example: [Cloud Storage Pricing](https://cloud.google.com/storage/pricing-announce) 
 
- {% include contact_box %}
+It's more important than ever that your Cloud Architecture is fit for purpose. **Just a few instances left on, or oversized for the work will quickly eat $10,000s/year that would otherwise grow your business.** Take a few minutes to search online, there are many cautionary tails where cloud users received a [surprise bill](https://www.google.com/search?q=surprise+aws+bill) from their provider. 
+
+Conversely, if you aren't thinking about where you hope to be in 3 years, expect to budget a major technical migration into the roadmap, pulling your engineers focus away from the mission.
+
+Getting this right is an art. Don't leave it up to chance.
+
+## We help you:
+
+- Select the right services for your applications, data pipelines, and data assets.
+- Setup budgets, monitors, and dashboards so you know exactly where your money is going.
+- Design systems that auto-scale up and down as your workloads & budget dictate.
+- Develop Infrastructure as Code for predictable, configurable infrastructure.
+- And lots more...
+
+We understand that every business is different. That's why we take a personalized approach to every client engagement. We work closely with you to identify your specific needs, tailoring solutions that are both cost-effective and scalable for the long term.
+ 
+{% include contact_box %}
