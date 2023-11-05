@@ -24,7 +24,7 @@ feature_row:
   - image_path: /assets/images/website/apis.jpg
     alt: "Photo of code on a computer screen"
     title: "API Design and Review"
-    excerpt: "Elevate Your Data Integration"
+    excerpt: "Seamlessly Transact Information Gold"
     url: "/consulting/apis"
     btn_label: "Learn More"
     btn_class: "btn--inverse"
