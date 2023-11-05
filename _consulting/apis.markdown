@@ -10,16 +10,35 @@ header:
   overlay_filter: 0.5
 
 excerpt: >-
-    Elevate Your Data Integration with Our API Expertise.
+    Seamlessly transact information gold. 
 
 ---
 
-In today's data-driven age, the seamless sharing of information is vital for accurate and efficient operations. It allows you to focus on your unique value proposition while gaining valuable insights from your partners who excel in their respective domains.
+## The Age of Information
 
-APIs (Application Programming Interface) serve as the blueprint for describing how and what data is exchanged. Whether you're operating in the B2B or B2C space, to provide your data partners with a delightful experience, adhering to industry best practices for information exchange is critical!
+A modern business knows the importance of investing in their website and branding. Partners and Customers make snap decisions about the quality of your business [within the first 10 seconds](https://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/). **Your APIs are a direct extension of your public-facing digital presence.** Avoid the pitfall of making it challenging for data consumers to access and utilize your information gold.
 
-Modern businesses invest significant effort in ensuring their websites present a polished facade. Your APIs are a direct extension of your public-facing digital presence. Avoid the pitfall of making it challenging for data consumers to access and utilize your valuable information.
+APIs (Application Programming Interface) serve as the blueprint for describing how and what data are exchanged. Whether you're operating in the B2B or B2C space, adhering to industry best practices for information exchange is critical! 
 
-Our API services are designed to ensure that the way you share information with your customers is intuitive, scalable, secure, and thoroughly documented. Getting this foundation right from the start leads to harmonious data integration, the efficiencies gained from automating information exchange, and most importantly, quicker insights. This strategic advantage allows you to outpace your competition by learning faster and staying one step ahead.
+## Startups can't afford to do everything.
+
+In today's data-driven age, **speed of learning is the new competitive advantage**. 
+
+It is much more cost effective, and mission effective, to delegate non-critical activities to companies who are winning in their respective field. A culture of information sharing allows you to focus on your unique value proposition while gaining valuable insights from your partners who excel in their respective domains.
+
+When a data partner doesn't understand how to use your company's information it quickly devolves into lost productivity 📉, support chains 📧, or guessing what to do 😱.
+
+## We help you:
+
+- Select API conventions that are ideal for your specific circumstances.
+- Implement smart documentation practices so your API specs are always up to date. 
+- Adopt industry standard practices for common concerns such as authentication & authorization, pagination, limits, resource routing and more.
+- Publish your API specs and health checks so integrators don't need to guess.
+
+Our API services are designed to ensure that the way you share information with your customers is intuitive, scalable, secure, and thoroughly documented. 
+
+Getting this foundation right from the start leads to happy data-partner relationships, the efficiencies gained from automating information exchange, and most importantly, quicker actionable insights. 
+
+This strategic advantage allows you to outpace your competition by learning faster and staying one step ahead.
 
 {% include contact_box %}
