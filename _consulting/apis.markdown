@@ -10,7 +10,7 @@ header:
   overlay_filter: 0.5
 
 excerpt: >-
-    Seamlessly transact information gold. 
+    Seamlessly Transact Information Gold. 
 
 ---
 
@@ -30,7 +30,7 @@ When a data partner doesn't understand how to use your company's information it 
 
 ## We help you:
 
-- Select API conventions that are ideal for your specific circumstances.
+- Select API methodologies and conventions that are ideal for your specific circumstances.
 - Implement smart documentation practices so your API specs are always up to date. 
 - Adopt industry standard practices for common concerns such as authentication & authorization, pagination, limits, resource routing and more.
 - Publish your API specs and health checks so integrators don't need to guess.
