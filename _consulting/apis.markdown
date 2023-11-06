@@ -19,7 +19,7 @@ A modern business knows the importance of investing in their website and brandin
 
 APIs (Application Programming Interface) serve as the blueprint for describing how and what data are exchanged. Whether you're operating in the B2B or B2C space, adhering to industry best practices for information exchange is critical! 
 
-## Startups can't afford to do everything.
+## Startups can't afford to do everything
 
 In today's data-driven age, **speed of learning is the new competitive advantage**. 
 
@@ -27,7 +27,7 @@ It is much more cost effective, and mission effective, to delegate non-critical 
 
 When a data partner doesn't understand how to use your company's information it quickly devolves into lost productivity 📉, support chains 📧, or guessing what to do 😱.
 
-## We help you:
+## We help you
 
 - Select API methodologies and conventions that are ideal for your specific circumstances.
 - Implement smart documentation practices so your API specs are always up to date. 
@@ -39,5 +39,7 @@ Our API services are designed to ensure that the way you share information with 
 Getting this foundation right from the start leads to happy data-partner relationships, the efficiencies gained from automating information exchange, and most importantly, quicker actionable insights. 
 
 This strategic advantage allows you to outpace your competition by learning faster and staying one step ahead.
+
+## Level up your Interfaces
 
 {% include contact_box %}

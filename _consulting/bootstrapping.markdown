@@ -19,4 +19,6 @@ At the outset, businesses typically don't require a full-time engineering staff,
 
 Our services are designed to assist startups and entrepreneurs select the right technology for their needs and get it running quickly and correctly within your desired workstreams. We provide technical guidance, mentorship, and practical strategies to help you navigate the challenges of early-stage development and establish a strong foundation for your venture. When it's time to bring in your own in house team, we'll help with the hiring and training to provide a seamless transition. 
 
+## Want tech that just works?
+
 {% include contact_box %}
