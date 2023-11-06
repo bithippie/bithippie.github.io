@@ -1,7 +1,7 @@
 ---
 title: Let's Help Each Other 🤝
 layout: splash
-permalink: /collaboration/
+permalink: /me/
 header:
   overlay_image: /assets/images/website/go_far_together.jpg
   overlay_color: "#000"
@@ -30,6 +30,7 @@ To that end, I'm giving it a shot 🚀
 * Reducing dependence on disposable plastic and ultra processed foods.
 * Decentralized micro-farms.
 * Affordable ways for families to safely and comfortably explore the global.
+* Cleaning up our water.
 
 ## Bucket list items in no particular order.
 
@@ -38,7 +39,7 @@ To that end, I'm giving it a shot 🚀
 * 🤿 Go scuba diving in vibrant locations.
 * 🐈‍⬛ Own a big kitty, probably a Savannah Cat.
 * 🏔 Have a house in the mountains that overlooks a vast and interesting landscape.
-* 🏝 Spend months at a time in new places. Costa Rica for starters!
+* 🏝 ~~Spend months at a time in new places. Costa Rica for starters~~ August 2023 Costa Rica trip with the family. Pura Vida 🦥 
 
 ## Here are some things I could use help with.
 * ✅ ~~A better BitHippie Logo.~~

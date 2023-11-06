@@ -1,18 +1,21 @@
 main:
-  - title: Collaboration
-    url: /collaboration/
   - title: Products & Services
     url: javascript:void(0)
     menu:
     - title: Tech Consulting
       url: /consulting/
-    - title: Brainwave Exchange
-      target: _blank
-      url: https://www.youtube.com/@BrainwaveExchange
     - title: PQ (Peak You)
       url: /pq/
-  - title: Values
-    url: /values/
-  - title: LinkedIn
+  - title: Podcast
     target: _blank
-    url: https://www.linkedin.com/company/bithippie/
+    url: https://www.youtube.com/@BrainwaveExchange
+  - title: About
+    url: javascript:void(0)
+    menu:
+    - title: Me
+      url: /me/
+    - title: Values
+      url: /values/
+    - title: LinkedIn
+      target: _blank
+      url: https://www.linkedin.com/company/bithippie/

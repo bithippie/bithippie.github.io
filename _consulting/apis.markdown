@@ -13,7 +13,6 @@ excerpt: >-
     Seamlessly Transact Information Gold. 
 
 ---
-
 ## The Age of Information
 
 A modern business knows the importance of investing in their website and branding. Partners and Customers make snap decisions about the quality of your business [within the first 10 seconds](https://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/). **Your APIs are a direct extension of your public-facing digital presence.** Avoid the pitfall of making it challenging for data consumers to access and utilize your information gold.
