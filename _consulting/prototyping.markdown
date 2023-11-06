@@ -18,4 +18,6 @@ Our commitment to Rapid Prototyping is rooted in the belief that innovation shou
 
 The beauty of our Rapid Prototyping service lies in its ability to foster an environment of experimentation and creativity. We understand that not every idea can be perfected on the drawing board, and often, it's the act of creation and testing that leads to breakthroughs. With our support, you can unleash your imagination without the fear of costly setbacks. Your ideas deserve to be explored, and we are here to guide you through the transformative journey from concept to refined prototype, all while optimizing your use of resources and time.
 
+## Skip the line with fast feedback
+
 {% include contact_box %}

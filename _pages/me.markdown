@@ -47,7 +47,7 @@ To that end, I'm giving it a shot 🚀
     Thanks again, Suzi! Check out [her work](https://suzanneandrewsfineart.com/){:target="_blank"}, there's so much beautiful artwork to see.
 * ✅ ~~An experienced triathlete coach, or buddy, to help make my Iron-man dream a reality.~~
 
-    I recently joined a Tri Club and they paired me with a mentor who has been amazing!
+    I recently joined a Tri Club and they paired me with a [mentor](https://www.youtube.com/watch?v=LsipUKRC38s){:target="_blank"} who has been amazing!
 * I would love to connect with a naturopath to optimize my personal health plan.
 * I want to learn how to design and build 3d puzzle boxes.
 * Someone semi-local with equipment to turn my milled cherry slabs into an epoxy desktop.
@@ -66,6 +66,8 @@ If you're still with me so far, let's see how we can help each other!
 
 This is not intended to be quid pro quo. If you see something in here that can help you or can help me, let's talk.
 
-Please feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/bithippie/){:target="_blank"}. Let me know what's on your mind and that you came from my site.
+## Get in Touch.
+
+{% include contact_box %}
 
 Until Then ✌️
