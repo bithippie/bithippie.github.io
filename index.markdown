@@ -14,7 +14,7 @@ feature_row:
   - image_path: /assets/images/website/together_we_create.jpg
     alt: "Photo by 'My Life Through A Lens' on Unsplash"
     title: "Let's Make Something"
-    excerpt: "If there is anything I can do to help you achieve your goals, let's talk!"
+    excerpt: "How we can help you achieve your goals!"
     url: "consulting"
     btn_label: "Learn More"
     btn_class: "btn--inverse"
@@ -22,7 +22,7 @@ feature_row:
   - image_path: /assets/images/website/climbing.jpg
     alt: "Photo by 'Jonathan Bell' on Unsplash"
     title: "Discover PQ (Peak You)"
-    excerpt: "There are ways to do it all without sacrificing what's important."
+    excerpt: "Do more without sacrificing what's important."
     url: "pq"
     btn_label: "Learn More"
     btn_class: "btn--inverse"
@@ -30,7 +30,7 @@ feature_row:
   - image_path: /assets/images/website/good_vibes.jpg
     alt: "Photo by MARK ADRIANE on Unsplash"
     title: "About me"
-    excerpt: "Learn a bit about what motivates me as a BitHippie."
+    excerpt: "Learn what makes me a bit Hippie."
     url: "me"
     btn_label: "Learn More"
     btn_class: "btn--inverse"
