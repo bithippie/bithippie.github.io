@@ -25,7 +25,7 @@ Conversely, if you aren't thinking about where you hope to be in 3 years, expect
 
 Getting this right is an art. Don't leave it up to chance.
 
-## We help you
+## We Help You
 
 - Select the right services for your applications, data pipelines, and data assets.
 - Set up budgets, monitors, and dashboards so you know exactly where your money is going.
@@ -35,6 +35,6 @@ Getting this right is an art. Don't leave it up to chance.
 
 We understand that every business is different. That's why we take a personalized approach to every client engagement. We work closely with you to identify your specific needs, tailoring solutions that are both cost-effective and scalable for the long term.
  
-## Right size your Infrastructure
+## Right-size Your Infrastructure
 
 {% include contact_box %}

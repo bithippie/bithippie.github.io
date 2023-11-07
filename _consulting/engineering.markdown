@@ -13,12 +13,32 @@ excerpt: >-
 
 ---
 
-In today's data-driven world, the ability to harness and leverage data effectively is paramount to your organization's success.  We specialize in providing top-tier Data Engineering Services tailored to meet your unique data needs. Our team of expert data engineers and architects are here to transform your data into a strategic asset, enabling you to make well-informed decisions, derive meaningful insights, and drive your business forward.
+## Information Is The New Oil
 
-What sets us apart is our unwavering commitment to creating robust, efficient, and scalable data pipelines. We understand that the journey from raw data to actionable insights can be complex and challenging. That's why our data engineers work diligently to design and implement data pipelines that streamline the entire data process, from ingestion and storage to transformation and analysis. By ensuring your data is always available, structured, and ready for analysis, we empower you to focus on what truly matters – making informed decisions that propel your business forward.
+In today's data driven age, there are virtually limitless data sources available to choose from. You could integrate with data partners, pull from public data sets, purchase curated assets from another company, and measure user behavior within your systems & products. 
 
-Our Data Engineering Services go beyond just managing data; they empower you to harness its full potential. We believe that your data should work for you, not the other way around. Whether it's optimizing performance, ensuring data quality, or constructing a robust data architecture, we are your trusted partner on your data journey. Contact us today to embark on a data transformation that will unlock the true power of your data and position your organization for success in the data-driven era.
+**With so many options at your fingertips, it's important to be able to quickly identify signal from the noise.**
 
-## Learn faster than your competition
+Good data handling processes are the difference between fumbling around in the dark searching for answers, or having a deep understanding about what is happening internally within your business and externally in the world at large. 
+
+## Common Pitfalls
+
+Data providers package and deliver their content using many different mechanisms. This usually means custom adapters for each data source leading to sprawl.
+
+If your information is not well documented and organized, different functions within your organization won't know what's available, leading to missed insights or purchasing nearly identical information!
+
+There is no shortage of information available. 
+
+However, too often quantity data is mistaken for quality information.
+
+## We Help You
+- Provide right-sized pipelines infrastructure for pulling information in at the speed required to make effective decisions.
+- Coordinate with data providers to ask the tough technical questions and evaluate the quality of their operations. 
+- Organize and manage your in-house information using industry best practices.
+- Work with your analysts to make sure the information is ready to report on.
+
+Our Data Engineering Services go beyond just managing data; they empower you to harness its full potential. Whether it's optimizing performance, ensuring data quality, or constructing a robust data architecture, we are your trusted partner on your data journey. 
+
+## Learn Faster; Learn Smarter
 
 {% include contact_box %}
