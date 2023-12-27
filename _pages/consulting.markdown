@@ -59,7 +59,7 @@ Our small batch sizes keep us agile and responsive to a constantly evolving, and
 This is <span class="primary">sustainable engineering.</span>
 
 
-## Our Gaurantee
+## Our Guarantee
 
 At BitHippie, we guarantee <em>a personalized, professional, and high-quality experience that is specifically designed to validate your ideas swiftly and effectively.</em> Our commitment is to ensure that you have <em>a tangible product ready to be showcased to stakeholders or customers in a matter of days or weeks</em>, not months. We also guarantee that our approach will provide you with the means to obtain <em>actionable feedback from your customers</em>, enabling you to rapidly validate and refine your ideas based on real-world insights.
 
