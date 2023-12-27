@@ -11,6 +11,14 @@ search: false
 $bh_green: #8a9f53 !default;
 $bh_brown: #a65a36 !default;
 
+.primary {
+    color: $bh_green;
+}
+
+.secondary {
+    color: $bh_brown;
+}
+
 #bithippie-text {
     width:200px;
 }
@@ -310,4 +318,25 @@ $bh_brown: #a65a36 !default;
             }
         }
     }
+}
+
+// Consulting Styles
+#sprout {
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+
+#globe {
+    width: 200px;
+    height: 200px;
+    float: right;
+}
+
+em {
+    color: $bh_green
+}
+
+.feature__wrapper {
+    border-bottom: none;
 }

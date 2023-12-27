@@ -1,67 +1,72 @@
 ---
-title: BitHippie Tech Consulting Services 👋
+title: So you want to change the world?
 layout: splash
 permalink: /consulting/
 collection: consulting
 
 header:
-  overlay_image: /assets/images/website/ideas.jpg
+  overlay_image: /assets/images/website/consulting/hero.png
   overlay_color: "#000"
-  overlay_filter: 0.5
+  overlay_filter: 0.3
 
 excerpt: >-
-    "Leave the tech to us so you can focus on what you do best!"
-
+    "Nothing is more powerful than an idea whose time has come." <br/> - Victor Hugo
 feature_row:
-  - image_path: /assets/images/website/architecting.jpg
-    alt: "Photo of hands holding a frame over clouds"
-    title: "Cloud Architecting"
-    excerpt: "Your Cloud, Right Sized, Designed for Scale"
-    url: "/consulting/architecting"
-    btn_label: "Learn More"
-    btn_class: "btn--inverse"
-
-  - image_path: /assets/images/website/apis.jpg
-    alt: "Photo of code on a computer screen"
-    title: "API Design and Review"
-    excerpt: "Seamlessly Transact Information Gold"
-    url: "/consulting/apis"
-    btn_label: "Learn More"
-    btn_class: "btn--inverse"
+  - image_path: /assets/images/website/consulting/science.png
+    alt: "Science and Engineering Collaboration Photo"
+    title: "Life Sciences"
+    excerpt: "Engineering best practices in a world of biology."
   
-  - image_path: /assets/images/website/data.jpg
-    alt: "Photo of a graph on a computer screen"
-    title: "Developer Experience"
-    excerpt: "10x Your Developer Efficiency"
-    url: "/consulting/experience"
-    btn_label: "Learn More"
-    btn_class: "btn--inverse"
+  - image_path: /assets/images/website/consulting/startups.png
+    alt: "People Sitting together in a Startup Office"
+    title: "Startup Entreprenuers"
+    excerpt: "Turn your idea into reality in weeks instead of months."
 
-  - image_path: /assets/images/website/bootstrapping.jpg
-    alt: "Photo of a laptop with a coffee mug in the background"
-    title: "Business Bootstrapping"
-    excerpt: "Get Your Business Up and Running Fast"
-    url: "/consulting/bootstrapping"
-    btn_label: "Learn More"
-    btn_class: "btn--inverse"
-
-  - image_path: /assets/images/website/prototyping.jpg
-    alt: "Photo from above looking down on a desk with a computer, a phone, and some papers with designs"
-    title: "Rapid Prototyping"
-    excerpt: "Innovate Faster with Rapid Prototyping"
-    url: "/consulting/prototyping"
-    btn_label: "Learn More"
-    btn_class: "btn--inverse"
-  
-  - image_path: /assets/images/website/engineering.jpg
-    alt: "Photo of a City skyline with a digital net around it styled like a wormhole"
-    title: "Data Engineering"
-    excerpt: "Unlock the Power of Data"
-    url: "/consulting/engineering"
-    btn_label: "Learn More"
-    btn_class: "btn--inverse"
-
+  - image_path: /assets/images/website/consulting/community.png
+    alt: "People Outdoors in the Park"
+    title: "Community Building"
+    excerpt: "Digital strategies for building engaged communities."
 ---
 
+# Sustainable Engineering <span class="primary">@</span> BitHippie
+
+Full-Stack Technical solutions for Life Sciences companies. Empowering startups with a strategic technical vision. Equipping community builders with the essential framework necessary for sustained traction. 
+
+Our mission is to help you launch quickly, learn from real-world feedback, and refine your ideas for maximum impact, with minimum waste.
 
 {% include feature_row %}
+
+## Sustainable Engineering
+
+![Globe](/assets/images/website/consulting/sprout.png){:id="sprout"}
+
+<span class="primary">Sustainable Engineering</span> is about achieving traction while minimizing waste through proven engineering practices. We take a lean approach to building, where frequent experimentation and rapid learning are baked into the process from the beginning. We focus on collecting actionable analytics to inform your next move. Each step we take is in service of validating assumptions, reducing risk, and gaining traction.
+
+<div style="clear:both"/>
+
+## Choose Us
+
+Our approach is all about creating a fit-for-purpose team that aligns to your unique circumstances. We work closely with you to design a team and milestone roadmap that not only meets your technical requirements, but also complements your organizational culture and goals. Whether it's a short-term project or a long-term partnership, our on-demand services are tailored to provide flexibility, expertise, and efficiency when you need, for as long as you need. 
+
+![Globe](/assets/images/website/consulting/globe.png){:id="globe"}
+
+We offer on-demand engineering services that combine the best of US-based and Latin American engineers. Our team specializes in a range of cutting-edge areas. We excel in <em>rapid prototyping</em>, <em>setting up your cloud infrastructure</em> and <em>integrating AI and ML</em> technologies into your products, pushing the boundaries of what's possible. Additionally, we are experts in <em>data model design and data integrations</em>, <em>web and mobile app development</em>, and <em>10X-ing your existing developer team.</em>
+
+<div class="clear:both"/>
+
+Our small batch sizes keep us agile and responsive to a constantly evolving, and ever changing landscape. 
+
+This is <span class="primary">sustainable engineering.</span>
+
+
+## Our Gaurantee
+
+At BitHippie, we guarantee <em>a personalized, professional, and high-quality experience that is specifically designed to validate your ideas swiftly and effectively.</em> Our commitment is to ensure that you have <em>a tangible product ready to be showcased to stakeholders or customers in a matter of days or weeks</em>, not months. We also guarantee that our approach will provide you with the means to obtain <em>actionable feedback from your customers</em>, enabling you to rapidly validate and refine your ideas based on real-world insights.
+
+### So you want to change the world?
+<br/>
+Let me know how I can help.
+
+## Get in Touch
+
+{% include contact_box %}

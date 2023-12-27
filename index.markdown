@@ -7,11 +7,11 @@ permalink: /
 header:
   overlay_image: /assets/images/website/sustainability.jpg
   overlay_color: "#000"
-  overlay_filter: 0.5
+  overlay_filter: 0.3
 excerpt: >-
-  My journey of self-discovery, solving hard problems, investing in a brighter future, and giving back.
+  Taking Action. Solving hard problems. Investing in a brighter future. Giving back.
 feature_row:
-  - image_path: /assets/images/website/together_we_create.jpg
+  - image_path: /assets/images/website/consulting/sustainable_engineering.jpg
     alt: "Photo by 'My Life Through A Lens' on Unsplash"
     title: "Let's Make Something"
     excerpt: "How we can help you achieve your goals!"
