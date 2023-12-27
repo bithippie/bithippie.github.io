@@ -70,4 +70,4 @@ How can we help you?
 {% include contact_box %}
 
 ## Connect with us on Social
-If you're just browsing, follow BitHippie's <i class="fab fa-linkedin underline" style="color:#4e91a5"></i> [LinkedIn Page](https://www.linkedin.com/company/bithippie/?) to keep up to date. 
+If you're just browsing, follow BitHippie's <i class="fab fa-linkedin" style="color:#4e91a5"></i> [LinkedIn Page](https://www.linkedin.com/company/bithippie/?) to keep up to date. 
