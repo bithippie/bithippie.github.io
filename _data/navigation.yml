@@ -2,7 +2,7 @@ main:
   - title: Products & Services
     url: javascript:void(0)
     menu:
-    - title: Tech Consulting
+    - title: Sustainable Engineering  
       url: /consulting/
     - title: PQ (Peak You)
       url: /pq/
