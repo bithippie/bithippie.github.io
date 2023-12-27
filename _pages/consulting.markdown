@@ -65,8 +65,9 @@ At BitHippie, we guarantee <em>a personalized, professional, and high-quality ex
 
 ### So you want to change the world?
 <br/>
-Let me know how I can help.
-
-## Get in Touch
+How can we help you?
 
 {% include contact_box %}
+
+## Connect with us on Social
+If you're just browsing, follow BitHippie's <i class="fab fa-linkedin underline" style="color:#4e91a5"></i> [LinkedIn Page](https://www.linkedin.com/company/bithippie/?) to keep up to date. 
