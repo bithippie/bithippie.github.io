@@ -82,7 +82,7 @@ export default function Home() {
 
         <section id="testimonials" className="bg-moss">
           <div className="container py-8">
-            <h2 className="text-5xl text-white text-center my-8">Why people love working with BitHippie.</h2>
+            <h2 className="text-5xl text-white text-center mt-8 mb-16">Why people love working with BitHippie.</h2>
             <Testimonials />
           </div>
         </section>
