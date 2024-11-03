@@ -5,6 +5,7 @@
 :root {
   --background: var(--platinum);
   --foreground: var(--dar-grey);
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {

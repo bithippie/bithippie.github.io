@@ -9,7 +9,7 @@ const marcellus = localFont({
 
 export const metadata = {
   title: "BitHippie",
-  description: "Full-Stack",
+  description: "Burst Capacity Software, Data, and Cloud Engineering Professionals Specializing in Rapid Product Development, Data Platform Design, and Internal Tooling",
 };
 
 export default function RootLayout({ children }) {

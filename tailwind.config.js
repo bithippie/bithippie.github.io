@@ -1,12 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 
-const defaultTheme = require('tailwindcss/defaultTheme')
+import flowbite from "flowbite-react/tailwind";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    flowbite.content()
   ],
   theme: {
     container: {
@@ -21,7 +23,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        "hero": "url('/sustainability.jpg')"
+        "hero": "linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('/sustainability.jpg')"
       },
       colors: {
         background: "var(--background)",
@@ -32,5 +34,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    flowbite.plugin()
+  ],
 };
