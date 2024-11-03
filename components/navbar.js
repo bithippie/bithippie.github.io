@@ -1,6 +1,6 @@
 "use client";
-
-import { Navbar, Link } from "flowbite-react";
+import Link from "next/link";
+import { Navbar } from "flowbite-react";
 import ScheduleConsultation from "./schedule_consultation";
 
 export default function Component() {

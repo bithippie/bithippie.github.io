@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: var(--platinum);
-  --foreground: var(--dar-grey);
-  scroll-behavior: smooth;
+  --background: #ededed;
+  --foreground: #0a0a0a;
+   scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +18,21 @@
 body {
   color: var(--foreground);
   background: var(--background);
+}
+
+.splide__arrow--prev {
+  left: 0 !important;
+}
+
+.splide__arrow--next {
+  right: 0 !important;
+}
+.splide__arrow--prev svg {
+  fill: #FFF !important;
+}
+.splide__arrow--next svg {
+  fill: #FFF !important;
+}
+.splide__pagination__page.is-active {
+  background: #D3A946 !important
 }

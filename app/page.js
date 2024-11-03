@@ -14,10 +14,10 @@ export default function Home() {
         <Navbar />
         <section id="hero" className="h-screen bg-hero bg-center bg-fill flex">
           <div className="container place-content-center flex flex-col items-center">
-            <h1 className="text-platinum text-6xl text-center">
+            <h1 className="text-platinum text-5xl text-center mt-16 md:text-6xl">
               Helping good humans <span className="text-moss">sustainably</span> deliver digital products customers <span className="text-old-gold">love</span> 
             </h1>
-            <h2 className="text-platinum text-4xl text-center my-8">
+            <h2 className="text-platinum text-2xl text-center my-8 md:text-4xl">
               Burst Capacity Software, Data, and Cloud Engineering Professionals 
               Specializing in Rapid Product Development, Data Platform Design, and Internal Tooling 
             </h2>
@@ -29,7 +29,7 @@ export default function Home() {
           <div className="container py-8 flex flex-col items-center">
             <h2 className="text-4xl text-moss w-full">How we work together</h2>
             <div className="grid grid-cols-3 gap-8 my-8 text-center">
-              <div>
+              <div className="width 1/3">
                 <img src="/idea.png"/>
                 <h3 className="text-2xl text-moss my-6">Delivery in 1 Month</h3>
                 <p className="text-justify">
@@ -104,7 +104,7 @@ export default function Home() {
               <FAQ />
             </div>
             <div className="col-span-12 md:col-span-7">
-              <iframe className="w-full h-[1200px] xl:h-[750px]"
+              <iframe className="w-full h-[1200px] sm:h-[750px] md:h-[1100px]"
                 src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true">
               </iframe>
             </div>

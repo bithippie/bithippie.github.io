@@ -1,6 +1,10 @@
 "use client";
+import { Card, Blockquote, Avatar } from "flowbite-react";
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 
-import { Carousel, Card, Blockquote, Avatar } from "flowbite-react";
+// or only core styles
+import '@splidejs/react-splide/css';
+import '@splidejs/splide/css/sea-green';
 
 const data = [
     {
@@ -20,7 +24,7 @@ const data = [
     },
     {
         "quote": "His exceptional technical skills, combined with his dedication, open-mindedness, and collaborative spirit, make him an invaluable asset to any team.",
-        "name": "Jonathan Weiss // partner and Chief Innovator",
+        "name": "Jonathan Weiss // Partner and Chief Innovator",
         "image": "jon.jpeg",
     },
     {
@@ -52,21 +56,43 @@ const data = [
 
 export default function Component() {
   return (
-    <div className="w-full inline-flex flex-nowrap">
-        <ul className="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8">
+    <Splide options={{
+        autoplay:true,
+        breakpoints: {
+            640: {
+                perPage: 1,
+            },
+            768: {
+                perPage: 2,
+            },
+            1024: {
+                perPage: 3
+            }
+        },
+        gap: 16,
+        interval: 5000,
+        mediaQuery: 'min',
+        type: 'loop',
+    }}>
+        
         {data.map((testimonial, i) => (
-            <Card key={i} className="w-1/3 h-full rounded-3xl flex flex-col py-16">
-                <Avatar img={testimonial.image} size="xl" rounded className="justify-self-center"/>
-                <Blockquote className="flex-grow text-lg text-justify" >
-                    {testimonial.quote}
-                </Blockquote>
-                <figcaption className="self-end">
-                    <cite>{testimonial.name}</cite>
-                </figcaption>
-            </Card>
+            <SplideSlide key={i} className="rounded-3xl">
+                <div className="h-[480px]">
+                    <Card className="h-full flex flex-col m-1">
+                        <Avatar img={testimonial.image} size="xl" rounded className="justify-self-center"/>
+                        <Blockquote className="flex-grow text-lg text-justify" >
+                            {testimonial.quote}
+                        </Blockquote>
+                        <figcaption className="self-end">
+                            <cite className="text-sm">{testimonial.name}</cite>
+                        </figcaption>
+                    </Card>
+                </div>
+            </SplideSlide>
         ))}
-        </ul>
-    </div>
+        <SplideTrack>
+        </SplideTrack>
+      </Splide>
   );
 }
 
