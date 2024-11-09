@@ -86,8 +86,8 @@ export default function Home() {
         </section>
 
         <section id="schedule" className="bg-platinum">
-          <div className="container grid col-span-1 md:grid-cols-12 gap-8 p-8">
-            <div className="col-span-1 md:col-span-5 text-dark-grey">
+          <div className="container ">
+            <div className="flex grow">
               <h2 className="text-4xl text-moss mt-3 mb-8">Schedule My Free Consultation</h2>
               <p className='text-xl mb-8'>
                 We love speaking with entrepreneurs, founders, and good humans who strive to leave the world better than they found it.
@@ -101,7 +101,7 @@ export default function Home() {
 
               <FAQ />
             </div>
-            <div className="col-span-1 md:col-span-7 frame">
+            <div className="flex">
               <iframe className="w-[599px] h-[1130px] self-center"
                 src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true">
               </iframe>
