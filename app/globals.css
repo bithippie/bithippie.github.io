@@ -36,3 +36,14 @@ body {
 .splide__pagination__page.is-active {
   background: #D3A946 !important
 }
+
+#hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 20;
+  background-color: #D3A946;
+}

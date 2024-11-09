@@ -23,7 +23,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        "hero": "linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('/sustainability.jpg')"
+        "hero": "linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/sustainability.jpg')"
       },
       colors: {
         background: "var(--background)",
