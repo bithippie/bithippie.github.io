@@ -9,11 +9,11 @@ export default function Component() {
             <img src="/logo.png" className="h-20" alt="BitHippie Logo" />
         </Navbar.Brand>
         <Navbar.Toggle />
-        <Navbar.Collapse>
-          <Navbar.Link href="#we-work-together" className="text-platinum text-2xl">Services</Navbar.Link>
-          <Navbar.Link href="#faq" className="text-platinum text-2xl">FAQ</Navbar.Link>
-          <Navbar.Link href="#schedule" className="text-platinum text-2xl">Schedule</Navbar.Link>
-          <Navbar.Link href="#about" className="text-platinum text-2xl">About</Navbar.Link>
+        <Navbar.Collapse className="bg-gradient-to-b from-transparent to-bg-dark-grey z-10 backdrop-blur-md opacity-95">
+          <Navbar.Link href="#we-work-together" className="text-platinum text-2xl hover:text-moss">Services</Navbar.Link>
+          <Navbar.Link href="#faq" className="text-platinum text-2xl hover:text-moss">FAQ</Navbar.Link>
+          <Navbar.Link href="#schedule" className="text-platinum text-2xl hover:text-moss">Schedule</Navbar.Link>
+          <Navbar.Link href="#about" className="text-platinum text-2xl hover:text-moss">About</Navbar.Link>
         </Navbar.Collapse>
     </Navbar>
   );

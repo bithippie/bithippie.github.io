@@ -16,7 +16,7 @@ export default function Home() {
         <Navbar />
 
         <Hero />
-
+        
         <section id="we-work-together" className="bg-platinum">
           <div className="container py-8 flex flex-col items-center">
             <h2 className="text-4xl text-moss w-full text-center">How we work together</h2>
@@ -80,31 +80,33 @@ export default function Home() {
 
         <section id="testimonials" className="bg-moss">
           <div className="container py-8">
-            <h2 className="text-5xl text-white text-center mt-8 mb-16">Why people love working with BitHippie.</h2>
+            <h2 className="text-5xl text-white text-center mt-4 mb-8">Why people love working with BitHippie.</h2>
             <Testimonials />
           </div>
         </section>
 
         <section id="schedule" className="bg-platinum">
-          <div className="container ">
-            <div className="flex grow">
-              <h2 className="text-4xl text-moss mt-3 mb-8">Schedule My Free Consultation</h2>
-              <p className='text-xl mb-8'>
-                We love speaking with entrepreneurs, founders, and good humans who strive to leave the world better than they found it.
-              </p>
-              <p className='text-xl mb-8'>
-                If you’re ready to take action then do schedule a time to speak with us.
-              </p>
-              <p className='text-xl'>
-                In as little as 1 Month you and your customers will see the manifestation of your idea. You’ll collect valuable data from your users, and you’ll move forward with an informed opinion about how best to proceed!
-              </p>
+          <div className="container p-8">
+            <div className="flex flex-col lg:flex-row">
+              <div className="flex flex-col grow w-full">
+                <h2 className="text-4xl text-moss mt-3 mb-8">Schedule My Free Consultation</h2>
+                <p className='text-xl mb-8'>
+                  We love speaking with entrepreneurs, founders, and good humans who strive to leave the world better than they found it.
+                </p>
+                <p className='text-xl mb-8'>
+                  If you’re ready to take action then do schedule a time to speak with us.
+                </p>
+                <p className='text-xl'>
+                  In as little as 1 Month you and your customers will see the manifestation of your idea. You’ll collect valuable data from your users, and you’ll move forward with an informed opinion about how best to proceed!
+                </p>
 
-              <FAQ />
-            </div>
-            <div className="flex">
-              <iframe className="w-[599px] h-[1130px] self-center"
-                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true">
-              </iframe>
+                <FAQ />
+              </div>
+              <div className="flex">
+                <iframe className="w-[599px] h-[1170px]"
+                  src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true">
+                </iframe>
+              </div>
             </div>
           </div>
         </section>
@@ -130,9 +132,11 @@ export default function Home() {
               <p className='mb-6'>
                 If you would like to learn more about the community, please reach out on LinkedIn and we can see if you’d be a good fit.
               </p>
-              <button className="bg-transparent text-moss border border-moss rounded py-4 px-32 hover:text-white hover:bg-moss hover:border-moss-800">
-                Learn More
-              </button>
+              <a href="https://www.linkedin.com/in/bithippie" target="_blank">
+                <button className="bg-transparent text-moss border border-moss rounded py-4 px-32 hover:text-white hover:bg-moss hover:border-moss-800">
+                  Learn More
+                </button>
+              </a>
             </div>
           </div>
         </section>
@@ -146,7 +150,7 @@ export default function Home() {
           <div className="col-span-5">
             <h3 className="text-4xl text-moss">Join the Socials!</h3>
             <p className="text-white">
-            Check out the <span className="text-old-gold">Brainwave Exchange Podcast</span> where we talk to good humans making their mark on the world.
+            Check out the <a href="https://www.youtube.com/@BrainwaveExchange" target="_blank"><span className="text-old-gold">Brainwave Exchange Podcast</span></a> where we talk to good humans making their mark on the world.
             </p>
           </div>
         </div>
