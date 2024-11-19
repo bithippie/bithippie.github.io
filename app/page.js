@@ -1,13 +1,12 @@
 import { Avatar, Blockquote } from "flowbite-react";
 
-import Navbar from '@/components/navbar';
-import ScheduleConsultation from '@/components/schedule_consultation';
-import EngagementAccordion from '@/components/engagement_accordion';
-import FAQ from '@/components/faq';
-import Testimonials from '@/components/testimonials';
-import Reveal from "@/components/reveal";
+import EngagementAccordion from "@/components/engagement_accordion";
+import FAQ from "@/components/faq";
 import Hero from "@/components/hero";
-
+import Navbar from "@/components/navbar";
+import Reveal from "@/components/reveal";
+import ScheduleConsultation from "@/components/schedule_consultation";
+import Testimonials from "@/components/testimonials";
 
 export default function Home() {
   return (
