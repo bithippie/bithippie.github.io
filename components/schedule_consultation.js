@@ -2,7 +2,7 @@
 
 import { Button } from "flowbite-react";
 
-export default function Component() {
+export default function ScheduleConsultation() {
   return (
     <a href="/#schedule">
       <Button className="bg-moss text-white" size="xl">
