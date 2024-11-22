@@ -35,11 +35,11 @@ export default function Home() {
         <Divider backgroundColor="white" curvePosition="start" />
 
         <About backgroundColor="white" />
-
-        <Divider backgroundColor="dark-grey" curvePosition="end" />
       </main>
 
-      <Footer backgroundColor="dark-grey" />
+      <Divider backgroundColor="dark-grey" curvePosition="end" />
+
+      <Footer />
     </div>
   );
 }

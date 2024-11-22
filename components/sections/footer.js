@@ -1,6 +1,6 @@
-export default function Footer({ backgroundColor }) {
+export default function Footer() {
   return (
-    <footer className={`bg-${backgroundColor} pb-14`}>
+    <footer className="bg-dark-grey pb-14">
       <div className="container grid grid-cols-1 md:grid-cols-12 gap-8 p-8">
         <div className="col-span-7">
           <h3 className="text-4xl text-moss">BitHippie LLC</h3>
