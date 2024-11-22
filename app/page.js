@@ -13,7 +13,7 @@ export default function Home() {
       <main>
         <Navbar />
 
-        <Hero backgroundColor="hero" />
+        <Hero />
 
         {/* Divider */}
         <div className="relative bg-platinum">
