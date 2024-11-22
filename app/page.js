@@ -1,3 +1,4 @@
+import Divider from "@/components/divider";
 import Navbar from "@/components/navbar";
 import About from "@/components/sections/about";
 import Footer from "@/components/sections/footer";
@@ -15,47 +16,30 @@ export default function Home() {
 
         <Hero />
 
-        {/* Divider */}
-        <div className="relative bg-platinum">
-          <div className="relative w-full h-[80px] bg-platinum start-curve-divider"></div>
-        </div>
+        <Divider backgroundColor="platinum" curvePosition="start" />
 
         <WeWorkTogether backgroundColor="platinum" />
 
-        {/* Divider */}
-        <div className="relative bg-white">
-          <div className="relative w-full h-[80px] bg-white end-curve-divider"></div>
-        </div>
+        <Divider backgroundColor="white" curvePosition="end" />
 
         <HowWeWork backgroundColor="white" />
 
-        {/* Divider */}
-        <div className="relative bg-moss">
-          <div className="relative w-full h-[80px] bg-moss start-curve-divider"></div>
-        </div>
+        <Divider backgroundColor="moss" curvePosition="start" />
 
         <Testimonials backgroundColor="moss" />
 
-        {/* Divider */}
-        <div className="relative bg-platinum">
-          <div className="relative w-full h-[80px] bg-platinum end-curve-divider"></div>
-        </div>
+        <Divider backgroundColor="platinum" curvePosition="end" />
 
         <Schedule backgroundColor="platinum" />
 
-        {/* Divider */}
-        <div className="relative bg-white">
-          <div className="relative w-full h-[80px] bg-white start-curve-divider"></div>
-        </div>
+        <Divider backgroundColor="white" curvePosition="start" />
 
         <About backgroundColor="white" />
-        {/* Divider */}
-        <div className="relative bg-dark-grey">
-          <div className="relative w-full h-[80px] bg-dark-grey end-curve-divider"></div>
-        </div>
 
-        <Footer backgroundColor="dark-grey" />
+        <Divider backgroundColor="dark-grey" curvePosition="end" />
       </main>
+
+      <Footer backgroundColor="dark-grey" />
     </div>
   );
 }
