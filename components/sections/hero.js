@@ -3,7 +3,7 @@ import ScheduleConsultation from "@/components/schedule_consultation";
 
 export default function Hero() {
   return (
-    <section id="hero" className={`h-screen bg-hero bg-center bg-cover flex`}>
+    <section id="hero" className={`h-[48rem] bg-hero bg-center bg-cover flex`}>
       <div className="container flex flex-col items-center self-center text-center">
         <Reveal id="revealME">
           <h1 className="text-white text-5xl mt-16 md:text-6xl">
