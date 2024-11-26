@@ -2,7 +2,10 @@ import FAQ from "@/components/faq";
 
 export default function Schedule({ backgroundColor }) {
   return (
-    <section id="schedule" className={`bg-${backgroundColor} mb-[-2px]`}>
+    <section
+      id="schedule"
+      className={`bg-${backgroundColor} pb-12 md:pb-0 mb-[-2px]`}
+    >
       <div className="container p-8">
         <div className="flex flex-col lg:flex-row">
           <div className="flex flex-col grow w-full">

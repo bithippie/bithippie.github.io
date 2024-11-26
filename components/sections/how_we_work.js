@@ -7,7 +7,7 @@ export default function HowWeWork({ backgroundColor }) {
   return (
     <section
       id="how-we-work"
-      className={`bg-${backgroundColor} h-[40rem] mb-[-1px]`}
+      className={`bg-${backgroundColor} pb-16 mb-[-1px] lg:pt-20 lg:pb-24 lg:mb-[-2px] xl:mb-[-4px] `}
     >
       <div className="container grid grid-cols-2 gap-8 py-8">
         <EngagementAccordion />

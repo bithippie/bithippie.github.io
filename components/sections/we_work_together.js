@@ -5,7 +5,7 @@ export default function WeWorkTogether({ backgroundColor }) {
   return (
     <section
       id="we-work-together"
-      className={`bg-${backgroundColor} pb-[15rem] mb-[-2px]`}
+      className={`bg-${backgroundColor} pb-[7rem] mb-[-2px]`}
     >
       <div className="container py-8 flex flex-col items-center">
         <h2 className="text-4xl text-moss w-full text-center">
