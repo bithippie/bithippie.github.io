@@ -16,7 +16,11 @@ export default function Home() {
 
         <Hero />
 
-        <Divider backgroundColor="platinum" curvePosition="start" />
+        <div className={`relative bg-platinum`}>
+          <div
+            className={`relative w-full h-10 sm:h-20 bg-platinum start-curve-divider`}
+          ></div>
+        </div>
 
         <WeWorkTogether backgroundColor="platinum" />
 
