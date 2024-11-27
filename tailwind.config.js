@@ -8,33 +8,31 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    flowbite.content()
+    flowbite.content(),
   ],
   theme: {
     container: {
-      center: true
+      center: true,
     },
     colors: {
-      "moss": "#8E9F5D",
+      moss: "#8E9F5D",
       "old-gold": "#D3A946",
       "dark-grey": "#393B34",
-      "platinum": "#E5E3DD",
-      "white": "#ffffff",
+      platinum: "#E5E3DD",
+      white: "#ffffff",
     },
     extend: {
       backgroundImage: {
-        "hero": "linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/sustainability.jpg')"
+        hero: "linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/sustainability.jpg')",
       },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        'sans': ['Marcellus', ...defaultTheme.fontFamily.sans],
+        sans: ["Marcellus", ...defaultTheme.fontFamily.sans],
       },
     },
   },
-  plugins: [
-    flowbite.plugin()
-  ],
+  plugins: [flowbite.plugin()],
 };
