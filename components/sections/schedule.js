@@ -1,4 +1,7 @@
+"use client";
+
 import FAQ from "@/components/faq";
+import LineDraw from "@/components/line_draw";
 
 export default function Schedule({ backgroundColor }) {
   return (
@@ -17,8 +20,12 @@ export default function Schedule({ backgroundColor }) {
               strive to leave the world better than they found it.
             </p>
             <p className="text-xl mb-8">
-              If you’re ready to take action then do schedule a time to speak
-              with us.
+              If you’re ready to{" "}
+              <span className="relative inline-block">
+                <span>take action</span>
+                <LineDraw hasScroll={false} />
+              </span>{" "}
+              then do schedule a time to speak with us.
             </p>
             <p className="text-xl">
               In as little as 1 Month you and your customers will see the
