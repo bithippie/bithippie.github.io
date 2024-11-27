@@ -2,7 +2,7 @@ export default function About({ backgroundColor }) {
   return (
     <section
       id="about"
-      className={`bg-${backgroundColor} pb-16 sm:pb-[14rem] sm:mb-[-2px] md:pb-[16rem] md:mb-[-2px] lg:pb-[18rem] lg:mb-[-2px] xl:mb-[-2px] 2xl:mb-[-4px]`}
+      className={`bg-${backgroundColor} pb-16 sm:pb-[14rem] sm:mb-[-2px] md:pb-[16rem] md:mb-[-2px] lg:pb-[18rem] lg:mb-[-3px] xl:mb-[-3px] 2xl:mb-[-4px]`}
     >
       <div className="container grid md:grid-cols-12 gap-8 p-8">
         <div className="col-span-12 md:col-span-7">
