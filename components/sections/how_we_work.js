@@ -9,10 +9,10 @@ export default function HowWeWork({ backgroundColor }) {
       id="how-we-work"
       className={`bg-${backgroundColor} pb-16 mb-[-1px] lg:pt-20 lg:pb-24 lg:mb-[-2px] xl:mb-[-4px] `}
     >
-      <div className="container grid grid-cols-2 gap-8 py-8">
+      <div className="container grid sm:grid-cols-2 gap-8 py-8">
         <EngagementAccordion />
 
-        <div>
+        <div className="container">
           <h2 className="text-5xl mb-8">A tried and true process</h2>
           <h3 className="text-3xl">
             Let our clients will be the first to tell you…
