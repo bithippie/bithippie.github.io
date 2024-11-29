@@ -13,6 +13,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      padding: "1.25rem",
     },
     colors: {
       moss: "#8E9F5D",
