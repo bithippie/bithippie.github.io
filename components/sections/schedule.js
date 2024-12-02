@@ -7,7 +7,7 @@ export default function Schedule({ backgroundColor }) {
   return (
     <section
       id="schedule"
-      className={`bg-${backgroundColor} pb-[8rem] md:pb-0 lg:pb-[9rem] 2xl:pb-[7rem] mb-[-2px]`}
+      className={`bg-${backgroundColor} pb-[8rem] md:pb-0 lg:pb-[9rem] 2xl:pb-[7rem]`}
     >
       <div className="container p-8">
         <div className="flex flex-col lg:flex-row">
