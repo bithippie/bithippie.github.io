@@ -2,11 +2,11 @@ export default function About({ backgroundColor }) {
   return (
     <section
       id="about"
-      className={`bg-${backgroundColor} pb-16 sm:pb-[14rem] sm:mb-[-2px] md:pb-[16rem] md:mb-[-2px] lg:pb-[18rem] lg:mb-[-3px] xl:mb-[-3px] 2xl:mb-[-4px]`}
+      className={`bg-${backgroundColor} pb-16 sm:pb-[14rem] md:pb-[16rem] lg:pb-[18rem] mb-[-3px] sm:mb-[-2px] lg:mb-[-2px] 2xl:mb-[-1px]`}
     >
       <div className="container grid md:grid-cols-12 gap-8 p-8">
         <div className="col-span-12 md:col-span-7">
-          <img className="md:pr-12" src="/globe.png" />
+          <img className="w-full h-auto md:pr-12" src="/globe.png" />
         </div>
         <div className="col-span-12 md:col-span-5 text-justify flex flex-col items-center">
           <h2 className="text-3xl sm:text-5xl text-moss mb-12">
