@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="bg-dark-grey pb-14 pt-8">
-      <div className="container grid grid-cols-1 md:grid-cols-12 gap-8 p-8">
+      <div className="container grid grid-cols-1 md:grid-cols-12 gap-8 p-0">
         <div className="col-span-7">
           <h3 className="text-4xl text-moss">BitHippie LLC</h3>
           <h4 className="text-xl text-white">
