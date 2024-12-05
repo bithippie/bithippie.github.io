@@ -4,7 +4,7 @@ import { Navbar } from "flowbite-react";
 
 export default function NavBar() {
   return (
-    <Navbar className="absolute bg-transparent w-full flex">
+    <Navbar className="absolute bg-transparent w-full flex z-50">
       <Navbar.Brand href="/">
         <img src="/logo.png" className="h-20" alt="BitHippie Logo" />
       </Navbar.Brand>
