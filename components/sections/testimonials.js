@@ -5,7 +5,7 @@ export default function Testimonials({ backgroundColor }) {
   return (
     <section
       id="testimonials"
-      className={`bg-${backgroundColor} pb-24 mb-[-2px]`}
+      className={`relative bg-${backgroundColor} pt-12 pb-24`}
     >
       <div className="container py-8">
         <h2 className="text-5xl text-white text-center mt-4 mb-8">

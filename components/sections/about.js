@@ -4,7 +4,7 @@ export default function About({ backgroundColor }) {
   return (
     <section
       id="about"
-      className={`bg-${backgroundColor} pb-16 sm:pb-[14rem] md:pb-[16rem] lg:pb-[18rem] mb-[-3px] sm:mb-[-2px] lg:mb-[-2px] 2xl:mb-[-1px]`}
+      className={`relative bg-${backgroundColor} pt-10 pb-20 md:pb-28`}
     >
       <div className="container grid md:grid-cols-12 gap-8 p-8">
         <div className="col-span-12 md:col-span-7">

@@ -7,10 +7,13 @@ import ScheduleConsultation from "@/components/schedule_consultation";
 
 export default function Hero() {
   return (
-    <section id="hero" className="h-[48rem] bg-hero bg-center bg-cover flex">
+    <section
+      id="hero"
+      className="h-screen py-16 md:py-24 bg-hero bg-center bg-cover flex relative"
+    >
       <div className="container flex flex-col items-center self-center text-center">
         <Reveal id="revealME">
-          <h1 className="text-white text-5xl mt-16 md:text-6xl">
+          <h1 className="text-white text-5xl md:text-6xl">
             Helping good humans{" "}
             <span className="relative inline-block">
               <span className="text-moss">sustainably</span>
