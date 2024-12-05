@@ -7,10 +7,10 @@ export default function About({ backgroundColor }) {
       className={`relative bg-${backgroundColor} pt-10 pb-20 md:pb-28`}
     >
       <div className="container grid md:grid-cols-12 gap-8 p-8">
-        <div className="col-span-12 md:col-span-7">
+        <div className="md:col-span-7">
           <img className="w-full h-auto md:pr-12" src="/globe.png" />
         </div>
-        <div className="col-span-12 md:col-span-5 text-justify flex flex-col items-center">
+        <div className="md:col-span-5 text-justify flex flex-col items-center">
           <h2 className="text-3xl sm:text-5xl text-moss mb-12">
             About Our Company
           </h2>
