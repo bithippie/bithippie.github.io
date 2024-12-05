@@ -1,3 +1,4 @@
+import Divider from "@/components/divider";
 import Reveal from "@/components/reveal";
 import ScheduleConsultation from "@/components/schedule_consultation";
 
@@ -56,6 +57,7 @@ export default function WeWorkTogether({ backgroundColor }) {
         </div>
         <ScheduleConsultation />
       </div>
+      <Divider backgroundColor="white" curvePosition="end" />
     </section>
   );
 }

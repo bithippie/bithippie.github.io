@@ -1,3 +1,5 @@
+import Divider from "@/components/divider";
+
 export default function About({ backgroundColor }) {
   return (
     <section
@@ -44,6 +46,7 @@ export default function About({ backgroundColor }) {
           </a>
         </div>
       </div>
+      <Divider backgroundColor="dark-grey" curvePosition="end" />
     </section>
   );
 }

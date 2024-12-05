@@ -1,5 +1,6 @@
 import { Avatar, Blockquote } from "flowbite-react";
 
+import Divider from "@/components/divider";
 import EngagementAccordion from "@/components/engagement_accordion";
 import ScheduleConsultation from "@/components/schedule_consultation";
 
@@ -41,6 +42,8 @@ export default function HowWeWork({ backgroundColor }) {
           <ScheduleConsultation />
         </div>
       </div>
+
+      <Divider backgroundColor="moss" curvePosition="start" />
     </section>
   );
 }

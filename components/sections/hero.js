@@ -1,5 +1,6 @@
 "use client";
 
+import Divider from "@/components/divider";
 import LineDraw from "@/components/line_draw";
 import Reveal from "@/components/reveal";
 import ScheduleConsultation from "@/components/schedule_consultation";
@@ -29,6 +30,7 @@ export default function Hero() {
           </div>
         </Reveal>
       </div>
+      <Divider curvePosition="start" backgroundColor="platinum" />
     </section>
   );
 }

@@ -1,3 +1,4 @@
+import Divider from "@/components/divider";
 import TestimonialsCarousel from "@/components/testimonials_carousel";
 
 export default function Testimonials({ backgroundColor }) {
@@ -12,6 +13,7 @@ export default function Testimonials({ backgroundColor }) {
         </h2>
         <TestimonialsCarousel />
       </div>
+      <Divider backgroundColor="platinum" curvePosition="end" />
     </section>
   );
 }

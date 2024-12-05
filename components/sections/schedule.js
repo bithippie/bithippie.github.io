@@ -1,5 +1,6 @@
 "use client";
 
+import Divider from "@/components/divider";
 import FAQ from "@/components/faq";
 import LineDraw from "@/components/line_draw";
 
@@ -44,6 +45,7 @@ export default function Schedule({ backgroundColor }) {
           </div>
         </div>
       </div>
+      <Divider backgroundColor="white" curvePosition="start" />
     </section>
   );
 }
