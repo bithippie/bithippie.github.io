@@ -8,7 +8,7 @@ export default function WeWorkTogether({ backgroundColor }) {
       id="we-work-together"
       className={`relative bg-${backgroundColor} pt-14 pb-28`}
     >
-      <div className="container py-8 flex flex-col items-center">
+      <div className="container w-full py-8 flex flex-col">
         <h2 className="text-4xl text-moss w-full text-center">
           How we work together
         </h2>
@@ -55,7 +55,9 @@ export default function WeWorkTogether({ backgroundColor }) {
             </div>
           </Reveal>
         </div>
-        <ScheduleConsultation />
+        <div className="flex flex-col items-center">
+          <ScheduleConsultation />
+        </div>
       </div>
       <Divider backgroundColor="white" curvePosition="end" />
     </section>
