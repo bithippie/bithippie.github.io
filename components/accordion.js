@@ -7,7 +7,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 export function Accordion({ accordionItems }) {
   return (
-    <div className="h-full w-full flex items-center justify-center">
+    <div className="h-full w-full flex items-center">
       <div className="w-full max-w-2xl divide-y divide-moss rounded-xl bg-white shadow-lg">
         {accordionItems.map((item) => (
           <Disclosure key={item.key} as="div" className="p-8">
