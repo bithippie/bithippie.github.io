@@ -2,38 +2,6 @@
 
 import { Accordion } from "@/components/accordion";
 
-export const styles = {
-  root: {
-    base: "border-none",
-    flush: {
-      off: "",
-      on: "",
-    },
-  },
-  content: {
-    base: "border-b-2 border-moss text-gray",
-  },
-  title: {
-    arrow: {
-      base: "h-6 w-6 shrink-0",
-      open: {
-        off: "",
-        on: "rotate-180",
-      },
-    },
-    base: "flex w-full justify-between py-5 text-left text-lg text-dark-grey cursor-pointer border-y-2 translate-y-[-2px]",
-    flush: {
-      off: "border-transparent hover:border-moss",
-      on: "bg-transparent",
-    },
-    heading: "",
-    open: {
-      off: "",
-      on: "border-moss border-b-transparent hover:border-b-transparent",
-    },
-  },
-};
-
 export default function FAQ() {
   const accordionItems = [
     {
