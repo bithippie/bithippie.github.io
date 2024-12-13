@@ -36,4 +36,11 @@ module.exports = {
     },
   },
   plugins: [flowbite.plugin()],
+  safelist: [
+    "bg-platinum",
+    "bg-white",
+    "bg-moss",
+    "start-curve-divider",
+    "end-curve-divider",
+  ],
 };
