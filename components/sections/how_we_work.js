@@ -8,38 +8,54 @@ export default function HowWeWork({ backgroundColor }) {
   return (
     <section
       id="how-we-work"
-      className={`relative bg-${backgroundColor} pt-10 pb-20`}
+      className={`relative bg-${backgroundColor} pt-16 pb-24`}
     >
-      <div className="container grid sm:grid-cols-2 gap-8 py-8">
-        <EngagementAccordion />
+      <div className="container grid grid-cols-1 sm:grid-cols-2 gap-8 py-8">
+        {/* Heading for mobile */}
+        <div className="sm:hidden mb-8 text-center">
+          <h2 className="text-5xl font-bold">A tried and true process</h2>
+        </div>
 
-        <div className="container">
-          <h2 className="text-5xl mb-8">A tried and true process</h2>
-          <h3 className="text-3xl">
-            Let our clients will be the first to tell you…
+        {/* Accordion Section */}
+        <div className="sm:col-span-1">
+          <EngagementAccordion />
+        </div>
+
+        {/* Content Section */}
+        <div className="sm:col-span-1 space-y-8">
+          {/* Heading for larger screens */}
+          <h2 className="text-5xl font-bold hidden sm:block">
+            A tried and true process
+          </h2>
+
+          <h3 className="text-3xl font-semibold text-center sm:text-left">
+            Let our clients be the first to tell you…
           </h3>
 
-          <Blockquote className="mt-8">
+          {/* Quote Section */}
+          <Blockquote className="my-6 bg-gray-50 rounded-lg p-6 shadow-md">
             <Avatar
-              className="float-right"
+              className="float-right mb-4 sm:mb-0"
               rounded
               size="lg"
               img="/alex.jpeg"
               alt="profile picture"
             />
-            “We were able to go from initial product idea to a demo with
-            stakeholders in just a couple of weeks. This enabled rapid
-            iteration, and minimized the chances of building something that
-            nobody would want. ”
+            <p className="text-lg sm:text-xl text-gray-700 font-light leading-relaxed">
+              “We were able to go from initial product idea to a demo with
+              stakeholders in just a couple of weeks. This enabled rapid
+              iteration, and minimized the chances of building something that
+              nobody would want.”
+            </p>
+            <figcaption className="mt-4 text-center sm:text-left text-gray-600 text-sm sm:text-base italic">
+              — Alex Greenfield // Chief Scientist & Founder // Fresnel.bio
+            </figcaption>
           </Blockquote>
 
-          <figcaption className="my-6 flex items-center space-x-3">
-            <cite>
-              — Alex Greenfield // Chief Scientist & Founder // Fresnel.bio
-            </cite>
-          </figcaption>
-
-          <ScheduleConsultation />
+          {/* Schedule Consultation Button */}
+          <div className="flex justify-center sm:justify-start">
+            <ScheduleConsultation />
+          </div>
         </div>
       </div>
 
