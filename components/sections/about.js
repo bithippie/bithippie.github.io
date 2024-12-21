@@ -1,4 +1,8 @@
+"use client";
+
 import Divider from "@/components/divider";
+import { motion } from 'framer-motion';
+import RevealOnScroll from "@/components/reveal";
 
 export default function About({ backgroundColor }) {
   return (
@@ -8,10 +12,12 @@ export default function About({ backgroundColor }) {
     >
       <div className="container grid md:grid-cols-12 gap-8 p-8">
         <div className="md:col-span-7">
-          <img className="w-full h-auto md:pr-12" src="/globe.png" />
+          <RevealOnScroll>
+            <img className="w-full h-auto md:pr-12" src="/globe.png" />
+          </RevealOnScroll>
         </div>
         <div className="md:col-span-5 text-justify flex flex-col items-center">
-          <h2 className="text-3xl sm:text-5xl text-moss mb-12">
+          <h2 className="text-3xl sm:text-5xl md:text-2xl text-moss mb-12">
             About Our Company
           </h2>
           <p className="mb-6">
@@ -40,9 +46,21 @@ export default function About({ backgroundColor }) {
             out on LinkedIn and we can see if you’d be a good fit.
           </p>
           <a href="https://www.linkedin.com/in/bithippie" target="_blank">
-            <button className="bg-transparent text-moss border border-moss rounded py-4 px-32 hover:text-white hover:bg-moss hover:border-moss-800">
+            <motion.button
+              className="
+                bg-transparent 
+                text-moss border 
+                border-moss 
+                px-8 py-4 
+                rounded 
+                shadow-lg 
+                hover:shadow-xl
+              "
+              whileHover={{ scale: 1.025 }}
+              whileTap={{ scale: 0.96 }}
+            >
               Learn More
-            </button>
+            </motion.button>
           </a>
         </div>
       </div>

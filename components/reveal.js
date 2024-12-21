@@ -1,34 +1,15 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { motion } from 'framer-motion';
 
 export default function RevealOnScroll({ children }) {
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef(null);
-
-  useEffect(() => {
-    const scrollObserver = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true);
-        scrollObserver.unobserve(entry.target);
-      }
-    });
-
-    scrollObserver.observe(ref.current);
-
-    return () => {
-      if (ref.current) {
-        scrollObserver.unobserve(ref.current);
-      }
-    };
-  }, []);
-
-  const classes = `transition-all ease-in 
-        ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`;
-
   return (
-    <div ref={ref} className={classes}>
+    <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.2, delay: 0.2 }}
+      >
       {children}
-    </div>
+    </motion.div>
   );
 }

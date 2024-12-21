@@ -1,14 +1,18 @@
 "use client";
 
-import { Button } from "flowbite-react";
+import { motion } from 'framer-motion'
 
 export default function ScheduleConsultation() {
   return (
     <a href="/#schedule">
-      <Button className="bg-moss text-white" size="xl">
+      <motion.button
+        className="bg-moss text-white text-xl px-8 py-4 rounded-lg shadow-lg hover:shadow-xl"
+        whileHover={{ scale: 1.025 }}
+        whileTap={{ scale: 0.95 }}
+      >
         <span className="hidden sm:block">Schedule My Free Consultation</span>
         <span className="sm:hidden">Schedule A Call</span>
-      </Button>
+      </motion.button>
     </a>
   );
 }

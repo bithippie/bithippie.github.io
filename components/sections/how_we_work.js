@@ -35,7 +35,7 @@ export default function HowWeWork({ backgroundColor }) {
           {/* Quote Section */}
           <Blockquote className="my-6 bg-gray-50 rounded-lg p-6 shadow-md">
             <Avatar
-              className="float-right mb-4 sm:mb-0"
+              className="float-right mb-4 mx-4 sm:mb-0"
               rounded
               size="lg"
               img="/alex.jpeg"
