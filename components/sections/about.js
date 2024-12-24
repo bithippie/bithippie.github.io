@@ -1,7 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 import Divider from "@/components/divider";
-import { motion } from 'framer-motion';
 import RevealOnScroll from "@/components/reveal";
 
 export default function About({ backgroundColor }) {
@@ -10,7 +11,7 @@ export default function About({ backgroundColor }) {
       id="about"
       className={`relative bg-${backgroundColor} pt-10 pb-20 md:pb-28`}
     >
-      <div className="container grid md:grid-cols-12 gap-8 p-8">
+      <div className="container grid md:grid-cols-12 gap-8 p-8 max-w-screen-xl">
         <div className="md:col-span-7">
           <RevealOnScroll>
             <img className="w-full h-auto md:pr-12" src="/globe.png" />

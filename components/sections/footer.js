@@ -3,7 +3,7 @@ import { FaApple, FaLinkedin, FaSpotify, FaYoutube } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="bg-dark-grey py-16">
-      <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 px-4 text-center md:text-left">
+      <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 px-4 text-center md:text-left max-w-screen-xl">
         {/* Left section with company name and tagline */}
         <div className="flex flex-col space-y-4 items-center md:items-start">
           <h3 className="text-3xl sm:text-4xl text-moss font-extrabold px-2 tracking-wide">

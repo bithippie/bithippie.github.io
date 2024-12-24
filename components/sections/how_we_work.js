@@ -10,7 +10,7 @@ export default function HowWeWork({ backgroundColor }) {
       id="how-we-work"
       className={`relative bg-${backgroundColor} pt-16 pb-24`}
     >
-      <div className="container grid grid-cols-1 sm:grid-cols-2 gap-8 py-8">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 gap-8 py-8 max-w-screen-xl">
         {/* Heading for mobile */}
         <div className="sm:hidden mb-8 text-center">
           <h2 className="text-5xl font-bold">A tried and true process</h2>
