@@ -11,7 +11,7 @@ export default function NavBar() {
       <Navbar.Toggle />
       <Navbar.Collapse className="bg-gradient-to-b from-transparent to-bg-dark-grey z-10 backdrop-blur-md opacity-95">
         <Navbar.Link
-          href="#we-work-together"
+          href="#together-we-go-far"
           className="text-platinum text-2xl hover:text-moss"
         >
           Services
