@@ -6,7 +6,7 @@ export default function LineDraw({ hasScroll }) {
       const svgSustainably = document.querySelector(".line-draw");
       const path = svgSustainably.querySelector(".path-draw");
       const triggerAnimation = () => {
-        path.style.animation = "draw 0.8s ease-out forwards";
+        path.style.animation = "draw 1.5s ease-out forwards";
       };
       const isLineVisible = (svg) => {
         const rect = svg.getBoundingClientRect();
@@ -36,7 +36,7 @@ export default function LineDraw({ hasScroll }) {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        style={hasScroll ? {} : { animation: "draw 0.8s ease-out forwards" }}
+        style={hasScroll ? {} : { animation: "draw 1.5s ease-out forwards" }}
         className="path-draw"
         d="M 0,76.23 c 36.5,-2.1174999999999926 73,-6.545000000000002 146,-8.469999999999999 c 73,-1.9249999999999972 110.95999999999998,0 146,0.769999999999996 c 7.007999999999981,0.15399999999999636 -5.548000000000002,2.194500000000005 -5.840000000000032,2.3100000000000023"
         fill="transparent"
