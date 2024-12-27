@@ -8,10 +8,10 @@ export default function Schedule({ backgroundColor }) {
   return (
     <section
       id="schedule"
-      className={`relative bg-${backgroundColor} pt-5 pb-10 md:pt-10 md:pb-0 lg:pb-20 xl:pb-10 max-w-screen-xl`}
+      className={`relative bg-${backgroundColor} pt-[7rem] pb-6 md:py-10 lg:pt-[8rem] lg:pb-14`}
     >
-      <div className="container p-8">
-        <div className="flex flex-col lg:flex-row">
+      <div className="container max-w-screen-xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-8">
           <div className="flex flex-col grow w-full">
             <h2 className="text-4xl text-moss pt-3 pb-8">
               Schedule My Free Consultation
@@ -37,10 +37,12 @@ export default function Schedule({ backgroundColor }) {
 
             <FAQ />
           </div>
+
           <div className="flex">
             <iframe
-              className="w-[599px] h-[1170px]"
+              className="w-[599px] min-h-[1280px]"
               src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true"
+              title="Schedule Appointment"
             ></iframe>
           </div>
         </div>
