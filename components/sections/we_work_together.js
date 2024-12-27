@@ -10,7 +10,7 @@ export default function WeWorkTogether({ backgroundColor }) {
       id="together-we-go-far"
       className={`relative bg-${backgroundColor} pt-14 pb-28`}
     >
-      <div className="container w-full py-8 flex flex-col max-w-screen-xl">
+      <div className="container py-8 flex flex-col max-w-screen-xl">
         <h2 className="text-6xl text-dark-grey w-full text-center">
           Together We Go Far
         </h2>
