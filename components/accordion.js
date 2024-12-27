@@ -1,10 +1,12 @@
+import { Fragment, useState } from "react";
+
+import { AnimatePresence, easeOut, motion } from "framer-motion";
+
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
-import { AnimatePresence, easeOut, motion } from 'framer-motion'
-import { Fragment } from 'react'
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 export function Accordion({ accordionItems }) {
