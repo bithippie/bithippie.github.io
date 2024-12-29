@@ -56,11 +56,11 @@ export default function WeWorkTogether({ backgroundColor }) {
                   today with a growth plan for how to get where you&apos;re
                   going.
                 </p>
-                <div className="flex flex-wrap space-x-8">
+                <div className="hidden md:flex items-center justify-between flex-wrap space-x-8">
                   <img
                     src="/icons/aws.png"
                     alt="AWS Icon"
-                    className="h-10 my-4"
+                    className="h-8 my-4"
                   />
                   <img
                     src="/icons/gcp.png"
