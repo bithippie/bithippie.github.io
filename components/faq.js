@@ -14,12 +14,15 @@ export default function FAQ() {
             to work within everyone's scope and budget.
           </p>
           <p className="my-4">
-            Our engagements are structured as a base contract, which includes a purpose-built 
-            tech team for a maximum number of hours per month.  
-            If more time is ever needed, additional time can be added at an hourly rate. 
+            Our engagements are structured as a base contract, which includes a
+            purpose-built tech team for a maximum number of hours per month. If
+            more time is ever needed, additional time can be added at an hourly
+            rate.
           </p>
           <p className="my-4">
-            Depending on team composition, complexity, and timeline - our typical small-to-medium projects range between $12,000 - $54,000 USD / month.
+            Depending on team composition, complexity, and timeline - our
+            typical small-to-medium projects range between $12,000 - $54,000 USD
+            / month.
           </p>
           <p className="my-4">
             We do offer discounted rates for engagements that are for 3 or more
@@ -35,16 +38,17 @@ export default function FAQ() {
         <>
           <p className="my-4">
             Our Sustainable Engineering model is designed to give you access to
-            Software, Data, Cloud Engineers, and Architects for as long as you need.
-            This allows you to keep your headcount and operating expenses low.
+            Software, Data, Cloud Engineers, and Architects for as long as you
+            need. This allows you to keep your headcount and operating expenses
+            low.
           </p>
           <p className="my-4">
-            We scope work into Milestones, each consisting of 2 Sprints, 
+            We scope work into Milestones, each consisting of 2 Sprints,
             totaling 20 business days.
           </p>
           <p className="my-4">
-            At the beginning of every Milestone all key stakeholders align on the
-            main objectives.
+            At the beginning of every Milestone all key stakeholders align on
+            the main objectives.
           </p>
           <p className="my-4">
             The sprints serve as checkpoints within the Milestone to demonstrate
@@ -52,7 +56,7 @@ export default function FAQ() {
             circumstances change.
           </p>
           <p className="my-4">
-            We offer both ad hoc as well as recurring engagement models. 
+            We offer both ad hoc as well as recurring engagement models.
           </p>
         </>
       ),
@@ -109,9 +113,12 @@ export default function FAQ() {
       ),
     },
   ];
+
   return (
-    <section id="faq">
-      <h3 className="text-3xl text-moss my-8 text-center lg:text-left">Frequently Asked Questions</h3>
+    <section id="faq" className="mb-16 min-h-[300px]">
+      <h3 className="text-3xl text-moss mt-4 text-center lg:text-left">
+        Frequently Asked Questions
+      </h3>
       <Accordion accordionItems={accordionItems} />
     </section>
   );
