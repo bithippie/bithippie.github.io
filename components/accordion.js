@@ -15,8 +15,9 @@ export function Accordion({ accordionItems }) {
   const toggleDisclosure = (index) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
+
   return (
-    <div className="h-full w-full flex items-center pb-8">
+    <div className="h-full w-full flex items-center">
       <div className="w-full divide-y divide-moss rounded-xl bg-white shadow-lg">
         {accordionItems.map((item, index) => {
           return (
@@ -62,6 +63,9 @@ export function Accordion({ accordionItems }) {
           );
         })}
       </div>
+
+      {/* Spacer below the accordion */}
+      <div className="h-12 sm:h-16"></div>
     </div>
   );
 }
