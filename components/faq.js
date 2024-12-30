@@ -19,7 +19,7 @@ export default function FAQ() {
             If more time is ever needed, additional time can be added at an hourly rate. 
           </p>
           <p className="my-4">
-            Depending on team composition and timeline, our typical small-to-medium projects range between $12,000 - $24,000 USD / month.
+            Depending on team composition, complexity, and timeline - our typical small-to-medium projects range between $12,000 - $54,000 USD / month.
           </p>
           <p className="my-4">
             We do offer discounted rates for engagements that are for 3 or more
@@ -35,20 +35,20 @@ export default function FAQ() {
         <>
           <p className="my-4">
             Our Sustainable Engineering model is designed to give you access to
-            Software, Data, and Cloud Engineers and Architects for as long as you need.
+            Software, Data, Cloud Engineers, and Architects for as long as you need.
             This allows you to keep your headcount and operating expenses low.
           </p>
           <p className="my-4">
-            We scope work into 1 month Milestones, consisting of (2) two-week
-            Sprints, totaling 20 business days.
+            We scope work into Milestones, each consisting of 2 Sprints, 
+            totaling 20 business days.
           </p>
           <p className="my-4">
-            At the beginning of each Milestone all key stakeholders align on the
+            At the beginning of every Milestone all key stakeholders align on the
             main objectives.
           </p>
           <p className="my-4">
             The sprints serve as checkpoints within the Milestone to demonstrate
-            progress, and provides an opportunity to realign in the event the
+            progress, and provide an opportunity to realign in the event the
             circumstances change.
           </p>
           <p className="my-4">

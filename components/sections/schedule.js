@@ -21,17 +21,17 @@ export default function Schedule({ backgroundColor }) {
               strive to leave the world better than they found it.
             </p>
             <p className="text-xl mb-8">
-              If you’re ready to{" "}
+              If you're ready to{" "}
               <span className="relative inline-block">
                 <span>take action</span>
                 <LineDraw hasScroll={false} />
               </span>{" "}
-              then do schedule a time to speak with us.
+              then schedule a time to speak with us.
             </p>
             <p className="text-xl">
-              In as little as 1 Month you and your customers will see the
-              manifestation of your idea. You’ll collect valuable data from your
-              users, and you’ll move forward with an informed opinion about how
+              In as little as one month you and your customers will see the
+              manifestation of your idea. You'll collect valuable data from your
+              users, and you'll move forward with an informed opinion about how
               best to proceed!
             </p>
 

@@ -28,7 +28,7 @@ export default function WeWorkTogether({ backgroundColor }) {
                 </h2>
                 <p className="flex text-xl flex-grow text-justify">
                   Our unique blend of deep techincal experience, stategic
-                  partnerships, maticulously chosen tooling, and AI companions,
+                  partnerships, meticulously chosen tooling, and AI companions
                   means our customers see first delivery of an idea in as little
                   as 1&nbsp;month!
                   <br />
@@ -89,7 +89,7 @@ export default function WeWorkTogether({ backgroundColor }) {
                 <p className="flex text-xl flex-grow text-justify">
                   Multi-discipline Engineering without the price tag. Hiring full-time talent across every engineering specialty can be a major cost. 
                   Our dev shop provides access to engineers who know front-end, API, data, DevOps, 
-                  and more, so you can get the expertise you need without the overhead.
+                  and more so you can get the expertise you need without the overhead.
                 </p>
               </div>
             </div>

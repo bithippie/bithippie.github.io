@@ -9,7 +9,7 @@ export default function EngagementAccordion() {
       title: "Discover",
       text: `
         We take the time to truly understand you and your business. 
-        There are no one-size-fits-all solutions, we listen to uncover what truly drives success. 
+        There are no one-size-fits-all solutions. We listen to uncover what truly drives success. 
         Together, we focus on the high-leverage activities that make the biggest impact, 
         ensuring every effort moves the needle in meaningful ways.
       `,
@@ -20,7 +20,7 @@ export default function EngagementAccordion() {
       text: `
         We create a detailed plan with a clear vision of your product's look and feel, 
         system integrations, and what needs to be built at every stage. 
-        The process is laid out — now, next, then after — so you'll feel confident moving forward with each step.
+        The process is laid out — now, next, and after — so you'll feel confident moving forward with each step.
       `,
     },
     {

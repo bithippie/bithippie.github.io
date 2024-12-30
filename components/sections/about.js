@@ -25,11 +25,11 @@ export default function About({ backgroundColor }) {
           <h2 className="w-full text-4xl text-moss mb-8 text-center lg:text-left">About Our Company</h2>
           <p className="my-4">
             Founder Anthony Torres believes there's more to business than maximizing shareholder value. 
-            It's about finding health, leaving the world better than we found it, thriving in our environment, 
+            It's about achieving health, leaving the world better than we found it, thriving in our environment, 
             elevating others, and doing meaningful, challenging work.
           </p>
           <p className="my-4">
-            We approach this from the inside out—starting with personal development and a growth-mindset, guided by quarterly 
+            At BitHippie we approach this from the inside out—starting with personal development and a growth-mindset, guided by quarterly 
             work & life goal-setting, supported by accountability, all within a culture of psychological safety.
           </p>
           <p className="my-4">
@@ -37,7 +37,7 @@ export default function About({ backgroundColor }) {
           </p>
           <p className="my-4">
             When you work with us, you're working with a team that knows each other deeply. 
-            Our shared experience allows us to collaborate effectively and effortlessly.
+            Our shared experiences allow us to collaborate effectively and effortlessly.
           </p>
           <p className="my-4">
             When we're not building digital products customers love, you might find us:
@@ -66,7 +66,8 @@ export default function About({ backgroundColor }) {
                 text-moss border 
                 border-moss 
                 px-8 py-4 
-                rounded 
+                text-xl
+                rounded-lg 
                 shadow-lg 
                 hover:shadow-xl
               "
