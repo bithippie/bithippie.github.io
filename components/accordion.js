@@ -17,7 +17,7 @@ export function Accordion({ accordionItems }) {
   };
   return (
     <div className="h-full w-full flex items-center pb-8">
-      <div className="w-full max-w-2xl divide-y divide-moss rounded-xl bg-white shadow-lg">
+      <div className="w-full divide-y divide-moss rounded-xl bg-white shadow-lg">
         {accordionItems.map((item, index) => {
           return (
             <Disclosure key={item.key} as="div" className="p-6">
@@ -45,9 +45,9 @@ export function Accordion({ accordionItems }) {
                         className="text-base text-gray-600 leading-relaxed origin-top transition duration-300 ease-out data-[closed]:-translate-y-4 data-[closed]:opacity-0"
                       >
                         <motion.div
-                          initial={{ height: 0, opacity: 0 }}
+                          initial={{ height: 20, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
+                          exit={{ height: 20, opacity: 0 }}
                           transition={{ duration: 0.2, ease: easeOut }}
                           className="overflow-hidden"
                         >

@@ -15,40 +15,45 @@ export default function About({ backgroundColor }) {
         <div className="md:col-span-4 overflow-hidden">
           <RevealOnScroll>
             <img
-              className="w-full h-auto object-cover md:pr-12 md:aspect-auto"
+              className="w-full h-auto max-h-[400px] object-contain md:pr-12 md:aspect-auto"
               src="/globe.png"
               alt="Globe"
-              style={{ maxHeight: "400px" }}
             />
           </RevealOnScroll>
         </div>
         <div className="md:col-span-8 text-justify flex flex-col items-start space-y-6">
-          <h2 className="text-4xl text-moss mb-8">About Our Company</h2>
-          <p>
-            BitHippie was started by Founder and serial entrepreneur, Anthony
-            Torres, when he came to the realization that mission and the people
-            impacted matter much more than maximizing shareholder value.
+          <h2 className="w-full text-4xl text-moss mb-8 text-center lg:text-left">About Our Company</h2>
+          <p className="my-4">
+            Founder Anthony Torres believes there's more to business than maximizing shareholder value. 
+            It's about finding health, leaving the world better than we found it, thriving in our environment, 
+            elevating others, and doing meaningful, challenging work.
           </p>
-          <p>
-            The best way to stay true to that ethos is by aligning his efforts
-            with the kind of people who care about the Earth and its
-            inhabitants.
+          <p className="my-4">
+            We approach this from the inside out—starting with personal development and a growth-mindset, guided by quarterly 
+            work & life goal-setting, supported by accountability, all within a culture of psychological safety.
           </p>
-          <p>
-            Rather than do this work alone, Anthony combined his passions for
-            making things, personal development, and service into a
-            one-of-a-kind community, a force for good.
+          <p className="my-4">
+            We strive daily to be our best so we can give you our best.
           </p>
-          <p>
-            Together he, and the friends made along the way, work together to
-            make real change in the world, hold one another accountable, improve
-            and maintain our health, and constantly remind one another that
-            “together we go far.”
+          <p className="my-4">
+            When you work with us, you're working with a team that knows each other deeply. 
+            Our shared experience allows us to collaborate effectively and effortlessly.
           </p>
-          <p>
-            If you would like to learn more about the community, please reach
-            out on LinkedIn and we can see if you’d be a good fit.
+          <p className="my-4">
+            When we're not building digital products customers love, you might find us:
           </p>
+          <ul className="list-disc pl-8">
+            <li>On top of a mountain watching the total solar eclipse.</li>
+            <li>Orienteering in a swim, bike, run adventure race on the Cape.</li>
+            <li>Talking about financial independence, health, and dreams for the future.</li>
+            <li>Discussing how diet, sleep, and stress are impacting our blood glucose levels.</li>
+            <li>Sharing workouts, personal records (PRs), supplements, and the latest non-alcoholic beverages.</li>
+            <li>Or lovingly challenging a colleagues limiting beliefs to help them get out of their own way.</li>
+          </ul>
+          <p className="my-4">
+            If you're interested in joining our mission, reach out via LinkedIn to explore if we'd be a good fit.
+          </p>
+
           <div className="w-full flex text-center justify-center md:justify-start">
             <a
               href="https://www.linkedin.com/in/bithippie"
@@ -68,7 +73,7 @@ export default function About({ backgroundColor }) {
                 whileHover={{ scale: 1.025 }}
                 whileTap={{ scale: 0.96 }}
               >
-                Learn More
+                Get in Touch
               </motion.button>
             </a>
           </div>

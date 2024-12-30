@@ -4,6 +4,7 @@ import Divider from "@/components/divider";
 import LineDraw from "@/components/line_draw";
 import RevealOnScroll from "@/components/reveal";
 import ScheduleConsultation from "@/components/schedule_consultation";
+import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
@@ -14,17 +15,16 @@ export default function Hero() {
       <div className="container flex flex-col items-center self-center text-center max-w-screen-xl">
         <RevealOnScroll>
           <h1 className="text-white text-5xl md:text-6xl">
-            Helping mission driven companies{" "}
+            Helping <span className="text-old-gold">BioTech</span> companies {" "}
             <span className="relative inline-block">
-              <span className="text-[#AABD7B]">sustainably</span>
+              <span className="text-moss">sustainably</span>
               <LineDraw hasScroll={true} />
             </span>{" "}
-            deliver digital solutions their users{" "}
-            <span className="text-old-gold">love!</span>
+            build scalable data platforms.
           </h1>
 
           <h2 className="text-platinum text-2xl my-8 md:text-4xl">
-            Software, Data, and Cloud Engineering Professionals. Specializing in
+            Fractional Software, Data, and Cloud Engineering. Specializing in
             Rapid Product Development, Data Platform Design, and Internal
             Tooling
           </h2>
@@ -34,6 +34,6 @@ export default function Hero() {
         </RevealOnScroll>
       </div>
       <Divider curvePosition="start" backgroundColor="platinum" />
-    </section>
+    </section >
   );
 }

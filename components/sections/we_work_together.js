@@ -26,7 +26,7 @@ export default function WeWorkTogether({ backgroundColor }) {
                 <h2 className="text-3xl sm:text-4xl text-moss py-6">
                   Rapid Product Development
                 </h2>
-                <p className="flex text-xl flex-grow ">
+                <p className="flex text-xl flex-grow text-justify">
                   Our unique blend of deep techincal experience, stategic
                   partnerships, maticulously chosen tooling, and AI companions,
                   means our customers see first delivery of an idea in as little
@@ -56,7 +56,7 @@ export default function WeWorkTogether({ backgroundColor }) {
                   today with a growth plan for how to get where you&apos;re
                   going.
                 </p>
-                <div className="hidden md:flex items-center justify-between flex-wrap space-x-8">
+                <div className="hidden md:flex md:justify-around items-center justify-between flex-wrap space-x-8">
                   <img
                     src="/icons/aws.png"
                     alt="AWS Icon"
@@ -84,13 +84,12 @@ export default function WeWorkTogether({ backgroundColor }) {
               />
               <div className="flex flex-col space-y-8 text-center lg:text-left">
                 <h2 className="text-3xl sm:text-4xl text-moss py-6">
-                  On Demand Resource Pool
+                  Fractional Engineering
                 </h2>
-                <p className="flex text-xl flex-grow ">
-                  Why pay for what you don&apos;t need? Our team of Software,
-                  Data, and Cloud Engineers are available when you need for as
-                  long as you need, keeping your operating expenses as low as
-                  possible.
+                <p className="flex text-xl flex-grow text-justify">
+                  Multi-discipline Engineering without the price tag. Hiring full-time talent across every engineering specialty can be a major cost. 
+                  Our dev shop provides access to engineers who know front-end, API, data, DevOps, 
+                  and more, so you can get the expertise you need without the overhead.
                 </p>
               </div>
             </div>

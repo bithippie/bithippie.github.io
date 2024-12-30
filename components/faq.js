@@ -11,21 +11,15 @@ export default function FAQ() {
         <>
           <p className="my-4">
             We know teams come with many different kinds of constraints. We try
-            to work within everyone’s scope and budget.
+            to work within everyone's scope and budget.
           </p>
           <p className="my-4">
-            That said, the smallest engagement we’ll accept is a one 1 month
-            commitment and a budget of $12,000 USD.
+            Our engagements are structured as a base contract, which includes a purpose-built 
+            tech team for a maximum number of hours per month.  
+            If more time is ever needed, additional time can be added at an hourly rate. 
           </p>
           <p className="my-4">
-            The listed price does not indicate the price of a contract, pricing
-            is a function of scope and complexity. This minimum has been
-            provided to serve as a safeguard in the event your budget
-            constraints are less than our threshold.
-          </p>
-          <p className="my-4">
-            Our typical small-to-medium projects range between $12,000 - $24,000
-            USD per month.
+            Depending on team composition and timeline, our typical small-to-medium projects range between $12,000 - $24,000 USD / month.
           </p>
           <p className="my-4">
             We do offer discounted rates for engagements that are for 3 or more
@@ -41,8 +35,8 @@ export default function FAQ() {
         <>
           <p className="my-4">
             Our Sustainable Engineering model is designed to give you access to
-            high quality Software, Data, and Cloud Engineers and Architects.
-            Allowing you to keep your headcount and operating expenses low.
+            Software, Data, and Cloud Engineers and Architects for as long as you need.
+            This allows you to keep your headcount and operating expenses low.
           </p>
           <p className="my-4">
             We scope work into 1 month Milestones, consisting of (2) two-week
@@ -58,16 +52,7 @@ export default function FAQ() {
             circumstances change.
           </p>
           <p className="my-4">
-            We have ad hoc as well as recurring engagement models.
-          </p>
-          <p className="my-4">
-            Our ad hoc model, the end of the Milestone signals the end of the
-            arrangement.
-          </p>
-          <p className="my-4">
-            In a recurring engagement, you’ll have access to the same team for
-            as long as you need. We do require 30 days notice to conclude the
-            engagement.
+            We offer both ad hoc as well as recurring engagement models. 
           </p>
         </>
       ),
@@ -78,13 +63,13 @@ export default function FAQ() {
       text: (
         <>
           <p className="my-4">
-            Payment structure depends on the length of the engagement.
+            Payment structure depends on the type of the engagement.
           </p>
 
           <p className="my-4">
             Ad hoc Engagements: 1 Milestone (4 weeks), payment is submitted in
             thirds: 1/3 Is required to schedule a kick-off. 1/3 is due after
-            we’ve completed the 1st sprint. 1/3 is due after we’ve completed the
+            we've completed the 1st sprint. 1/3 is due after we've completed the
             2nd sprint.
           </p>
           <p className="my-4">
@@ -126,10 +111,8 @@ export default function FAQ() {
   ];
   return (
     <section id="faq">
-      <h3 className="text-3xl text-moss my-8">Frequently Asked Questions</h3>
-      <div>
-        <Accordion accordionItems={accordionItems} />
-      </div>
+      <h3 className="text-3xl text-moss my-8 text-center lg:text-left">Frequently Asked Questions</h3>
+      <Accordion accordionItems={accordionItems} />
     </section>
   );
 }
