@@ -8,7 +8,7 @@ export default function Schedule({ backgroundColor }) {
   return (
     <section
       id="schedule"
-      className={`relative bg-${backgroundColor} pt-[7rem] pb-6 lg:pt-[8rem] lg:pb-14`}
+      className={`relative bg-${backgroundColor} pt-[7rem] pb-16 lg:pt-[8rem] lg:pb-24`}
     >
       <div className="container max-w-screen-xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-8">
