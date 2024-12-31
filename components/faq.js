@@ -105,7 +105,16 @@ export default function FAQ() {
           </p>
           <p className="my-4">
             Fret not, if this is something you’re worried about, check out{" "}
-            <a href="#testimonials" className="text-moss underline">
+            <a
+              href="#testimonials"
+              className="text-moss underline"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("testimonials")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               Why people love working with BitHippie!
             </a>
           </p>
