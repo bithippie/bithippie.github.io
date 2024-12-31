@@ -116,7 +116,7 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="mb-16 min-h-[300px]">
-      <h3 className="text-3xl text-moss mt-4 text-center lg:text-left">
+      <h3 className="text-3xl text-moss mt-4 text-center pb-4 lg:pb-0 lg:text-left">
         Frequently Asked Questions
       </h3>
       <Accordion accordionItems={accordionItems} />
