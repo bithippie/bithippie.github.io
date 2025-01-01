@@ -24,7 +24,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        hero: "linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/assets/images/hero/sustainability.jpg')",
+        hero: "linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/assets/images/home/hero.jpg')",
       },
       colors: {
         background: "var(--background)",

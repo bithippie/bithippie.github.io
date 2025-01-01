@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from 'next/image'
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function NavBar() {
@@ -12,8 +11,8 @@ export default function NavBar() {
       <nav className="py-2.5 absolute bg-transparent w-full flex z-50">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between container">
           <a href="/">
-            <Image 
-              src="/assets/images/flare/logo.png" 
+            <img
+              src="/assets/images/logo.png" 
               className="h-20" 
               alt="BitHippie Logo"
               width={300}

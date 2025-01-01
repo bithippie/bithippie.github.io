@@ -10,7 +10,7 @@ const marcellus = localFont({
 
 export const metadata = {
   url: "https://bithippie.com",
-  image: "/assets/images/hero/og_image.png",
+  image: "/assets/images/home/og_image.png",
   title: "Sustainable Data Platforms for BioTech with BitHippie",
   description:` 
     Fractional Software, Data, and Cloud Engineering. 
@@ -21,8 +21,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>{metadata.title}</title>
-
         <link rel="manifest" href="/assets/favicon_io/site.manifest" />
         <link rel="shortcut icon" href="/assets/favicon_io/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png" />
@@ -30,7 +28,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png"/>
 
         {/* HTML Meta Tags */}
-        <meta name="description" content={metadata.description}/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         {/* Facebook Meta Tags */}
         <meta property="og:url" content={metadata.url} />
@@ -46,8 +44,6 @@ export default function RootLayout({ children }) {
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content={metadata.image} />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
 
       <body className={`${marcellus.variable} antialiased `}>
