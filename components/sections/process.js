@@ -38,7 +38,7 @@ export default function HowWeWork({ backgroundColor }) {
               className="float-right mb-4 mx-4 sm:mb-0"
               rounded
               size="lg"
-              img="/alex.jpeg"
+              img="/assets/images/testimonials/alex.jpeg"
               alt="profile picture"
             />
             <p className="text-lg sm:text-xl text-gray-700 font-light leading-relaxed">

@@ -16,7 +16,7 @@ export default function About({ backgroundColor }) {
           <RevealOnScroll>
             <img
               className="w-full h-auto max-h-[400px] object-contain md:pr-12 md:aspect-auto"
-              src="/globe.png"
+              src="/assets/images/flare/globe.png"
               alt="Globe"
             />
           </RevealOnScroll>

@@ -91,7 +91,7 @@ export default function TestimonialsCarousel() {
           <div className="h-[480px]">
             <Card className="h-full flex flex-col m-1">
               <Avatar
-                img={testimonial.image}
+                img={`/assets/images/testimonials/${testimonial.image}`}
                 size="xl"
                 rounded
                 className="justify-self-center"

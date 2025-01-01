@@ -19,7 +19,7 @@ export default function WeWorkTogether({ backgroundColor }) {
           <RevealOnScroll>
             <div className="flex flex-col my-4 text-center items-stretch lg:flex-row lg:space-x-8">
               <img
-                src="/idea.png"
+                src="/assets/images/services/idea.png"
                 className="rounded-xl m-auto max-w-96 lg:max-w-80"
               />
               <div className="flex flex-col space-y-8 text-center lg:text-left">
@@ -42,7 +42,7 @@ export default function WeWorkTogether({ backgroundColor }) {
           <RevealOnScroll>
             <div className="flex flex-col my-4 text-center items-stretch lg:flex-row lg:space-x-8">
               <img
-                src="/science.png"
+                src="/assets/images/services/science.png"
                 className="rounded-xl m-auto max-w-96 lg:max-w-80"
               />
               <div className="flex flex-col space-y-8 text-center lg:text-left">
@@ -58,17 +58,17 @@ export default function WeWorkTogether({ backgroundColor }) {
                 </p>
                 <div className="hidden md:flex md:justify-around items-center justify-between flex-wrap space-x-8">
                   <img
-                    src="/icons/aws.png"
+                    src="/assets/images/icons/aws.png"
                     alt="AWS Icon"
                     className="h-8 my-4"
                   />
                   <img
-                    src="/icons/gcp.png"
+                    src="/assets/images/icons/gcp.png"
                     alt="GCP Icon"
                     className="h-8 my-4"
                   />
                   <img
-                    src="/icons/render.png"
+                    src="/assets/images/icons/render.png"
                     alt="Render.com Icon"
                     className="h-8 my-4"
                   />
@@ -79,7 +79,7 @@ export default function WeWorkTogether({ backgroundColor }) {
           <RevealOnScroll>
             <div className="flex flex-col my-4 text-center items-stretch lg:flex-row lg:space-x-8">
               <img
-                src="/community.png"
+                src="/assets/images/services/community.png"
                 className="rounded-xl m-auto max-w-96 lg:max-w-80"
               />
               <div className="flex flex-col space-y-8 text-center lg:text-left">
