@@ -10,7 +10,7 @@ import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 const data = [
   {
     quote:
-      "I’ve benefitted firsthand from his robust data platform construction. As a data scientist, he made my life easier everyday. The data platform was designed to be easy to use, long lasting, and used across multiple teams",
+      "I've benefitted firsthand from his robust data platform construction. As a data scientist, he made my life easier everyday. The data platform was designed to be easy to use, long lasting, and used across multiple teams",
     name: "Sara Kohnke, PhD // Senior Data Scientist",
     image: "sara.jpeg",
   },
@@ -22,7 +22,7 @@ const data = [
   },
   {
     quote:
-      "When I needed support to launch my startup, he didn’t hesitate to jump in and offer his assistance. His willingness to help, combined with his insightful guidance, made a significant difference in my journey.",
+      "When I needed support to launch my startup, he didn't hesitate to jump in and offer his assistance. His willingness to help, combined with his insightful guidance, made a significant difference in my journey.",
     name: "Lindsay Ruiz // Founder // Human As Usual",
     image: "lindsay.jpeg",
   },
