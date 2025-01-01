@@ -9,9 +9,12 @@ const marcellus = localFont({
 });
 
 export const metadata = {
-  title: "BitHippie",
-  description:
-    "Burst Capacity Software, Data, and Cloud Engineering Professionals Specializing in Rapid Product Development, Data Platform Design, and Internal Tooling",
+  url: "https://bithippie.com",
+  image: "/assets/images/hero/og_image.png",
+  title: "Sustainable Data Platforms for BioTech with BitHippie",
+  description:` 
+    Fractional Software, Data, and Cloud Engineering. 
+    Specializing in Rapid Product Development, Data Platform Design, and Internal Tooling`,
 };
 
 export default function RootLayout({ children }) {
@@ -19,17 +22,32 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:title" content="BitHippie" />
-        <meta property="og:description" content="Burst Capacity Software, Data, and Cloud Engineering Professionals Specializing in Rapid Product Development, Data Platform Design, and Internal Tooling" />
-        <meta property="og:image" content="/assets/images/hero/sustainability.jpg" />
-        <meta property="og:url" content="https://bithippie.com" />
+
+        {/* HTML Meta Tags */}
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description}/>
+
+        {/* Facebook Meta Tags */}
+        <meta property="og:url" content={metadata.url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content={metadata.image} />
+
+        {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0"
-        ></meta>
+        <meta property="twitter:domain" content={metadata.url} />
+        <meta property="twitter:url" content={metadata.url} />
+        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.description} />
+        <meta name="twitter:image" content={metadata.image} />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className={`${marcellus.variable} antialiased `}>{children}</body>
+      
+      <body className={`${marcellus.variable} antialiased `}>
+        {children}
+      </body>
     </html>
   );
 }

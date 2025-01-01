@@ -9,9 +9,9 @@ export default function NavBar() {
 
   return (
     <section className="w-full">
-      <nav className="py-2.5 sm:px-4 absolute bg-transparent w-full flex z-50 px-0">
-        <div className="mx-auto flex flex-wrap items-center justify-between container">
-          <a className="flex items-center" href="/">
+      <nav className="py-2.5 absolute bg-transparent w-full flex z-50">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between container">
+          <a href="/">
             <Image 
               src="/assets/images/flare/logo.png" 
               className="h-20" 

@@ -1,10 +1,8 @@
-"use client";
-
+import { metadata } from "@/app/layout";
 import Divider from "@/components/divider";
 import LineDraw from "@/components/line_draw";
 import RevealOnScroll from "@/components/reveal";
 import ScheduleConsultation from "@/components/schedule_consultation";
-import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
@@ -24,9 +22,7 @@ export default function Hero() {
           </h1>
 
           <h2 className="text-platinum text-2xl my-8 md:text-4xl">
-            Fractional Software, Data, and Cloud Engineering. Specializing in
-            Rapid Product Development, Data Platform Design, and Internal
-            Tooling
+            {metadata.description}
           </h2>
           <div className="flex place-content-center">
             <ScheduleConsultation />
