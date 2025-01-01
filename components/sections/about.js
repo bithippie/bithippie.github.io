@@ -4,28 +4,31 @@ import { motion } from "framer-motion";
 
 import Divider from "@/components/divider";
 import RevealOnScroll from "@/components/reveal";
+import Image from "next/image";
 
 export default function About({ backgroundColor }) {
   return (
     <section
-      id="about"
       className={`relative bg-${backgroundColor} pt-10 pb-20 md:pb-28`}
     >
-      <div className="container grid md:grid-cols-12 gap-8 p-8 max-w-screen-xl items-center">
-        <div className="md:col-span-4 overflow-hidden">
+      <a name="about" />
+      <div className="container grid lg:grid-cols-12 gap-8 p-8 max-w-screen-xl items-center">
+        <div className="lg:col-span-4 overflow-hidden">
           <RevealOnScroll>
-            <img
-              className="w-full h-auto max-h-[400px] object-contain md:pr-12 md:aspect-auto"
+            <Image
+              width={0}
+              height={0}
+              className="w-full h-auto max-h-[400px] object-contain lg:aspect-auto"
               src="/assets/images/home/globe.png"
               alt="Globe"
             />
           </RevealOnScroll>
         </div>
-        <div className="md:col-span-8 text-justify flex flex-col items-start space-y-6">
-          <h2 className="w-full text-4xl text-moss mb-8 text-center lg:text-left">About Our Company</h2>
+        <div className="lg:col-span-8 text-justify flex flex-col items-start space-y-6">
+          <h2 className="w-full text-moss mb-8 text-center lg:text-left">About Our Company</h2>
           <p className="my-4">
-            Founder Anthony Torres believes there's more to business than maximizing shareholder value. 
-            It's about achieving health, leaving the world better than we found it, thriving in our environment, 
+            Founder Anthony Torres believes there&apos;s more to business than maximizing shareholder value. 
+            It&apos;s about achieving health, leaving the world better than we found it, thriving in our environment, 
             elevating others, and doing meaningful, challenging work.
           </p>
           <p className="my-4">
@@ -36,11 +39,11 @@ export default function About({ backgroundColor }) {
             We strive daily to be our best so we can give you our best.
           </p>
           <p className="my-4">
-            When you work with us, you're working with a team that knows each other deeply. 
+            When you work with us, you&apos;re working with a team that knows each other deeply. 
             Our shared experiences allow us to collaborate effectively and effortlessly.
           </p>
           <p className="my-4">
-            When we're not building digital products customers love, you might find us:
+            When we&apos;re not building digital products customers love, you might find us:
           </p>
           <ul className="list-disc pl-8">
             <li>On top of a mountain watching the total solar eclipse.</li>
@@ -51,10 +54,10 @@ export default function About({ backgroundColor }) {
             <li>Or lovingly challenging a colleagues limiting beliefs to help them get out of their own way.</li>
           </ul>
           <p className="my-4">
-            If you're interested in joining our mission, reach out via LinkedIn to explore if we'd be a good fit.
+            If you&apos;re interested in joining our mission, reach out via LinkedIn to explore if we&apos;d be a good fit.
           </p>
 
-          <div className="w-full flex text-center justify-center md:justify-start">
+          <div className="w-full flex text-center justify-center xl:justify-start">
             <a
               href="https://www.linkedin.com/in/bithippie"
               className=""

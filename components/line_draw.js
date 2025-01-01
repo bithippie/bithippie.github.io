@@ -3,8 +3,8 @@
 import { useEffect } from "react";
 
 export default function LineDraw({ hasScroll }) {
-  if (hasScroll) {
-    useEffect(() => {
+  useEffect(() => {
+    if (hasScroll) {
       const svgSustainably = document.querySelector(".line-draw");
       const path = svgSustainably.querySelector(".path-draw");
       const triggerAnimation = () => {
@@ -28,8 +28,8 @@ export default function LineDraw({ hasScroll }) {
       window.addEventListener("scroll", handleVisibility);
 
       return () => window.removeEventListener("scroll", handleVisibility);
-    }, []);
-  }
+    }
+  }, [hasScroll]);
   return (
     <svg
       className="line-draw absolute bottom-0 left-0 w-full h-8 -mb-4"

@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Image from 'next/image'
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function NavBar() {
@@ -10,14 +12,14 @@ export default function NavBar() {
     <section className="w-full">
       <nav className="py-2.5 absolute bg-transparent w-full flex z-50">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between container">
-          <a href="/">
-            <img
+          <Link href="/">
+            <Image
               src="/assets/images/logo.png" 
               className="h-20" 
               alt="BitHippie Logo"
               width={300}
               height={125}/>
-          </a>
+          </Link>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -53,36 +55,36 @@ export default function NavBar() {
               >
                 <ul className="mt-4 flex flex-col">
                   <li>
-                    <a
+                    <Link
                       className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
-                      href="#together-we-go-far"
+                      href="#services"
                     >
                       Services
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
                       href="#faq"
                     >
                       FAQ
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
                       href="#schedule"
                     >
                       Schedule
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
                       href="#about"
                     >
                       About
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </motion.div>
@@ -91,36 +93,36 @@ export default function NavBar() {
           <div className="w-full hidden md:block md:w-auto bg-gradient-to-b from-transparent to-bg-dark-grey backdrop-blur-md opacity-95">
             <ul className="mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium">
               <li>
-                <a
+                <Link
                   className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-platinum text-2xl hover:text-moss"
-                  href="#together-we-go-far"
+                  href="#services"
                 >
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-platinum text-2xl hover:text-moss"
                   href="#faq"
                 >
                   FAQ
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-platinum text-2xl hover:text-moss"
                   href="#schedule"
                 >
                   Schedule
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-platinum text-2xl hover:text-moss"
                   href="#about"
                 >
                   About
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

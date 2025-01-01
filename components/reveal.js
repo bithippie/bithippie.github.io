@@ -7,7 +7,7 @@ export default function RevealOnScroll({ children }) {
     <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.2, delay: 0.2 }}
+        transition={{ duration: 0.4, delay: 0 }}
         viewport={{ once: true }}
       >
       {children}

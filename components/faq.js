@@ -1,6 +1,7 @@
 "use client";
 
 import { Accordion } from "@/components/accordion";
+import Link from "next/link";
 
 export default function FAQ() {
   const accordionItems = [
@@ -11,7 +12,7 @@ export default function FAQ() {
         <>
           <p className="my-4">
             We know teams come with many different kinds of constraints. We try
-            to work within everyone's scope and budget.
+            to work within everyone&apos;s scope and budget.
           </p>
           <p className="my-4">
             Our engagements are structured as a base contract, which includes a
@@ -73,7 +74,7 @@ export default function FAQ() {
           <p className="my-4">
             Ad hoc Engagements: 1 Milestone (4 weeks), payment is submitted in
             thirds: 1/3 Is required to schedule a kick-off. 1/3 is due after
-            we've completed the 1st sprint. 1/3 is due after we've completed the
+            we&apos;ve completed the 1st sprint. 1/3 is due after we&apos;ve completed the
             2nd sprint.
           </p>
           <p className="my-4">
@@ -104,19 +105,13 @@ export default function FAQ() {
             take more severe measures such as terminating the arrangement.
           </p>
           <p className="my-4">
-            Fret not, if this is something you’re worried about, check out{" "}
-            <a
+            Fret not, if this is something you&apos;re worried about, check out{" "}
+            <Link
               href="#testimonials"
               className="text-moss underline"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("testimonials")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
             >
               Why people love working with BitHippie!
-            </a>
+            </Link>
           </p>
         </>
       ),
@@ -125,7 +120,7 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="mb-16 min-h-[300px]">
-      <h3 className="text-3xl text-moss mt-4 text-center pb-4 lg:pb-0 lg:text-left">
+      <h3 className="text-moss my-8 text-center xl:mb-0 xl:text-left">
         Frequently Asked Questions
       </h3>
       <Accordion accordionItems={accordionItems} />
