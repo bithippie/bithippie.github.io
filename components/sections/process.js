@@ -8,7 +8,7 @@ import RevealOnScroll from "@/components/reveal";
 export default function HowWeWork({ backgroundColor }) {
   return (
     <section
-      className={`relative bg-${backgroundColor} pt-16 pb-24 min-h-screen`}
+      className={`relative bg-${backgroundColor} pt-16 pb-24 min-h-[768]`}
     >
       <a name="how-we-work" />
       
