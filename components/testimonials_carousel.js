@@ -80,8 +80,10 @@ export default function TestimonialsCarousel() {
             perPage: 3,
           },
         },
+        easing: "ease",
+        speed: 2200,
         gap: 16,
-        interval: 5000,
+        interval: 10000,
         mediaQuery: "min",
         type: "loop",
       }}

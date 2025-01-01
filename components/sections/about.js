@@ -57,7 +57,7 @@ export default function About({ backgroundColor }) {
             If you&apos;re interested in joining our mission, reach out via LinkedIn to explore if we&apos;d be a good fit.
           </p>
 
-          <div className="w-full flex text-center justify-center xl:justify-start">
+          <div className="w-full flex text-center justify-center">
             <a
               href="https://www.linkedin.com/in/bithippie"
               className=""
