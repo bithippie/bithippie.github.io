@@ -1,0 +1,4 @@
+version: 2
+snapshot:
+  widths: [375, 768, 1024, 1280] # Example responsive widths
+  min-height: 800 # Minimum viewport height
