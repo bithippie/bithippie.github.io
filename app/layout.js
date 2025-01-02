@@ -10,7 +10,7 @@ const marcellus = localFont({
 
 export const metadata = {
   url: "https://bithippie.com",
-  image: "/assets/images/home/og_image.png",
+  image: "/assets/images/home/og_image.jpg",
   title: "Sustainable Data Platforms for BioTech with BitHippie",
   description:`Fractional Software, Data, and Cloud Engineering. Specializing in Rapid Product Development, Data Platform Design, and Internal Tooling`,
 };
