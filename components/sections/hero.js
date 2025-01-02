@@ -12,7 +12,7 @@ export default function Hero() {
     >
       <div className="container flex flex-col items-center self-center text-center max-w-screen-xl">
         <RevealOnScroll>
-          <h1 className="text-white text-5xl md:text-6xl">
+          <h1 className="text-white">
             Helping <span className="text-old-gold">BioTech</span> companies {" "}
             <span className="relative inline-block">
               <span className="text-moss">sustainably</span>

@@ -67,7 +67,6 @@ const data = [
 export default function TestimonialsCarousel() {
   return (
     <Splide
-      className="m-auto"
       options={{
         autoplay: true,
         breakpoints: {
@@ -93,7 +92,7 @@ export default function TestimonialsCarousel() {
     >
       {data.map((testimonial, i) => (
         <SplideSlide key={i} className="rounded-3xl">
-          <div className="h-[480px]">
+          <div className="h-[500px] ">
             <Card className="h-full flex flex-col m-1">
               <Avatar
                 img={`/assets/images/testimonials/${testimonial.image}`}
