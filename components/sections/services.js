@@ -63,26 +63,26 @@ export default function WeWorkTogether({ backgroundColor }) {
                   today with a growth plan for how to get where you&apos;re
                   going.
                 </p>
-                <div className="hidden md:flex md:justify-around items-center justify-between flex-wrap space-x-8">
+                <div className="flex flex-col sm:flex-row flex-wrap items-center justify-around sm:space-x-8">
                   <Image
                     width={52.2}
                     height={32}
                     src="/assets/images/icons/aws.png"
-                    alt="AWS Icon"
+                    alt="Amazon Web Services Logo"
                     className="h-8 my-4"
                   />
                   <Image
                     width={206}
                     height={32}
                     src="/assets/images/icons/gcp.png"
-                    alt="GCP Icon"
+                    alt="Google Cloud Platform Logo"
                     className="h-8 my-4"
                   />
                   <Image
                     width={167}
                     height={32}
                     src="/assets/images/icons/render.png"
-                    alt="Render.com Icon"
+                    alt="Render.com Logo"
                     className="h-8 my-4"
                   />
                 </div>

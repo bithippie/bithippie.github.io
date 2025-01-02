@@ -16,15 +16,15 @@ export default function About({ backgroundColor }) {
         <div className="lg:col-span-4 overflow-hidden">
           <RevealOnScroll>
             <Image
-              width={0}
-              height={0}
+              width={360}
+              height={360}
               className="w-full h-auto max-h-[400px] object-contain lg:aspect-auto"
               src="/assets/images/home/globe.png"
               alt="Globe"
             />
           </RevealOnScroll>
         </div>
-        <div className="lg:col-span-8 text-justify flex flex-col items-start space-y-6">
+        <div className="lg:col-span-8 text-left flex flex-col items-start space-y-6">
           <h2 className="w-full text-moss mb-8 text-center lg:text-left">About Our Company</h2>
           <p className="my-4">
             Founder Anthony Torres believes there&apos;s more to business than maximizing shareholder value. 
