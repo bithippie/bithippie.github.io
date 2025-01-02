@@ -1,6 +1,6 @@
 # The BitHippie.com Website
 
-![BitHippie Logo](./public/assets/images/home/og_image.png)
+![BitHippie Logo](./public/assets/images/home/og_image.jpg)
 
 ## Running Locally
 
