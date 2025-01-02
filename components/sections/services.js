@@ -22,7 +22,7 @@ export default function WeWorkTogether({ backgroundColor }) {
               <Image
                 width={360}
                 height={360}
-                src="/assets/images/services/idea.png"
+                src="/assets/images/services/idea.jpg"
                 className="rounded-xl m-auto"
                 alt="Rapid Product Development Service Image"
               />
@@ -48,7 +48,7 @@ export default function WeWorkTogether({ backgroundColor }) {
               <Image
                 width={360}
                 height={360}
-                src="/assets/images/services/science.png"
+                src="/assets/images/services/science.jpg"
                 className="rounded-xl m-auto"
                 alt="Tech Backbone Service Image"
               />
@@ -94,7 +94,7 @@ export default function WeWorkTogether({ backgroundColor }) {
               <Image
                 width={360}
                 height={360}
-                src="/assets/images/services/community.png"
+                src="/assets/images/services/community.jpg"
                 className="rounded-xl m-auto"
                 alt="Fractional Engineering Service Image"
               />
