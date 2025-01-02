@@ -9,7 +9,7 @@ export default function Testimonials({ backgroundColor }) {
       <a name="testimonials" />
       <div className="container py-8 max-w-screen-xl">
         <h2 className="text-white text-center mt-4 mb-8">
-          Why people love working&nbsp;with&nbsp;BitHippie.
+          Why people love working with BitHippie.
         </h2>
         <TestimonialsCarousel />
       </div>

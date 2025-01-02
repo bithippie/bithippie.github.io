@@ -20,10 +20,10 @@ export default function WeWorkTogether({ backgroundColor }) {
           <RevealOnScroll>
             <div className="flex flex-col my-4 text-center items-stretch lg:flex-row lg:space-x-8">
               <Image
-                width={400}
-                height={400}
+                width={360}
+                height={360}
                 src="/assets/images/services/idea.png"
-                className="rounded-xl m-auto max-w-96 lg:max-w-80"
+                className="rounded-xl m-auto"
                 alt="Rapid Product Development Service Image"
               />
               <div className="flex flex-col space-y-8 text-center lg:text-left">
@@ -46,10 +46,10 @@ export default function WeWorkTogether({ backgroundColor }) {
           <RevealOnScroll>
             <div className="flex flex-col my-4 text-center items-stretch lg:flex-row lg:space-x-8">
               <Image
-                width={400}
-                height={400}
+                width={360}
+                height={360}
                 src="/assets/images/services/science.png"
-                className="rounded-xl m-auto max-w-96 lg:max-w-80"
+                className="rounded-xl m-auto"
                 alt="Tech Backbone Service Image"
               />
               <div className="flex flex-col space-y-8 text-center lg:text-left">
@@ -92,10 +92,10 @@ export default function WeWorkTogether({ backgroundColor }) {
           <RevealOnScroll>
             <div className="flex flex-col my-4 text-center items-stretch lg:flex-row lg:space-x-8">
               <Image
-                width={400}
-                height={400}
+                width={360}
+                height={360}
                 src="/assets/images/services/community.png"
-                className="rounded-xl m-auto max-w-96 lg:max-w-80"
+                className="rounded-xl m-auto"
                 alt="Fractional Engineering Service Image"
               />
               <div className="flex flex-col space-y-8 text-center lg:text-left">

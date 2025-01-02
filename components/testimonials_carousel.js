@@ -67,21 +67,24 @@ const data = [
 export default function TestimonialsCarousel() {
   return (
     <Splide
+      className="m-auto"
       options={{
         autoplay: true,
         breakpoints: {
           640: {
             perPage: 1,
+            speed: 750,
           },
           768: {
             perPage: 2,
+            speed: 1200,
           },
           1024: {
             perPage: 3,
+            speed: 2200,
           },
         },
         easing: "ease",
-        speed: 2200,
         gap: 16,
         interval: 10000,
         mediaQuery: "min",
@@ -96,9 +99,9 @@ export default function TestimonialsCarousel() {
                 img={`/assets/images/testimonials/${testimonial.image}`}
                 size="xl"
                 rounded
-                className="justify-self-center"
+                className="flex-start justify-self-center"
               />
-              <Blockquote className="flex-grow text-lg text-justify">
+              <Blockquote className="flex-grow text-md sm:text-lg text-left">
                 {testimonial.quote}
               </Blockquote>
               <figcaption className="self-end">
