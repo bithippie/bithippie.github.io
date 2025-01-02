@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="h-screen py-16 md:py-24 bg-hero bg-center bg-cover flex relative"
+      className="h-screen min-h-[750px] py-16 md:py-24 bg-hero bg-center bg-cover flex relative"
     >
       <div className="container flex flex-col items-center self-center text-center max-w-screen-xl">
         <RevealOnScroll>

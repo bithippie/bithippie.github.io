@@ -15,6 +15,7 @@
   --background: #ededed;
   --foreground: #0a0a0a;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
