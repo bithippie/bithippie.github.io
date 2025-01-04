@@ -9,17 +9,29 @@ import Link from "next/link";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className="w-full">
       <nav className="py-2.5 absolute bg-transparent w-full flex z-50">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between container">
           <Link href="/">
             <Image
-              src="/assets/images/logo.png" 
-              className="h-20" 
+              src="/assets/images/logo.png"
+              className="h-20"
               alt="BitHippie Logo"
               width={300}
-              height={125}/>
+              height={125}
+            />
           </Link>
 
           <button
