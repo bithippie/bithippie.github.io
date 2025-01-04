@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import Image from 'next/image'
-import Link from "next/link";
+import { useEffect, useState } from "react";
+
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
