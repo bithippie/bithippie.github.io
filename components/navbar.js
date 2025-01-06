@@ -6,12 +6,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
+import screens from "@/utils/tailwindScreens";
+
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= screens.md) {
         setIsOpen(false);
       }
     };
