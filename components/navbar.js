@@ -59,88 +59,91 @@ export default function NavBar() {
               />
             </svg>
           </button>
-          <AnimatePresence>
-            {isOpen && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.5 }}
-                className="w-full bg-gradient-to-b from-transparent to-bg-dark-grey backdrop-blur-md opacity-95"
-              >
-                <ul className="mt-4 flex flex-col">
-                  <li>
-                    <Link
-                      className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
-                      href="#services"
-                    >
-                      Services
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
-                      href="#faq"
-                    >
-                      FAQ
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
-                      href="#schedule"
-                    >
-                      Schedule
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
-                      href="#about"
-                    >
-                      About
-                    </Link>
-                  </li>
-                </ul>
-              </motion.div>
-            )}
-          </AnimatePresence>
-          <div className="w-full hidden md:block md:w-auto bg-gradient-to-b from-transparent to-bg-dark-grey backdrop-blur-md opacity-95">
-            <ul className="mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium">
-              <li>
-                <Link
-                  className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-platinum text-2xl hover:text-moss"
-                  href="#services"
+          {window.innerWidth < screens.md ? (
+            <AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="w-full bg-gradient-to-b from-transparent to-bg-dark-grey backdrop-blur-md opacity-95"
                 >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-platinum text-2xl hover:text-moss"
-                  href="#faq"
-                >
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-platinum text-2xl hover:text-moss"
-                  href="#schedule"
-                >
-                  Schedule
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-platinum text-2xl hover:text-moss"
-                  href="#about"
-                >
-                  About
-                </Link>
-              </li>
-            </ul>
-          </div>
+                  <ul className="mt-4 flex flex-col">
+                    <li>
+                      <Link
+                        className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
+                        href="#services"
+                      >
+                        Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
+                        href="#faq"
+                      >
+                        FAQ
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
+                        href="#schedule"
+                      >
+                        Schedule
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
+                        href="#about"
+                      >
+                        About
+                      </Link>
+                    </li>
+                  </ul>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          ) : (
+            <div className="w-full hidden md:block md:w-auto bg-gradient-to-b from-transparent to-bg-dark-grey backdrop-blur-md opacity-95">
+              <ul className="mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium">
+                <li>
+                  <Link
+                    className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-platinum text-2xl hover:text-moss"
+                    href="#services"
+                  >
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-platinum text-2xl hover:text-moss"
+                    href="#faq"
+                  >
+                    FAQ
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-platinum text-2xl hover:text-moss"
+                    href="#schedule"
+                  >
+                    Schedule
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-platinum text-2xl hover:text-moss"
+                    href="#about"
+                  >
+                    About
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
       </nav>
     </section>
