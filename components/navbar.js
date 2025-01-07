@@ -15,14 +15,17 @@ export default function NavBar() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= screens.md) {
-        setIsOpen(false);
+      if (typeof window !== "undefined") {
+        setIsSmallScreen(window.innerWidth < mdScreen);
       }
     };
 
+    handleResize();
+
     window.addEventListener("resize", handleResize);
+
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [mdScreen]);
 
   return (
     <section className="w-full">
