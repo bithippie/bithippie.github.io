@@ -38,6 +38,7 @@ export default function NavBar() {
               alt="BitHippie Logo"
               width={300}
               height={125}
+              priority
             />
           </Link>
 
