@@ -10,6 +10,8 @@ import screens from "@/utils/tailwindScreens";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const mdScreen = parseInt(screens.md);
 
   useEffect(() => {
     const handleResize = () => {
