@@ -115,11 +115,11 @@ export default function NavBar() {
               </AnimatePresence>
             </>
           ) : (
-            <div className="w-full hidden md:block md:w-auto bg-gradient-to-b from-transparent to-bg-dark-grey backdrop-blur-md opacity-95">
-              <ul className="mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium">
+            <div className="w-auto">
+              <ul className="flex mt-0 flex-row space-x-8 text-sm font-medium">
                 <li>
                   <Link
-                    className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-platinum text-2xl hover:text-moss"
+                    className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
                     href="#services"
                   >
                     Services
@@ -127,7 +127,7 @@ export default function NavBar() {
                 </li>
                 <li>
                   <Link
-                    className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-platinum text-2xl hover:text-moss"
+                    className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
                     href="#faq"
                   >
                     FAQ
@@ -135,7 +135,7 @@ export default function NavBar() {
                 </li>
                 <li>
                   <Link
-                    className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-platinum text-2xl hover:text-moss"
+                    className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
                     href="#schedule"
                   >
                     Schedule
@@ -143,7 +143,7 @@ export default function NavBar() {
                 </li>
                 <li>
                   <Link
-                    className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-cyan-700 md:dark:hover:bg-transparent md:dark:hover:text-white text-platinum text-2xl hover:text-moss"
+                    className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
                     href="#about"
                   >
                     About
