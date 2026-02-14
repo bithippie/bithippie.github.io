@@ -1,7 +1,6 @@
 "use client";
 
 import { Accordion } from "@/components/accordion";
-import Link from "next/link";
 
 export default function FAQ() {
   const accordionItems = [
@@ -106,12 +105,12 @@ export default function FAQ() {
           </p>
           <p className="my-4">
             Fret not, if this is something you&apos;re worried about, check out{" "}
-            <Link
+            <a
               href="#testimonials"
               className="text-moss underline"
             >
               Why people love working with BitHippie!
-            </Link>
+            </a>
           </p>
         </>
       ),

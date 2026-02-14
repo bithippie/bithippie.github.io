@@ -9,10 +9,22 @@ const marcellus = localFont({
 });
 
 export const metadata = {
-  url: "https://bithippie.com",
-  image: "/assets/images/home/og_image.jpg",
+  metadataBase: new URL("https://bithippie.com"),
   title: "Sustainable Data Platforms for BioTech with BitHippie",
-  description:`Fractional Software, Data, and Cloud Engineering. Specializing in Rapid Product Development, Data Platform Design, and Internal Tooling`,
+  description: "Fractional Software, Data, and Cloud Engineering. Specializing in Rapid Product Development, Data Platform Design, and Internal Tooling",
+  openGraph: {
+    url: "https://bithippie.com",
+    type: "website",
+    title: "Sustainable Data Platforms for BioTech with BitHippie",
+    description: "Fractional Software, Data, and Cloud Engineering. Specializing in Rapid Product Development, Data Platform Design, and Internal Tooling",
+    images: "/assets/images/home/og_image.jpg",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sustainable Data Platforms for BioTech with BitHippie",
+    description: "Fractional Software, Data, and Cloud Engineering. Specializing in Rapid Product Development, Data Platform Design, and Internal Tooling",
+    images: "/assets/images/home/og_image.jpg",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -25,32 +37,13 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png"/>
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png"/>
 
-        {/* Sets viewport width to device width and prevents initial zoom - essential for responsive mobile design */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Content Security Policy - Only load resources from your own domain */}
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self';" />
-        {/* Prevent MIME type sniffing */}
-        <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-        {/* Control referrer information sent to other sites */}
-        <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-        {/* Disable unused browser features */}
-        <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
-
-
-        {/* Facebook Meta Tags */}
-        <meta property="og:url" content={metadata.url} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:image" content={metadata.image} />
-
-        {/* Twitter Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content={metadata.url} />
-        <meta property="twitter:url" content={metadata.url} />
-        <meta name="twitter:title" content={metadata.title} />
-        <meta name="twitter:description" content={metadata.description} />
-        <meta name="twitter:image" content={metadata.image} />
+        {/* Security Headers */}
+        {process.env.NODE_ENV === "production" && (
+          <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; frame-src https://calendar.google.com;" />
+        )}
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+        <meta httpEquiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
       </head>
 
       <body className={`${marcellus.variable} antialiased `}>
