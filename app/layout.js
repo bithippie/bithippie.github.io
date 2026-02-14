@@ -25,8 +25,17 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png"/>
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png"/>
 
-        {/* HTML Meta Tags */}
+        {/* Sets viewport width to device width and prevents initial zoom - essential for responsive mobile design */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* Content Security Policy - Only load resources from your own domain */}
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self';" />
+        {/* Prevent MIME type sniffing */}
+        <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+        {/* Control referrer information sent to other sites */}
+        <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+        {/* Disable unused browser features */}
+        <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
+
 
         {/* Facebook Meta Tags */}
         <meta property="og:url" content={metadata.url} />
