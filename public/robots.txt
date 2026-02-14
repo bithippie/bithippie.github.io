@@ -1,0 +1,9 @@
+# Block testimonial images from being indexed
+User-agent: *
+Disallow: /assets/images/testimonials/
+
+User-agent: Googlebot-Image
+Disallow: /assets/images/testimonials/
+
+User-agent: Bingbot
+Disallow: /assets/images/testimonials/
