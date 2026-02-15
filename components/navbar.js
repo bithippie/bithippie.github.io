@@ -34,7 +34,6 @@ export default function NavBar() {
           <Link href="/">
             <Image
               src="/assets/images/logo.png"
-              className="h-20"
               alt="BitHippie Logo"
               width={300}
               height={125}
@@ -78,36 +77,36 @@ export default function NavBar() {
                   >
                     <ul className="mt-4 flex flex-col">
                       <li>
-                        <Link
+                        <a
                           className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
                           href="#services"
                         >
                           Services
-                        </Link>
+                        </a>
                       </li>
                       <li>
-                        <Link
+                        <a
                           className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
                           href="#faq"
                         >
                           FAQ
-                        </Link>
+                        </a>
                       </li>
                       <li>
-                        <Link
+                        <a
                           className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
                           href="#schedule"
                         >
                           Schedule
-                        </Link>
+                        </a>
                       </li>
                       <li>
-                        <Link
+                        <a
                           className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
                           href="#about"
                         >
                           About
-                        </Link>
+                        </a>
                       </li>
                     </ul>
                   </motion.div>
@@ -118,36 +117,36 @@ export default function NavBar() {
             <div className="w-auto">
               <ul className="flex mt-0 flex-row space-x-8 text-sm font-medium">
                 <li>
-                  <Link
+                  <a
                     className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
                     href="#services"
                   >
                     Services
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
+                  <a
                     className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
                     href="#faq"
                   >
                     FAQ
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
+                  <a
                     className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
                     href="#schedule"
                   >
                     Schedule
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
+                  <a
                     className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
                     href="#about"
                   >
                     About
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>

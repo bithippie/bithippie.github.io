@@ -69,21 +69,21 @@ export default function WeWorkTogether({ backgroundColor }) {
                     height={32}
                     src="/assets/images/icons/aws.png"
                     alt="Amazon Web Services Logo"
-                    className="h-8 my-4"
+                    className="my-4"
                   />
                   <Image
                     width={206}
                     height={32}
                     src="/assets/images/icons/gcp.png"
                     alt="Google Cloud Platform Logo"
-                    className="h-8 my-4"
+                    className="my-4"
                   />
                   <Image
                     width={167}
                     height={32}
                     src="/assets/images/icons/render.png"
                     alt="Render.com Logo"
-                    className="h-8 my-4"
+                    className="my-4"
                   />
                 </div>
               </div>

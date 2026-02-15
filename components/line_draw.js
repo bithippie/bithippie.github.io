@@ -17,7 +17,6 @@ export default function LineDraw({ hasScroll }) {
 
       const handleVisibility = () => {
         if (isLineVisible(svgSustainably)) {
-          console.log({ isVisible: isLineVisible(svgSustainably) });
           triggerAnimation();
           window.removeEventListener("scroll", handleVisibility);
         }
