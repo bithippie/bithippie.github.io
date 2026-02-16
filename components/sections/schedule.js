@@ -26,6 +26,7 @@ export default function Schedule({ backgroundColor }) {
               Schedule a discovery call to explore how we can help.
             </p>
 
+            <a name="faq" />
             <FAQ />
           </div>
 

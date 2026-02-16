@@ -40,6 +40,7 @@ module.exports = {
     "bg-platinum",
     "bg-white",
     "bg-moss",
+    "bg-dark-grey",
     "start-curve-divider",
     "end-curve-divider",
   ],

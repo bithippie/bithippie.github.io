@@ -21,7 +21,7 @@ export default function Hero() {
           </h1>
 
           <h2 className="text-platinum text-2xl my-8 md:text-3xl">
-            We're your engineering partner for the data platforms, pipelines, and tools that 
+            We&apos;re your engineering partner for the data platforms, pipelines, and tools that
             let your scientists focus on science—not wrestling with technology.
           </h2>
 

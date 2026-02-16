@@ -35,7 +35,7 @@ export default function About({ backgroundColor }) {
             as our understanding evolves.
           </p>
           <p className="my-4">
-            We've built data infrastructure for companies across the biotech 
+            We&apos;ve built data infrastructure for companies across the biotech
             ecosystem—from AI-driven drug discovery platforms and clinical trial 
             optimization companies to global pharmaceutical research organizations 
             and life sciences venture capital firms.
@@ -49,47 +49,6 @@ export default function About({ backgroundColor }) {
             Great engineering partnerships require more than technical skills—they 
             demand deep understanding of your research operations, adaptability as 
             priorities shift, and genuine investment in your success.
-          </p>
-
-          <div className="border-t border-gray-200 pt-8 mt-4 w-full">
-            <h3 className="text-moss mb-4 text-center lg:text-left">
-              Our Team Culture
-            </h3>
-            <p className="my-4">
-              When you work with us, you&apos;re working with a team that knows
-              each other deeply. Our shared experiences allow us to collaborate
-              effectively and effortlessly.
-            </p>
-            <p className="my-4">
-              When we&apos;re not building data infrastructure, you might find us:
-            </p>
-            <ul className="list-disc pl-8">
-              <li>On top of a mountain watching the total solar eclipse.</li>
-              <li>
-                Orienteering in a swim, bike, run adventure race on the Cape.
-              </li>
-              <li>
-                Talking about financial independence, health, and dreams for the
-                future.
-              </li>
-              <li>
-                Discussing how diet, sleep, and stress are impacting our blood
-                glucose levels.
-              </li>
-              <li>
-                Sharing workouts, personal records (PRs), supplements, and the
-                latest non-alcoholic beverages.
-              </li>
-              <li>
-                Or lovingly challenging a colleagues limiting beliefs to help
-                them get out of their own way.
-              </li>
-            </ul>
-          </div>
-
-          <p className="my-4">
-            If you&apos;re interested in joining our mission, reach out via
-            LinkedIn to explore if we&apos;d be a good fit.
           </p>
 
           <div className="w-full flex text-center justify-center">

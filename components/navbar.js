@@ -1,17 +1,43 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 import screens from "@/utils/tailwindScreens";
+
+function scrollToSection(hash) {
+  const name = hash.replace("#", "");
+  const el = document.querySelector(`a[name="${name}"]`);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+}
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const mdScreen = parseInt(screens.md);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleHashClick = useCallback(
+    (e, hash) => {
+      e.preventDefault();
+      setIsOpen(false);
+      if (pathname === "/") {
+        window.history.replaceState(null, "", `/${hash}`);
+        scrollToSection(hash);
+      } else {
+        router.push(`/${hash}`, { scroll: false });
+        setTimeout(() => scrollToSection(hash), 800);
+      }
+    },
+    [pathname, router],
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,6 +52,13 @@ export default function NavBar() {
 
     return () => window.removeEventListener("resize", handleResize);
   }, [mdScreen]);
+
+  const navItems = [
+    { label: "Services", hash: "#services" },
+    { label: "FAQ", hash: "#faq" },
+    { label: "Schedule", hash: "#schedule" },
+    { label: "About", hash: "#about" },
+  ];
 
   return (
     <section className="w-full">
@@ -76,37 +109,24 @@ export default function NavBar() {
                     className="w-full bg-gradient-to-b from-transparent to-bg-dark-grey backdrop-blur-md opacity-95"
                   >
                     <ul className="mt-4 flex flex-col">
+                      {navItems.map((item) => (
+                        <li key={item.hash}>
+                          <a
+                            className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss cursor-pointer"
+                            onClick={(e) => handleHashClick(e, item.hash)}
+                          >
+                            {item.label}
+                          </a>
+                        </li>
+                      ))}
                       <li>
-                        <a
-                          className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
-                          href="#services"
-                        >
-                          Services
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
-                          href="#faq"
-                        >
-                          FAQ
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
-                          href="#schedule"
-                        >
-                          Schedule
-                        </a>
-                      </li>
-                      <li>
-                        <a
+                        <Link
                           className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
-                          href="#about"
+                          href="/team"
+                          onClick={() => setIsOpen(false)}
                         >
-                          About
-                        </a>
+                          Careers
+                        </Link>
                       </li>
                     </ul>
                   </motion.div>
@@ -116,37 +136,24 @@ export default function NavBar() {
           ) : (
             <div className="w-auto">
               <ul className="flex mt-0 flex-row space-x-8 text-sm font-medium">
+                {navItems.map((item) => (
+                  <li key={item.hash}>
+                    <a
+                      className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss cursor-pointer"
+                      onClick={(e) => handleHashClick(e, item.hash)}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+                <li className="text-platinum text-2xl select-none" aria-hidden="true">|</li>
                 <li>
-                  <a
+                  <Link
                     className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
-                    href="#services"
+                    href="/team"
                   >
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
-                    href="#faq"
-                  >
-                    FAQ
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
-                    href="#schedule"
-                  >
-                    Schedule
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
-                    href="#about"
-                  >
-                    About
-                  </a>
+                    Careers
+                  </Link>
                 </li>
               </ul>
             </div>
