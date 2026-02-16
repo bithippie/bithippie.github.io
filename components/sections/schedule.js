@@ -1,5 +1,7 @@
 "use client";
 
+import { Avatar, Blockquote } from "flowbite-react";
+
 import Divider from "@/components/divider";
 import FAQ from "@/components/faq";
 
@@ -26,8 +28,25 @@ export default function Schedule({ backgroundColor }) {
               Schedule a discovery call to explore how we can help.
             </p>
 
+            <Blockquote className="my-6 bg-gray-50 rounded-lg p-6 shadow-md">
+              <Avatar
+                className="float-right mb-4 mx-4 sm:mb-0"
+                rounded
+                size="lg"
+                img="/assets/images/testimonials/jacob.jpeg"
+                alt="Jacob Oppenheim // Venture Partner"
+              />
+              <p className="text-lg sm:text-xl text-gray-700 font-light leading-relaxed">
+                &ldquo;BitHippie has innovated practical and effective solutions in diverse fields from computational biology and bioinformatics, to laboratory + scientific systems, to classic business + financial systems, to health care over this time.&rdquo;
+              </p>
+              <figcaption className="mt-4 text-center sm:text-left text-gray-600 text-sm sm:text-base italic">
+                — Jacob Oppenheim // Venture Partner
+              </figcaption>
+            </Blockquote>
+
             <a name="faq" />
             <FAQ />
+          
           </div>
 
           <div className="flex sm:m-auto">
@@ -46,7 +65,7 @@ export default function Schedule({ backgroundColor }) {
           </div>
         </div>
       </div>
-      <Divider backgroundColor="white" curvePosition="start" />
+      <Divider backgroundColor="dark-grey" curvePosition="end" />
     </section>
   );
 }

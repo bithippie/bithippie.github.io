@@ -53,40 +53,29 @@ export default function Team() {
           <div className="container flex flex-col items-center text-center max-w-screen-xl">
             <RevealOnScroll>
               <h1 className="text-white">
-                Build What <span className="text-moss">Matters</span>
+                The Team Behind <span className="text-moss">BitHippie</span>
               </h1>
               <h2 className="text-platinum text-2xl my-8 md:text-3xl max-w-3xl mx-auto">
-                Join a team where engineering excellence meets purpose—accelerating
-                biotech research through world-class data infrastructure.
+                A small team building data infrastructure that accelerates 
+                biotech research.
               </h2>
             </RevealOnScroll>
           </div>
           <Divider curvePosition="start" backgroundColor="platinum" />
         </section>
 
-        {/* Why Work With Us */}
+        {/* How We Work */}
         <section className="relative bg-platinum pt-10 pb-20 md:pb-28">
           <div className="container max-w-screen-xl p-8">
             <RevealOnScroll>
-              <h2 className="text-moss mb-12 text-center">Why Work With Us</h2>
+              <h2 className="text-dark-grey mb-12 text-center">How We Work</h2>
             </RevealOnScroll>
-            <div className="grid md:grid-cols-3 gap-8">
-              {values.map((value) => (
-                <RevealOnScroll key={value.title}>
-                  <div className="bg-white rounded-lg p-8 shadow-md h-full">
-                    <h3 className="text-moss mb-4">{value.title}</h3>
-                    <p>{value.description}</p>
-                  </div>
-                </RevealOnScroll>
-              ))}
-            </div>
-            <div className="max-w-3xl mx-auto space-y-6 mt-16">
+            <div className="max-w-3xl mx-auto space-y-6">
               <RevealOnScroll>
                 <p>
-                  We operate as embedded engineering partners for biotech companies.
-                  That means you won&apos;t be building products in isolation—you&apos;ll
-                  work directly alongside research scientists, data analysts, and
-                  domain experts to solve real problems.
+                  We operate as embedded engineering partners for biotech companies—
+                  working directly alongside research scientists, data analysts, and 
+                  domain experts to solve real infrastructure challenges.
                 </p>
               </RevealOnScroll>
               <RevealOnScroll>
@@ -97,6 +86,13 @@ export default function Team() {
                   deliver early wins. This transitions into{" "}
                   <strong className="text-old-gold">Strategic Builds</strong> where we
                   take ownership of major platform development.
+                </p>
+              </RevealOnScroll>
+              <RevealOnScroll>
+                <p>
+                  We've built data infrastructure for AI-driven drug discovery platforms, 
+                  clinical trial optimization companies, global pharmaceutical research 
+                  organizations, and life sciences venture capital firms.
                 </p>
               </RevealOnScroll>
               <RevealOnScroll>
@@ -116,81 +112,66 @@ export default function Team() {
         <section className="relative bg-white pt-10 pb-20 md:pb-28">
           <div className="container max-w-screen-xl p-8">
             <RevealOnScroll>
-              <h2 className="text-moss mb-8 text-center">Our Team Culture</h2>
+              <h2 className="text-moss mb-8 text-center">Beyond the Code</h2>
             </RevealOnScroll>
             <div className="max-w-3xl mx-auto space-y-6">
               <RevealOnScroll>
                 <p>
-                  When you work with us, you&apos;re working with a team that knows
-                  each other deeply. Our shared experiences allow us to collaborate
-                  effectively and effortlessly.
+                  When you work with BitHippie, you're working with a team that knows
+                  each other deeply. Our shared experiences—both technical and 
+                  personal—allow us to collaborate effectively and bring our whole 
+                  selves to the work.
                 </p>
               </RevealOnScroll>
               <RevealOnScroll>
                 <p>
-                  When we&apos;re not building data infrastructure, you might find us:
+                  When we're not building data infrastructure, you might find us:
                 </p>
                 <ul className="list-disc pl-8 mt-4 space-y-2">
-                  <li>On top of a mountain watching the total solar eclipse.</li>
-                  <li>Orienteering in a swim, bike, run adventure race on the Cape.</li>
-                  <li>Talking about financial independence, health, and dreams for the future.</li>
-                  <li>Discussing how diet, sleep, and stress are impacting our blood glucose levels.</li>
-                  <li>Sharing workouts, personal records (PRs), supplements, and the latest non-alcoholic beverages.</li>
-                  <li>Or lovingly challenging a colleagues limiting beliefs to help them get out of their own way.</li>
+                  <li>On top of a mountain watching the total solar eclipse</li>
+                  <li>Orienteering in a swim, bike, run adventure race on the Cape</li>
+                  <li>Talking about financial independence, health, and dreams for the future</li>
+                  <li>Discussing how diet, sleep, and stress impact our blood glucose levels</li>
+                  <li>Sharing workouts, personal records, supplements, and the latest non-alcoholic beverages</li>
+                  <li>Lovingly challenging each other's limiting beliefs to help us get out of our own way</li>
                 </ul>
+              </RevealOnScroll>
+              <RevealOnScroll>
+                <p className="mt-6">
+                  We approach business from the inside out—starting with personal 
+                  development, guided by quarterly goal-setting, supported by 
+                  accountability, all within a culture of psychological safety.
+                </p>
               </RevealOnScroll>
             </div>
           </div>
-          <Divider backgroundColor="platinum" curvePosition="end" />
+          <Divider backgroundColor="platinum" curvePosition="start" />
         </section>
 
-        {/* Open Roles */}
+        {/* Join Our Network */}
         <section className="relative bg-platinum pt-10 pb-20 md:pb-28">
           <div className="container max-w-screen-xl p-8">
             <RevealOnScroll>
-              <h2 className="text-moss mb-12 text-center">Open Roles</h2>
+              <h2 className="text-moss mb-12 text-center">Join Our Network</h2>
             </RevealOnScroll>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {roles.map((role) => (
-                <RevealOnScroll key={role.title}>
-                  <div className="bg-white rounded-lg p-8 shadow-md h-full flex flex-col">
-                    <h3 className="text-moss mb-3">{role.title}</h3>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="bg-platinum text-dark-grey px-3 py-1 rounded-full text-sm">
-                        {role.type}
-                      </span>
-                      <span className="bg-platinum text-dark-grey px-3 py-1 rounded-full text-sm">
-                        {role.location}
-                      </span>
-                    </div>
-                    <p className="flex-grow">{role.description}</p>
-                    <a
-                      href="https://www.linkedin.com/in/bithippie"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <motion.button
-                        className="mt-6 bg-moss text-white px-6 py-3 rounded-lg shadow-md hover:shadow-lg"
-                        whileHover={{ scale: 1.025 }}
-                        whileTap={{ scale: 0.96 }}
-                      >
-                        Apply via LinkedIn
-                      </motion.button>
-                    </a>
-                  </div>
-                </RevealOnScroll>
-              ))}
-            </div>
-
-            <RevealOnScroll>
-              <div className="mt-16 text-center max-w-2xl mx-auto">
-                <h3 className="text-moss mb-4">Don&apos;t See a Perfect Match?</h3>
-                <p className="mb-6">
-                  We&apos;re always interested in meeting talented engineers who are
-                  passionate about biotech and data infrastructure. Reach out and
-                  tell us about yourself.
+            <div className="max-w-3xl mx-auto space-y-6">
+              <RevealOnScroll>
+                <p>
+                  We occasionally collaborate with senior engineers who understand the 
+                  unique demands of biotech data infrastructure—complex experimental 
+                  workflows, cross-functional collaboration, and systems that evolve 
+                  with research.
                 </p>
-                <a
+              </RevealOnScroll>
+              <RevealOnScroll>
+                <p>
+                  If you're interested in working on challenging problems at the 
+                  intersection of engineering and scientific discovery, reach out via 
+                  LinkedIn to explore if there's a fit.
+                </p>
+              </RevealOnScroll>
+              
+              <a className="flex justify-center pt-8"
                   href="https://www.linkedin.com/in/bithippie"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -202,14 +183,12 @@ export default function Team() {
                   >
                     Get in Touch
                   </motion.button>
-                </a>
-              </div>
-            </RevealOnScroll>
+              </a>
+            </div>
           </div>
           <Divider backgroundColor="dark-grey" curvePosition="end" />
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

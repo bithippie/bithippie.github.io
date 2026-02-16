@@ -1,10 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { Avatar, Blockquote } from "flowbite-react";
+import Image from "next/image";
 
 import Divider from "@/components/divider";
 import RevealOnScroll from "@/components/reveal";
-import Image from "next/image";
+import ScheduleConsultation from "@/components/schedule_consultation";
+
 
 export default function About({ backgroundColor }) {
   return (
@@ -50,34 +52,33 @@ export default function About({ backgroundColor }) {
             demand deep understanding of your research operations, adaptability as 
             priorities shift, and genuine investment in your success.
           </p>
+          <p className="my-4">
+            We become an extension of your team—communicating regularly, owning execution, and 
+            delivering production-ready solutions. Access multi-disciplinary engineering expertise without 
+            the overhead of full-time hires.
+          </p>
 
+          <Blockquote className="my-6 bg-gray-50 rounded-lg p-6 shadow-md">
+            <Avatar
+              className="float-right mb-4 mx-4 sm:mb-0"
+              rounded
+              size="lg"
+              img="/assets/images/testimonials/alex_g.jpeg"
+              alt="Alex Garcia // Principal Data Engineer"
+            />
+            <p className="text-lg sm:text-xl text-gray-700 font-light leading-relaxed">
+              &ldquo;Instead of simply presenting a solution, BitHippie engaged in active listening and posed insightful questions, leading us through the complexities and the course of action which we executed.&rdquo;
+            </p>
+            <figcaption className="mt-4 text-center sm:text-left text-gray-600 text-sm sm:text-base italic">
+              — Alex Garcia // Principal Data Engineer
+            </figcaption>
+          </Blockquote>
           <div className="w-full flex text-center justify-center">
-            <a
-              href="https://www.linkedin.com/in/bithippie"
-              className=""
-              target="_blank"
-            >
-              <motion.button
-                className="
-                bg-transparent
-                text-moss border
-                border-moss
-                px-8 py-4
-                text-xl
-                rounded-lg
-                shadow-lg
-                hover:shadow-xl
-              "
-                whileHover={{ scale: 1.025 }}
-                whileTap={{ scale: 0.96 }}
-              >
-                Get in Touch
-              </motion.button>
-            </a>
+            <ScheduleConsultation />
           </div>
         </div>
       </div>
-      <Divider backgroundColor="dark-grey" curvePosition="end" />
+      <Divider backgroundColor="white" curvePosition="start" />
     </section>
   );
 }

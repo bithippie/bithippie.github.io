@@ -10,7 +10,7 @@ import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 const data = [
   {
     quote:
-      "I've benefitted firsthand from his robust data platform construction. As a data scientist, he made my life easier everyday. The data platform was designed to be easy to use, long lasting, and used across multiple teams",
+      "I've benefitted firsthand from his robust data platform construction. As a data scientist, BitHippie made my life easier everyday. The data platform was designed to be easy to use, long lasting, and used across multiple teams",
     name: "Sara Kohnke, PhD // Senior Data Scientist",
     image: "sara.jpeg",
   },
@@ -22,13 +22,13 @@ const data = [
   },
   {
     quote:
-      "He has innovated practical and effective solutions in diverse fields from computational biology and bioinformatics, to laboratory + scientific systems, to classic business + financial systems, to health care over this time.",
+      "BitHippie has innovated practical and effective solutions in diverse fields from computational biology and bioinformatics, to laboratory + scientific systems, to classic business + financial systems, to health care over this time.",
     name: "Jacob Oppenheim // Venture Partner",
     image: "jacob.jpeg",
   },
   {
     quote:
-      "Instead of simply presenting a solution, he engaged in active listening and posed insightful questions, leading us through the complexities and the course of action which we executed.",
+      "Instead of simply presenting a solution, BitHippie engaged in active listening and posed insightful questions, leading us through the complexities and the course of action which we executed.",
     name: "Alex Garcia // Principal Data Engineer",
     image: "alex_g.jpeg",
   },
@@ -40,7 +40,7 @@ const data = [
   },
   {
     quote:
-      "There are few people who's opinion I value more than Anthony's as his technical knowledge is both wide and deep.",
+      "There are few people who's opinion I value more than BitHippie's as his technical knowledge is both wide and deep.",
     name: "Jason Davis-Cooke // Software Engineer",
     image: "jason.jpeg",
   },

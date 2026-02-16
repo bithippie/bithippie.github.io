@@ -1,6 +1,6 @@
 import Navbar from "@/components/navbar";
 import Hero from "@/components/sections/hero";
-import Services from "@/components/sections/services";
+import Outcomes from "@/components/sections/outcomes";
 import Process from "@/components/sections/process";
 import Testimonials from "@/components/sections/testimonials";
 import Schedule from "@/components/sections/schedule";
@@ -13,11 +13,10 @@ export default function Home() {
       <main>
         <Navbar />
         <Hero />
-        <Services backgroundColor="platinum" />
+        <Outcomes backgroundColor="platinum" />
         <Process backgroundColor="white" />
-        <Testimonials backgroundColor="moss" />
-        <Schedule backgroundColor="platinum" />
-        <About backgroundColor="white" />
+        <About backgroundColor="platinum" />
+        <Schedule backgroundColor="white" />
       </main>
       <Footer />
     </div>

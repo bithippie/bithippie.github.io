@@ -10,7 +10,7 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 export function Accordion({ accordionItems }) {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0);
 
   const toggleDisclosure = (index) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));

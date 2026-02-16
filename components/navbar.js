@@ -54,10 +54,10 @@ export default function NavBar() {
   }, [mdScreen]);
 
   const navItems = [
-    { label: "Services", hash: "#services" },
-    { label: "FAQ", hash: "#faq" },
+    { label: "Outcomes", hash: "#outcomes" },
+    { label: "Engagement", hash: "#engagement" },
     { label: "Schedule", hash: "#schedule" },
-    { label: "About", hash: "#about" },
+    { label: "Experience", hash: "#experience" },
   ];
 
   return (
@@ -106,7 +106,7 @@ export default function NavBar() {
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="w-full bg-gradient-to-b from-transparent to-bg-dark-grey backdrop-blur-md opacity-95"
+                    className="w-full bg-gradient-to-b from-transparent to-dark-grey backdrop-blur-md opacity-95"
                   >
                     <ul className="mt-4 flex flex-col">
                       {navItems.map((item) => (
@@ -125,7 +125,7 @@ export default function NavBar() {
                           href="/team"
                           onClick={() => setIsOpen(false)}
                         >
-                          Careers
+                          Team
                         </Link>
                       </li>
                     </ul>
@@ -152,7 +152,7 @@ export default function NavBar() {
                     className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
                     href="/team"
                   >
-                    Careers
+                    Team
                   </Link>
                 </li>
               </ul>

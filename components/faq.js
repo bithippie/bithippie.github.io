@@ -86,7 +86,7 @@ export default function FAQ() {
           <p className="my-4">
             <strong className="text-old-gold">
               You get access to a multi-disciplinary delivery team 
-              with decades of combined technical experience
+              with decades of combined technical and product experience
               —without the overhead of building an internal function. 
             </strong>
             <br/><br/>

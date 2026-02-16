@@ -32,10 +32,10 @@ export default function HowWeWork({ backgroundColor }) {
     <section
       className={`relative bg-${backgroundColor} pt-16 pb-24 min-h-[768]`}
     >
-      <a name="how-we-work" />
+      <a name="engagement" />
 
-      <div className="text-center">
-        <h2>Together We&nbsp;Go&nbsp;Far</h2>
+      <div className="text-center mt-4 text-moss">
+        <h2>Together We'll&nbsp;Go&nbsp;Far</h2>
       </div>
 
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 py-8 max-w-screen-xl">
@@ -49,18 +49,13 @@ export default function HowWeWork({ backgroundColor }) {
               </div>
             </RevealOnScroll>
           ))}
-          <p className="text-gray-700 mt-4 px-2">
-            We become an extension of your team—communicating regularly, owning execution, and 
-            delivering production-ready solutions. Access multi-disciplinary engineering expertise without 
-            the overhead of full-time hires.
-          </p>
         </div>
 
         {/* Featured Testimonial */}
         <RevealOnScroll>
           <div className="sm:col-span-1 space-y-8">
             <h3 className="text-center lg:text-left">
-              Let our clients be the first&nbsp;to&nbsp;tell&nbsp;you…
+              Our clients are the first&nbsp;to&nbsp;tell&nbsp;you…
             </h3>
 
             <Blockquote className="my-6 bg-gray-50 rounded-lg p-6 shadow-md">
@@ -81,6 +76,21 @@ export default function HowWeWork({ backgroundColor }) {
                 — Sara Kohnke, PhD // Senior Data Scientist
               </figcaption>
             </Blockquote>
+            <Blockquote className="my-6 bg-gray-50 rounded-lg p-6 shadow-md">
+              <Avatar
+                className="float-right mb-4 mx-4 sm:mb-0"
+                rounded
+                size="lg"
+                img="/assets/images/testimonials/alex.jpeg"
+                alt="Alex Greenfield // Chief Scientist & Founder"
+              />
+              <p className="text-lg sm:text-xl text-gray-700 font-light leading-relaxed">
+                &ldquo;We were able to go from initial product idea to a demo with stakeholders in just a couple of weeks. This enabled rapid iteration, and minimized the chances of building something that nobody would want.&rdquo;
+              </p>
+              <figcaption className="mt-4 text-center sm:text-left text-gray-600 text-sm sm:text-base italic">
+                — Alex Greenfield // Chief Scientist & Founder
+              </figcaption>
+            </Blockquote>
 
             <div className="flex justify-center">
               <ScheduleConsultation />
@@ -89,7 +99,7 @@ export default function HowWeWork({ backgroundColor }) {
         </RevealOnScroll>
       </div>
 
-      <Divider backgroundColor="moss" curvePosition="start" />
+      <Divider backgroundColor="platinum" curvePosition="end" />
     </section>
   );
 }
