@@ -10,8 +10,7 @@ export default function ScheduleConsultation() {
         whileHover={{ scale: 1.025 }}
         whileTap={{ scale: 0.95 }}
       >
-        <span className="hidden sm:block">Schedule My Free Consultation</span>
-        <span className="sm:hidden">Schedule A Call</span>
+        Schedule a Discovery Call
       </motion.button>
     </a>
   );

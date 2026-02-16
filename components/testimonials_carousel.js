@@ -16,27 +16,9 @@ const data = [
   },
   {
     quote:
-      "He successfully helped us move our WordPress media from the local WP Engine server to an Amazon S3 bucket which enabled us to save a ton of money on our monthly hosting bill.",
-    name: "Theron Gamboa // Founder // Cabin Connoisseur",
-    image: "ron.jpeg",
-  },
-  {
-    quote:
-      "When I needed support to launch my startup, he didn't hesitate to jump in and offer his assistance. His willingness to help, combined with his insightful guidance, made a significant difference in my journey.",
-    name: "Lindsay Ruiz // Founder // Human As Usual",
-    image: "lindsay.jpeg",
-  },
-  {
-    quote:
-      "His exceptional technical skills, combined with his dedication, open-mindedness, and collaborative spirit, make him an invaluable asset to any team.",
-    name: "Jonathan Weiss // Partner and Chief Innovator",
-    image: "jon.jpeg",
-  },
-  {
-    quote:
-      "We were able to go from initial product idea to a demo with stakeholders in just a couple of weeks. This enabled rapid iteration, and minimized the chances of building something that nobody would want.",
-    name: "Alex Greenfield // Cheif Scientist & Founder",
-    image: "alex.jpeg",
+      "Under his leadership, the engineering team has designed and implemented a clean architecture and built a sustainable data infrastructure that supports multiple teams of data scientists, analysts, and downstream business users.",
+    name: "Lina Chen // Data Engineering Lead",
+    image: "lina.jpeg",
   },
   {
     quote:
@@ -46,15 +28,15 @@ const data = [
   },
   {
     quote:
-      "Under his leadership, the engineering team has designed and implemented a clean architecture and built a sustainable data infrastructure that supports multiple teams of data scientists, analysts, and downstream business users.",
-    name: "Lina Chen // Data Engineering Lead",
-    image: "lina.jpeg",
-  },
-  {
-    quote:
       "Instead of simply presenting a solution, he engaged in active listening and posed insightful questions, leading us through the complexities and the course of action which we executed.",
     name: "Alex Garcia // Principal Data Engineer",
     image: "alex_g.jpeg",
+  },
+  {
+    quote:
+      "We were able to go from initial product idea to a demo with stakeholders in just a couple of weeks. This enabled rapid iteration, and minimized the chances of building something that nobody would want.",
+    name: "Alex Greenfield // Chief Scientist & Founder",
+    image: "alex.jpeg",
   },
   {
     quote:

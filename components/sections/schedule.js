@@ -2,7 +2,6 @@
 
 import Divider from "@/components/divider";
 import FAQ from "@/components/faq";
-import LineDraw from "@/components/line_draw";
 
 export default function Schedule({ backgroundColor }) {
   return (
@@ -14,25 +13,17 @@ export default function Schedule({ backgroundColor }) {
           <div className="flex flex-col grow w-full text-center xl:text-left">
             <a name="schedule" />
             <h2 className="text-moss pb-8">
-              Schedule My Free&nbsp;Consultation
+              Schedule a Discovery&nbsp;Call
             </h2>
             <p className="text-xl mb-8">
-              We love speaking with entrepreneurs, founders, and good humans who
-              strive to leave the world better than they found it.
+              We partner with biotech companies across the spectrum—from 
+              venture-backed startups and computational biology companies to 
+              AI-driven drug discovery platforms and global pharmaceutical 
+              research organizations—building the data infrastructure that 
+              accelerates discovery.
             </p>
             <p className="text-xl mb-8">
-              If you&apos;re ready to{" "}
-              <span className="relative inline-block">
-                <span>take action</span>
-                <LineDraw hasScroll={false} />
-              </span>{" "}
-              then schedule a time to speak with us.
-            </p>
-            <p className="text-xl">
-              In as little as one month you and your customers will see the
-              manifestation of your idea. You&apos;ll collect valuable data from your
-              users, and you&apos;ll move forward with an informed opinion about how
-              best to proceed!
+              Schedule a discovery call to explore how we can help.
             </p>
 
             <FAQ />
@@ -41,10 +32,10 @@ export default function Schedule({ backgroundColor }) {
           <div className="flex sm:m-auto">
             <iframe
               className="
-                w-[599px] 
-                lg:w-[1024px] 
-                xl:w-[599px] 
-                
+                w-[599px]
+                lg:w-[1024px]
+                xl:w-[599px]
+
                 min-h-[1200px]
                 lg:min-h-[700px]
                 xl:min-h-[1200px]"

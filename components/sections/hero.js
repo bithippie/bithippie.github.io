@@ -1,4 +1,3 @@
-import { metadata } from "@/app/layout";
 import Divider from "@/components/divider";
 import LineDraw from "@/components/line_draw";
 import RevealOnScroll from "@/components/reveal";
@@ -12,24 +11,26 @@ export default function Hero() {
     >
       <div className="container flex flex-col items-center self-center text-center max-w-screen-xl">
         <RevealOnScroll>
-          <h1 className="text-white">
-            Helping <span className="text-old-gold">BioTech</span> companies {" "}
+          <h1 className="text-white md:text-7xl">
+            Good Data Systems{" "}
             <span className="relative inline-block">
-              <span className="text-moss">sustainably</span>
+              <span className="text-moss">Accelerate</span>
               <LineDraw hasScroll={true} />
             </span>{" "}
-            build scalable data platforms.
+            <span className="text-old-gold">Biotech</span>&nbsp;Research
           </h1>
 
-          <h2 className="text-platinum text-2xl my-8 md:text-4xl">
-            {metadata.description}
+          <h2 className="text-platinum text-2xl my-8 md:text-3xl">
+            We're your engineering partner for the data platforms, pipelines, and tools that 
+            let your scientists focus on science—not wrestling with technology.
           </h2>
+
           <div className="flex place-content-center">
             <ScheduleConsultation />
           </div>
         </RevealOnScroll>
       </div>
       <Divider curvePosition="start" backgroundColor="platinum" />
-    </section >
+    </section>
   );
 }

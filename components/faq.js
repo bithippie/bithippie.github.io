@@ -1,116 +1,122 @@
 "use client";
 
 import { Accordion } from "@/components/accordion";
+import Link from "next/link";
 
 export default function FAQ() {
   const accordionItems = [
     {
-      key: 0,
+      key: "beginning",
+      title: "How do partnerships begin?",
+      text: (
+        <>
+          <p className="my-4">
+            We start with a <strong className="text-old-gold">Discovery Conversation</strong>{" "} 
+            to understand your data infrastructure needs and research priorities. We explore whether 
+            there&apos;s strong alignment between your challenges and our expertise.
+          </p>
+          <p className="my-4">
+            If the fit is right, we move into a <strong className="text-old-gold">Foundational Partnership</strong>{" "}
+            where we embed with your team, map your technical landscape, and identify 
+            the highest-impact opportunities. This phase builds the working 
+            relationship and technical understanding that enables larger 
+            strategic work.
+          </p>
+          <p className="my-4">
+            By the end of this phase, <strong className="text-old-gold">we&apos;ve delivered early wins and 
+            established a now, next, and after data platform roadmap.</strong>
+          </p>
+        </>
+      ),
+    },
+    {
+      key: "engagement",
+      title: "What can I expect during a typical engagement?",
+      text: (
+        <>
+          <p className="my-4">
+            We begin with a <strong className="text-old-gold">Foundational Partnership</strong>{" "}
+            (3-6 months) where we embed with your team, understand your research
+            priorities and technical landscape, and deliver early wins.
+          </p>
+          <p className="my-4">
+            This transitions into a{" "}
+            <strong className="text-old-gold">Strategic Build</strong>{" "}
+            (6-12+ months) where we take ownership of major platform development—you focus on your science,
+            we handle the technical execution.
+          </p>
+          <p className="my-4">
+            Many clients <strong className="text-old-gold">continue partnering with us</strong>{" "}
+            on successive strategic initiatives as their platform needs evolve—whether 
+            that&apos;s expanding capabilities, integrating new data sources, or scaling
+            infrastructure for growth.
+          </p>
+          <p className="my-4">
+            We function as your engineering partner—owning execution, integrating 
+            seamlessly with your team, and enabling your research operations.
+          </p>
+        </>
+      ),
+    },
+    {
+      key: "cost",
       title: "What will it cost?",
       text: (
         <>
           <p className="my-4">
-            We know teams come with many different kinds of constraints. We try
-            to work within everyone&apos;s scope and budget.
+            Partnerships cost will vary depending on the
+            composition of your technical team, scope, and the complexity
+            of infrastructure we&apos;re providing.
+          </p>
+          <ul className="my-4">
+            <li>
+              -{" "}
+              <strong className="text-old-gold">
+                Foundational Partnerships
+              </strong> are in the range of $100k-$250k for a 3-6 month engagement.
+            </li>
+            
+            <li>
+              -{" "}
+              <strong className="text-old-gold">
+                Strategic Builds
+              </strong> typically start around $300k for a 6-month engagement and will scale based on the scope of work.
+            </li>
+          </ul>
+          <p className="my-4">
+            <strong className="text-old-gold">
+              You get access to a multi-disciplinary delivery team 
+              with decades of combined technical experience
+              —without the overhead of building an internal function. 
+            </strong>
+            <br/><br/>
+            We stay current with technology so your scientists can stay focused on breakthroughs.
           </p>
           <p className="my-4">
-            Our engagements are structured as a base contract, which includes a
-            purpose-built tech team for a maximum number of hours per month. If
-            more time is ever needed, additional time can be added at an hourly
-            rate.
-          </p>
-          <p className="my-4">
-            Depending on team composition, complexity, and timeline - our
-            typical small-to-medium projects range between $12,000 - $54,000 USD
-            / month.
-          </p>
-          <p className="my-4">
-            We do offer discounted rates for engagements that are for 3 or more
-            consecutive months.
-          </p>
-        </>
-      ),
-    },
-    {
-      key: 1,
-      title: "How is the work structured?",
-      text: (
-        <>
-          <p className="my-4">
-            Our Sustainable Engineering model is designed to give you access to
-            Software, Data, Cloud Engineers, and Architects for as long as you
-            need. This allows you to keep your headcount and operating expenses
-            low.
-          </p>
-          <p className="my-4">
-            We scope work into Milestones, each consisting of 2 Sprints,
-            totaling 20 business days.
-          </p>
-          <p className="my-4">
-            At the beginning of every Milestone all key stakeholders align on
-            the main objectives.
-          </p>
-          <p className="my-4">
-            The sprints serve as checkpoints within the Milestone to demonstrate
-            progress, and provide an opportunity to realign in the event the
-            circumstances change.
-          </p>
-          <p className="my-4">
-            We offer both ad hoc as well as recurring engagement models.
+            <Link href="#schedule" className="text-moss underline">
+              Schedule a discovery call
+            </Link>{" "}
+            to explore how we can help.
           </p>
         </>
       ),
     },
     {
-      key: 2,
-      title: "How are payments structured?",
+      key: "adaptability",
+      title: "How do you adapt to our changing priorities?",
       text: (
         <>
           <p className="my-4">
-            Payment structure depends on the type of the engagement.
-          </p>
-
-          <p className="my-4">
-            Ad hoc Engagements: 1 Milestone (4 weeks), payment is submitted in
-            thirds: 1/3 Is required to schedule a kick-off. 1/3 is due after
-            we&apos;ve completed the 1st sprint. 1/3 is due after we&apos;ve completed the
-            2nd sprint.
+            Research priorities shift as science evolves. Regulatory changes, 
+            funding milestones, and breakthrough discoveries reshape what matters 
+            most. Our partnership model is built for this reality.
           </p>
           <p className="my-4">
-            Recurring Engagement: 3 or more Milestones (12+ weeks), an invoice
-            is submitted in arrears for the month with a Net 30 due date.
-          </p>
-        </>
-      ),
-    },
-    {
-      key: 3,
-      title: "What if I'm not happy?",
-      text: (
-        <>
-          <p className="my-4">
-            While we never want to get to that point, our Sustainable
-            Engineering models is structured such that you can end the
-            relationship in at most 1 Month.
-          </p>
-          <p className="my-4">
-            When you provide notice to terminate the arrangement, all future
-            development work plans will be suspended and you will only be
-            invoiced for work delivered and any off-boarding work you authorize
-            us to conclude.
-          </p>
-          <p className="my-4">
-            We will do our best to make the situation right before we need to
-            take more severe measures such as terminating the arrangement.
-          </p>
-          <p className="my-4">
-            Fret not, if this is something you&apos;re worried about, check out{" "}
-            <a
-              href="#testimonials"
-              className="text-moss underline"
-            >
-              Why people love working with BitHippie!
-            </a>
+            For our longer-term Strategic Builds,{" "}
+            <strong className="text-old-gold">we conduct regular milestone 
+            reviews—typically every 4-8 weeks—to assess progress and ensure 
+            alignment with your evolving priorities.</strong> This structured cadence 
+            keeps us nimble while maintaining momentum on core development.
           </p>
         </>
       ),

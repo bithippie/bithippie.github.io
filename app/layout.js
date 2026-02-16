@@ -8,22 +8,27 @@ const marcellus = localFont({
   weight: "100 900",
 });
 
+const url = "https://bithippie.com"
+const title = "BitHippie | Data Platforms for Biotech Research";
+const description = "Specialized engineering partnerships for biotech companies. We build data platforms, ETL pipelines, and cloud infrastructure that accelerate drug discovery.";
+const images = "/assets/images/home/og_image.jpg";
+
 export const metadata = {
-  metadataBase: new URL("https://bithippie.com"),
-  title: "Sustainable Data Platforms for BioTech with BitHippie",
-  description: "Fractional Software, Data, and Cloud Engineering. Specializing in Rapid Product Development, Data Platform Design, and Internal Tooling",
+  metadataBase: new URL(url),
+  title,
+  description,
   openGraph: {
-    url: "https://bithippie.com",
+    url,
     type: "website",
-    title: "Sustainable Data Platforms for BioTech with BitHippie",
-    description: "Fractional Software, Data, and Cloud Engineering. Specializing in Rapid Product Development, Data Platform Design, and Internal Tooling",
-    images: "/assets/images/home/og_image.jpg",
+    title,
+    description,
+    images
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sustainable Data Platforms for BioTech with BitHippie",
-    description: "Fractional Software, Data, and Cloud Engineering. Specializing in Rapid Product Development, Data Platform Design, and Internal Tooling",
-    images: "/assets/images/home/og_image.jpg",
+    title,
+    description,
+    images
   },
 };
 
