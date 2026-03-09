@@ -1,11 +1,31 @@
 import "./globals.css";
 
 import localFont from "next/font/local";
+import { Playfair_Display, Merriweather, EB_Garamond } from "next/font/google";
 
 const marcellus = localFont({
   src: "../public/assets/fonts/Marcellus.ttf",
   variable: "--font-marcellus",
   weight: "100 900",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  variable: "--font-merriweather",
+  weight: ["300", "400", "700", "900"],
+  display: "swap",
+});
+
+const ebGaramond = EB_Garamond({
+  subsets: ["latin"],
+  variable: "--font-eb-garamond",
+  display: "swap",
 });
 
 const url = "https://bithippie.com"
@@ -51,7 +71,7 @@ export default function RootLayout({ children }) {
         <meta httpEquiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
       </head>
 
-      <body className={`${marcellus.variable} antialiased `}>
+      <body className={`${marcellus.variable} ${playfair.variable} ${merriweather.variable} ${ebGaramond.variable} antialiased`}>
         {children}
       </body>
     </html>

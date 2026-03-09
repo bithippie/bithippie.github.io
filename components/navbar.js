@@ -33,7 +33,7 @@ export default function NavBar() {
         scrollToSection(hash);
       } else {
         router.push(`/${hash}`, { scroll: false });
-        setTimeout(() => scrollToSection(hash), 800);
+        setTimeout(() => scrollToSection(hash), 300);
       }
     },
     [pathname, router],

@@ -19,7 +19,7 @@ export default function TeamPage() {
           <div className="container flex flex-col items-center text-center max-w-screen-xl">
             <RevealOnScroll>
               <h1 className="text-white">
-                Taking care of ourselves so we can take better care of the world.
+                Taking care of ourselves so we can<br/>take better care of the world.
               </h1>
             </RevealOnScroll>
           </div>

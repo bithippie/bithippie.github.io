@@ -13,7 +13,7 @@ export default function About({ backgroundColor }) {
     <section
       className={`relative bg-${backgroundColor} pt-10 pb-20 md:pb-28`}
     >
-      <a name="about" />
+      <a name="experience" />
       <div className="container grid lg:grid-cols-12 gap-8 p-8 max-w-screen-xl items-center">
         <div className="lg:col-span-4 overflow-hidden">
           <RevealOnScroll>
@@ -57,7 +57,7 @@ export default function About({ backgroundColor }) {
             delivering production-ready solutions. Access multi-disciplinary engineering expertise without 
             the overhead of full-time hires.
           </p>
-"I do believe in the ultimate mission of patient compensation and your team has advanced that mission tenfold." 
+
           <Blockquote className="my-6 bg-gray-50 rounded-lg p-6 shadow-md">
             <Avatar
               className="float-right mb-4 mx-4 sm:mb-0"

@@ -68,21 +68,32 @@ export default function FAQ() {
             composition of your technical team, scope, and the complexity
             of infrastructure we&apos;re providing.
           </p>
-          <ul className="my-4">
-            <li>
-              -{" "}
-              <strong className="text-old-gold">
-                Foundational Partnerships
-              </strong> are in the range of $100k-$250k for a 3-6 month engagement.
-            </li>
-            
-            <li>
-              -{" "}
-              <strong className="text-old-gold">
-                Strategic Builds
-              </strong> typically start around $300k for a 6-month engagement and will scale based on the scope of work.
-            </li>
-          </ul>
+          <table className="my-4 w-full text-left border-collapse">
+            <thead>
+              <tr className="border-b border-gray-300">
+                <th className="py-2 pr-4 font-semibold">Partnership</th>
+                <th className="py-2 pr-4 font-semibold">Timeline</th>
+                <th className="py-2 font-semibold">Starting At</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-gray-200">
+                <td className="py-2 pr-4 font-medium">Discovery</td>
+                <td className="py-2 pr-4">1–2 months</td>
+                <td className="py-2">$350/hr</td>
+              </tr>
+              <tr className="border-b border-gray-200">
+                <td className="py-2 pr-4 font-medium">Foundational</td>
+                <td className="py-2 pr-4">3–6 months</td>
+                <td className="py-2">$100k</td>
+              </tr>
+              <tr>
+                <td className="py-2 pr-4 font-medium">Strategic Build</td>
+                <td className="py-2 pr-4">6+ months</td>
+                <td className="py-2">$300k</td>
+              </tr>
+            </tbody>
+          </table>
           <p className="my-4">
             <strong className="text-old-gold">
               You get access to a multi-disciplinary delivery team 

@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 px-4 text-center md:text-left max-w-screen-xl">
         {/* Left section with company name and tagline */}
         <div className="flex flex-col space-y-4 items-center md:items-start">
-          <h3 className="text-3xl sm:text-4xl text-moss font-extrabold px-2 tracking-wide">
+          <h3 className="text-3xl sm:text-4xl text-moss px-2 tracking-wide">
             BitHippie LLC
           </h3>
           <h4 className="text-base sm:text-xl text-white opacity-80 px-2 mb-6">
@@ -16,7 +16,7 @@ export default function Footer() {
 
         {/* Right section with Socials and Podcast */}
         <div className="flex flex-col justify-between items-center md:items-start">
-          <h3 className="text-3xl sm:text-4xl text-moss font-extrabold mb-4 px-2 tracking-wide">
+          <h3 className="text-3xl sm:text-4xl text-moss mb-4 px-2 tracking-wide">
             Join the Socials!
           </h3>
           <p className="text-base sm:text-lg text-white opacity-80 px-2 mb-6">
