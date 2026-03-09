@@ -13,127 +13,64 @@ export default function WeWorkTogether({ backgroundColor }) {
       <a name="outcomes" />
       <div className="container py-8 flex flex-col max-w-screen-xl">
         <h2 className="text-dark-grey w-full text-center">
-          Data Platforms That Keep Pace With Discovery
+          Tech-Enabled Research
         </h2>
 
         <div className="flex flex-col space-y-4 my-8 ">
           <RevealOnScroll>
-            <div className="flex flex-col my-4 text-center items-stretch lg:flex-row lg:space-x-8">
-              <Image
-                width={360}
-                height={360}
-                src="/assets/images/outcomes/science.jpg"
-                className="rounded-xl m-auto"
-                alt="Unified Data Access"
-              />
-              <div className="flex flex-col space-y-8 text-center lg:text-left">
-                <h2 className="text-3xl sm:text-4xl text-moss py-6">
-                  Unified Data Access
+            <div className="flex flex-col lg:flex-row rounded-2xl border border-gray-200 shadow-sm overflow-hidden my-4" style={{backgroundColor:"#fdfcfb"}}>
+              <div className="flex-shrink-0 flex items-center justify-center overflow-hidden w-full h-[260px] lg:w-[360px] lg:h-[360px]" style={{backgroundColor:"#fdfcfb", position:"relative"}}>
+                <Image
+                  width={300}
+                  height={300}
+                  src="/assets/images/outcomes/bithippie_image_1.png"
+                  className="rounded-xl scale-[1.3]"
+                  alt="Integrated Research Intelligence"
+                />
+                <div style={{position:"absolute", inset:0, background:"radial-gradient(ellipse at center, transparent 50%, #fdfcfb 70%)", pointerEvents:"none"}} />
+              </div>
+              <div className="flex flex-col space-y-6 p-8 pl-6 lg:p-8 lg:pl-4 text-center lg:text-left justify-center">
+                <h2 className="text-3xl sm:text-4xl text-moss">
+                  Integrated Research Intelligence
                 </h2>
                 <p className="text-xl text-justify">
-                  Your experimental data lives across disconnected
-                  systems—instruments, LIMS, ELNs, analysis tools. Your data
-                  scientists piece together insights from fragments instead of
-                  working with the complete picture. We consolidate these sources
-                  into unified datasets so your team can build intelligence from
-                  comprehensive data, not guesses.
+                  The most valuable insights emerge when computational predictions connect to experimental
+                  results and downstream outcomes. Patterns between early-stage models and assay performance.
+                  Correlations linking screening data to toxicology results. Intelligence that only becomes
+                  visible when data flows across your research pipeline.
                 </p>
                 <p className="text-xl text-justify">
-                  We design ETL pipelines that connect your systems into cohesive
-                  data flows, capture metadata at scale, and create analytics
-                  infrastructure your team actually uses. The result: data
-                  scientists spend time on discovery, not data wrangling.
+                  We build infrastructure and warehousing strategies that enable cross-functional analysis
+                  across computational and wet lab teams. Your scientists discover correlations earlier,
+                  refine predictions with real-world results, and make faster decisions—while maintaining
+                  appropriate access controls.
                 </p>
               </div>
             </div>
           </RevealOnScroll>
           <RevealOnScroll>
-            <div className="flex flex-col my-4 text-center items-stretch lg:flex-row lg:space-x-8">
-              <Image
-                width={360}
-                height={360}
-                src="/assets/images/outcomes/idea.jpg"
-                className="rounded-xl m-auto"
-                alt="Parallel Compute Environments"
-              />
-              <div className="flex flex-col space-y-8 text-center lg:text-left">
-                <h2 className="text-3xl sm:text-4xl text-moss py-6">
+            <div className="flex flex-col lg:flex-row rounded-2xl border border-gray-200 shadow-sm overflow-hidden my-4" style={{backgroundColor:"#fdfcfb"}}>
+              <div className="flex-shrink-0 flex items-center justify-center overflow-hidden w-full h-[260px] lg:w-[360px] lg:h-[360px]" style={{backgroundColor:"#fdfcfb", position:"relative"}}>
+                <Image
+                  width={300}
+                  height={300}
+                  src="/assets/images/outcomes/bithippie_image_2.png"
+                  className="rounded-xl scale-[1.4]"
+                  alt="Parallel Compute Environments"
+                />
+                <div style={{position:"absolute", inset:0, background:"radial-gradient(ellipse at center, transparent 50%, #fdfcfb 70%)", pointerEvents:"none"}} />
+              </div>
+              <div className="flex flex-col space-y-6 p-8 pl-6 lg:p-8 lg:pl-4 text-center lg:text-left justify-center">
+                <h2 className="text-3xl sm:text-4xl text-moss">
                   Parallel Compute Environments
                 </h2>
                 <p className="text-xl text-justify">
-                  Your computational bottleneck isn&apos;t your
-                  scientists&apos; intelligence—it&apos;s your infrastructure.
-                  Heavy workloads run sequentially. Researchers wait for results
-                  instead of iterating. We build cloud environments that enable
-                  parallel processing, so your team gets answers fast enough to
-                  act on them in real time.
+                  Sequential processing delays discovery. Researchers wait for results instead of iterating.
+                  Multi-day computational failures waste time and resources.
                 </p>
                 <p className="text-xl text-justify">
-                  We design scalable compute infrastructure that grows with your
-                  data volumes and research demands. Your scientists run
-                  computations in parallel, leverage specialized resources when
-                  needed, and spend less time waiting and more time discovering.
-                </p>
-              </div>
-            </div>
-          </RevealOnScroll>
-          <RevealOnScroll>
-            <div className="flex flex-col my-4 text-center items-stretch lg:flex-row lg:space-x-8">
-              <Image
-                width={360}
-                height={360}
-                src="/assets/images/outcomes/community.jpg"
-                className="rounded-xl m-auto"
-                alt="Purpose-Built Internal Tools"
-              />
-              <div className="flex flex-col space-y-8 text-center lg:text-left">
-                <h2 className="text-3xl sm:text-4xl text-moss py-6">
-                  Purpose-Built Internal Tools
-                </h2>
-                <p className="text-xl text-justify">
-                  Off-the-shelf bioinformatics platforms are built for nobody in
-                  particular—which means they fit nobody perfectly. You pay for
-                  features you&apos;ll never use, navigate workflows that
-                  don&apos;t match your science, and lock into expensive
-                  licensing. We replace these platforms with custom tools designed
-                  for how your team actually works.
-                </p>
-                <p className="text-xl text-justify">
-                  Working closely with your wet lab and computational teams, we
-                  build applications that eliminate bloat, match your workflows,
-                  and give you control. You own the code. You control the
-                  features. You own the future.
-                </p>
-              </div>
-            </div>
-          </RevealOnScroll>
-          <RevealOnScroll>
-            <div className="flex flex-col my-4 text-center items-stretch lg:flex-row lg:space-x-8">
-              <Image
-                width={360}
-                height={360}
-                src="/assets/images/outcomes/idea.jpg"
-                className="rounded-xl m-auto"
-                alt="Reliable Deployment and Operations"
-              />
-              <div className="flex flex-col space-y-8 text-center lg:text-left">
-                <h2 className="text-3xl sm:text-4xl text-moss py-6">
-                  Reliable Deployment & Operations
-                </h2>
-                <p className="text-xl text-justify">
-                  In biotech, deployment can&apos;t be a manual process.
-                  It&apos;s a compliance risk and an operational bottleneck. Your
-                  code sits in repos waiting to go live. We automate this: your
-                  code deploys through repeatable, auditable, transparent
-                  processes that give you confidence and visibility every step of
-                  the way.
-                </p>
-                <p className="text-xl text-justify">
-                  We build deployment automation that integrates with your
-                  team&apos;s workflow. Code gets tested automatically. It
-                  deploys when ready. Everything is logged and
-                  auditable—exactly what biotech governance demands and your
-                  operations team needs.
+                  We build cloud infrastructure that enables parallel processing at scale. Your team gets answers
+                  fast—intelligently leveraging CPUs or GPUs to run workloads efficiently and cost-effectively.
                 </p>
                 <div className="flex flex-col sm:flex-row flex-wrap items-center justify-around sm:space-x-8">
                   <Image
@@ -158,6 +95,62 @@ export default function WeWorkTogether({ backgroundColor }) {
                     className="my-4"
                   />
                 </div>
+              </div>
+            </div>
+          </RevealOnScroll>
+          <RevealOnScroll>
+            <div className="flex flex-col lg:flex-row rounded-2xl border border-gray-200 shadow-sm overflow-hidden my-4" style={{backgroundColor:"#fdfcfb"}}>
+              <div className="flex-shrink-0 flex items-center justify-center overflow-hidden w-full h-[260px] lg:w-[360px] lg:h-[360px]" style={{backgroundColor:"#fdfcfb", position:"relative"}}>
+                <Image
+                  width={300}
+                  height={300}
+                  src="/assets/images/outcomes/bithippie_image_3.png"
+                  className="rounded-xl scale-[1.4]"
+                  alt="Purpose-Built Internal Tools"
+                />
+                <div style={{position:"absolute", inset:0, background:"radial-gradient(ellipse at center, transparent 50%, #fdfcfb 70%)", pointerEvents:"none"}} />
+              </div>
+              <div className="flex flex-col space-y-6 p-8 pl-6 lg:p-8 lg:pl-4 text-center lg:text-left justify-center">
+                <h2 className="text-3xl sm:text-4xl text-moss">
+                  Purpose-Built Internal Tools
+                </h2>
+                <p className="text-xl text-justify">
+                  Off-the-shelf bioinformatics platforms fit nobody perfectly. You pay for unused features, navigate
+                  workflows that don&apos;t match your science, and lock into expensive licensing.
+                </p>
+                <p className="text-xl text-justify">
+                  We build custom tools designed alongside your team—internal applications and interactive dashboards
+                  that replace bloated SaaS products. You own the code, control the features, and set the direction.
+                </p>
+              </div>
+            </div>
+          </RevealOnScroll>
+          <RevealOnScroll>
+            <div className="flex flex-col lg:flex-row rounded-2xl border border-gray-200 shadow-sm overflow-hidden my-4" style={{backgroundColor:"#fdfcfb"}}>
+              <div className="flex-shrink-0 flex items-center justify-center overflow-hidden w-full h-[260px] lg:w-[360px] lg:h-[360px]" style={{backgroundColor:"#fdfcfb", position:"relative"}}>
+                <Image
+                  width={300}
+                  height={300}
+                  src="/assets/images/outcomes/bithippie_image_4.png"
+                  className="rounded-xl lg:scale-[1.4]"
+                  alt="From Sandbox to Production"
+                />
+                <div style={{position:"absolute", inset:0, background:"radial-gradient(ellipse at center, transparent 50%, #fdfcfb 70%)", pointerEvents:"none"}} />
+              </div>
+              <div className="flex flex-col space-y-6 p-8 pl-6 lg:p-8 lg:pl-4 text-center lg:text-left justify-center">
+                <h2 className="text-3xl sm:text-4xl text-moss">
+                  From Sandbox to Production
+                </h2>
+                <p className="text-xl text-justify">
+                  Biotech research demands both speed and rigor. Data scientists need freedom to explore, but ad-hoc
+                  VM setups create black boxes—results can&apos;t be reproduced, audit trails don&apos;t exist, and
+                  workflows remain undocumented.
+                </p>
+                <p className="text-xl text-justify">
+                  We build infrastructure that bridges exploration and production. Infrastructure-as-code gives your
+                  team self-service environments that are documented, version-controlled, and auditable. Scientists
+                  iterate in sandbox environments, then transition proven workflows to production with full traceability.
+                </p>
               </div>
             </div>
           </RevealOnScroll>
