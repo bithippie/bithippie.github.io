@@ -68,29 +68,29 @@ export default function FAQ() {
             composition of your technical team, scope, and the complexity
             of infrastructure we&apos;re providing.
           </p>
-          <table className="my-4 w-full text-left border-collapse">
+          <table className="my-4 w-full text-left text-sm border-collapse">
             <thead>
               <tr className="border-b border-gray-300">
-                <th className="py-2 pr-4 font-bold">Partnership</th>
-                <th className="py-2 pr-4 font-bold">Timeline</th>
-                <th className="py-2 font-bold">Starting At</th>
+                <th className="py-2 pr-4">Partnership</th>
+                <th className="py-2 pr-4">Timeline</th>
+                <th className="py-2">Starting At</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-b border-gray-200">
                 <td className="py-2 pr-4">Discovery</td>
                 <td className="py-2 pr-4">1–2 months</td>
-                <td className="py-2">$350/hr</td>
+                <td className="py-2">$15k-$30k</td>
               </tr>
               <tr className="border-b border-gray-200">
                 <td className="py-2 pr-4">Foundational</td>
                 <td className="py-2 pr-4">3–6 months</td>
-                <td className="py-2">$100k</td>
+                <td className="py-2">$100k+</td>
               </tr>
               <tr>
                 <td className="py-2 pr-4">Strategic Build</td>
                 <td className="py-2 pr-4">6+ months</td>
-                <td className="py-2">$300k</td>
+                <td className="py-2">$400k+</td>
               </tr>
             </tbody>
           </table>
@@ -103,12 +103,6 @@ export default function FAQ() {
             <br/><br/>
             We stay current with technology so your scientists can stay focused on breakthroughs.
           </p>
-          <p className="my-4">
-            <Link href="#schedule" className="text-moss underline">
-              Schedule a discovery call
-            </Link>{" "}
-            to explore how we can help.
-          </p>
         </>
       ),
     },
@@ -118,9 +112,7 @@ export default function FAQ() {
       text: (
         <>
           <p className="my-4">
-            Research priorities shift as science evolves. Regulatory changes, 
-            funding milestones, and breakthrough discoveries reshape what matters 
-            most. Our partnership model is built for this reality.
+            Research priorities shift as science evolves. Our partnership model is built for this reality.
           </p>
           <p className="my-4">
             For our longer-term Strategic Builds,{" "}

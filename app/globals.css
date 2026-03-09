@@ -105,8 +105,8 @@ body {
 
 /* Initial state for the line */
 .path-draw {
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300; /* Hides the entire line initially */
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500; /* Hides the entire line initially */
 }
 
 /* Animation for the line-drawing effect */

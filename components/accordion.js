@@ -28,7 +28,7 @@ export function Accordion({ accordionItems }) {
                   onClick={() => toggleDisclosure(index)}
                 >
                   <div className="flex items-center justify-between w-full">
-                    <span className="text-lg font-semibold text-gray-800 group-data-[hover]:text-gray-600">
+                    <span className="text-lg font-medium text-gray-800 group-data-[hover]:text-gray-600">
                       {item.title}
                     </span>
                     <ChevronDownIcon
