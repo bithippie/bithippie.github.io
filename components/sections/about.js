@@ -30,7 +30,7 @@ export default function About({ backgroundColor }) {
           <h2 className="w-full text-moss mb-8 text-center lg:text-left">
             Why Biotech Companies Choose BitHippie
           </h2>
-          <p className="my-4">
+          <p className="my-4 text-lg">
             We understand that biotech data infrastructure has unique demands:
             complex experimental workflows, cross-functional collaboration
             between wet lab and computational teams, and systems that must evolve

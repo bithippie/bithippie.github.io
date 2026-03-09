@@ -71,24 +71,24 @@ export default function FAQ() {
           <table className="my-4 w-full text-left border-collapse">
             <thead>
               <tr className="border-b border-gray-300">
-                <th className="py-2 pr-4 font-semibold">Partnership</th>
-                <th className="py-2 pr-4 font-semibold">Timeline</th>
-                <th className="py-2 font-semibold">Starting At</th>
+                <th className="py-2 pr-4 font-bold">Partnership</th>
+                <th className="py-2 pr-4 font-bold">Timeline</th>
+                <th className="py-2 font-bold">Starting At</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-b border-gray-200">
-                <td className="py-2 pr-4 font-medium">Discovery</td>
+                <td className="py-2 pr-4">Discovery</td>
                 <td className="py-2 pr-4">1–2 months</td>
                 <td className="py-2">$350/hr</td>
               </tr>
               <tr className="border-b border-gray-200">
-                <td className="py-2 pr-4 font-medium">Foundational</td>
+                <td className="py-2 pr-4">Foundational</td>
                 <td className="py-2 pr-4">3–6 months</td>
                 <td className="py-2">$100k</td>
               </tr>
               <tr>
-                <td className="py-2 pr-4 font-medium">Strategic Build</td>
+                <td className="py-2 pr-4">Strategic Build</td>
                 <td className="py-2 pr-4">6+ months</td>
                 <td className="py-2">$300k</td>
               </tr>

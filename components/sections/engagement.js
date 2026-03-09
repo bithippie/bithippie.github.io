@@ -62,7 +62,7 @@ export default function HowWeWork({ backgroundColor }) {
         <RevealOnScroll>
           <div className="sm:col-span-1 space-y-8">
             <h3 className="text-center lg:text-left">
-              Together We'll&nbsp;Go&nbsp;Far…
+              Together We&apos;ll&nbsp;Go&nbsp;Far…
             </h3>
 
             <Blockquote className="my-6 bg-gray-50 rounded-lg p-6 shadow-md">

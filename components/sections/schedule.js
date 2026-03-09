@@ -57,7 +57,7 @@ export default function Schedule({ backgroundColor }) {
                 xl:w-[599px]
 
                 min-h-[1240px]
-                lg:min-h-[700px]
+                lg:min-h-[770px]
                 xl:min-h-[1240px]"
               src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true"
               title="Schedule Appointment"

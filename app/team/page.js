@@ -18,9 +18,9 @@ export default function TeamPage() {
         <section className="bg-hero bg-center bg-cover pt-36 pb-20 md:pt-44 md:pb-28 flex relative">
           <div className="container flex flex-col items-center text-center max-w-screen-xl">
             <RevealOnScroll>
-              <h1 className="text-white">
+              <h2 className="text-white">
                 Taking care of ourselves so we can<br/>take better care of the world.
-              </h1>
+              </h2>
             </RevealOnScroll>
           </div>
           <Divider curvePosition="start" backgroundColor="platinum" />
@@ -35,10 +35,10 @@ export default function TeamPage() {
             <RevealOnScroll>
               <h2 className="text-dark-grey mb-8 text-center">Beyond the Code</h2>
             </RevealOnScroll>
-            <div className="max-w-3xl mx-auto space-y-6">
+            <div className="max-w-3xl mx-auto space-y-6 text-lg">
               <RevealOnScroll>
                 <p>
-                  At BitHippie we're committed to creating a one of a kind environment that fosters deep connection, personal growth, and elite performance.  
+                  At BitHippie we&apos;re committed to creating a one of a kind environment that fosters deep connection, personal growth, and elite performance.  
                   Engrained in our culture is the belief that the best professional performance comes first from being our best selves. 
                   To that end, guests and advisors are a common sight around BitHippie. 
                   Each person bringing their perspectives, expertise, and energy in the areas of Safety, Health, Wealth, Connection, Direction (a.k.a Pursuing purpose).
@@ -46,7 +46,7 @@ export default function TeamPage() {
               </RevealOnScroll>
               <RevealOnScroll>
                 <p>
-                  When we're not building data infrastructure, you might find us:
+                  When we&apos;re not building data infrastructure, you might find us:
                 </p>
                 <ul className="list-disc pl-8 mt-4 space-y-2">
                   <li>On top of a mountain watching the total solar eclipse</li>
@@ -54,7 +54,7 @@ export default function TeamPage() {
                   <li>Talking about financial independence, health, and dreams for the future</li>
                   <li>Discussing how diet, sleep, and stress impact our blood glucose levels</li>
                   <li>Sharing workouts, personal records, supplements, and the latest non-alcoholic beverages</li>
-                  <li>Lovingly challenging each other's limiting beliefs to help us get out of our own way</li>
+                  <li>Lovingly challenging each other&apos;s limiting beliefs to help us get out of our own way</li>
                   <li>Hosting a mini music festival from the back of a boat</li>
                 </ul>
               </RevealOnScroll>
@@ -76,7 +76,7 @@ export default function TeamPage() {
             <RevealOnScroll>
               <h2 className="text-moss mb-12 text-center">Join The BitHippie Network</h2>
             </RevealOnScroll>
-            <div className="max-w-3xl mx-auto space-y-6 text-justify">
+            <div className="max-w-3xl mx-auto space-y-6 text-justify text-lg">
               <RevealOnScroll>
                 <p>
                   We are always eager to meet people who believe we can do better making 
@@ -88,7 +88,7 @@ export default function TeamPage() {
                   Nutrition, Sleep, Exercise, meaningful Relationships, Autonomy, a sense of Purpose,
                   and prudent Risk Taking create the foundation for a thriving existance. 
                   
-                  At BitHippie we recognize and honor the synergy between nature's inherent
+                  At BitHippie we recognize and honor the synergy between nature&apos;s inherent
                   wisdom, supplemented with human ingenuity and scientific achievement.  
                   
                   These are two halves of the whole story, yin and yang.
@@ -98,7 +98,7 @@ export default function TeamPage() {
                 <p>
                   For the artists, architects, and evangelists, the strategists, organizers, and the dreamers — 
                   if you share in our mission and vision to making a individualized thriving existing the norm,
-                  we'd be grateful to know you. 
+                  we&apos;d be grateful to know you. 
                 </p>
               </RevealOnScroll>
               
