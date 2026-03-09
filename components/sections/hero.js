@@ -22,7 +22,7 @@ export default function Hero() {
 
           <h2 className="text-platinum text-2xl my-8 md:text-3xl">
             We&apos;re your engineering partner for the data platforms, pipelines, and tools that
-            let your scientists focus on science—not wrestling with technology.
+            let your scientists focus on science — not wrestling with technology.
           </h2>
 
           <div className="flex place-content-center">

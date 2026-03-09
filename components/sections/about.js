@@ -38,8 +38,8 @@ export default function About({ backgroundColor }) {
           </p>
           <p className="my-4">
             We&apos;ve built data infrastructure for companies across the biotech
-            ecosystem—from AI-driven drug discovery platforms and clinical trial 
-            optimization companies to global pharmaceutical research organizations 
+            ecosystem, from AI-driven drug discovery platforms and clinical trial
+            optimization companies to global pharmaceutical research organizations
             and life sciences venture capital firms.
           </p>
           <p className="my-4">
@@ -57,20 +57,20 @@ export default function About({ backgroundColor }) {
             delivering production-ready solutions. Access multi-disciplinary engineering expertise without 
             the overhead of full-time hires.
           </p>
-
+"I do believe in the ultimate mission of patient compensation and your team has advanced that mission tenfold." 
           <Blockquote className="my-6 bg-gray-50 rounded-lg p-6 shadow-md">
             <Avatar
               className="float-right mb-4 mx-4 sm:mb-0"
               rounded
               size="lg"
-              img="/assets/images/testimonials/alex_g.jpeg"
-              alt="Alex Garcia // Principal Data Engineer"
+              img="/assets/images/testimonials/emily.jpeg"
+              alt="Emily Engel // Senior Manager, Patient Engagement Operations"
             />
             <p className="text-lg sm:text-xl text-gray-700 font-light leading-relaxed">
-              &ldquo;Instead of simply presenting a solution, BitHippie engaged in active listening and posed insightful questions, leading us through the complexities and the course of action which we executed.&rdquo;
+              &ldquo;I do believe in the ultimate mission of patient compensation and your team has advanced that mission tenfold.&rdquo;
             </p>
             <figcaption className="mt-4 text-center sm:text-left text-gray-600 text-sm sm:text-base italic">
-              — Alex Garcia // Principal Data Engineer
+              — Emily Engel // Senior Manager, Patient Engagement Operations
             </figcaption>
           </Blockquote>
           <div className="w-full flex text-center justify-center">

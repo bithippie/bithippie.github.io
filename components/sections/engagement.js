@@ -1,4 +1,7 @@
+"use client";
+
 import { Avatar, Blockquote } from "flowbite-react";
+import { motion } from "framer-motion";
 
 import Divider from "@/components/divider";
 import ScheduleConsultation from "@/components/schedule_consultation";
@@ -35,18 +38,22 @@ export default function HowWeWork({ backgroundColor }) {
       <a name="engagement" />
 
       <div className="text-center mt-4 text-moss">
-        <h2>Together We'll&nbsp;Go&nbsp;Far</h2>
+        <h2>Engagement Flow</h2>
       </div>
 
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 py-8 max-w-screen-xl">
-        {/* Process Steps */}
+        {/* Engagement Steps */}
         <div className="sm:col-span-1 space-y-6">
           {steps.map((step, i) => (
             <RevealOnScroll key={i}>
-              <div className="bg-white rounded-lg p-6 shadow-md">
+              <motion.div
+                className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl"
+                whileHover={{ scale: 1.025 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <h3 className="text-moss text-xl mb-2">{step.title}</h3>
                 <p className="text-gray-700">{step.description}</p>
-              </div>
+              </motion.div>
             </RevealOnScroll>
           ))}
         </div>
@@ -55,7 +62,7 @@ export default function HowWeWork({ backgroundColor }) {
         <RevealOnScroll>
           <div className="sm:col-span-1 space-y-8">
             <h3 className="text-center lg:text-left">
-              Our clients are the first&nbsp;to&nbsp;tell&nbsp;you…
+              Together We'll&nbsp;Go&nbsp;Far…
             </h3>
 
             <Blockquote className="my-6 bg-gray-50 rounded-lg p-6 shadow-md">

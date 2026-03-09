@@ -8,13 +8,13 @@ import FAQ from "@/components/faq";
 export default function Schedule({ backgroundColor }) {
   return (
     <section
-      className={`relative bg-${backgroundColor} pt-[7rem] pb-16 lg:pt-[8rem] lg:pb-24`}
+      className={`relative bg-${backgroundColor} pb-16 lg:pb-24`}
     >
       <div className="container max-w-screen-xl mx-auto">
         <div className="flex flex-col xl:flex-row gap-8">
           <div className="flex flex-col grow w-full text-center xl:text-left">
             <a name="schedule" />
-            <h2 className="text-moss pb-8">
+            <h2 className="text-moss py-8">
               Schedule a Discovery&nbsp;Call
             </h2>
             <p className="text-xl mb-8">

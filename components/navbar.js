@@ -56,8 +56,8 @@ export default function NavBar() {
   const navItems = [
     { label: "Outcomes", hash: "#outcomes" },
     { label: "Engagement", hash: "#engagement" },
-    { label: "Schedule", hash: "#schedule" },
     { label: "Experience", hash: "#experience" },
+    { label: "Schedule", hash: "#schedule" },
   ];
 
   return (
