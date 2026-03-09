@@ -11,7 +11,7 @@ export default function Hero() {
     >
       <div className="container flex flex-col items-center self-center text-center max-w-screen-xl">
         <RevealOnScroll>
-          <h1 className="text-platinum md:text-7xl">
+          <h1 className="text-platinum text-5xl md:text-6xl">
             Good Data Systems<br/>
             <span className="relative inline-block italic">
               Accelerate

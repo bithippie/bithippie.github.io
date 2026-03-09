@@ -10,7 +10,7 @@ export default function Footer() {
             BitHippie LLC
           </h3>
           <h5 className="text-base sm:text-lg text-white opacity-80 px-2 mb-6">
-            Trusting in Natures Wisdom; Complemented by Science and Engineering 
+            Trusting in Natures Wisdom; Complemented by human ingenuity.
           </h5>
         </div>
 
