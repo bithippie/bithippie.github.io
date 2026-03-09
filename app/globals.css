@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl font-playfair font-medium;
+    @apply text-4xl sm:text-5xl md:text-6xl font-sans font-medium;
   }
   h2 {
     @apply text-4xl md:text-5xl font-merriweather;
@@ -19,7 +19,7 @@
     @apply font-garamond;
   }
   button {
-    @apply font-merriweather;
+    @apply font-sans;
   }
 }
 

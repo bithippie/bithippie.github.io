@@ -1,7 +1,7 @@
 import "./globals.css";
 
 import localFont from "next/font/local";
-import { Playfair_Display, Merriweather, EB_Garamond } from "next/font/google";
+import { Playfair_Display, Merriweather, EB_Garamond, Oxanium } from "next/font/google";
 
 const marcellus = localFont({
   src: "../public/assets/fonts/Marcellus.ttf",
@@ -25,6 +25,12 @@ const merriweather = Merriweather({
 const ebGaramond = EB_Garamond({
   subsets: ["latin"],
   variable: "--font-eb-garamond",
+  display: "swap",
+});
+
+const oxanium = Oxanium({
+  subsets: ["latin"],
+  variable: "--font-oxanium",
   display: "swap",
 });
 
@@ -71,7 +77,7 @@ export default function RootLayout({ children }) {
         <meta httpEquiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
       </head>
 
-      <body className={`${marcellus.variable} ${playfair.variable} ${merriweather.variable} ${ebGaramond.variable} antialiased`}>
+      <body className={`${marcellus.variable} ${playfair.variable} ${merriweather.variable} ${ebGaramond.variable} ${oxanium.variable} antialiased`}>
         {children}
       </body>
     </html>
