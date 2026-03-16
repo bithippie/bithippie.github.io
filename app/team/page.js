@@ -51,11 +51,11 @@ export default function TeamPage() {
                 <ul className="list-disc pl-8 mt-4 space-y-2">
                   <li>On top of a mountain watching the total solar eclipse</li>
                   <li>Orienteering in a swim, bike, run adventure race on the Cape</li>
+                  <li>Hosting a mini music festival from the back of a boat</li>
                   <li>Talking about financial independence, health, and dreams for the future</li>
                   <li>Discussing how diet, sleep, and stress impact our blood glucose levels</li>
                   <li>Sharing workouts, personal records, supplements, and the latest non-alcoholic beverages</li>
                   <li>Lovingly challenging each other&apos;s limiting beliefs to help us get out of our own way</li>
-                  <li>Hosting a mini music festival from the back of a boat</li>
                 </ul>
               </RevealOnScroll>
               <RevealOnScroll>
@@ -89,16 +89,15 @@ export default function TeamPage() {
                   and prudent Risk Taking create the foundation for a thriving existance. 
                   
                   At BitHippie we recognize and honor the synergy between nature&apos;s inherent
-                  wisdom, supplemented with human ingenuity and scientific achievement.  
+                  wisdom complemented by human ingenuity and scientific achievement.  
                   
                   These are two halves of the whole story, yin and yang.
                 </p>
               </RevealOnScroll>
               <RevealOnScroll>
                 <p>
-                  For the artists, architects, and evangelists, the strategists, organizers, and the dreamers — 
-                  if you share in our mission and vision to making a individualized thriving existing the norm,
-                  we&apos;d be grateful to know you. 
+                  If you already share in our mission and vision to make individualized 
+                  thriving the norm, we&apos;d be grateful to know you. 
                 </p>
               </RevealOnScroll>
               

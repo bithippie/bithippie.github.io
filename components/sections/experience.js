@@ -28,7 +28,7 @@ export default function About({ backgroundColor }) {
         </div>
         <div className="lg:col-span-8 text-left flex flex-col items-start space-y-6">
           <h2 className="w-full text-moss mb-8 text-center lg:text-left">
-            Why Biotech Companies Choose BitHippie
+            Why Biotechs Choose BitHippie
           </h2>
           <p className="my-4 text-lg">
             We understand that biotech data infrastructure has unique demands:

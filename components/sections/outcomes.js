@@ -23,7 +23,7 @@ export default function WeWorkTogether({ backgroundColor }) {
                 <Image
                   width={300}
                   height={300}
-                  src="/assets/images/outcomes/bithippie_image_1.png"
+                  src="/assets/images/outcomes/integrated_research.png"
                   className="rounded-xl scale-[1.3]"
                   alt="Integrated Research Intelligence"
                 />
@@ -54,7 +54,7 @@ export default function WeWorkTogether({ backgroundColor }) {
                 <Image
                   width={300}
                   height={300}
-                  src="/assets/images/outcomes/bithippie_image_2.png"
+                  src="/assets/images/outcomes/parallel_compute.png"
                   className="rounded-xl scale-[1.4]"
                   alt="Parallel Compute Environments"
                 />
@@ -104,7 +104,7 @@ export default function WeWorkTogether({ backgroundColor }) {
                 <Image
                   width={300}
                   height={300}
-                  src="/assets/images/outcomes/bithippie_image_3.png"
+                  src="/assets/images/outcomes/internal_tools.png"
                   className="rounded-xl scale-[1.4]"
                   alt="Purpose-Built Internal Tools"
                 />
@@ -131,7 +131,7 @@ export default function WeWorkTogether({ backgroundColor }) {
                 <Image
                   width={300}
                   height={300}
-                  src="/assets/images/outcomes/bithippie_image_4.png"
+                  src="/assets/images/outcomes/sandbox_to_production.png"
                   className="rounded-xl lg:scale-[1.4]"
                   alt="From Sandbox to Production"
                 />
