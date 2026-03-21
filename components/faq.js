@@ -24,7 +24,7 @@ export default function FAQ() {
           </p>
           <p className="my-4">
             By the end of this phase, <strong className="text-old-gold">we&apos;ve delivered early wins and 
-            established a now, next, and after data platform roadmap.</strong>
+            established a &ldquo;Now, Next, and After&rdquo; data platform roadmap.</strong>
           </p>
         </>
       ),
@@ -96,9 +96,9 @@ export default function FAQ() {
           </table>
           <p className="my-4">
             <strong className="text-old-gold">
-              You get access to a multi-disciplinary delivery team 
-              with decades of combined technical and product experience
-              —without the overhead of building an internal function. 
+              You get access to a multi-disciplinary delivery team with decades of combined
+              technical and product experience helping scientists accelerate their research,
+              without the overhead of building an internal function. 
             </strong>
             <br/><br/>
             We stay current with technology so your scientists can stay focused on breakthroughs.

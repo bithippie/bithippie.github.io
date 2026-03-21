@@ -11,17 +11,17 @@ export default function Team({ backgroundColor }) {
     {
       name: "Anthony",
       image: "/assets/images/team/anthony.jpeg",
-      title: "Founder & CEO of BitHippie ✌️ Biotech Engineering Consultant 🧬 Co-Host, Brainwave Exchange Podcast 🎙️ Wellness Enthusiast ❤️ Earth Conscious 🌱",
+      title: "Founder & CEO ✌️ | Biotech Engineering Consultant 🧬  | Co-Host, Brainwave Exchange Podcast 🎙️ | Wellness Enthusiast ❤️ | Earth Conscious 🌱",
     },
     {
       name: "Jason",
       image: "/assets/images/team/jason.jpeg",
-      title: "Director of Engineering @ BitHippie | Co-Host, Brainwave Exchange Podcast 🎙️",
+      title: "Director of Engineering | Co-Host, Brainwave Exchange Podcast 🎙️",
     },
     {
       name: "Lisa",
       image: "/assets/images/team/lisa.jpeg",
-      title: "Head of Product & Project Management",
+      title: "Head of Engagement Management | Nutritionist & Founder of Hoopes Health | Co-Creator of the \"Dinghy Disco\" | Living aboard a sailboat",
     },
     {
       name: "Matheus",
@@ -39,7 +39,7 @@ export default function Team({ backgroundColor }) {
     {
       name: "Gordon",
       image: "/assets/images/team/gordon.jpeg",
-      title: "Business Advisor & Technical Engagement Manager",
+      title: "Business Advisor | Technical Engagement Manager",
     },
     {
       name: "Michael",

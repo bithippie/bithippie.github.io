@@ -76,8 +76,8 @@ export default function HowWeWork({ backgroundColor }) {
               <p className="text-lg sm:text-xl text-gray-700 font-light leading-relaxed">
                 &ldquo;I&apos;ve benefitted firsthand from his robust data
                 platform construction. As a data scientist, he made my life
-                easier everyday. The data platform was designed to be easy to
-                use, long lasting, and used across multiple teams&rdquo;
+                easier every day. The data platform was designed to be easy to
+                use, long-lasting, and used across multiple teams.&rdquo;
               </p>
               <figcaption className="mt-4 text-center sm:text-left text-gray-600 text-sm sm:text-base italic">
                 — Sara Kohnke, PhD // Senior Data Scientist
@@ -92,7 +92,8 @@ export default function HowWeWork({ backgroundColor }) {
                 alt="Alex Greenfield // Chief Scientist & Founder"
               />
               <p className="text-lg sm:text-xl text-gray-700 font-light leading-relaxed">
-                &ldquo;We were able to go from initial product idea to a demo with stakeholders in just a couple of weeks. This enabled rapid iteration, and minimized the chances of building something that nobody would want.&rdquo;
+                &ldquo;We were able to go from initial product idea to a demo with stakeholders in just a couple of weeks. 
+                This enabled rapid iteration, and minimized the chances of building something that nobody would want.&rdquo;
               </p>
               <figcaption className="mt-4 text-center sm:text-left text-gray-600 text-sm sm:text-base italic">
                 — Alex Greenfield // Chief Scientist & Founder

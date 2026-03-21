@@ -38,10 +38,10 @@ export default function TeamPage() {
             <div className="max-w-3xl mx-auto space-y-6 text-lg">
               <RevealOnScroll>
                 <p>
-                  At BitHippie we&apos;re committed to creating a one of a kind environment that fosters deep connection, personal growth, and elite performance.  
+                  At BitHippie we&apos;re committed to creating a one-of-a-kind environment that fosters deep connection, personal growth, and elite performance.  
                   Engrained in our culture is the belief that the best professional performance comes first from being our best selves. 
                   To that end, guests and advisors are a common sight around BitHippie. 
-                  Each person bringing their perspectives, expertise, and energy in the areas of Safety, Health, Wealth, Connection, Direction (a.k.a Pursuing purpose).
+                  Each person bringing their perspectives, expertise, and energy in the areas of Safety, Health, Wealth, Connection, Direction (a.k.a. Pursuing purpose).
                 </p>
               </RevealOnScroll>
               <RevealOnScroll>
@@ -49,13 +49,13 @@ export default function TeamPage() {
                   When we&apos;re not building data infrastructure, you might find us:
                 </p>
                 <ul className="list-disc pl-8 mt-4 space-y-2">
-                  <li>On top of a mountain watching the total solar eclipse</li>
-                  <li>Orienteering in a swim, bike, run adventure race on the Cape</li>
-                  <li>Hosting a mini music festival from the back of a boat</li>
-                  <li>Talking about financial independence, health, and dreams for the future</li>
-                  <li>Discussing how diet, sleep, and stress impact our blood glucose levels</li>
-                  <li>Sharing workouts, personal records, supplements, and the latest non-alcoholic beverages</li>
-                  <li>Lovingly challenging each other&apos;s limiting beliefs to help us get out of our own way</li>
+                  <li>On top of a mountain watching the total solar eclipse.</li>
+                  <li>Orienteering in a swim, bike, run adventure race on The Cape.</li>
+                  <li>Hosting a mini music festival from the back of a boat.</li>
+                  <li>Talking about financial independence, health, and dreams for the future.</li>
+                  <li>Discussing how diet, sleep, and stress impact our blood glucose levels.</li>
+                  <li>Sharing workouts, personal records, supplements, and the latest non-alcoholic beverages.</li>
+                  <li>Lovingly challenging each other&apos;s limiting beliefs to help us get out of our own way.</li>
                 </ul>
               </RevealOnScroll>
               <RevealOnScroll>
@@ -86,7 +86,7 @@ export default function TeamPage() {
               <RevealOnScroll>
                 <p>
                   Nutrition, Sleep, Exercise, meaningful Relationships, Autonomy, a sense of Purpose,
-                  and prudent Risk Taking create the foundation for a thriving existance. 
+                  and prudent Risk Taking create the foundation for a thriving existence. 
                   
                   At BitHippie we recognize and honor the synergy between nature&apos;s inherent
                   wisdom complemented by human ingenuity and scientific achievement.  

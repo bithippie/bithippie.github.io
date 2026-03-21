@@ -25,13 +25,13 @@ export default function WeWorkTogether({ backgroundColor }) {
                   height={300}
                   src="/assets/images/outcomes/integrated_research.png"
                   className="rounded-xl scale-[1.3]"
-                  alt="Integrated Research Intelligence"
+                  alt="Turn Data Into Discovery Velocity"
                 />
                 <div style={{position:"absolute", inset:0, background:"radial-gradient(ellipse at center, transparent 50%, #fdfcfb 70%)", pointerEvents:"none"}} />
               </div>
               <div className="flex flex-col space-y-6 p-8 pl-6 lg:p-8 lg:pl-4 text-center lg:text-left justify-center">
                 <h2 className="text-3xl sm:text-4xl text-moss">
-                  Integrated Research Intelligence
+                  Turn Data Into Discovery Velocity
                 </h2>
                 <p className="text-xl text-justify">
                   The most valuable insights emerge when computational predictions connect to experimental
@@ -56,16 +56,17 @@ export default function WeWorkTogether({ backgroundColor }) {
                   height={300}
                   src="/assets/images/outcomes/parallel_compute.png"
                   className="rounded-xl scale-[1.4]"
-                  alt="Parallel Compute Environments"
+                  alt="Eliminate the Latency of Learning"
                 />
                 <div style={{position:"absolute", inset:0, background:"radial-gradient(ellipse at center, transparent 50%, #fdfcfb 70%)", pointerEvents:"none"}} />
               </div>
               <div className="flex flex-col space-y-6 p-8 pl-6 lg:p-8 lg:pl-4 text-center lg:text-left justify-center">
                 <h2 className="text-3xl sm:text-4xl text-moss">
-                  Parallel Compute Environments
+                  Eliminate the Latency of Learning
                 </h2>
                 <p className="text-xl text-justify">
-                  Sequential processing delays discovery. Researchers wait for results instead of iterating.
+                  We&apos;ve seen brilliant computational scientists sidelined for days by computational bottlenecks. 
+                  Sequential processing delays discovery. Researchers wait for results instead of learning and iterating. 
                   Multi-day computational failures waste time and resources.
                 </p>
                 <p className="text-xl text-justify">
@@ -106,13 +107,13 @@ export default function WeWorkTogether({ backgroundColor }) {
                   height={300}
                   src="/assets/images/outcomes/internal_tools.png"
                   className="rounded-xl scale-[1.4]"
-                  alt="Purpose-Built Internal Tools"
+                  alt="Workflows Defined by Science, Not Software"
                 />
                 <div style={{position:"absolute", inset:0, background:"radial-gradient(ellipse at center, transparent 50%, #fdfcfb 70%)", pointerEvents:"none"}} />
               </div>
               <div className="flex flex-col space-y-6 p-8 pl-6 lg:p-8 lg:pl-4 text-center lg:text-left justify-center">
                 <h2 className="text-3xl sm:text-4xl text-moss">
-                  Purpose-Built Internal Tools
+                  Workflows Defined by Science, Not Software
                 </h2>
                 <p className="text-xl text-justify">
                   Off-the-shelf bioinformatics platforms fit nobody perfectly. You pay for unused features, navigate
@@ -133,17 +134,17 @@ export default function WeWorkTogether({ backgroundColor }) {
                   height={300}
                   src="/assets/images/outcomes/sandbox_to_production.png"
                   className="rounded-xl lg:scale-[1.4]"
-                  alt="From Sandbox to Production"
+                  alt="Research Freedom, Production Discipline"
                 />
                 <div style={{position:"absolute", inset:0, background:"radial-gradient(ellipse at center, transparent 50%, #fdfcfb 70%)", pointerEvents:"none"}} />
               </div>
               <div className="flex flex-col space-y-6 p-8 pl-6 lg:p-8 lg:pl-4 text-center lg:text-left justify-center">
                 <h2 className="text-3xl sm:text-4xl text-moss">
-                  From Sandbox to Production
+                  Research Freedom, Production Discipline
                 </h2>
                 <p className="text-xl text-justify">
                   Biotech research demands both speed and rigor. Data scientists need freedom to explore, but ad-hoc
-                  VM setups create black boxes—results can&apos;t be reproduced, audit trails don&apos;t exist, and
+                  VM setups create black boxes: results can&apos;t be reproduced, audit trails don&apos;t exist, and
                   workflows remain undocumented.
                 </p>
                 <p className="text-xl text-justify">

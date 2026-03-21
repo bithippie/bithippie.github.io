@@ -53,8 +53,8 @@ export default function About({ backgroundColor }) {
             priorities shift, and genuine investment in your success.
           </p>
           <p className="my-4">
-            We become an extension of your team—communicating regularly, owning execution, and 
-            delivering production-ready solutions. Access multi-disciplinary engineering expertise without 
+            We become an extension of your team. We communicate regularly, own execution, and 
+            deliver production-ready solutions. Access multi-disciplinary engineering expertise without 
             the overhead of full-time hires.
           </p>
 
