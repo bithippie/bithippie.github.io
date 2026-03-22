@@ -9,7 +9,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 /*
  * Scene 3: "Workflows Defined by Science, Not Software"
- * Layout: side-by-side (animation left, text right)
+ * Layout: side-by-side on desktop (animation left, text right)
+ *
+ * Layers:
+ *   Background (z-0): platform window, panels, price tag, custom panels, result
+ *   Foreground (z-10): heading + body text
  *
  * Timeline (scroll 0% → 100%):
  *   Text:    heading at 0%, body paragraphs at configured visibleAt values
@@ -51,12 +55,11 @@ const customPanels = [
 
 // Grid layout constants
 const COLS = 4;
-const ROWS = 4;
 const PANEL_W = 110;
 const PANEL_H = 60;
 const GAP = 8;
 const GRID_W = COLS * PANEL_W + (COLS - 1) * GAP;
-const GRID_H = ROWS * PANEL_H + (ROWS - 1) * GAP;
+const GRID_H = 4 * PANEL_H + 3 * GAP;
 const PLAT_PAD = 16;
 const PLAT_W = GRID_W + PLAT_PAD * 2;
 const PLAT_H = GRID_H + PLAT_PAD * 2 + 28; // 28px for title bar
@@ -78,7 +81,7 @@ function panelY(row) {
   return PLAT_PAD + 28 + row * (PANEL_H + GAP);
 }
 
-export default function WorkflowsByScience({ body = [] }) {
+export default function WorkflowsByScience({ heading, body = [] }) {
   const containerRef = useRef(null);
   const priceRef = useRef(null);
 
@@ -87,7 +90,6 @@ export default function WorkflowsByScience({ body = [] }) {
 
     mm.add("(min-width: 768px)", () => {
       const triggerEl = containerRef.current.closest("[id='workflows-by-science']");
-      const heading = triggerEl.querySelector("[data-text='heading']");
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -106,10 +108,9 @@ export default function WorkflowsByScience({ body = [] }) {
       });
 
       // ── Text ──
-      tl.to(heading, { opacity: 1, duration: 0.04 }, 0);
+      tl.to("[data-text='heading']", { opacity: 1, duration: 0.04 }, 0);
       body.forEach((paragraph, i) => {
-        const el = triggerEl.querySelector(`[data-text-index='${i}']`);
-        if (el) tl.to(el, { opacity: 1, duration: 0.06 }, paragraph.visibleAt);
+        tl.to(`[data-text-index='${i}']`, { opacity: 1, duration: 0.06 }, paragraph.visibleAt);
       });
 
       // ── Phase 1 (0.00–0.25): Bloated platform appears ──
@@ -252,114 +253,141 @@ export default function WorkflowsByScience({ body = [] }) {
   }, { scope: containerRef });
 
   return (
-    <div ref={containerRef} className="relative w-full h-full flex items-center justify-center">
-      {/* Platform window border — Phase 1 */}
-      <div
-        data-platform
-        className="absolute rounded-xl border-2 border-gray-300"
-        style={{
-          width: PLAT_W,
-          height: PLAT_H,
-          left: "50%",
-          top: "50%",
-          transform: "translate(-50%, -50%)",
-          backgroundColor: "#faf8f5",
-          zIndex: 1,
-        }}
-      >
-        {/* Title bar with traffic lights */}
+    <div ref={containerRef} className="relative w-full h-full">
+      {/* ── Background layer: animation ── */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        {/* Platform window border — Phase 1 */}
         <div
-          className="flex items-center gap-2 px-3 rounded-t-xl"
-          style={{ height: 28, backgroundColor: "#e8e0d5" }}
+          data-platform
+          className="absolute rounded-xl border-2 border-gray-300"
+          style={{
+            width: PLAT_W,
+            height: PLAT_H,
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            backgroundColor: "#faf8f5",
+            zIndex: 1,
+          }}
         >
-          <div className="w-2.5 h-2.5 rounded-full bg-red-300" />
-          <div className="w-2.5 h-2.5 rounded-full bg-yellow-300" />
-          <div className="w-2.5 h-2.5 rounded-full bg-green-300" />
-          <span className="text-xs text-gray-400 ml-2 font-medium">Enterprise Informatics Suite v12.4 &mdash; 47 modules licensed</span>
+          {/* Title bar with traffic lights */}
+          <div
+            className="flex items-center gap-2 px-3 rounded-t-xl"
+            style={{ height: 28, backgroundColor: "#e8e0d5" }}
+          >
+            <div className="w-2.5 h-2.5 rounded-full bg-red-300" />
+            <div className="w-2.5 h-2.5 rounded-full bg-yellow-300" />
+            <div className="w-2.5 h-2.5 rounded-full bg-green-300" />
+            <span className="text-xs text-gray-400 ml-2 font-medium">Enterprise Informatics Suite v12.4 &mdash; 47 modules licensed</span>
+          </div>
+        </div>
+
+        {/* Price tag — counter ticks up in Phase 1, disappears in Phase 2 */}
+        <div
+          data-price
+          className="absolute flex items-center gap-1 rounded-full px-3 py-1 shadow-md"
+          style={{
+            top: `calc(50% - ${PLAT_H / 2 + 20}px)`,
+            left: "50%",
+            transform: "translateX(-50%)",
+            backgroundColor: "#9B4D4D",
+            color: "white",
+            fontSize: 13,
+            fontWeight: 700,
+            zIndex: 4,
+            visibility: "hidden",
+          }}
+        >
+          <span ref={priceRef}>${PRICE_START.toLocaleString()} /mo</span>
+        </div>
+
+        {/* Module panels — 4x4 grid inside platform */}
+        {panels.map((panel, i) => {
+          const isRelevant = panel.type === "relevant";
+          return (
+            <div
+              key={panel.label}
+              data-panel={i}
+              className="absolute flex items-center justify-center rounded-lg border text-center"
+              style={{
+                width: PANEL_W,
+                height: PANEL_H,
+                left: `calc(50% - ${PLAT_W / 2}px + ${panelX(panel.col)}px)`,
+                top: `calc(50% - ${PLAT_H / 2}px + ${panelY(panel.row)}px)`,
+                backgroundColor: isRelevant ? RELEVANT_BG : IRRELEVANT_BG,
+                borderColor: isRelevant ? RELEVANT_BORDER : IRRELEVANT_BORDER,
+                zIndex: 2,
+              }}
+            >
+              <span
+                className="text-xs font-semibold px-1"
+                style={{ color: isRelevant ? "#2d5a3a" : "#8a7a5a" }}
+              >
+                {panel.label}
+              </span>
+            </div>
+          );
+        })}
+
+        {/* Custom panels — appear in Phase 3 */}
+        {customPanels.map((cp, i) => {
+          const xOffset = i === 0 ? -130 : 20;
+          return (
+            <div
+              key={cp.label}
+              data-custom={i}
+              className="absolute flex items-center justify-center rounded-lg border-2 shadow-lg"
+              style={{
+                width: 140,
+                height: 80,
+                left: `calc(50% + ${xOffset}px)`,
+                top: `calc(50% + 140px)`,
+                backgroundColor: cp.color,
+                borderColor: cp.color,
+                visibility: "hidden",
+                zIndex: 3,
+              }}
+            >
+              <span className="text-xs font-bold text-white px-2 text-center">
+                {cp.label}
+              </span>
+            </div>
+          );
+        })}
+
+        {/* Result label — Phase 4 */}
+        <div
+          data-label="result"
+          className="absolute left-1/2 -translate-x-1/2 text-center"
+          style={{ bottom: "8%", visibility: "hidden", zIndex: 3 }}
+        >
+          <div className="text-2xl font-bold text-gray-800 mb-1">
+            Your tools. Your science. Your code.
+          </div>
         </div>
       </div>
 
-      {/* Price tag — counter ticks up in Phase 1, disappears in Phase 2 */}
-      <div
-        data-price
-        className="absolute flex items-center gap-1 rounded-full px-3 py-1 shadow-md"
-        style={{
-          top: `calc(50% - ${PLAT_H / 2 + 20}px)`,
-          left: "50%",
-          transform: "translateX(-50%)",
-          backgroundColor: "#9B4D4D",
-          color: "white",
-          fontSize: 13,
-          fontWeight: 700,
-          zIndex: 30,
-          visibility: "hidden",
-        }}
-      >
-        <span ref={priceRef}>${PRICE_START.toLocaleString()} /mo</span>
-      </div>
-
-      {/* Module panels — 4x4 grid inside platform */}
-      {panels.map((panel, i) => {
-        const isRelevant = panel.type === "relevant";
-        return (
-          <div
-            key={panel.label}
-            data-panel={i}
-            className="absolute flex items-center justify-center rounded-lg border text-center"
-            style={{
-              width: PANEL_W,
-              height: PANEL_H,
-              left: `calc(50% - ${PLAT_W / 2}px + ${panelX(panel.col)}px)`,
-              top: `calc(50% - ${PLAT_H / 2}px + ${panelY(panel.row)}px)`,
-              backgroundColor: isRelevant ? RELEVANT_BG : IRRELEVANT_BG,
-              borderColor: isRelevant ? RELEVANT_BORDER : IRRELEVANT_BORDER,
-              zIndex: 10,
-            }}
+      {/* ── Foreground layer: text ── */}
+      <div className="relative z-10 pointer-events-none flex flex-col lg:flex-row items-center h-full max-w-screen-xl mx-auto px-8">
+        <div className="flex-1" />
+        <div className="flex-1 flex flex-col justify-center space-y-6 p-8 text-center lg:text-left">
+          <h2
+            data-text="heading"
+            className="text-3xl sm:text-4xl text-moss"
+            style={{ opacity: 0 }}
           >
-            <span
-              className="text-xs font-semibold px-1"
-              style={{ color: isRelevant ? "#2d5a3a" : "#8a7a5a" }}
+            {heading}
+          </h2>
+          {body.map((paragraph, i) => (
+            <p
+              key={i}
+              data-text-index={i}
+              className="text-xl text-justify"
+              style={{ opacity: 0 }}
             >
-              {panel.label}
-            </span>
-          </div>
-        );
-      })}
-
-      {/* Custom panels — appear in Phase 3 */}
-      {customPanels.map((cp, i) => {
-        const xOffset = i === 0 ? -130 : 20;
-        return (
-          <div
-            key={cp.label}
-            data-custom={i}
-            className="absolute flex items-center justify-center rounded-lg border-2 shadow-lg"
-            style={{
-              width: 140,
-              height: 80,
-              left: `calc(50% + ${xOffset}px)`,
-              top: `calc(50% + 140px)`,
-              backgroundColor: cp.color,
-              borderColor: cp.color,
-              visibility: "hidden",
-              zIndex: 15,
-            }}
-          >
-            <span className="text-xs font-bold text-white px-2 text-center">
-              {cp.label}
-            </span>
-          </div>
-        );
-      })}
-
-      {/* Result label — Phase 4 */}
-      <div
-        data-label="result"
-        className="absolute left-1/2 -translate-x-1/2 text-center"
-        style={{ bottom: "8%", visibility: "hidden", zIndex: 25 }}
-      >
-        <div className="text-2xl font-bold text-gray-800 mb-1">
-          Your tools. Your science. Your code.
+              {paragraph.text}
+            </p>
+          ))}
         </div>
       </div>
     </div>

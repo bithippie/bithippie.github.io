@@ -1,6 +1,5 @@
 import DiscoveryVelocity from "./scenes/DiscoveryVelocity";
 import LatencyOfLearning from "./scenes/LatencyOfLearning";
-import PlaceholderScene from "./scenes/PlaceholderScene";
 import ResearchFreedom from "./scenes/ResearchFreedom";
 import WorkflowsByScience from "./scenes/WorkflowsByScience";
 
@@ -34,7 +33,6 @@ const outcomes = [
       },
     ],
     Scene: LatencyOfLearning,
-    layout: "stacked",
   },
   {
     id: "workflows-by-science",

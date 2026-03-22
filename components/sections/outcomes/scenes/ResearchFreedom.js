@@ -9,7 +9,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 /*
  * Scene 4: "Research Freedom, Production Discipline"
- * Layout: side-by-side (animation left, text right)
+ * Layout: side-by-side on desktop (animation left, text right)
+ *
+ * Layers:
+ *   Background (z-0): zone labels, divider, adhoc cards, IaC overlay/stack,
+ *                      production lane, prod cards, badge, result
+ *   Foreground (z-10): heading + body text
  *
  * Timeline (scroll 0% → 100%):
  *   Text:    heading at 0%, body paragraphs at configured visibleAt values
@@ -54,7 +59,7 @@ const CARD_W = 180;
 const CARD_H = 52;
 const STACK_GAP = 8;
 
-export default function ResearchFreedom({ body = [] }) {
+export default function ResearchFreedom({ heading, body = [] }) {
   const containerRef = useRef(null);
 
   useGSAP(() => {
@@ -62,7 +67,6 @@ export default function ResearchFreedom({ body = [] }) {
 
     mm.add("(min-width: 768px)", () => {
       const triggerEl = containerRef.current.closest("[id='research-freedom']");
-      const heading = triggerEl.querySelector("[data-text='heading']");
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -74,10 +78,9 @@ export default function ResearchFreedom({ body = [] }) {
       });
 
       // ── Text ──
-      tl.to(heading, { opacity: 1, duration: 0.04 }, 0);
+      tl.to("[data-text='heading']", { opacity: 1, duration: 0.04 }, 0);
       body.forEach((paragraph, i) => {
-        const el = triggerEl.querySelector(`[data-text-index='${i}']`);
-        if (el) tl.to(el, { opacity: 1, duration: 0.06 }, paragraph.visibleAt);
+        tl.to(`[data-text-index='${i}']`, { opacity: 1, duration: 0.06 }, paragraph.visibleAt);
       });
 
       // ── Phase 1 (0.00–0.25): Ad-hoc chaos ──
@@ -274,200 +277,227 @@ export default function ResearchFreedom({ body = [] }) {
 
   return (
     <div ref={containerRef} className="relative w-full h-full">
-      {/* Zone labels — top of each half */}
-      <div
-        data-label="adhoc-zone"
-        className="absolute text-sm font-semibold text-gray-400"
-        style={{ left: leftX, top: "12%", transform: "translateX(-50%)", visibility: "hidden" }}
-      >
-        Ad-Hoc Environments
-      </div>
-      <div
-        data-label="prod-zone"
-        className="absolute text-sm font-semibold text-gray-400"
-        style={{ left: rightX, top: "12%", transform: "translateX(-50%)", visibility: "hidden" }}
-      >
-        Production
-      </div>
-
-      {/* Center divider */}
-      <div
-        data-divider
-        className="absolute bg-gray-200"
-        style={{
-          left: "50%",
-          top: "15%",
-          width: 1,
-          height: "70%",
-          transformOrigin: "top center",
-          visibility: "hidden",
-        }}
-      />
-
-      {/* Ad-hoc VM cards — scattered in Phase 1, organized in Phase 2 */}
-      {adhocItems.map((item, i) => (
+      {/* ── Background layer: animation ── */}
+      <div className="absolute inset-0">
+        {/* Zone labels — top of each half */}
         <div
-          key={item.label}
-          data-adhoc={i}
-          className="absolute rounded-lg border border-gray-300 px-3 py-2 shadow-sm"
+          data-label="adhoc-zone"
+          className="absolute text-sm font-semibold text-gray-400"
+          style={{ left: leftX, top: "12%", transform: "translateX(-50%)", visibility: "hidden" }}
+        >
+          Ad-Hoc Environments
+        </div>
+        <div
+          data-label="prod-zone"
+          className="absolute text-sm font-semibold text-gray-400"
+          style={{ left: rightX, top: "12%", transform: "translateX(-50%)", visibility: "hidden" }}
+        >
+          Production
+        </div>
+
+        {/* Center divider */}
+        <div
+          data-divider
+          className="absolute bg-gray-200"
           style={{
-            width: CARD_W,
-            left: `calc(${leftX} + ${item.x}px)`,
-            top: `calc(${centerY} + ${item.y}px)`,
-            backgroundColor: "#faf8f5",
-            zIndex: 10,
+            left: "50%",
+            top: "15%",
+            width: 1,
+            height: "70%",
+            transformOrigin: "top center",
+            visibility: "hidden",
+          }}
+        />
+
+        {/* Ad-hoc VM cards — scattered in Phase 1, organized in Phase 2 */}
+        {adhocItems.map((item, i) => (
+          <div
+            key={item.label}
+            data-adhoc={i}
+            className="absolute rounded-lg border border-gray-300 px-3 py-2 shadow-sm"
+            style={{
+              width: CARD_W,
+              left: `calc(${leftX} + ${item.x}px)`,
+              top: `calc(${centerY} + ${item.y}px)`,
+              backgroundColor: "#faf8f5",
+              zIndex: 2,
+              visibility: "hidden",
+            }}
+          >
+            <div className="text-xs font-mono font-semibold text-gray-600">{item.label}</div>
+            <div className="text-xs text-red-400 italic">{item.sub}</div>
+          </div>
+        ))}
+
+        {/* IaC overlay — Terraform template, slides in during Phase 2 */}
+        <div
+          data-iac-overlay
+          className="absolute rounded-lg border-2 border-dashed border-green-600 px-4 py-3"
+          style={{
+            width: 220,
+            left: `calc(${leftX} - 110px)`,
+            top: `calc(${centerY} - 100px)`,
+            height: 200,
+            backgroundColor: "rgba(74, 124, 89, 0.06)",
+            zIndex: 3,
             visibility: "hidden",
           }}
         >
-          <div className="text-xs font-mono font-semibold text-gray-600">{item.label}</div>
-          <div className="text-xs text-red-400 italic">{item.sub}</div>
-        </div>
-      ))}
-
-      {/* IaC overlay — Terraform template, slides in during Phase 2 */}
-      <div
-        data-iac-overlay
-        className="absolute rounded-lg border-2 border-dashed border-green-600 px-4 py-3"
-        style={{
-          width: 220,
-          left: `calc(${leftX} - 110px)`,
-          top: `calc(${centerY} - 100px)`,
-          height: 200,
-          backgroundColor: "rgba(74, 124, 89, 0.06)",
-          zIndex: 20,
-          visibility: "hidden",
-        }}
-      >
-        <div className="text-xs font-mono text-green-700 leading-relaxed">
-          <div className="opacity-60">{"# infrastructure.tf"}</div>
-          <div>{"resource \"env\" {"}</div>
-          <div className="pl-3">{"version_control = true"}</div>
-          <div className="pl-3">{"audit_trail     = true"}</div>
-          <div className="pl-3">{"reproducible    = true"}</div>
-          <div>{"}"}</div>
-        </div>
-      </div>
-
-      {/* IaC-managed cards — replace adhoc cards in Phase 2 */}
-      {iacStack.map((item, i) => {
-        const stackY = -((iacStack.length - 1) * (CARD_H + STACK_GAP)) / 2 + i * (CARD_H + STACK_GAP);
-        return (
-          <div
-            key={item.label}
-            data-iac={i}
-            className="absolute rounded-lg border-2 border-green-600 px-3 py-2"
-            style={{
-              width: CARD_W,
-              height: CARD_H,
-              left: `calc(${leftX} - ${CARD_W / 2}px)`,
-              top: `calc(${centerY} + ${stackY}px)`,
-              backgroundColor: "#dce8df",
-              zIndex: 15,
-              visibility: "hidden",
-            }}
-          >
-            <div className="text-xs font-mono font-semibold text-green-800">{item.label}</div>
-            <div className="text-xs text-green-600">{item.version} &middot; {item.env}</div>
+          <div className="text-xs font-mono text-green-700 leading-relaxed">
+            <div className="opacity-60">{"# infrastructure.tf"}</div>
+            <div>{"resource \"env\" {"}</div>
+            <div className="pl-3">{"version_control = true"}</div>
+            <div className="pl-3">{"audit_trail     = true"}</div>
+            <div className="pl-3">{"reproducible    = true"}</div>
+            <div>{"}"}</div>
           </div>
-        );
-      })}
+        </div>
 
-      {/* Audit trail line — connects IaC stack, appears Phase 2 */}
-      <div
-        data-audit-trail
-        className="absolute bg-green-500 rounded-full"
-        style={{
-          width: 3,
-          height: iacStack.length * (CARD_H + STACK_GAP) - STACK_GAP,
-          left: `calc(${leftX} - ${CARD_W / 2}px - 10px)`,
-          top: `calc(${centerY} - ${((iacStack.length - 1) * (CARD_H + STACK_GAP)) / 2}px)`,
-          transformOrigin: "top center",
-          visibility: "hidden",
-          zIndex: 14,
-        }}
-      />
+        {/* IaC-managed cards — replace adhoc cards in Phase 2 */}
+        {iacStack.map((item, i) => {
+          const stackY = -((iacStack.length - 1) * (CARD_H + STACK_GAP)) / 2 + i * (CARD_H + STACK_GAP);
+          return (
+            <div
+              key={item.label}
+              data-iac={i}
+              className="absolute rounded-lg border-2 border-green-600 px-3 py-2"
+              style={{
+                width: CARD_W,
+                height: CARD_H,
+                left: `calc(${leftX} - ${CARD_W / 2}px)`,
+                top: `calc(${centerY} + ${stackY}px)`,
+                backgroundColor: "#dce8df",
+                zIndex: 2,
+                visibility: "hidden",
+              }}
+            >
+              <div className="text-xs font-mono font-semibold text-green-800">{item.label}</div>
+              <div className="text-xs text-green-600">{item.version} &middot; {item.env}</div>
+            </div>
+          );
+        })}
 
-      {/* Production lane — dashed outline, solidifies in Phase 3 */}
-      <div
-        data-prod-lane
-        className="absolute rounded-xl border-2 border-dashed border-gray-300"
-        style={{
-          width: CARD_W + 32,
-          height: iacStack.length * (CARD_H + STACK_GAP) + 40,
-          left: `calc(${rightX} - ${(CARD_W + 32) / 2}px)`,
-          top: `calc(${centerY} - ${((iacStack.length - 1) * (CARD_H + STACK_GAP)) / 2 + 20}px)`,
-          backgroundColor: "rgba(74, 124, 89, 0.03)",
-          visibility: "hidden",
-          zIndex: 2,
-        }}
-      />
+        {/* Audit trail line — connects IaC stack, appears Phase 2 */}
+        <div
+          data-audit-trail
+          className="absolute bg-green-500 rounded-full"
+          style={{
+            width: 3,
+            height: iacStack.length * (CARD_H + STACK_GAP) - STACK_GAP,
+            left: `calc(${leftX} - ${CARD_W / 2}px - 10px)`,
+            top: `calc(${centerY} - ${((iacStack.length - 1) * (CARD_H + STACK_GAP)) / 2}px)`,
+            transformOrigin: "top center",
+            visibility: "hidden",
+            zIndex: 1,
+          }}
+        />
 
-      {/* "?" placeholder — fills empty prod lane in Phase 1 */}
-      <div
-        data-label="empty"
-        className="absolute text-4xl font-bold text-gray-300"
-        style={{
-          left: rightX,
-          top: centerY,
-          transform: "translate(-50%, -50%)",
-          visibility: "hidden",
-          zIndex: 3,
-        }}
-      >
-        ?
-      </div>
+        {/* Production lane — dashed outline, solidifies in Phase 3 */}
+        <div
+          data-prod-lane
+          className="absolute rounded-xl border-2 border-dashed border-gray-300"
+          style={{
+            width: CARD_W + 32,
+            height: iacStack.length * (CARD_H + STACK_GAP) + 40,
+            left: `calc(${rightX} - ${(CARD_W + 32) / 2}px)`,
+            top: `calc(${centerY} - ${((iacStack.length - 1) * (CARD_H + STACK_GAP)) / 2 + 20}px)`,
+            backgroundColor: "rgba(74, 124, 89, 0.03)",
+            visibility: "hidden",
+            zIndex: 1,
+          }}
+        />
 
-      {/* Production cards — appear in Phase 3 */}
-      {prodItems.map((item, i) => {
-        const stackY = -((prodItems.length - 1) * (CARD_H + STACK_GAP)) / 2 + i * (CARD_H + STACK_GAP);
-        return (
-          <div
-            key={item.label}
-            data-prod={i}
-            className="absolute rounded-lg border-2 border-green-700 px-3 py-2"
-            style={{
-              width: CARD_W,
-              height: CARD_H,
-              left: `calc(${rightX} - ${CARD_W / 2}px)`,
-              top: `calc(${centerY} + ${stackY}px)`,
-              backgroundColor: "#4A7C59",
-              zIndex: 15,
-              visibility: "hidden",
-            }}
-          >
-            <div className="text-xs font-mono font-bold text-white">{item.label}</div>
-            <div className="text-xs text-green-200">{item.version} &middot; production</div>
+        {/* "?" placeholder — fills empty prod lane in Phase 1 */}
+        <div
+          data-label="empty"
+          className="absolute text-4xl font-bold text-gray-300"
+          style={{
+            left: rightX,
+            top: centerY,
+            transform: "translate(-50%, -50%)",
+            visibility: "hidden",
+            zIndex: 1,
+          }}
+        >
+          ?
+        </div>
+
+        {/* Production cards — appear in Phase 3 */}
+        {prodItems.map((item, i) => {
+          const stackY = -((prodItems.length - 1) * (CARD_H + STACK_GAP)) / 2 + i * (CARD_H + STACK_GAP);
+          return (
+            <div
+              key={item.label}
+              data-prod={i}
+              className="absolute rounded-lg border-2 border-green-700 px-3 py-2"
+              style={{
+                width: CARD_W,
+                height: CARD_H,
+                left: `calc(${rightX} - ${CARD_W / 2}px)`,
+                top: `calc(${centerY} + ${stackY}px)`,
+                backgroundColor: "#4A7C59",
+                zIndex: 2,
+                visibility: "hidden",
+              }}
+            >
+              <div className="text-xs font-mono font-bold text-white">{item.label}</div>
+              <div className="text-xs text-green-200">{item.version} &middot; production</div>
+            </div>
+          );
+        })}
+
+        {/* Reproducible badge — pops in Phase 3 */}
+        <div
+          data-badge
+          className="absolute rounded-full px-4 py-1.5 shadow-lg"
+          style={{
+            left: rightX,
+            top: `calc(${centerY} + ${(prodItems.length * (CARD_H + STACK_GAP)) / 2 + 20}px)`,
+            transform: "translateX(-50%)",
+            backgroundColor: "#2C7C6F",
+            color: "white",
+            fontSize: 12,
+            fontWeight: 700,
+            visibility: "hidden",
+            zIndex: 3,
+          }}
+        >
+          Reproducible &middot; Auditable &middot; Version-Controlled
+        </div>
+
+        {/* Result label — Phase 4 */}
+        <div
+          data-label="result"
+          className="absolute left-1/2 -translate-x-1/2 text-center"
+          style={{ bottom: "6%", visibility: "hidden", zIndex: 3 }}
+        >
+          <div className="text-2xl font-bold text-gray-800">
+            Explore freely. Ship confidently.
           </div>
-        );
-      })}
-
-      {/* Reproducible badge — pops in Phase 3 */}
-      <div
-        data-badge
-        className="absolute rounded-full px-4 py-1.5 shadow-lg"
-        style={{
-          left: rightX,
-          top: `calc(${centerY} + ${(prodItems.length * (CARD_H + STACK_GAP)) / 2 + 20}px)`,
-          transform: "translateX(-50%)",
-          backgroundColor: "#2C7C6F",
-          color: "white",
-          fontSize: 12,
-          fontWeight: 700,
-          visibility: "hidden",
-          zIndex: 20,
-        }}
-      >
-        Reproducible &middot; Auditable &middot; Version-Controlled
+        </div>
       </div>
 
-      {/* Result label — Phase 4 */}
-      <div
-        data-label="result"
-        className="absolute left-1/2 -translate-x-1/2 text-center"
-        style={{ bottom: "6%", visibility: "hidden", zIndex: 25 }}
-      >
-        <div className="text-2xl font-bold text-gray-800">
-          Explore freely. Ship confidently.
+      {/* ── Foreground layer: text ── */}
+      <div className="relative z-10 pointer-events-none flex flex-col lg:flex-row items-center h-full max-w-screen-xl mx-auto px-8">
+        <div className="flex-1" />
+        <div className="flex-1 flex flex-col justify-center space-y-6 p-8 text-center lg:text-left">
+          <h2
+            data-text="heading"
+            className="text-3xl sm:text-4xl text-moss"
+            style={{ opacity: 0 }}
+          >
+            {heading}
+          </h2>
+          {body.map((paragraph, i) => (
+            <p
+              key={i}
+              data-text-index={i}
+              className="text-xl text-justify"
+              style={{ opacity: 0 }}
+            >
+              {paragraph.text}
+            </p>
+          ))}
         </div>
       </div>
     </div>

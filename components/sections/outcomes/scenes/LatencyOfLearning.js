@@ -9,7 +9,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 /*
  * Scene 2: "Eliminate the Latency of Learning"
- * Layout: stacked (text top, full-width animation below)
+ * Layout: text overlay on top, full-width animation behind
+ *
+ * Layers:
+ *   Background (z-0): pipeline lanes, workload blocks, labels, result
+ *   Foreground (z-10): heading + body text overlay at top
  *
  * Timeline (scroll 0% → 100%):
  *   Text:    heading at 0%, body paragraphs at configured visibleAt values
@@ -53,7 +57,7 @@ const PIPELINE_WIDTH = "86%";
 const QUEUE_BASE = PIPELINE_BOTTOM + 30;
 const SERIAL_PROCESSED = 3;
 
-export default function LatencyOfLearning({ body = [] }) {
+export default function LatencyOfLearning({ heading, body = [] }) {
   const containerRef = useRef(null);
 
   useGSAP(() => {
@@ -61,7 +65,6 @@ export default function LatencyOfLearning({ body = [] }) {
 
     mm.add("(min-width: 768px)", () => {
       const triggerEl = containerRef.current.closest("[id='latency-of-learning']");
-      const heading = triggerEl.querySelector("[data-text='heading']");
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -73,10 +76,9 @@ export default function LatencyOfLearning({ body = [] }) {
       });
 
       // ── Text ──
-      tl.to(heading, { opacity: 1, duration: 0.04 }, 0);
+      tl.to("[data-text='heading']", { opacity: 1, duration: 0.04 }, 0);
       body.forEach((paragraph, i) => {
-        const el = triggerEl.querySelector(`[data-text-index='${i}']`);
-        if (el) tl.to(el, { opacity: 1, duration: 0.06 }, paragraph.visibleAt);
+        tl.to(`[data-text-index='${i}']`, { opacity: 1, duration: 0.06 }, paragraph.visibleAt);
       });
 
       // ── Phase 1 (0.00–0.45): Serial bottleneck ──
@@ -239,70 +241,96 @@ export default function LatencyOfLearning({ body = [] }) {
 
   return (
     <div ref={containerRef} className="relative w-full h-full">
-      {/* Workload blocks — queue on the left */}
-      {workloads.map((w, i) => (
+      {/* ── Background layer: animation ── */}
+      <div className="absolute inset-0">
+        {/* Workload blocks — queue on the left */}
+        {workloads.map((w, i) => (
+          <div
+            key={`${w.label}-${i}`}
+            data-block={i}
+            className="absolute flex items-center justify-center rounded px-3 text-white font-semibold text-xs shadow-md whitespace-nowrap"
+            style={{
+              backgroundColor: w.color,
+              height: BLOCK_H,
+              left: QUEUE_LEFT,
+              bottom: QUEUE_BASE + i * (BLOCK_H + BLOCK_GAP),
+              zIndex: 2,
+            }}
+          >
+            {w.label}
+          </div>
+        ))}
+
+        {/* Pipeline lanes — lane 0 visible, lanes 1–3 hidden until Phase 2 */}
+        {Array.from({ length: LANE_COUNT }).map((_, lane) => (
+          <div
+            key={lane}
+            data-pipeline={lane}
+            className="absolute rounded-full"
+            style={{
+              left: PIPELINE_LEFT,
+              width: PIPELINE_WIDTH,
+              height: LANE_H,
+              bottom: PIPELINE_BOTTOM + lane * (LANE_H + LANE_GAP),
+              backgroundColor: "#d1ccc4",
+              visibility: lane === 0 ? "visible" : "hidden",
+              transformOrigin: "left center",
+              zIndex: 1,
+            }}
+          />
+        ))}
+
+        {/* Processing mode labels */}
         <div
-          key={`${w.label}-${i}`}
-          data-block={i}
-          className="absolute flex items-center justify-center rounded px-3 text-white font-semibold text-xs shadow-md whitespace-nowrap"
-          style={{
-            backgroundColor: w.color,
-            height: BLOCK_H,
-            left: QUEUE_LEFT,
-            bottom: QUEUE_BASE + i * (BLOCK_H + BLOCK_GAP),
-            zIndex: 20,
-          }}
+          data-label="serial"
+          className="absolute text-sm font-semibold text-gray-500"
+          style={{ left: PIPELINE_LEFT, bottom: PIPELINE_BOTTOM - 24, opacity: 0 }}
         >
-          {w.label}
+          Sequential Processing
         </div>
-      ))}
-
-      {/* Pipeline lanes — lane 0 visible, lanes 1–3 hidden until Phase 2 */}
-      {Array.from({ length: LANE_COUNT }).map((_, lane) => (
         <div
-          key={lane}
-          data-pipeline={lane}
-          className="absolute rounded-full"
-          style={{
-            left: PIPELINE_LEFT,
-            width: PIPELINE_WIDTH,
-            height: LANE_H,
-            bottom: PIPELINE_BOTTOM + lane * (LANE_H + LANE_GAP),
-            backgroundColor: "#d1ccc4",
-            visibility: lane === 0 ? "visible" : "hidden",
-            transformOrigin: "left center",
-            zIndex: 5,
-          }}
-        />
-      ))}
-
-      {/* Processing mode labels */}
-      <div
-        data-label="serial"
-        className="absolute text-sm font-semibold text-gray-500"
-        style={{ left: PIPELINE_LEFT, bottom: PIPELINE_BOTTOM - 24, opacity: 0 }}
-      >
-        Sequential Processing
-      </div>
-      <div
-        data-label="parallel"
-        className="absolute text-sm font-semibold text-gray-500"
-        style={{ left: PIPELINE_LEFT, bottom: PIPELINE_BOTTOM - 24, opacity: 0 }}
-      >
-        Parallel Processing
-      </div>
-
-      {/* Result label — Phase 4 */}
-      <div
-        data-label="result"
-        className="absolute left-1/2 -translate-x-1/2 text-center"
-        style={{ top: "20%", visibility: "hidden" }}
-      >
-        <div className="text-3xl font-bold text-gray-800 mb-2">
-          4x throughput
+          data-label="parallel"
+          className="absolute text-sm font-semibold text-gray-500"
+          style={{ left: PIPELINE_LEFT, bottom: PIPELINE_BOTTOM - 24, opacity: 0 }}
+        >
+          Parallel Processing
         </div>
-        <div className="text-base text-gray-500">
-          Same infrastructure. Parallel execution.
+
+        {/* Result label — Phase 4 */}
+        <div
+          data-label="result"
+          className="absolute left-1/2 -translate-x-1/2 text-center"
+          style={{ top: "20%", visibility: "hidden", zIndex: 3 }}
+        >
+          <div className="text-3xl font-bold text-gray-800 mb-2">
+            4x throughput
+          </div>
+          <div className="text-base text-gray-500">
+            Same infrastructure. Parallel execution.
+          </div>
+        </div>
+      </div>
+
+      {/* ── Foreground layer: text ── */}
+      <div className="relative z-10 pointer-events-none w-full max-w-screen-xl mx-auto px-8 pt-6 pb-4 flex flex-col lg:flex-row lg:items-baseline lg:gap-8">
+        <h2
+          data-text="heading"
+          className="text-3xl sm:text-4xl text-moss shrink-0"
+          style={{ opacity: 0 }}
+        >
+          {heading}
+        </h2>
+        <div className="flex gap-6 mt-3 lg:mt-0">
+          {body.map((paragraph, i) => (
+            <p
+              key={i}
+              data-text-index={i}
+              className="text-base text-justify"
+              style={{ opacity: 0 }}
+            >
+              {paragraph.text}
+            </p>
+          ))}
         </div>
       </div>
     </div>
