@@ -78,7 +78,16 @@ export default function ResearchFreedom({ heading, body = [] }) {
       });
 
       // ── Text ──
-      tl.to("[data-text='heading']", { opacity: 1, duration: 0.04 }, 0);
+      gsap.to("[data-text='heading']", {
+        opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: triggerEl,
+          start: "top bottom",
+          end: "top top",
+          scrub: 1,
+        },
+      });
       body.forEach((paragraph, i) => {
         tl.to(`[data-text-index='${i}']`, { opacity: 1, duration: 0.06 }, paragraph.visibleAt);
       });
@@ -478,26 +487,33 @@ export default function ResearchFreedom({ heading, body = [] }) {
       </div>
 
       {/* ── Foreground layer: text ── */}
-      <div className="relative z-10 pointer-events-none flex flex-col lg:flex-row items-center h-full max-w-screen-xl mx-auto px-8">
-        <div className="flex-1" />
-        <div className="flex-1 flex flex-col justify-center space-y-6 p-8 text-center lg:text-left">
+      <div className="absolute inset-0 z-10 pointer-events-none">
+        {/* Heading — full-width, centered at top */}
+        <div className="absolute top-0 left-0 right-0 flex justify-center pt-16 px-8">
           <h2
             data-text="heading"
-            className="text-3xl sm:text-4xl text-moss"
+            className="text-3xl sm:text-4xl text-moss text-center"
             style={{ opacity: 0 }}
           >
             {heading}
           </h2>
-          {body.map((paragraph, i) => (
-            <p
-              key={i}
-              data-text-index={i}
-              className="text-xl text-justify"
-              style={{ opacity: 0 }}
-            >
-              {paragraph.text}
-            </p>
-          ))}
+        </div>
+
+        {/* Body — right column, vertically centered */}
+        <div className="absolute inset-0 flex flex-col lg:flex-row items-center max-w-screen-xl mx-auto px-8">
+          <div className="flex-1" />
+          <div className="flex-1 flex flex-col justify-center space-y-6 p-8 text-center lg:text-left">
+            {body.map((paragraph, i) => (
+              <p
+                key={i}
+                data-text-index={i}
+                className="text-xl text-justify"
+                style={{ opacity: 0 }}
+              >
+                {paragraph.text}
+              </p>
+            ))}
+          </div>
         </div>
       </div>
     </div>

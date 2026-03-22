@@ -43,7 +43,7 @@ const CENTER_Y = "50%";
 
 const startPositions = [
   { x: -340, y: -180 },
-  { x: 300, y: -160 },
+  { x: 300, y: -230 },
   { x: -300, y: 160 },
   { x: 320, y: 140 },
   { x: -80, y: -240 },
@@ -59,9 +59,10 @@ export default function DiscoveryVelocity({ heading, body = [] }) {
       const triggerEl = containerRef.current.closest("[id='discovery-velocity']");
 
       // ── Initial states (set once, outside timeline so reverse is always clean) ──
+      const startOpacities = [0.18, 0.22, 0.15, 0.20, 0, 0];
       dataSources.forEach((_, i) => {
         gsap.set(`[data-source='${i}']`, {
-          opacity: 0, scale: 0.6, xPercent: -50, yPercent: -50,
+          opacity: startOpacities[i] ?? 0, scale: 0.6, xPercent: -50, yPercent: -50,
           x: startPositions[i].x, y: startPositions[i].y,
         });
       });
@@ -78,7 +79,16 @@ export default function DiscoveryVelocity({ heading, body = [] }) {
       });
 
       // ── Text ──
-      tl.to("[data-text='heading']", { opacity: 1, duration: 0.06, ease: "power2.out" }, 0);
+      gsap.to("[data-text='heading']", {
+        opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: triggerEl,
+          start: "top bottom",
+          end: "top top",
+          scrub: 1,
+        },
+      });
       body.forEach((paragraph, i) => {
         tl.to(`[data-text-index='${i}']`, { opacity: 1, duration: 0.08, ease: "power2.out" }, paragraph.visibleAt);
       });
@@ -288,7 +298,7 @@ export default function DiscoveryVelocity({ heading, body = [] }) {
       {/* ── Foreground layer: text ── */}
       <div data-layer="foreground" className="absolute inset-0 z-10 pointer-events-none">
         {/* Heading — full-width, centered at top */}
-        <div className="absolute top-0 left-0 right-0 flex justify-center pt-10 px-8">
+        <div className="absolute top-0 left-0 right-0 flex justify-center pt-16 px-8">
           <h2
             data-text="heading"
             className="text-3xl sm:text-4xl text-moss text-center"

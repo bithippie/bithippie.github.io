@@ -76,7 +76,16 @@ export default function LatencyOfLearning({ heading, body = [] }) {
       });
 
       // ── Text ──
-      tl.to("[data-text='heading']", { opacity: 1, duration: 0.04 }, 0);
+      gsap.to("[data-text='heading']", {
+        opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: triggerEl,
+          start: "top bottom",
+          end: "top top",
+          scrub: 1,
+        },
+      });
       body.forEach((paragraph, i) => {
         tl.to(`[data-text-index='${i}']`, { opacity: 1, duration: 0.06 }, paragraph.visibleAt);
       });
@@ -312,25 +321,32 @@ export default function LatencyOfLearning({ heading, body = [] }) {
       </div>
 
       {/* ── Foreground layer: text ── */}
-      <div className="relative z-10 pointer-events-none w-full max-w-screen-xl mx-auto px-8 pt-6 pb-4 flex flex-col lg:flex-row lg:items-baseline lg:gap-8">
-        <h2
-          data-text="heading"
-          className="text-3xl sm:text-4xl text-moss shrink-0"
-          style={{ opacity: 0 }}
-        >
-          {heading}
-        </h2>
-        <div className="flex gap-6 mt-3 lg:mt-0">
-          {body.map((paragraph, i) => (
-            <p
-              key={i}
-              data-text-index={i}
-              className="text-base text-justify"
-              style={{ opacity: 0 }}
-            >
-              {paragraph.text}
-            </p>
-          ))}
+      <div className="absolute inset-0 z-10 pointer-events-none">
+        {/* Heading — full-width, centered at top (matches DiscoveryVelocity) */}
+        <div className="absolute top-0 left-0 right-0 flex justify-center pt-16 px-8">
+          <h2
+            data-text="heading"
+            className="text-3xl sm:text-4xl text-moss text-center"
+            style={{ opacity: 0 }}
+          >
+            {heading}
+          </h2>
+        </div>
+
+        {/* Body — inline row below heading */}
+        <div className="absolute top-0 left-0 right-0 flex justify-center pt-28 px-8">
+          <div className="flex gap-6 w-full max-w-screen-xl">
+            {body.map((paragraph, i) => (
+              <p
+                key={i}
+                data-text-index={i}
+                className="text-base text-justify"
+                style={{ opacity: 0 }}
+              >
+                {paragraph.text}
+              </p>
+            ))}
+          </div>
         </div>
       </div>
     </div>

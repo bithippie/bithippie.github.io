@@ -50,7 +50,7 @@ export default function OutcomeScene({ children, id }) {
     <div ref={wrapperRef} id={id} className="relative" style={{ height: "200vh" }}>
       <div
         ref={contentRef}
-        className="w-full h-screen overflow-hidden"
+        className="w-full h-screen overflow-hidden bg-inherit"
         onClick={handleClick}
       >
         {children}
