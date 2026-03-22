@@ -22,7 +22,7 @@ export default function WeWorkTogether({ backgroundColor }) {
               <div className="flex-shrink-0 flex items-center justify-center overflow-hidden w-full h-[260px] lg:w-[360px] lg:h-[360px]" style={{backgroundColor:"#fdfcfb", position:"relative"}}>
                 <Image
                   width={300}
-                  height={300}
+                  height={200}
                   src="/assets/images/outcomes/integrated_research.png"
                   className="rounded-xl scale-[1.3]"
                   alt="Turn Data Into Discovery Velocity"
@@ -53,7 +53,7 @@ export default function WeWorkTogether({ backgroundColor }) {
               <div className="flex-shrink-0 flex items-center justify-center overflow-hidden w-full h-[260px] lg:w-[360px] lg:h-[360px]" style={{backgroundColor:"#fdfcfb", position:"relative"}}>
                 <Image
                   width={300}
-                  height={300}
+                  height={200}
                   src="/assets/images/outcomes/parallel_compute.png"
                   className="rounded-xl scale-[1.4]"
                   alt="Eliminate the Latency of Learning"
@@ -75,7 +75,7 @@ export default function WeWorkTogether({ backgroundColor }) {
                 </p>
                 <div className="flex flex-col sm:flex-row flex-wrap items-center justify-around sm:space-x-8">
                   <Image
-                    width={52.2}
+                    width={52}
                     height={32}
                     src="/assets/images/icons/aws.png"
                     alt="Amazon Web Services Logo"
@@ -104,7 +104,7 @@ export default function WeWorkTogether({ backgroundColor }) {
               <div className="flex-shrink-0 flex items-center justify-center overflow-hidden w-full h-[260px] lg:w-[360px] lg:h-[360px]" style={{backgroundColor:"#fdfcfb", position:"relative"}}>
                 <Image
                   width={300}
-                  height={300}
+                  height={200}
                   src="/assets/images/outcomes/internal_tools.png"
                   className="rounded-xl scale-[1.4]"
                   alt="Workflows Defined by Science, Not Software"
@@ -131,7 +131,7 @@ export default function WeWorkTogether({ backgroundColor }) {
               <div className="flex-shrink-0 flex items-center justify-center overflow-hidden w-full h-[260px] lg:w-[360px] lg:h-[360px]" style={{backgroundColor:"#fdfcfb", position:"relative"}}>
                 <Image
                   width={300}
-                  height={300}
+                  height={200}
                   src="/assets/images/outcomes/sandbox_to_production.png"
                   className="rounded-xl lg:scale-[1.4]"
                   alt="Research Freedom, Production Discipline"

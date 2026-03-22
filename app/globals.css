@@ -35,25 +35,6 @@ body {
   background: var(--background);
 }
 
-.splide__arrow--prev {
-  left: 0 !important;
-}
-
-.splide__arrow--next {
-  right: 0 !important;
-}
-.splide__arrow--prev svg,
-.splide__arrow--next svg {
-  fill: #fff !important;
-}
-
-.splide__pagination__page {
-  background: #fff !important;
-}
-.splide__pagination__page.is-active {
-  background: #d3a946 !important;
-}
-
 #hero::after {
   content: "";
   display: block;

@@ -1,18 +1,12 @@
 import "./globals.css";
 
 import localFont from "next/font/local";
-import { Playfair_Display, Merriweather, EB_Garamond, Oxanium } from "next/font/google";
+import { Merriweather, EB_Garamond } from "next/font/google";
 
 const marcellus = localFont({
   src: "../public/assets/fonts/Marcellus.ttf",
   variable: "--font-marcellus",
   weight: "100 900",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
 });
 
 const merriweather = Merriweather({
@@ -25,12 +19,6 @@ const merriweather = Merriweather({
 const ebGaramond = EB_Garamond({
   subsets: ["latin"],
   variable: "--font-eb-garamond",
-  display: "swap",
-});
-
-const oxanium = Oxanium({
-  subsets: ["latin"],
-  variable: "--font-oxanium",
   display: "swap",
 });
 
@@ -60,7 +48,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         <link rel="manifest" href="/assets/favicon_io/site.webmanifest" />
         <link rel="shortcut icon" href="/assets/favicon_io/favicon.ico" />
@@ -77,7 +65,7 @@ export default function RootLayout({ children }) {
         <meta httpEquiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
       </head>
 
-      <body className={`${marcellus.variable} ${playfair.variable} ${merriweather.variable} ${ebGaramond.variable} ${oxanium.variable} antialiased`}>
+      <body className={`${marcellus.variable} ${merriweather.variable} ${ebGaramond.variable} antialiased`}>
         {children}
       </body>
     </html>

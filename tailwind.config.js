@@ -32,10 +32,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Marcellus", ...defaultTheme.fontFamily.sans],
-        playfair: ["var(--font-playfair)", ...defaultTheme.fontFamily.serif],
         merriweather: ["var(--font-merriweather)", ...defaultTheme.fontFamily.serif],
         garamond: ["var(--font-eb-garamond)", ...defaultTheme.fontFamily.serif],
-        oxanium: ["var(--font-oxanium)", ...defaultTheme.fontFamily.sans],
       },
     },
   },
