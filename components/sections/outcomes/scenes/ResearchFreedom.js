@@ -1,15 +1,31 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const PREFIX = "[ResearchFreedom]";
+/*
+ * Scene 4: "Research Freedom, Production Discipline"
+ * Layout: side-by-side (animation left, text right)
+ *
+ * Timeline (scroll 0% → 100%):
+ *   Text:    heading at 0%, body paragraphs at configured visibleAt values
+ *   Phase 1: (0.00–0.25) Ad-hoc chaos — scattered VM cards pile up on the
+ *            left with "no docs", "undocumented" labels. Empty production
+ *            lane with "?" on the right.
+ *   Phase 2: (0.28–0.55) IaC organizes — Terraform template slides in,
+ *            adhoc cards snap into organized stack or dissolve. IaC-managed
+ *            cards replace them with version labels. Audit trail connects.
+ *   Phase 3: (0.58–0.80) Promote to production — organized stack slides
+ *            right into production lane. Prod cards appear. Lane border
+ *            solidifies. "Reproducible" badge appears.
+ *   Phase 4: (0.85–1.00) Result: "Explore freely. Ship confidently."
+ */
 
-// Ad-hoc VM fragments — the chaos
+// Ad-hoc VM fragments — scattered chaos on the left
 const adhocItems = [
   { label: "gpu-instance-7f3a", sub: "no docs", x: -220, y: -120, rot: -6 },
   { label: "analysis-vm-tmp", sub: "owner: ???", x: -160, y: -30, rot: 4 },
@@ -19,65 +35,34 @@ const adhocItems = [
   { label: "scratch-docking-2", sub: "temp / permanent?", x: -180, y: 30, rot: 2 },
 ];
 
-// Organized IaC stack — what they become
+// Organized IaC stack — what the first 3 adhoc items become
 const iacStack = [
   { label: "sandbox-docking", version: "v1.2.0", env: "sandbox" },
   { label: "sandbox-analysis", version: "v3.1.0", env: "sandbox" },
   { label: "sandbox-ml-train", version: "v2.0.1", env: "sandbox" },
 ];
 
-// Production lane items
+// Production lane items — final state after promotion
 const prodItems = [
   { label: "prod-docking", version: "v1.2.0" },
   { label: "prod-analysis", version: "v3.1.0" },
   { label: "prod-ml-train", version: "v2.0.1" },
 ];
 
+// Card sizing
 const CARD_W = 180;
 const CARD_H = 52;
 const STACK_GAP = 8;
 
-export default function ResearchFreedom() {
+export default function ResearchFreedom({ body = [] }) {
   const containerRef = useRef(null);
 
-  // ── CP1: Verify DOM ──
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) {
-      console.error(PREFIX, "CP1 FAIL: containerRef is null");
-      return;
-    }
-    console.log(PREFIX, "CP1: container dimensions", {
-      width: container.offsetWidth,
-      height: container.offsetHeight,
-    });
-
-    const adhocEls = container.querySelectorAll("[data-adhoc]");
-    console.log(PREFIX, `CP1: Found ${adhocEls.length}/${adhocItems.length} adhoc elements`);
-
-    const iacEls = container.querySelectorAll("[data-iac]");
-    console.log(PREFIX, `CP1: Found ${iacEls.length}/${iacStack.length} iac elements`);
-
-    const prodEls = container.querySelectorAll("[data-prod]");
-    console.log(PREFIX, `CP1: Found ${prodEls.length}/${prodItems.length} prod elements`);
-
-    const trigger = container.closest("[id='research-freedom']");
-    console.log(PREFIX, "CP1: trigger element", trigger);
-    if (!trigger) {
-      console.error(PREFIX, "CP1 FAIL: Cannot find parent with id='research-freedom'");
-    }
-  }, []);
-
-  // ── GSAP animations ──
   useGSAP(() => {
-    console.log(PREFIX, "CP2: useGSAP callback fired");
-
     const mm = gsap.matchMedia();
 
     mm.add("(min-width: 768px)", () => {
-      console.log(PREFIX, "CP2: matchMedia matched");
-
       const triggerEl = containerRef.current.closest("[id='research-freedom']");
+      const heading = triggerEl.querySelector("[data-text='heading']");
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -85,21 +70,19 @@ export default function ResearchFreedom() {
           start: "top top",
           end: "bottom bottom",
           scrub: 1,
-          onUpdate: (self) => {
-            const pct = Math.round(self.progress * 100);
-            if (pct % 10 === 0) {
-              console.log(PREFIX, `CP2: scroll progress ${pct}%`);
-            }
-          },
         },
       });
 
-      // ════════════════════════════════════════
-      // PHASE 1: Ad-hoc mess piles up (0 – 0.25)
-      // ════════════════════════════════════════
-      console.log(PREFIX, "Phase 1: Ad-hoc mess");
+      // ── Text ──
+      tl.to(heading, { opacity: 1, duration: 0.04 }, 0);
+      body.forEach((paragraph, i) => {
+        const el = triggerEl.querySelector(`[data-text-index='${i}']`);
+        if (el) tl.to(el, { opacity: 1, duration: 0.06 }, paragraph.visibleAt);
+      });
 
-      // Zone labels fade in
+      // ── Phase 1 (0.00–0.25): Ad-hoc chaos ──
+
+      // Zone labels appear
       tl.fromTo(
         "[data-label='adhoc-zone']",
         { autoAlpha: 0 },
@@ -113,7 +96,7 @@ export default function ResearchFreedom() {
         0
       );
 
-      // Divider line
+      // Center divider line
       tl.fromTo(
         "[data-divider]",
         { autoAlpha: 0, scaleY: 0 },
@@ -121,11 +104,9 @@ export default function ResearchFreedom() {
         0.02
       );
 
-      // Ad-hoc items scatter in one by one
+      // Ad-hoc VM cards scatter in one by one at messy angles
       adhocItems.forEach((_, i) => {
         const t = 0.03 + i * 0.035;
-        console.log(PREFIX, `Phase 1: adhoc ${i} appears at t=${t.toFixed(3)}`);
-
         tl.fromTo(
           `[data-adhoc='${i}']`,
           { autoAlpha: 0, scale: 0.6, rotation: 0 },
@@ -140,7 +121,7 @@ export default function ResearchFreedom() {
         );
       });
 
-      // Production lane sits empty — just a dashed outline
+      // Empty production lane (dashed outline)
       tl.fromTo(
         "[data-prod-lane]",
         { autoAlpha: 0 },
@@ -148,7 +129,7 @@ export default function ResearchFreedom() {
         0.05
       );
 
-      // "?" floats in the prod lane
+      // "?" in the empty prod lane
       tl.fromTo(
         "[data-label='empty']",
         { autoAlpha: 0 },
@@ -156,12 +137,9 @@ export default function ResearchFreedom() {
         0.10
       );
 
-      // ════════════════════════════════════════
-      // PHASE 2: IaC organizes the chaos (0.28 – 0.55)
-      // ════════════════════════════════════════
-      console.log(PREFIX, "Phase 2: IaC overlay");
+      // ── Phase 2 (0.28–0.55): IaC organizes the chaos ──
 
-      // Code template slides in
+      // Terraform template slides in
       tl.fromTo(
         "[data-iac-overlay]",
         { autoAlpha: 0, x: -60 },
@@ -169,14 +147,10 @@ export default function ResearchFreedom() {
         0.28
       );
 
-      // Ad-hoc items snap into organized stack positions
-      // First 3 become the IaC stack, rest dissolve
+      // First 3 adhoc items snap to organized stack, rest dissolve
       adhocItems.forEach((_, i) => {
         if (i < iacStack.length) {
-          // Snap to stack position
           const stackY = -((iacStack.length - 1) * (CARD_H + STACK_GAP)) / 2 + i * (CARD_H + STACK_GAP);
-          console.log(PREFIX, `Phase 2: adhoc ${i} snaps to stack pos y=${stackY}`);
-
           tl.to(`[data-adhoc='${i}']`, {
             x: -120,
             y: stackY,
@@ -186,7 +160,6 @@ export default function ResearchFreedom() {
             ease: "power2.out",
           }, 0.34);
         } else {
-          // Dissolve
           tl.to(`[data-adhoc='${i}']`, {
             autoAlpha: 0,
             scale: 0.4,
@@ -196,7 +169,7 @@ export default function ResearchFreedom() {
         }
       });
 
-      // IaC stack items appear (replacing the adhoc cards)
+      // IaC-managed cards replace adhoc cards
       iacStack.forEach((_, i) => {
         tl.fromTo(
           `[data-iac='${i}']`,
@@ -204,14 +177,13 @@ export default function ResearchFreedom() {
           { autoAlpha: 1, x: 0, duration: 0.04, ease: "power2.out" },
           0.42 + i * 0.02
         );
-        // Simultaneously hide the adhoc card it replaced
         tl.to(`[data-adhoc='${i}']`, {
           autoAlpha: 0,
           duration: 0.02,
         }, 0.42 + i * 0.02);
       });
 
-      // Overlay fades after organizing
+      // IaC overlay fades out
       tl.to("[data-iac-overlay]", {
         autoAlpha: 0,
         duration: 0.04,
@@ -225,10 +197,7 @@ export default function ResearchFreedom() {
         0.48
       );
 
-      // ════════════════════════════════════════
-      // PHASE 3: Promote to production (0.58 – 0.80)
-      // ════════════════════════════════════════
-      console.log(PREFIX, "Phase 3: Promote to production");
+      // ── Phase 3 (0.58–0.80): Promote to production ──
 
       // "?" fades out
       tl.to("[data-label='empty']", {
@@ -252,7 +221,7 @@ export default function ResearchFreedom() {
         ease: "power2.inOut",
       }, 0.61);
 
-      // Prod items appear in the lane
+      // Production cards appear (replacing traveling IaC cards)
       prodItems.forEach((_, i) => {
         tl.fromTo(
           `[data-prod='${i}']`,
@@ -262,18 +231,24 @@ export default function ResearchFreedom() {
         );
       });
 
-      // Hide the traveling iac cards (prod cards replace them)
+      // Hide traveling IaC cards and audit trail
       tl.to("[data-iac='0'], [data-iac='1'], [data-iac='2']", {
         autoAlpha: 0,
         duration: 0.02,
       }, 0.70);
-
       tl.to("[data-audit-trail]", {
         autoAlpha: 0,
         duration: 0.02,
       }, 0.70);
 
-      // Reproducible badge
+      // Production lane border solidifies
+      tl.to("[data-prod-lane]", {
+        borderColor: "#4A7C59",
+        borderStyle: "solid",
+        duration: 0.04,
+      }, 0.74);
+
+      // "Reproducible" badge pops in
       tl.fromTo(
         "[data-badge]",
         { autoAlpha: 0, scale: 0.5 },
@@ -281,17 +256,7 @@ export default function ResearchFreedom() {
         0.76
       );
 
-      // Prod lane border solidifies
-      tl.to("[data-prod-lane]", {
-        borderColor: "#4A7C59",
-        borderStyle: "solid",
-        duration: 0.04,
-      }, 0.74);
-
-      // ════════════════════════════════════════
-      // PHASE 4: Result (0.85 – 1.0)
-      // ════════════════════════════════════════
-      console.log(PREFIX, "Phase 4: Result");
+      // ── Phase 4 (0.85–1.00): Result ──
 
       tl.fromTo(
         "[data-label='result']",
@@ -299,19 +264,17 @@ export default function ResearchFreedom() {
         { autoAlpha: 1, y: 0, duration: 0.1, ease: "power2.out" },
         0.85
       );
-
-      console.log(PREFIX, "CP2: Timeline built, duration:", tl.duration());
     });
   }, { scope: containerRef });
 
-  // Shared center Y for stacks
+  // Layout positions
   const centerY = "50%";
-  const leftX = "28%"; // Ad-hoc / sandbox zone
+  const leftX = "28%";  // Ad-hoc / sandbox zone
   const rightX = "72%"; // Production zone
 
   return (
     <div ref={containerRef} className="relative w-full h-full">
-      {/* ── Zone labels ── */}
+      {/* Zone labels — top of each half */}
       <div
         data-label="adhoc-zone"
         className="absolute text-sm font-semibold text-gray-400"
@@ -327,7 +290,7 @@ export default function ResearchFreedom() {
         Production
       </div>
 
-      {/* ── Center divider ── */}
+      {/* Center divider */}
       <div
         data-divider
         className="absolute bg-gray-200"
@@ -341,7 +304,7 @@ export default function ResearchFreedom() {
         }}
       />
 
-      {/* ── Ad-hoc items (scattered terminals) ── */}
+      {/* Ad-hoc VM cards — scattered in Phase 1, organized in Phase 2 */}
       {adhocItems.map((item, i) => (
         <div
           key={item.label}
@@ -361,7 +324,7 @@ export default function ResearchFreedom() {
         </div>
       ))}
 
-      {/* ── IaC overlay (code template) ── */}
+      {/* IaC overlay — Terraform template, slides in during Phase 2 */}
       <div
         data-iac-overlay
         className="absolute rounded-lg border-2 border-dashed border-green-600 px-4 py-3"
@@ -385,7 +348,7 @@ export default function ResearchFreedom() {
         </div>
       </div>
 
-      {/* ── IaC organized stack ── */}
+      {/* IaC-managed cards — replace adhoc cards in Phase 2 */}
       {iacStack.map((item, i) => {
         const stackY = -((iacStack.length - 1) * (CARD_H + STACK_GAP)) / 2 + i * (CARD_H + STACK_GAP);
         return (
@@ -409,7 +372,7 @@ export default function ResearchFreedom() {
         );
       })}
 
-      {/* ── Audit trail line ── */}
+      {/* Audit trail line — connects IaC stack, appears Phase 2 */}
       <div
         data-audit-trail
         className="absolute bg-green-500 rounded-full"
@@ -424,7 +387,7 @@ export default function ResearchFreedom() {
         }}
       />
 
-      {/* ── Production lane (dashed outline, waiting) ── */}
+      {/* Production lane — dashed outline, solidifies in Phase 3 */}
       <div
         data-prod-lane
         className="absolute rounded-xl border-2 border-dashed border-gray-300"
@@ -439,7 +402,7 @@ export default function ResearchFreedom() {
         }}
       />
 
-      {/* ── Empty "?" label ── */}
+      {/* "?" placeholder — fills empty prod lane in Phase 1 */}
       <div
         data-label="empty"
         className="absolute text-4xl font-bold text-gray-300"
@@ -454,7 +417,7 @@ export default function ResearchFreedom() {
         ?
       </div>
 
-      {/* ── Production items ── */}
+      {/* Production cards — appear in Phase 3 */}
       {prodItems.map((item, i) => {
         const stackY = -((prodItems.length - 1) * (CARD_H + STACK_GAP)) / 2 + i * (CARD_H + STACK_GAP);
         return (
@@ -478,7 +441,7 @@ export default function ResearchFreedom() {
         );
       })}
 
-      {/* ── Reproducible badge ── */}
+      {/* Reproducible badge — pops in Phase 3 */}
       <div
         data-badge
         className="absolute rounded-full px-4 py-1.5 shadow-lg"
@@ -497,7 +460,7 @@ export default function ResearchFreedom() {
         Reproducible &middot; Auditable &middot; Version-Controlled
       </div>
 
-      {/* ── Result tagline ── */}
+      {/* Result label — Phase 4 */}
       <div
         data-label="result"
         className="absolute left-1/2 -translate-x-1/2 text-center"

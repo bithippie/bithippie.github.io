@@ -1,46 +1,55 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const PREFIX = "[WorkflowsByScience]";
+/*
+ * Scene 3: "Workflows Defined by Science, Not Software"
+ * Layout: side-by-side (animation left, text right)
+ *
+ * Timeline (scroll 0% → 100%):
+ *   Text:    heading at 0%, body paragraphs at configured visibleAt values
+ *   Phase 1: (0.00–0.25) Bloated platform — mock SaaS window with 16 panels
+ *            in a 4x4 grid. Price counter ticks from $4,200 to $86,000/mo.
+ *            Irrelevant panels pulse amber.
+ *   Phase 2: (0.28–0.55) Shed the bloat — irrelevant panels tumble away one
+ *            by one with rotation. Price tag and platform border dissolve.
+ *   Phase 3: (0.55–0.80) Custom rebuild — 3 relevant panels grow and reposition.
+ *            2 new custom panels (Pipeline Monitor, Team Notebook) materialize.
+ *   Phase 4: (0.84–1.00) Result: "Your tools. Your science. Your code."
+ */
 
-// Panels in the bloated SaaS monolith
-// type: "irrelevant" = opaque bloat you pay for but don't need
-// type: "relevant" = the 3 things your scientists actually use
+// 4x4 grid of panels — 13 irrelevant bloat, 3 relevant to the scientist
 const panels = [
-  // Row 0
   { label: "Workflow Engine", type: "irrelevant", row: 0, col: 0 },
   { label: "Experiment Log", type: "relevant", row: 0, col: 1 },
   { label: "Regulatory Module", type: "irrelevant", row: 0, col: 2 },
   { label: "Vendor Integrations", type: "irrelevant", row: 0, col: 3 },
-  // Row 1
   { label: "Pipeline Orchestrator", type: "irrelevant", row: 1, col: 0 },
   { label: "Sample Tracking", type: "irrelevant", row: 1, col: 1 },
   { label: "Audit Trail Engine", type: "irrelevant", row: 1, col: 2 },
   { label: "Screening Results", type: "relevant", row: 1, col: 3 },
-  // Row 2
   { label: "Error: Opaque Failure", type: "irrelevant", row: 2, col: 0 },
   { label: "Report Generator", type: "irrelevant", row: 2, col: 1 },
   { label: "Compound Search", type: "relevant", row: 2, col: 2 },
   { label: "User Provisioning", type: "irrelevant", row: 2, col: 3 },
-  // Row 3
   { label: "License Manager", type: "irrelevant", row: 3, col: 0 },
   { label: "Onboarding Wizard", type: "irrelevant", row: 3, col: 1 },
   { label: "Black Box Logs", type: "irrelevant", row: 3, col: 2 },
   { label: "Analytics Add-on ($)", type: "irrelevant", row: 3, col: 3 },
 ];
 
-// The custom rebuild — simple, transparent, purpose-built
+// Custom panels that replace the bloat in Phase 3
 const customPanels = [
   { label: "Pipeline Monitor", color: "#4A7C59" },
   { label: "Team Notebook", color: "#2C7C6F" },
 ];
 
+// Grid layout constants
 const COLS = 4;
 const ROWS = 4;
 const PANEL_W = 110;
@@ -48,65 +57,37 @@ const PANEL_H = 60;
 const GAP = 8;
 const GRID_W = COLS * PANEL_W + (COLS - 1) * GAP;
 const GRID_H = ROWS * PANEL_H + (ROWS - 1) * GAP;
-// Platform border padding
 const PLAT_PAD = 16;
 const PLAT_W = GRID_W + PLAT_PAD * 2;
-const PLAT_H = GRID_H + PLAT_PAD * 2 + 28; // extra for "title bar"
+const PLAT_H = GRID_H + PLAT_PAD * 2 + 28; // 28px for title bar
 
+// Colors
 const IRRELEVANT_BG = "#e8e0d5";
 const IRRELEVANT_BORDER = "#c4a96a";
 const RELEVANT_BG = "#dce8df";
 const RELEVANT_BORDER = "#4A7C59";
 
+// Price counter range
+const PRICE_START = 4200;
+const PRICE_END = 86000;
+
 function panelX(col) {
   return PLAT_PAD + col * (PANEL_W + GAP);
 }
 function panelY(row) {
-  return PLAT_PAD + 28 + row * (PANEL_H + GAP); // 28 for title bar
+  return PLAT_PAD + 28 + row * (PANEL_H + GAP);
 }
 
-const PRICE_START = 4200;
-const PRICE_END = 86000;
-
-export default function WorkflowsByScience() {
+export default function WorkflowsByScience({ body = [] }) {
   const containerRef = useRef(null);
   const priceRef = useRef(null);
 
-  // ── CP1: Verify DOM renders ──
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) {
-      console.error(PREFIX, "CP1 FAIL: containerRef is null");
-      return;
-    }
-    console.log(PREFIX, "CP1: container dimensions", {
-      width: container.offsetWidth,
-      height: container.offsetHeight,
-    });
-
-    const panelEls = container.querySelectorAll("[data-panel]");
-    console.log(PREFIX, `CP1: Found ${panelEls.length}/${panels.length} panel elements`);
-
-    const customEls = container.querySelectorAll("[data-custom]");
-    console.log(PREFIX, `CP1: Found ${customEls.length}/${customPanels.length} custom panel elements`);
-
-    const trigger = container.closest("[id='workflows-by-science']");
-    console.log(PREFIX, "CP1: trigger element", trigger);
-    if (!trigger) {
-      console.error(PREFIX, "CP1 FAIL: Cannot find parent with id='workflows-by-science'");
-    }
-  }, []);
-
-  // ── GSAP animations ──
   useGSAP(() => {
-    console.log(PREFIX, "CP2: useGSAP callback fired");
-
     const mm = gsap.matchMedia();
 
     mm.add("(min-width: 768px)", () => {
-      console.log(PREFIX, "CP2: matchMedia matched");
-
       const triggerEl = containerRef.current.closest("[id='workflows-by-science']");
+      const heading = triggerEl.querySelector("[data-text='heading']");
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -114,17 +95,8 @@ export default function WorkflowsByScience() {
           start: "top top",
           end: "bottom bottom",
           scrub: 1,
-          onUpdate: (self) => {
-            const pct = Math.round(self.progress * 100);
-            if (pct % 10 === 0) {
-              console.log(PREFIX, `CP2: scroll progress ${pct}%`);
-            }
-          },
         },
       });
-
-      const scopedPanels = gsap.utils.toArray("[data-panel]", containerRef.current);
-      console.log(PREFIX, `CP2: scoped panels: ${scopedPanels.length}`);
 
       const irrelevantIndices = [];
       const relevantIndices = [];
@@ -133,14 +105,16 @@ export default function WorkflowsByScience() {
         else relevantIndices.push(i);
       });
 
-      console.log(PREFIX, `CP2: ${irrelevantIndices.length} irrelevant, ${relevantIndices.length} relevant`);
+      // ── Text ──
+      tl.to(heading, { opacity: 1, duration: 0.04 }, 0);
+      body.forEach((paragraph, i) => {
+        const el = triggerEl.querySelector(`[data-text-index='${i}']`);
+        if (el) tl.to(el, { opacity: 1, duration: 0.06 }, paragraph.visibleAt);
+      });
 
-      // ════════════════════════════════════════
-      // PHASE 1: Bloated platform fades in (0 – 0.25)
-      // ════════════════════════════════════════
-      console.log(PREFIX, "Phase 1: Building bloated platform");
+      // ── Phase 1 (0.00–0.25): Bloated platform appears ──
 
-      // Platform border
+      // Platform window border
       tl.fromTo(
         "[data-platform]",
         { autoAlpha: 0, scale: 0.9 },
@@ -148,7 +122,7 @@ export default function WorkflowsByScience() {
         0
       );
 
-      // Price tag — fades in then number ticks up ominously through Phase 1
+      // Price tag fades in
       const priceCounter = { val: PRICE_START };
       tl.fromTo(
         "[data-price]",
@@ -156,6 +130,8 @@ export default function WorkflowsByScience() {
         { autoAlpha: 1, y: 0, scale: 0.8, duration: 0.05, ease: "power2.out" },
         0.06
       );
+
+      // Price counter ticks up ominously
       tl.to(priceCounter, {
         val: PRICE_END,
         duration: 0.22,
@@ -166,13 +142,15 @@ export default function WorkflowsByScience() {
           }
         },
       }, 0.11);
+
+      // Price tag grows in size as cost increases
       tl.to("[data-price]", {
         scale: 1.3,
         duration: 0.22,
         ease: "power1.in",
       }, 0.11);
 
-      // Panels appear with stagger
+      // Panels stagger in
       panels.forEach((_, i) => {
         const t = 0.04 + i * 0.012;
         tl.fromTo(
@@ -183,7 +161,7 @@ export default function WorkflowsByScience() {
         );
       });
 
-      // Irrelevant panels get an amber glow pulse to highlight waste
+      // Irrelevant panels glow amber to highlight waste
       tl.to(
         irrelevantIndices.map((i) => `[data-panel='${i}']`).join(", "),
         {
@@ -196,19 +174,14 @@ export default function WorkflowsByScience() {
         0.22
       );
 
-      // ════════════════════════════════════════
-      // PHASE 2: Irrelevant panels fall away (0.28 – 0.55)
-      // ════════════════════════════════════════
-      console.log(PREFIX, "Phase 2: Irrelevant panels fall away");
+      // ── Phase 2 (0.28–0.55): Irrelevant panels fall away ──
 
+      // Each irrelevant panel tumbles down with rotation
       const fallDuration = 0.25;
       const fallStagger = fallDuration / irrelevantIndices.length;
-
       irrelevantIndices.forEach((panelIdx, i) => {
         const t = 0.28 + i * fallStagger;
         const direction = Math.random() > 0.5 ? 1 : -1;
-        console.log(PREFIX, `Phase 2: panel ${panelIdx} ("${panels[panelIdx].label}") falls at t=${t.toFixed(3)}`);
-
         tl.to(`[data-panel='${panelIdx}']`, {
           y: 120,
           rotation: direction * (15 + Math.random() * 20),
@@ -219,7 +192,7 @@ export default function WorkflowsByScience() {
         }, t);
       });
 
-      // Price tag shrinks
+      // Price tag shrinks and disappears
       tl.to("[data-price]", {
         scale: 0.5,
         autoAlpha: 0,
@@ -234,22 +207,16 @@ export default function WorkflowsByScience() {
         ease: "power1.in",
       }, 0.50);
 
-      // ════════════════════════════════════════
-      // PHASE 3: Custom rebuild (0.55 – 0.80)
-      // ════════════════════════════════════════
-      console.log(PREFIX, "Phase 3: Custom rebuild");
+      // ── Phase 3 (0.55–0.80): Custom rebuild ──
 
-      // Relevant panels grow and reposition to a clean centered layout
+      // Relevant panels grow and reposition into clean layout
       const rebuildPositions = [
         { x: -130, y: -40, w: 140, h: 80 },
         { x: 20, y: -40, w: 140, h: 80 },
         { x: -55, y: 50, w: 140, h: 80 },
       ];
-
       relevantIndices.forEach((panelIdx, i) => {
         const pos = rebuildPositions[i];
-        console.log(PREFIX, `Phase 3: panel ${panelIdx} ("${panels[panelIdx].label}") rebuilds to pos ${i}`);
-
         tl.to(`[data-panel='${panelIdx}']`, {
           x: pos.x,
           y: pos.y,
@@ -262,11 +229,9 @@ export default function WorkflowsByScience() {
         }, 0.56);
       });
 
-      // Custom panels materialize
+      // New custom panels materialize
       customPanels.forEach((_, i) => {
         const t = 0.66 + i * 0.04;
-        console.log(PREFIX, `Phase 3: custom panel ${i} appears at t=${t.toFixed(3)}`);
-
         tl.fromTo(
           `[data-custom='${i}']`,
           { autoAlpha: 0, scale: 0.5, y: 20 },
@@ -275,10 +240,7 @@ export default function WorkflowsByScience() {
         );
       });
 
-      // ════════════════════════════════════════
-      // PHASE 4: Result (0.82 – 1.0)
-      // ════════════════════════════════════════
-      console.log(PREFIX, "Phase 4: Result tagline");
+      // ── Phase 4 (0.84–1.00): Result ──
 
       tl.fromTo(
         "[data-label='result']",
@@ -286,14 +248,12 @@ export default function WorkflowsByScience() {
         { autoAlpha: 1, y: 0, duration: 0.1, ease: "power2.out" },
         0.84
       );
-
-      console.log(PREFIX, "CP2: Timeline built, duration:", tl.duration());
     });
   }, { scope: containerRef });
 
   return (
     <div ref={containerRef} className="relative w-full h-full flex items-center justify-center">
-      {/* ── Platform border ── */}
+      {/* Platform window border — Phase 1 */}
       <div
         data-platform
         className="absolute rounded-xl border-2 border-gray-300"
@@ -307,7 +267,7 @@ export default function WorkflowsByScience() {
           zIndex: 1,
         }}
       >
-        {/* Title bar */}
+        {/* Title bar with traffic lights */}
         <div
           className="flex items-center gap-2 px-3 rounded-t-xl"
           style={{ height: 28, backgroundColor: "#e8e0d5" }}
@@ -319,7 +279,7 @@ export default function WorkflowsByScience() {
         </div>
       </div>
 
-      {/* ── Price tag ── */}
+      {/* Price tag — counter ticks up in Phase 1, disappears in Phase 2 */}
       <div
         data-price
         className="absolute flex items-center gap-1 rounded-full px-3 py-1 shadow-md"
@@ -338,7 +298,7 @@ export default function WorkflowsByScience() {
         <span ref={priceRef}>${PRICE_START.toLocaleString()} /mo</span>
       </div>
 
-      {/* ── Grid panels ── */}
+      {/* Module panels — 4x4 grid inside platform */}
       {panels.map((panel, i) => {
         const isRelevant = panel.type === "relevant";
         return (
@@ -349,7 +309,6 @@ export default function WorkflowsByScience() {
             style={{
               width: PANEL_W,
               height: PANEL_H,
-              // Position relative to platform center
               left: `calc(50% - ${PLAT_W / 2}px + ${panelX(panel.col)}px)`,
               top: `calc(50% - ${PLAT_H / 2}px + ${panelY(panel.row)}px)`,
               backgroundColor: isRelevant ? RELEVANT_BG : IRRELEVANT_BG,
@@ -367,9 +326,8 @@ export default function WorkflowsByScience() {
         );
       })}
 
-      {/* ── Custom panels (hidden, appear in Phase 3) ── */}
+      {/* Custom panels — appear in Phase 3 */}
       {customPanels.map((cp, i) => {
-        // Position them flanking the rebuilt layout
         const xOffset = i === 0 ? -130 : 20;
         return (
           <div
@@ -394,7 +352,7 @@ export default function WorkflowsByScience() {
         );
       })}
 
-      {/* ── Result tagline ── */}
+      {/* Result label — Phase 4 */}
       <div
         data-label="result"
         className="absolute left-1/2 -translate-x-1/2 text-center"

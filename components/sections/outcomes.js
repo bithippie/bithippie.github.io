@@ -25,13 +25,22 @@ export default function WeWorkTogether({ backgroundColor }) {
               <div className="relative w-full h-full flex flex-col">
                 {/* Text — compact strip at top */}
                 <div className="w-full max-w-screen-xl mx-auto px-8 pt-6 pb-4 flex flex-col lg:flex-row lg:items-baseline lg:gap-8">
-                  <h2 className="text-3xl sm:text-4xl text-moss shrink-0">
+                  <h2
+                    data-text="heading"
+                    className="text-3xl sm:text-4xl text-moss shrink-0"
+                    style={{ opacity: 0 }}
+                  >
                     {outcome.heading}
                   </h2>
                   <div className="flex gap-6 mt-3 lg:mt-0">
                     {outcome.body.map((paragraph, i) => (
-                      <p key={i} className="text-base text-justify">
-                        {paragraph}
+                      <p
+                        key={i}
+                        data-text-index={i}
+                        className="text-base text-justify"
+                        style={{ opacity: 0 }}
+                      >
+                        {paragraph.text}
                       </p>
                     ))}
                   </div>
@@ -39,24 +48,33 @@ export default function WeWorkTogether({ backgroundColor }) {
 
                 {/* Animation — full width, fills remaining height */}
                 <div className="flex-1 relative w-full min-h-0">
-                  <Scene color={outcome.placeholderColor} />
+                  <Scene color={outcome.placeholderColor} body={outcome.body} />
                 </div>
               </div>
             ) : (
               <div className="relative w-full h-full max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center px-8">
                 {/* Animation area */}
                 <div className="flex-1 relative h-full min-h-[400px]">
-                  <Scene color={outcome.placeholderColor} />
+                  <Scene color={outcome.placeholderColor} body={outcome.body} />
                 </div>
 
                 {/* Text content */}
                 <div className="flex-1 flex flex-col justify-center space-y-6 p-8 text-center lg:text-left">
-                  <h2 className="text-3xl sm:text-4xl text-moss">
+                  <h2
+                    data-text="heading"
+                    className="text-3xl sm:text-4xl text-moss"
+                    style={{ opacity: 0 }}
+                  >
                     {outcome.heading}
                   </h2>
                   {outcome.body.map((paragraph, i) => (
-                    <p key={i} className="text-xl text-justify">
-                      {paragraph}
+                    <p
+                      key={i}
+                      data-text-index={i}
+                      className="text-xl text-justify"
+                      style={{ opacity: 0 }}
+                    >
+                      {paragraph.text}
                     </p>
                   ))}
                 </div>
