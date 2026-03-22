@@ -48,7 +48,7 @@ export default function TeamPage() {
                 <p>
                   When we&apos;re not building data infrastructure, you might find us:
                 </p>
-                <ul className="list-disc pl-8 mt-4 space-y-2">
+                <ul className="list-disc pl-8 mt-4 space-y-2 font-garamond">
                   <li>On top of a mountain watching the total solar eclipse.</li>
                   <li>Orienteering in a swim, bike, run adventure race on The Cape.</li>
                   <li>Hosting a mini music festival from the back of a boat.</li>
