@@ -1,6 +1,7 @@
 import DiscoveryVelocity from "./scenes/DiscoveryVelocity";
 import LatencyOfLearning from "./scenes/LatencyOfLearning";
 import PlaceholderScene from "./scenes/PlaceholderScene";
+import ResearchFreedom from "./scenes/ResearchFreedom";
 import WorkflowsByScience from "./scenes/WorkflowsByScience";
 
 const outcomes = [
@@ -39,8 +40,7 @@ const outcomes = [
       "Biotech research demands both speed and rigor. Data scientists need freedom to explore, but ad-hoc VM setups create black boxes: results can\u2019t be reproduced, audit trails don\u2019t exist, and workflows remain undocumented.",
       "We build infrastructure that bridges exploration and production. Infrastructure-as-code gives your team self-service environments that are documented, version-controlled, and auditable. Scientists iterate in sandbox environments, then transition proven workflows to production with full traceability.",
     ],
-    Scene: PlaceholderScene,
-    placeholderColor: "#2C5F7C",
+    Scene: ResearchFreedom,
   },
 ];
 
