@@ -1,6 +1,7 @@
 import DiscoveryVelocity from "./scenes/DiscoveryVelocity";
 import LatencyOfLearning from "./scenes/LatencyOfLearning";
 import PlaceholderScene from "./scenes/PlaceholderScene";
+import WorkflowsByScience from "./scenes/WorkflowsByScience";
 
 const outcomes = [
   {
@@ -29,8 +30,7 @@ const outcomes = [
       "Off-the-shelf bioinformatics platforms fit nobody perfectly. You pay for unused features, navigate workflows that don\u2019t match your science, and lock into expensive licensing.",
       "We build custom tools designed alongside your team\u2014internal applications and interactive dashboards that replace bloated SaaS products. You own the code, control the features, and set the direction.",
     ],
-    Scene: PlaceholderScene,
-    placeholderColor: "#8B6914",
+    Scene: WorkflowsByScience,
   },
   {
     id: "research-freedom",
