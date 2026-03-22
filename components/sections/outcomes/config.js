@@ -1,4 +1,5 @@
 import DiscoveryVelocity from "./scenes/DiscoveryVelocity";
+import LatencyOfLearning from "./scenes/LatencyOfLearning";
 import PlaceholderScene from "./scenes/PlaceholderScene";
 
 const outcomes = [
@@ -18,8 +19,8 @@ const outcomes = [
       "We\u2019ve seen brilliant computational scientists sidelined for days by computational bottlenecks. Sequential processing delays discovery. Researchers wait for results instead of learning and iterating. Multi-day computational failures waste time and resources.",
       "We build cloud infrastructure that enables parallel processing at scale. Your team gets answers fast\u2014intelligently leveraging CPUs or GPUs to run workloads efficiently and cost-effectively.",
     ],
-    Scene: PlaceholderScene,
-    placeholderColor: "#4A7C59",
+    Scene: LatencyOfLearning,
+    layout: "stacked",
   },
   {
     id: "workflows-by-science",
