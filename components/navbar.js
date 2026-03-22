@@ -30,7 +30,7 @@ export default function NavBar() {
       setIsOpen(false);
       if (pathname === "/") {
         window.history.replaceState(null, "", `/${hash}`);
-        scrollToSection(hash);
+        setTimeout(() => scrollToSection(hash), 550);
       } else {
         router.push(`/${hash}`, { scroll: false });
         setTimeout(() => scrollToSection(hash), 300);
