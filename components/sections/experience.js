@@ -15,7 +15,7 @@ export default function About({ backgroundColor }) {
     >
       <a name="experience" />
       <div className="container grid lg:grid-cols-12 gap-8 p-8 max-w-screen-xl items-center">
-        <div className="lg:col-span-4 overflow-hidden">
+        <div className="lg:col-span-4">
           <RevealOnScroll>
             <Image
               width={360}
