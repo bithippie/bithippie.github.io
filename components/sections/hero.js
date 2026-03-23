@@ -1,7 +1,7 @@
 import Divider from "@/components/divider";
 import LineDraw from "@/components/line_draw";
 import RevealOnScroll from "@/components/reveal";
-import ScheduleConsultation from "@/components/schedule_consultation";
+import ScheduleDiscovery from "@/components/schedule_discovery";
 
 export default function Hero() {
   return (
@@ -26,7 +26,7 @@ export default function Hero() {
           </h2>
 
           <div className="flex place-content-center">
-            <ScheduleConsultation />
+            <ScheduleDiscovery />
           </div>
         </RevealOnScroll>
       </div>

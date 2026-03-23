@@ -3,7 +3,7 @@
 import Divider from "@/components/divider";
 import Image from "next/image";
 import RevealOnScroll from "@/components/reveal";
-import ScheduleConsultation from "@/components/schedule_consultation";
+import ScheduleDiscovery from "@/components/schedule_discovery";
 
 export default function WeWorkTogether({ backgroundColor }) {
   return (
@@ -157,7 +157,7 @@ export default function WeWorkTogether({ backgroundColor }) {
           </RevealOnScroll>
         </div>
         <div className="flex flex-col items-center">
-          <ScheduleConsultation />
+          <ScheduleDiscovery />
         </div>
       </div>
       <Divider backgroundColor="white" curvePosition="end" />

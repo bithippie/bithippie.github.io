@@ -4,7 +4,7 @@ import { Avatar, Blockquote } from "flowbite-react";
 import { motion } from "framer-motion";
 
 import Divider from "@/components/divider";
-import ScheduleConsultation from "@/components/schedule_consultation";
+import ScheduleDiscovery from "@/components/schedule_discovery";
 import RevealOnScroll from "@/components/reveal";
 
 export default function HowWeWork({ backgroundColor }) {
@@ -101,7 +101,7 @@ export default function HowWeWork({ backgroundColor }) {
             </Blockquote>
 
             <div className="flex justify-center">
-              <ScheduleConsultation />
+              <ScheduleDiscovery />
             </div>
           </div>
         </RevealOnScroll>

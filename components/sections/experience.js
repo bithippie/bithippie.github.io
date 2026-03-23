@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import Divider from "@/components/divider";
 import RevealOnScroll from "@/components/reveal";
-import ScheduleConsultation from "@/components/schedule_consultation";
+import ScheduleDiscovery from "@/components/schedule_discovery";
 
 
 export default function About({ backgroundColor }) {
@@ -74,7 +74,7 @@ export default function About({ backgroundColor }) {
             </figcaption>
           </Blockquote>
           <div className="w-full flex text-center justify-center">
-            <ScheduleConsultation />
+            <ScheduleDiscovery />
           </div>
         </div>
       </div>
