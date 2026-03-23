@@ -20,7 +20,7 @@ export default function About({ backgroundColor }) {
             <Image
               width={360}
               height={360}
-              className="w-full h-auto max-h-[400px] object-contain lg:aspect-auto"
+              className="w-full aspect-square object-contain lg:h-auto lg:aspect-auto lg:max-h-[400px]"
               src="/assets/images/home/globe.png"
               alt="Globe"
             />

@@ -7,11 +7,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
+function smoothScrollTo(targetY, duration = 800) {
+  const startY = window.scrollY;
+  const diff = targetY - startY;
+  let startTime = null;
+  const ease = (t) =>
+    t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  function step(ts) {
+    if (!startTime) startTime = ts;
+    const progress = Math.min((ts - startTime) / duration, 1);
+    window.scrollTo(0, startY + diff * ease(progress));
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
 function scrollToSection(hash) {
   const name = hash.replace("#", "");
   const el = document.querySelector(`a[name="${name}"]`);
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth" });
+if (el) {
+    smoothScrollTo(el.getBoundingClientRect().top + window.scrollY);
   }
 }
 
@@ -52,6 +67,7 @@ export default function NavBar() {
               alt="BitHippie Logo"
               width={300}
               height={83}
+              priority
             />
           </Link>
 
