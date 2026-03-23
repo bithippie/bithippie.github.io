@@ -1,13 +1,11 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-
-import screens from "@/utils/tailwindScreens";
 
 function scrollToSection(hash) {
   const name = hash.replace("#", "");
@@ -19,8 +17,6 @@ function scrollToSection(hash) {
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-  const mdScreen = parseInt(screens.md);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -38,20 +34,6 @@ export default function NavBar() {
     },
     [pathname, router],
   );
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (typeof window !== "undefined") {
-        setIsSmallScreen(window.innerWidth < mdScreen);
-      }
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, [mdScreen]);
 
   const navItems = [
     { label: "Outcomes", hash: "#outcomes" },
@@ -73,90 +55,90 @@ export default function NavBar() {
             />
           </Link>
 
-          {isSmallScreen ? (
-            <>
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                type="button"
-                className="inline-flex items-center rounded-lg bg-transparent p-2 text-sm text-gray-500 focus:outline-none md:hidden"
-                aria-expanded="false"
+          {/* Hamburger button — CSS-hidden on md+ */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            type="button"
+            className="md:hidden inline-flex items-center rounded-lg bg-transparent p-2 text-sm text-gray-500 focus:outline-none"
+            aria-expanded={isOpen}
+          >
+            <span className="sr-only">Open main menu</span>
+            <svg
+              className="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="#AABD7B"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+
+          {/* Mobile dropdown — full-width flex child, CSS-hidden on md+ */}
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.5 }}
+                className="md:hidden w-full bg-gradient-to-b from-transparent to-dark-grey backdrop-blur-md opacity-95"
               >
-                <span className="sr-only">Open main menu</span>
-                <svg
-                  className="w-5 h-5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 17 14"
-                >
-                  <path
-                    stroke="#AABD7B"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M1 1h15M1 7h15M1 13h15"
-                  />
-                </svg>
-              </button>
-              <AnimatePresence>
-                {isOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="w-full bg-gradient-to-b from-transparent to-dark-grey backdrop-blur-md opacity-95"
-                  >
-                    <ul className="mt-4 flex flex-col">
-                      {navItems.map((item) => (
-                        <li key={item.hash}>
-                          <a
-                            className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss cursor-pointer"
-                            onClick={(e) => handleHashClick(e, item.hash)}
-                          >
-                            {item.label}
-                          </a>
-                        </li>
-                      ))}
-                      <li>
-                        <Link
-                          className="block py-2 pl-3 pr-4 md:p-0 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
-                          href="/team"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          Team
-                        </Link>
-                      </li>
-                    </ul>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </>
-          ) : (
-            <div className="w-auto">
-              <ul className="flex mt-0 flex-row space-x-8 text-sm font-medium">
-                {navItems.map((item) => (
-                  <li key={item.hash}>
-                    <a
-                      className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss cursor-pointer"
-                      onClick={(e) => handleHashClick(e, item.hash)}
+                <ul className="mt-4 flex flex-col">
+                  {navItems.map((item) => (
+                    <li key={item.hash}>
+                      <a
+                        className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss cursor-pointer"
+                        onClick={(e) => handleHashClick(e, item.hash)}
+                      >
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                  <li>
+                    <Link
+                      className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
+                      href="/team"
+                      onClick={() => setIsOpen(false)}
                     >
-                      {item.label}
-                    </a>
+                      Team
+                    </Link>
                   </li>
-                ))}
-                <li className="text-platinum text-2xl select-none" aria-hidden="true">|</li>
-                <li>
-                  <Link
-                    className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
-                    href="/team"
+                </ul>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Desktop nav — CSS-hidden below md */}
+          <div className="hidden md:block w-auto">
+            <ul className="flex mt-0 flex-row space-x-8 text-sm font-medium">
+              {navItems.map((item) => (
+                <li key={item.hash}>
+                  <a
+                    className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss cursor-pointer"
+                    onClick={(e) => handleHashClick(e, item.hash)}
                   >
-                    Team
-                  </Link>
+                    {item.label}
+                  </a>
                 </li>
-              </ul>
-            </div>
-          )}
+              ))}
+              <li className="text-platinum text-2xl select-none" aria-hidden="true">|</li>
+              <li>
+                <Link
+                  className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
+                  href="/team"
+                >
+                  Team
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </section>

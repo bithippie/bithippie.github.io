@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "npx serve@latest out",
     "lint": "next lint",
-    "test": "npx percy exec -- npx playwright test"
+    "test": "npx playwright test"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
@@ -21,8 +21,6 @@
     "react-icons": "^5.4.0"
   },
   "devDependencies": {
-    "@percy/cli": "^1.30.4",
-    "@percy/playwright": "^1.0.7",
     "@playwright/test": "^1.49.0",
     "eslint": "^9.39.2",
     "eslint-config-next": "15.1.3",
