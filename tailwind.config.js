@@ -32,6 +32,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Marcellus", ...defaultTheme.fontFamily.sans],
+        merriweather: ["var(--font-merriweather)", ...defaultTheme.fontFamily.serif],
+        garamond: ["var(--font-eb-garamond)", ...defaultTheme.fontFamily.serif],
       },
     },
   },
@@ -40,6 +42,7 @@ module.exports = {
     "bg-platinum",
     "bg-white",
     "bg-moss",
+    "bg-dark-grey",
     "start-curve-divider",
     "end-curve-divider",
   ],

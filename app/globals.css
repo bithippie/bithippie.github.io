@@ -4,45 +4,35 @@
 
 @layer base {
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl;
+    @apply text-4xl sm:text-5xl md:text-6xl font-merriweather font-medium;
   }
   h2 {
-    @apply text-4xl md:text-5xl;
+    @apply text-4xl md:text-5xl font-merriweather;
   }
   h3 {
-    @apply text-3xl md:text-4xl;
+    @apply text-3xl md:text-4xl font-merriweather;
+  }
+  h4, h5, h6 {
+    @apply font-merriweather;
+  }
+  p {
+    @apply font-garamond;
+  }
+  button {
+    @apply font-merriweather;
   }
 }
 
 :root {
   --background: #ededed;
   --foreground: #0a0a0a;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   overflow-x: hidden;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-}
-
-.splide__arrow--prev {
-  left: 0 !important;
-}
-
-.splide__arrow--next {
-  right: 0 !important;
-}
-.splide__arrow--prev svg,
-.splide__arrow--next svg {
-  fill: #fff !important;
-}
-
-.splide__pagination__page {
-  background: #fff !important;
-}
-.splide__pagination__page.is-active {
-  background: #d3a946 !important;
 }
 
 #hero::after {
@@ -96,8 +86,8 @@ body {
 
 /* Initial state for the line */
 .path-draw {
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300; /* Hides the entire line initially */
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500; /* Hides the entire line initially */
 }
 
 /* Animation for the line-drawing effect */

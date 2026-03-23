@@ -5,21 +5,21 @@ export default function Footer() {
     <footer className="bg-dark-grey py-16">
       <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 px-4 text-center md:text-left max-w-screen-xl">
         {/* Left section with company name and tagline */}
-        <div className="flex flex-col space-y-4 items-center md:items-start">
-          <h3 className="text-3xl sm:text-4xl text-moss font-extrabold px-2 tracking-wide">
+        <div className="flex flex-col items-center md:items-start">
+          <h3 className="text-3xl sm:text-4xl text-moss mb-4 px-2 tracking-wide">
             BitHippie LLC
           </h3>
-          <h4 className="text-base sm:text-xl text-white opacity-80 px-2 mb-6">
-            At the Intersection of Sustainability, Technology, and Wellness
-          </h4>
+          <h5 className="text-base sm:text-lg text-white opacity-80 px-2 mb-6">
+            Trusting in Nature&apos;s Wisdom, complemented by human ingenuity.
+          </h5>
         </div>
 
         {/* Right section with Socials and Podcast */}
         <div className="flex flex-col justify-between items-center md:items-start">
-          <h3 className="text-3xl sm:text-4xl text-moss font-extrabold mb-4 px-2 tracking-wide">
+          <h3 className="text-3xl sm:text-4xl text-moss mb-4 px-2 tracking-wide">
             Join the Socials!
           </h3>
-          <p className="text-base sm:text-lg text-white opacity-80 px-2 mb-6">
+          <h5 className="text-base sm:text-lg text-white opacity-80 px-2 mb-6">
             Check out the{" "}
             <a
               href="https://www.youtube.com/@BrainwaveExchange"
@@ -29,8 +29,8 @@ export default function Footer() {
             >
               Brainwave Exchange Podcast
             </a>{" "}
-            where we talk to good humans making their mark on the world.
-          </p>
+            where we talk to humans making their mark on the world.
+          </h5>
 
           {/* Social Media Icons */}
           <div className="flex space-x-6 mb-6 px-2">
