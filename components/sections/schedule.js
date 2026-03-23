@@ -24,10 +24,7 @@ export default function Schedule({ backgroundColor }) {
               research organizations—building the data infrastructure that 
               accelerates discovery.
             </p>
-            <p className="text-xl mb-8">
-              Schedule a discovery call to explore how we can help.
-            </p>
-
+            
             <Blockquote className="my-6 bg-gray-50 rounded-lg p-6 shadow-md">
               <Avatar
                 className="float-right mb-4 mx-4 sm:mb-0"
