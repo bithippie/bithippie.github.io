@@ -11,7 +11,7 @@ export default function Hero() {
     >
       <div className="container flex flex-col items-center self-center text-center max-w-screen-xl">
         <RevealOnScroll>
-          <h1 className="text-platinum text-5xl md:text-6xl leading-normal md:leading-snug">
+          <h1 className="text-platinum  text-4xl sm:text-5xl md:text-6xl leading-snug md:leading-snug">
             Good Data Systems<br/>
             <span className="relative inline-block italic">
               Accelerate
@@ -22,7 +22,7 @@ export default function Hero() {
 
           <h2 className="text-platinum text-2xl my-8 md:text-2xl">
             We&apos;re your engineering partner for the data platforms, pipelines, and tools that
-            <br/>let your scientists focus on science, not wrestling with technology.
+            <br className="hidden lg:block"/>{" "}let your scientists focus on science, not wrestling with technology.
           </h2>
 
           <div className="flex place-content-center">

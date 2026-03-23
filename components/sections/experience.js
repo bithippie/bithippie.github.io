@@ -45,10 +45,10 @@ export default function About({ backgroundColor }) {
           <p className="my-4">
             Good data systems accelerate research. When scientists can access 
             complete experimental records, run analyses in parallel, and iterate 
-            without infrastructure friction—discovery moves faster.
+            without infrastructure friction; discovery moves faster.
           </p>
           <p className="my-4">
-            Great engineering partnerships require more than technical skills—they 
+            Great engineering partnerships require more than technical skills; they
             demand deep understanding of your research operations, adaptability as 
             priorities shift, and genuine investment in your success.
           </p>

@@ -42,17 +42,17 @@ export default function FAQ() {
           <p className="my-4">
             This transitions into a{" "}
             <strong className="text-old-gold">Strategic Build</strong>{" "}
-            (6-12+ months) where we take ownership of major platform development—you focus on your science,
+            (6-12+ months) where we take ownership of major platform development: you focus on your science,
             we handle the technical execution.
           </p>
           <p className="my-4">
             Many clients <strong className="text-old-gold">continue partnering with us</strong>{" "}
-            on successive strategic initiatives as their platform needs evolve—whether 
+            on successive strategic initiatives as their platform needs evolve, whether
             that&apos;s expanding capabilities, integrating new data sources, or scaling
             infrastructure for growth.
           </p>
           <p className="my-4">
-            We function as your engineering partner—owning execution, integrating 
+            We function as your engineering partner, owning execution, integrating
             seamlessly with your team, and enabling your research operations.
           </p>
         </>

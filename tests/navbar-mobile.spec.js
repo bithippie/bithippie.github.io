@@ -44,7 +44,7 @@ test.describe("Mobile nav scroll", () => {
     await page.waitForLoadState("networkidle");
   });
 
-  test("menu is closed on page load — no flash of nav items", async ({
+  test("menu is closed on page load: no flash of nav items", async ({
     page,
   }) => {
     // The hamburger button must be visible immediately (CSS-driven, no hydration delay)
