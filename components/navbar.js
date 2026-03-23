@@ -71,7 +71,7 @@ export default function NavBar() {
             />
           </Link>
 
-          {/* Hamburger button — CSS-hidden on md+ */}
+          {/* Hamburger button (CSS-hidden on md+) */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
@@ -96,7 +96,7 @@ export default function NavBar() {
             </svg>
           </button>
 
-          {/* Mobile dropdown — full-width flex child, CSS-hidden on md+ */}
+          {/* Mobile dropdown (full-width flex child, CSS-hidden on md+) */}
           <AnimatePresence>
             {isOpen && (
               <motion.div
@@ -131,7 +131,7 @@ export default function NavBar() {
             )}
           </AnimatePresence>
 
-          {/* Desktop nav — CSS-hidden below md */}
+          {/* Desktop nav (CSS-hidden below md) */}
           <div className="hidden md:block w-auto">
             <ul className="flex mt-0 flex-row space-x-8 text-sm font-medium">
               {navItems.map((item) => (

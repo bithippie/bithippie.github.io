@@ -12,7 +12,7 @@ export default function HowWeWork({ backgroundColor }) {
     {
       title: "Discovery Conversation",
       description:
-        "We meet with your scientists and leadership to understand what winning looks like—where you are, where you're headed, and what constraints shape your path. We explore fit and outline a roadmap to close that gap.",
+        "We meet with your scientists and leadership to understand what winning looks like: where you are, where you're headed, and what constraints shape your path. We explore fit and outline a roadmap to close that gap.",
     },
     {
       title: "Foundational Partnership (3-6 months)",

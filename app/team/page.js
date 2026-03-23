@@ -60,7 +60,7 @@ export default function TeamPage() {
               </RevealOnScroll>
               <RevealOnScroll>
                 <p className="mt-6">
-                  We approach business from the inside out—starting with personal 
+                  We approach business from the inside out, starting with personal
                   development, guided by quarterly goal-setting, supported by 
                   accountability, all within a culture of psychological safety.
                 </p>

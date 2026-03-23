@@ -42,7 +42,7 @@ export default function WeWorkTogether({ backgroundColor }) {
                 <p className="text-xl text-justify">
                   We build infrastructure and warehousing strategies that enable cross-functional analysis
                   across computational and wet lab teams. Your scientists discover correlations earlier,
-                  refine predictions with real-world results, and make faster decisions—while maintaining
+                  refine predictions with real-world results, and make faster decisions, while maintaining
                   appropriate access controls.
                 </p>
               </div>
@@ -71,7 +71,7 @@ export default function WeWorkTogether({ backgroundColor }) {
                 </p>
                 <p className="text-xl text-justify">
                   We build cloud infrastructure that enables parallel processing at scale. Your team gets answers
-                  fast—intelligently leveraging CPUs or GPUs to run workloads efficiently and cost-effectively.
+                  fast, intelligently leveraging CPUs or GPUs to run workloads efficiently and cost-effectively.
                 </p>
                 <div className="flex flex-col sm:flex-row flex-wrap items-center justify-around sm:space-x-8">
                   <Image
@@ -120,7 +120,7 @@ export default function WeWorkTogether({ backgroundColor }) {
                   workflows that don&apos;t match your science, and lock into expensive licensing.
                 </p>
                 <p className="text-xl text-justify">
-                  We build custom tools designed alongside your team—internal applications and interactive dashboards
+                  We build custom tools designed alongside your team: internal applications and interactive dashboards
                   that replace bloated SaaS products. You own the code, control the features, and set the direction.
                 </p>
               </div>

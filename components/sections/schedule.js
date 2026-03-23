@@ -18,10 +18,10 @@ export default function Schedule({ backgroundColor }) {
               Schedule a Discovery&nbsp;Call
             </h2>
             <p className="text-xl mb-8">
-              We partner with biotech companies across the spectrum—from 
-              venture-backed startups and computational biology companies to 
-              AI-driven drug discovery platforms and global pharmaceutical 
-              research organizations—building the data infrastructure that 
+              We partner with biotech companies across the spectrum, from
+              venture-backed startups and computational biology companies to
+              AI-driven drug discovery platforms and global pharmaceutical
+              research organizations, building the data infrastructure that
               accelerates discovery.
             </p>
             
