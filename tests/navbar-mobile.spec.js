@@ -41,7 +41,7 @@ test.describe("Mobile nav scroll", () => {
   test.beforeEach(async ({ page }) => {
     await page.setViewportSize(MOBILE);
     await page.goto("http://localhost:3000");
-    await page.waitForLoadState("networkidle");
+    await page.waitForLoadState("load");
   });
 
   test("menu is closed on page load: no flash of nav items", async ({
@@ -80,7 +80,7 @@ test.describe("Desktop nav scroll", () => {
   test.beforeEach(async ({ page }) => {
     await page.setViewportSize(DESKTOP);
     await page.goto("http://localhost:3000");
-    await page.waitForLoadState("networkidle");
+    await page.waitForLoadState("load");
   });
 
   test("scrolls to correct section after clicking desktop nav item", async ({
@@ -97,16 +97,87 @@ test.describe("Desktop nav scroll", () => {
   });
 });
 
+test.describe("Schedule Discovery button scroll", () => {
+  test.beforeEach(async ({ page }) => {
+    await page.setViewportSize(DESKTOP);
+    await page.goto("http://localhost:3000");
+    await page.waitForLoadState("load");
+  });
+
+  test("hero button scrolls to schedule section", async ({ page }) => {
+    const targetScrollY = await anchorScrollTarget(page, "schedule");
+
+    await page
+      .getByRole("button", { name: "Schedule a Discovery Call" })
+      .first()
+      .click();
+
+    await waitForScrollEnd(page);
+
+    const scrollY = await page.evaluate(() => window.scrollY);
+    expect(Math.abs(scrollY - targetScrollY)).toBeLessThan(60);
+  });
+
+  test("button scroll takes at least 500ms", async ({ page }) => {
+    await page.evaluate(() => {
+      window.__scrollStart = null;
+      window.__scrollEnd = null;
+      window.addEventListener(
+        "scroll",
+        () => {
+          const now = performance.now();
+          if (window.__scrollStart === null) window.__scrollStart = now;
+          window.__scrollEnd = now;
+        },
+        { passive: true },
+      );
+    });
+
+    await page
+      .getByRole("button", { name: "Schedule a Discovery Call" })
+      .first()
+      .click();
+
+    await page.waitForFunction(() => window.__scrollStart !== null, {
+      timeout: 5000,
+    });
+    await waitForScrollEnd(page);
+
+    const duration = await page.evaluate(
+      () => window.__scrollEnd - window.__scrollStart,
+    );
+    expect(duration).toBeGreaterThanOrEqual(500);
+  });
+});
+
+test.describe("Hash on page load (template.js)", () => {
+  test("landing on /#schedule scrolls to the schedule section", async ({
+    page,
+  }) => {
+    await page.setViewportSize(DESKTOP);
+    await page.goto("http://localhost:3000/#schedule");
+    await page.waitForLoadState("load");
+    // template.js delays 300ms then animates for ~800ms — wait for it to settle
+    await page.waitForTimeout(1200);
+
+    const targetScrollY = await anchorScrollTarget(page, "schedule");
+    const scrollY = await page.evaluate(() => window.scrollY);
+    expect(Math.abs(scrollY - targetScrollY)).toBeLessThan(60);
+  });
+});
+
 test.describe("Cross-page nav scroll", () => {
   test("navigates from /team to home and scrolls to the correct section", async ({
     page,
   }) => {
     await page.setViewportSize(DESKTOP);
     await page.goto("http://localhost:3000/team");
-    await page.waitForLoadState("networkidle");
+    await page.waitForLoadState("load");
 
-    // Click "Schedule" in the nav while on the team page
-    await page.locator("ul a").filter({ hasText: "Schedule" }).filter({ visible: true }).click();
+    // Click "Schedule" in the nav while on the team page — wait for hydration
+    const scheduleLink = page.locator("ul a").filter({ hasText: "Schedule" }).first();
+    await scheduleLink.waitFor({ state: "visible", timeout: 10000 });
+    await scheduleLink.click();
 
     // Wait for Next.js to navigate to the home page, then for scroll to settle
     await page.waitForURL("**/#schedule");
