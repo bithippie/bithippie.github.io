@@ -1,9 +1,11 @@
 "use client";
 
-import { Avatar, Blockquote } from "flowbite-react";
-
 import Divider from "@/components/divider";
 import FAQ from "@/components/faq";
+import Testimonial from "@/components/testimonial";
+
+const CALENDAR_URL =
+  "https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true";
 
 export default function Schedule({ backgroundColor }) {
   return (
@@ -25,21 +27,13 @@ export default function Schedule({ backgroundColor }) {
               accelerates discovery.
             </p>
             
-            <Blockquote className="my-6 bg-gray-50 rounded-lg p-6 shadow-md">
-              <Avatar
-                className="float-right mb-4 mx-4 sm:mb-0"
-                rounded
-                size="lg"
-                img="/assets/images/testimonials/jacob.jpeg"
-                alt="Jacob Oppenheim // Venture Partner"
-              />
-              <p className="text-lg sm:text-xl text-gray-700 font-light leading-relaxed">
-                &ldquo;BitHippie has innovated practical and effective solutions in diverse fields from computational biology and bioinformatics, to laboratory + scientific systems, to classic business + financial systems, to health care over this time.&rdquo;
-              </p>
-              <figcaption className="mt-4 text-center sm:text-left text-gray-600 text-sm sm:text-base italic">
-                — Jacob Oppenheim // Venture Partner
-              </figcaption>
-            </Blockquote>
+            <Testimonial
+              img="/assets/images/testimonials/jacob.jpeg"
+              alt="Jacob Oppenheim // Venture Partner"
+              attribution="— Jacob Oppenheim // Venture Partner"
+            >
+              &ldquo;BitHippie has innovated practical and effective solutions in diverse fields from computational biology and bioinformatics, to laboratory + scientific systems, to classic business + financial systems, to health care over this time.&rdquo;
+            </Testimonial>
 
             <a name="faq" />
             <FAQ />
@@ -56,7 +50,7 @@ export default function Schedule({ backgroundColor }) {
                 min-h-[1240px]
                 lg:min-h-[770px]
                 xl:min-h-[1240px]"
-              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true"
+              src={CALENDAR_URL}
               title="Schedule Appointment"
             ></iframe>
           </div>

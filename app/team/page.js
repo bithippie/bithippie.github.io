@@ -109,7 +109,7 @@ export default function TeamPage() {
                 <motion.button
                   className="bg-transparent text-moss border border-moss px-8 py-4 text-xl rounded-lg shadow-lg hover:shadow-xl"
                   whileHover={{ scale: 1.025 }}
-                  whileTap={{ scale: 0.96 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   Get in Touch
                 </motion.button>

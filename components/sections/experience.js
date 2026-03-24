@@ -1,14 +1,14 @@
 "use client";
 
-import { Avatar, Blockquote } from "flowbite-react";
 import Image from "next/image";
 
 import Divider from "@/components/divider";
 import RevealOnScroll from "@/components/reveal";
 import ScheduleDiscovery from "@/components/schedule_discovery";
+import Testimonial from "@/components/testimonial";
 
 
-export default function About({ backgroundColor }) {
+export default function Experience({ backgroundColor }) {
   return (
     <section
       className={`relative bg-${backgroundColor} pt-10 pb-20 md:pb-28`}
@@ -58,21 +58,13 @@ export default function About({ backgroundColor }) {
             the overhead of full-time hires.
           </p>
 
-          <Blockquote className="my-6 bg-gray-50 rounded-lg p-6 shadow-md">
-            <Avatar
-              className="float-right mb-4 mx-4 sm:mb-0"
-              rounded
-              size="lg"
-              img="/assets/images/testimonials/emily.jpeg"
-              alt="Emily Engel // Senior Manager, Patient Engagement Operations"
-            />
-            <p className="text-lg sm:text-xl text-gray-700 font-light leading-relaxed">
-              &ldquo;I do believe in the ultimate mission of patient compensation and your team has advanced that mission tenfold.&rdquo;
-            </p>
-            <figcaption className="mt-4 text-center sm:text-left text-gray-600 text-sm sm:text-base italic">
-              — Emily Engel // Senior Manager, Patient Engagement Operations
-            </figcaption>
-          </Blockquote>
+          <Testimonial
+            img="/assets/images/testimonials/emily.jpeg"
+            alt="Emily Engel // Senior Manager, Patient Engagement Operations"
+            attribution="— Emily Engel // Senior Manager, Patient Engagement Operations"
+          >
+            &ldquo;I do believe in the ultimate mission of patient compensation and your team has advanced that mission tenfold.&rdquo;
+          </Testimonial>
           <div className="w-full flex text-center justify-center">
             <ScheduleDiscovery />
           </div>
