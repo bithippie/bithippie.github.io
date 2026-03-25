@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
 
         {/* Security Headers */}
         {process.env.NODE_ENV === "production" && (
-          <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; frame-src https://calendar.google.com;" />
+          <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; frame-src https://calendar.google.com;" />
         )}
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
