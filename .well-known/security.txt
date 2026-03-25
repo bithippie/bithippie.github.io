@@ -1,0 +1,4 @@
+Contact: mailto:security@bithippie.com
+Expires: 2027-02-14T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://bithippie.com/.well-known/security.txt
