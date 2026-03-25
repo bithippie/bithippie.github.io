@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 
-import Divider from "@/components/divider";
-import OutcomeCard from "@/components/outcome_card";
-import RevealOnScroll from "@/components/reveal";
-import ScheduleDiscovery from "@/components/schedule_discovery";
+import Divider from "@/components/layout/divider";
+import OutcomeCard from "@/components/ui/outcome_card";
+import RevealOnScroll from "@/components/ui/reveal";
+import ScheduleDiscovery from "@/components/ui/schedule_discovery";
 
 export default function Outcomes({ backgroundColor }) {
   return (

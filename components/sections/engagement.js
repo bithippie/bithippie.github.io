@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 
-import Divider from "@/components/divider";
-import RevealOnScroll from "@/components/reveal";
-import ScheduleDiscovery from "@/components/schedule_discovery";
-import Testimonial from "@/components/testimonial";
+import Divider from "@/components/layout/divider";
+import RevealOnScroll from "@/components/ui/reveal";
+import ScheduleDiscovery from "@/components/ui/schedule_discovery";
+import Testimonial from "@/components/ui/testimonial";
 
 export default function Engagement({ backgroundColor }) {
   const steps = [

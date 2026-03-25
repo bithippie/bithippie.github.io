@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 
-import Divider from "@/components/divider";
-import Footer from "@/components/sections/footer";
-import Navbar from "@/components/navbar";
-import RevealOnScroll from "@/components/reveal";
+import Divider from "@/components/layout/divider";
+import Footer from "@/components/layout/footer";
+import Navbar from "@/components/layout/navbar";
+import RevealOnScroll from "@/components/ui/reveal";
 import Team from "@/components/sections/team";
 
 export default function TeamPage() {

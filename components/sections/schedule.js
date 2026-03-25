@@ -1,8 +1,8 @@
 "use client";
 
-import Divider from "@/components/divider";
-import FAQ from "@/components/faq";
-import Testimonial from "@/components/testimonial";
+import Divider from "@/components/layout/divider";
+import FAQ from "@/components/ui/faq";
+import Testimonial from "@/components/ui/testimonial";
 
 const CALENDAR_URL =
   "https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true";

@@ -3,8 +3,8 @@
 import { Avatar } from "flowbite-react";
 import { motion } from "framer-motion";
 
-import Divider from "@/components/divider";
-import RevealOnScroll from "@/components/reveal";
+import Divider from "@/components/layout/divider";
+import RevealOnScroll from "@/components/ui/reveal";
 
 export default function Team({ backgroundColor }) {
   const teamMembers = [

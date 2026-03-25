@@ -1,6 +1,6 @@
 "use client";
 
-import { Accordion } from "@/components/accordion";
+import { Accordion } from "@/components/ui/accordion";
 
 export default function FAQ() {
   const accordionItems = [
