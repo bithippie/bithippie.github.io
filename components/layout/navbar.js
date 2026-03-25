@@ -7,28 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
-function smoothScrollTo(targetY, duration = 800) {
-  const startY = window.scrollY;
-  const diff = targetY - startY;
-  let startTime = null;
-  const ease = (t) =>
-    t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-  function step(ts) {
-    if (!startTime) startTime = ts;
-    const progress = Math.min((ts - startTime) / duration, 1);
-    window.scrollTo(0, startY + diff * ease(progress));
-    if (progress < 1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
-
-function scrollToSection(hash) {
-  const name = hash.replace("#", "");
-  const el = document.querySelector(`a[name="${name}"]`);
-if (el) {
-    smoothScrollTo(el.getBoundingClientRect().top + window.scrollY);
-  }
-}
+import { navigateAndScroll } from "@/utils/scroll";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,15 +18,13 @@ export default function NavBar() {
     (e, hash) => {
       e.preventDefault();
       setIsOpen(false);
-      if (pathname === "/") {
-        window.history.replaceState(null, "", `/${hash}`);
-        setTimeout(() => scrollToSection(hash), 550);
-      } else {
-        router.push(`/${hash}`, { scroll: false });
-        setTimeout(() => scrollToSection(hash), 300);
-      }
+      navigateAndScroll(`/${hash}`, {
+        pathname,
+        router,
+        samePageDelay: isOpen ? 550 : 0,
+      });
     },
-    [pathname, router],
+    [pathname, router, isOpen],
   );
 
   const navItems = [

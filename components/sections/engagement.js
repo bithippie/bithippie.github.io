@@ -1,13 +1,13 @@
 "use client";
 
-import { Avatar, Blockquote } from "flowbite-react";
 import { motion } from "framer-motion";
 
-import Divider from "@/components/divider";
-import ScheduleDiscovery from "@/components/schedule_discovery";
-import RevealOnScroll from "@/components/reveal";
+import Divider from "@/components/layout/divider";
+import RevealOnScroll from "@/components/ui/reveal";
+import ScheduleDiscovery from "@/components/ui/schedule_discovery";
+import Testimonial from "@/components/ui/testimonial";
 
-export default function HowWeWork({ backgroundColor }) {
+export default function Engagement({ backgroundColor }) {
   const steps = [
     {
       title: "Discovery Conversation",
@@ -65,40 +65,24 @@ export default function HowWeWork({ backgroundColor }) {
               Together We&apos;ll&nbsp;Go&nbsp;Far…
             </h3>
 
-            <Blockquote className="my-6 bg-gray-50 rounded-lg p-6 shadow-md">
-              <Avatar
-                className="float-right mb-4 mx-4 sm:mb-0"
-                rounded
-                size="lg"
-                img="/assets/images/testimonials/sara.jpeg"
-                alt="Sara Kohnke, PhD"
-              />
-              <p className="text-lg sm:text-xl text-gray-700 font-light leading-relaxed">
-                &ldquo;I&apos;ve benefitted firsthand from his robust data
-                platform construction. As a data scientist, he made my life
-                easier every day. The data platform was designed to be easy to
-                use, long-lasting, and used across multiple teams.&rdquo;
-              </p>
-              <figcaption className="mt-4 text-center sm:text-left text-gray-600 text-sm sm:text-base italic">
-                — Sara Kohnke, PhD // Senior Data Scientist
-              </figcaption>
-            </Blockquote>
-            <Blockquote className="my-6 bg-gray-50 rounded-lg p-6 shadow-md">
-              <Avatar
-                className="float-right mb-4 mx-4 sm:mb-0"
-                rounded
-                size="lg"
-                img="/assets/images/testimonials/alex.jpeg"
-                alt="Alex Greenfield // Chief Scientist & Founder"
-              />
-              <p className="text-lg sm:text-xl text-gray-700 font-light leading-relaxed">
-                &ldquo;We were able to go from initial product idea to a demo with stakeholders in just a couple of weeks. 
-                This enabled rapid iteration, and minimized the chances of building something that nobody would want.&rdquo;
-              </p>
-              <figcaption className="mt-4 text-center sm:text-left text-gray-600 text-sm sm:text-base italic">
-                — Alex Greenfield // Chief Scientist & Founder
-              </figcaption>
-            </Blockquote>
+            <Testimonial
+              img="/assets/images/testimonials/sara.jpeg"
+              alt="Sara Kohnke, PhD"
+              attribution="— Sara Kohnke, PhD // Senior Data Scientist"
+            >
+              &ldquo;I&apos;ve benefitted firsthand from his robust data
+              platform construction. As a data scientist, he made my life
+              easier every day. The data platform was designed to be easy to
+              use, long-lasting, and used across multiple teams.&rdquo;
+            </Testimonial>
+            <Testimonial
+              img="/assets/images/testimonials/alex.jpeg"
+              alt="Alex Greenfield // Chief Scientist & Founder"
+              attribution="— Alex Greenfield // Chief Scientist & Founder"
+            >
+              &ldquo;We were able to go from initial product idea to a demo with stakeholders in just a couple of weeks.
+              This enabled rapid iteration, and minimized the chances of building something that nobody would want.&rdquo;
+            </Testimonial>
 
             <div className="flex justify-center">
               <ScheduleDiscovery />

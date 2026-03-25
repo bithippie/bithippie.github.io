@@ -1,7 +1,7 @@
-import Divider from "@/components/divider";
-import LineDraw from "@/components/line_draw";
-import RevealOnScroll from "@/components/reveal";
-import ScheduleDiscovery from "@/components/schedule_discovery";
+import Divider from "@/components/layout/divider";
+import LineDraw from "@/components/ui/line_draw";
+import RevealOnScroll from "@/components/ui/reveal";
+import ScheduleDiscovery from "@/components/ui/schedule_discovery";
 
 export default function Hero() {
   return (

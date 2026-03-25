@@ -26,7 +26,6 @@
 :root {
   --background: #ededed;
   --foreground: #0a0a0a;
-  /* scroll-behavior: smooth; */
   overflow-x: hidden;
 }
 
@@ -42,8 +41,8 @@ body {
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: 20;
-  background-color: #d3a946;
+  height: 20px;
+  @apply bg-old-gold;
 }
 
 .start-curve-divider {

@@ -21,6 +21,7 @@ module.exports = {
       "dark-grey": "#393B34",
       platinum: "#E5E3DD",
       white: "#ffffff",
+      "warm-white": "#fdfcfb",
     },
     extend: {
       backgroundImage: {
@@ -43,6 +44,7 @@ module.exports = {
     "bg-white",
     "bg-moss",
     "bg-dark-grey",
+    "bg-warm-white",
     "start-curve-divider",
     "end-curve-divider",
   ],

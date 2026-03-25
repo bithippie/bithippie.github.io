@@ -68,7 +68,7 @@ test.describe("Scroll animation duration", () => {
   test.beforeEach(async ({ page }) => {
     await page.setViewportSize(DESKTOP);
     await page.goto("http://localhost:3000");
-    await page.waitForLoadState("networkidle");
+    await page.waitForLoadState("load");
   });
 
   test("smooth scroll takes at least 500ms", async ({ page, browserName }) => {
@@ -78,8 +78,6 @@ test.describe("Scroll animation duration", () => {
       type: "scroll-duration",
       description: `${browserName}: ${Math.round(duration)}ms`,
     });
-
-    console.log(`[${browserName}] scroll duration: ${Math.round(duration)}ms`);
 
     expect(
       duration,
