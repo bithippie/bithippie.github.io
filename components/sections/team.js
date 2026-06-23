@@ -3,6 +3,7 @@
 import { Avatar } from "flowbite-react";
 import { motion } from "framer-motion";
 
+import Divider from "@/components/layout/divider";
 import RevealOnScroll from "@/components/ui/reveal";
 
 export default function Team({ backgroundColor }) {
@@ -81,13 +82,14 @@ export default function Team({ backgroundColor }) {
         </div>
         <div className="flex flex-wrap justify-center gap-8 lg:gap-12 max-w-4xl mx-auto">
           {members.map((member, i) => (
-            <div key={i} className="w-full md:w-[calc(33.333%-2rem)]">
+            <div key={i} className="w-full sm:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
               <TeamCard member={member} />
             </div>
           ))}
         </div>
       </div>
 
+      <Divider backgroundColor="moss" curvePosition="start" />
     </section>
   );
 }

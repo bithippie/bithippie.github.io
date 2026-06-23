@@ -30,9 +30,6 @@ export default function TeamPage() {
         {/* Team & Advisors */}
         <Team backgroundColor="platinum" />
 
-        {/* Partners */}
-        <Partners backgroundColor="platinum" />
-
         {/* Team Culture */}
         <section className="relative bg-moss pt-8 pb-20 md:pb-28">
           <div className="container max-w-screen-xl p-8">
@@ -122,6 +119,8 @@ export default function TeamPage() {
           </div>
           <Divider backgroundColor="dark-grey" curvePosition="end" />
         </section>
+        {/* Partners */}
+        <Partners backgroundColor="dark-grey" />
       </main>
       <Footer />
     </div>
