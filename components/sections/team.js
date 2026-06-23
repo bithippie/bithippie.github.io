@@ -28,11 +28,6 @@ export default function Team({ backgroundColor }) {
       image: "/assets/images/team/matheus.jpeg",
       title: "Software & DevOps Engineer",
     },
-    {
-      name: "Bruno",
-      image: "/assets/images/team/bruno.jpeg",
-      title: "Software & Data Engineer",
-    },
   ];
 
   const advisors = [
