@@ -7,7 +7,7 @@ import Divider from "@/components/layout/divider";
 import RevealOnScroll from "@/components/ui/reveal";
 
 export default function Team({ backgroundColor }) {
-  const teamMembers = [
+  const members = [
     {
       name: "Anthony",
       image: "/assets/images/team/anthony.jpeg",
@@ -28,9 +28,11 @@ export default function Team({ backgroundColor }) {
       image: "/assets/images/team/matheus.jpeg",
       title: "Software & DevOps Engineer",
     },
-  ];
-
-  const advisors = [
+    {
+      name: "Cassandra",
+      image: "/assets/images/team/cassandra.jpeg",
+      title: "Fractional Chief Growth Officer",
+    },
     {
       name: "Gordon",
       image: "/assets/images/team/gordon.jpeg",
@@ -75,30 +77,15 @@ export default function Team({ backgroundColor }) {
       <a name="team" />
 
       <div className="container max-w-screen-xl px-8 mx-auto">
-        {/* The Team */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-moss">The Team</h2>
-          </div>
-          <div className="flex flex-wrap justify-center gap-8 lg:gap-12 max-w-4xl mx-auto">
-            {teamMembers.map((member, i) => (
-              <div key={i} className="w-full md:w-[calc(33.333%-2rem)]">
-                <TeamCard member={member} />
-              </div>
-            ))}
-          </div>
+        <div className="text-center mb-12">
+          <h2 className="text-moss">Team, Friends, and Advisors</h2>
         </div>
-
-        {/* Trusted Advisors */}
-        <div>
-          <div className="text-center mb-12">
-            <h2 className="text-moss">Trusted Advisors</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-4xl mx-auto">
-            {advisors.map((advisor, i) => (
-              <TeamCard key={i} member={advisor} />
-            ))}
-          </div>
+        <div className="flex flex-wrap justify-center gap-8 lg:gap-12 max-w-4xl mx-auto">
+          {members.map((member, i) => (
+            <div key={i} className="w-full md:w-[calc(33.333%-2rem)]">
+              <TeamCard member={member} />
+            </div>
+          ))}
         </div>
       </div>
 
