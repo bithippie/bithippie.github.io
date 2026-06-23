@@ -6,6 +6,7 @@ import Divider from "@/components/layout/divider";
 import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
 import RevealOnScroll from "@/components/ui/reveal";
+import Partners from "@/components/sections/partners";
 import Team from "@/components/sections/team";
 
 export default function TeamPage() {
@@ -28,6 +29,9 @@ export default function TeamPage() {
 
         {/* Team & Advisors */}
         <Team backgroundColor="platinum" />
+
+        {/* Partners */}
+        <Partners backgroundColor="platinum" />
 
         {/* Team Culture */}
         <section className="relative bg-moss pt-8 pb-20 md:pb-28">

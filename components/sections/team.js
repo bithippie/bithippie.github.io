@@ -3,7 +3,6 @@
 import { Avatar } from "flowbite-react";
 import { motion } from "framer-motion";
 
-import Divider from "@/components/layout/divider";
 import RevealOnScroll from "@/components/ui/reveal";
 
 export default function Team({ backgroundColor }) {
@@ -89,7 +88,6 @@ export default function Team({ backgroundColor }) {
         </div>
       </div>
 
-      <Divider backgroundColor="moss" curvePosition="start" />
     </section>
   );
 }
