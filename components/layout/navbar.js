@@ -39,13 +39,15 @@ export default function NavBar() {
       <nav className="py-2.5 absolute bg-transparent w-full flex z-50">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between container">
           <Link href="/">
-            <Image
-              src="/assets/images/logo.svg"
-              alt="BitHippie Logo"
-              width={207}
-              height={83}
-              priority
-            />
+            <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
+              <Image
+                src="/assets/images/logo.svg"
+                alt="BitHippie Logo"
+                width={207}
+                height={83}
+                priority
+              />
+            </motion.div>
           </Link>
 
           {/* Hamburger button (CSS-hidden on md+) */}
