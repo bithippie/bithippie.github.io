@@ -167,14 +167,14 @@ test.describe("Hash on page load (template.js)", () => {
 });
 
 test.describe("Cross-page nav scroll", () => {
-  test("navigates from /team to home and scrolls to the correct section", async ({
+  test("navigates from /community to home and scrolls to the correct section", async ({
     page,
   }) => {
     await page.setViewportSize(DESKTOP);
-    await page.goto("http://localhost:3000/team");
+    await page.goto("http://localhost:3000/community");
     await page.waitForLoadState("load");
 
-    // Click "Schedule" in the nav while on the team page — wait for hydration
+    // Click "Schedule" in the nav while on the community page — wait for hydration
     const scheduleLink = page.locator("ul a").filter({ hasText: "Schedule" }).first();
     await scheduleLink.waitFor({ state: "visible", timeout: 10000 });
     await scheduleLink.click();

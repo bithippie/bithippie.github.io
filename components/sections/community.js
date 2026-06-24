@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Divider from "@/components/layout/divider";
 import RevealOnScroll from "@/components/ui/reveal";
 
-export default function Team({ backgroundColor }) {
+export default function Community({ backgroundColor }) {
   const members = [
     {
       name: "Anthony",
@@ -50,7 +50,7 @@ export default function Team({ backgroundColor }) {
     },
   ];
 
-  const TeamCard = ({ member }) => (
+  const MemberCard = ({ member }) => (
     <RevealOnScroll>
       <motion.div
         className="flex flex-col items-center text-center"
@@ -74,7 +74,7 @@ export default function Team({ backgroundColor }) {
     <section
       className={`relative bg-${backgroundColor} pt-16 pb-24 min-h-[768]`}
     >
-      <a name="team" />
+      <a name="community" />
 
       <div className="container max-w-screen-xl px-8 mx-auto">
         <div className="text-center mb-12">
@@ -83,7 +83,7 @@ export default function Team({ backgroundColor }) {
         <div className="flex flex-wrap justify-center gap-8 lg:gap-12 max-w-4xl mx-auto">
           {members.map((member, i) => (
             <div key={i} className="w-full sm:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
-              <TeamCard member={member} />
+              <MemberCard member={member} />
             </div>
           ))}
         </div>

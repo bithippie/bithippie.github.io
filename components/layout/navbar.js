@@ -40,9 +40,9 @@ export default function NavBar() {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between container">
           <Link href="/">
             <Image
-              src="/assets/images/logo.png"
+              src="/assets/images/logo.svg"
               alt="BitHippie Logo"
-              width={300}
+              width={207}
               height={83}
               priority
             />
@@ -97,10 +97,10 @@ export default function NavBar() {
                   <li>
                     <Link
                       className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
-                      href="/team"
+                      href="/community"
                       onClick={() => setIsOpen(false)}
                     >
-                      Team
+                      Community
                     </Link>
                   </li>
                 </ul>
@@ -125,9 +125,9 @@ export default function NavBar() {
               <li>
                 <Link
                   className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
-                  href="/team"
+                  href="/community"
                 >
-                  Team
+                  Community
                 </Link>
               </li>
             </ul>

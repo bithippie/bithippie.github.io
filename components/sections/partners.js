@@ -51,9 +51,13 @@ export default function Partners({ backgroundColor }) {
             <p className="text-gray-300 mb-8 max-w-xl mx-auto">
               Interested in partnering with BitHippie? We&apos;d love to hear from technology companies aligned with our mission.
             </p>
-            <a href="mailto:anthony@bithippie.com">
+            <a className="flex justify-center pt-8"
+                href="https://www.linkedin.com/in/bithippie"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
               <motion.button
-                className="bg-transparent text-white border border-white px-8 py-4 text-xl rounded-lg shadow-lg hover:shadow-xl"
+                className="bg-transparent text-white border border-white px-8 py-4 text-xl rounded-lg shadow-lg hover:shadow-xl hover:shadow-white/10"
                 whileHover={{ scale: 1.025 }}
                 whileTap={{ scale: 0.95 }}
               >
