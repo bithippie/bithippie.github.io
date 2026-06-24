@@ -99,10 +99,10 @@ export default function NavBar() {
                   <li>
                     <Link
                       className="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 text-platinum text-2xl hover:text-moss"
-                      href="/community"
+                      href="/connect"
                       onClick={() => setIsOpen(false)}
                     >
-                      Community
+                      Connect
                     </Link>
                   </li>
                 </ul>
@@ -127,9 +127,9 @@ export default function NavBar() {
               <li>
                 <Link
                   className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
-                  href="/community"
+                  href="/connect"
                 >
-                  Community
+                  Connect
                 </Link>
               </li>
             </ul>

@@ -7,9 +7,9 @@ import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
 import RevealOnScroll from "@/components/ui/reveal";
 import Partners from "@/components/sections/partners";
-import Community from "@/components/sections/community";
+import Connect from "@/components/sections/connect";
 
-export default function CommunityPage() {
+export default function ConnectPage() {
   return (
     <div id="root">
       <main>
@@ -27,10 +27,10 @@ export default function CommunityPage() {
           <Divider curvePosition="start" backgroundColor="platinum" />
         </section>
 
-        {/* Community & Advisors */}
-        <Community backgroundColor="platinum" />
+        {/* Connect & Advisors */}
+        <Connect backgroundColor="platinum" />
 
-        {/* Community Culture */}
+        {/* Connect Culture */}
         <section className="relative bg-moss pt-8 pb-20 md:pb-28">
           <div className="container max-w-screen-xl p-8">
             <RevealOnScroll>

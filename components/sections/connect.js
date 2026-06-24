@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Divider from "@/components/layout/divider";
 import RevealOnScroll from "@/components/ui/reveal";
 
-export default function Community({ backgroundColor }) {
+export default function Connect({ backgroundColor }) {
   const members = [
     {
       name: "Anthony",
@@ -74,7 +74,7 @@ export default function Community({ backgroundColor }) {
     <section
       className={`relative bg-${backgroundColor} pt-16 pb-24 min-h-[768]`}
     >
-      <a name="community" />
+      <a name="connect" />
 
       <div className="container max-w-screen-xl px-8 mx-auto">
         <div className="text-center mb-12">
