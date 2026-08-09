@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#fffce9;font-family:'IBM Plex Sans',system-ui,sans-serif}
+a{color:#a55c36}a:hover{color:#8ea05c}
+summary::-webkit-details-marker{display:none}
+summary{cursor:pointer}
+details[open] .om-plus{transform:rotate(45deg)}
+</style>
+</helmet>
+
+<div style="background:#fffce9;min-height:100vh">
+
+<header style="position:sticky;top:0;z-index:20;background:rgba(255,252,233,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(57,59,52,.12)">
+<nav style="max-width:1280px;margin:0 auto;padding:18px 48px;display:flex;align-items:center;justify-content:space-between;gap:40px">
+<a href="index.dc.html" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+<img src="assets/logo-icon.png" alt="" style="height:36px;width:36px;display:block">
+<img src="assets/logo-wordmark.svg" alt="BitHippie" style="height:30px;display:block;position:relative;top:3px">
+</a>
+<div style="display:flex;align-items:center;gap:30px">
+<a href="Capabilities.dc.html" style="font:500 15px/1 'IBM Plex Sans',sans-serif;color:#393b34;text-decoration:none;border-bottom:2px solid #8ea05c;padding-bottom:3px">Capabilities</a>
+<a href="Outcomes.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#4a4d43;text-decoration:none">Outcomes</a>
+<a href="Engagement.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#4a4d43;text-decoration:none">Engagement</a>
+<a href="Team.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#4a4d43;text-decoration:none">Team</a>
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:500 14px/1 'IBM Plex Sans',sans-serif;color:#393b34;background:#f8a825;text-decoration:none;padding:12px 20px;border-radius:100px">Schedule a Call</a>
+</div>
+</nav>
+</header>
+
+<section style="max-width:1280px;margin:0 auto;padding:88px 48px 40px">
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:60px;border-bottom:2px solid #393b34;padding-bottom:34px">
+<div style="max-width:700px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#8ea05c;text-transform:uppercase;margin-bottom:22px">Capabilities</div>
+<h1 style="font:600 60px/1.03 'Space Grotesk',sans-serif;color:#393b34;margin:0;letter-spacing:-.025em;text-wrap:pretty">Everything your scientists should never have to think about</h1>
+</div>
+</div>
+</section>
+
+<section style="background:#f6f3df;border-top:1px solid rgba(57,59,52,.14);border-bottom:1px solid rgba(57,59,52,.14);margin-top:38px">
+<div style="max-width:1280px;margin:0 auto;padding:38px 48px 44px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#a55c36;text-transform:uppercase;margin-bottom:20px">Start where it hurts</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<button type="button" onClick="{{ jA4 }}" style="font:400 15px/1.3 'IBM Plex Sans',sans-serif;color:#393b34;background:#fffce9;border:1px solid rgba(57,59,52,.2);border-radius:100px;padding:11px 20px;cursor:pointer;text-align:left" style-hover="border-color:#8ea05c;background:#fff">Our scientists are waiting on compute</button>
+<button type="button" onClick="{{ jA2 }}" style="font:400 15px/1.3 'IBM Plex Sans',sans-serif;color:#393b34;background:#fffce9;border:1px solid rgba(57,59,52,.2);border-radius:100px;padding:11px 20px;cursor:pointer;text-align:left" style-hover="border-color:#8ea05c;background:#fff">Nobody knows what data we already have</button>
+<button type="button" onClick="{{ jA1 }}" style="font:400 15px/1.3 'IBM Plex Sans',sans-serif;color:#393b34;background:#fffce9;border:1px solid rgba(57,59,52,.2);border-radius:100px;padding:11px 20px;cursor:pointer;text-align:left" style-hover="border-color:#8ea05c;background:#fff">Every CRO sends data in a different shape</button>
+<button type="button" onClick="{{ jA3 }}" style="font:400 15px/1.3 'IBM Plex Sans',sans-serif;color:#393b34;background:#fffce9;border:1px solid rgba(57,59,52,.2);border-radius:100px;padding:11px 20px;cursor:pointer;text-align:left" style-hover="border-color:#8ea05c;background:#fff">Our tools do not match how we run experiments</button>
+<button type="button" onClick="{{ jA6 }}" style="font:400 15px/1.3 'IBM Plex Sans',sans-serif;color:#393b34;background:#fffce9;border:1px solid rgba(57,59,52,.2);border-radius:100px;padding:11px 20px;cursor:pointer;text-align:left" style-hover="border-color:#8ea05c;background:#fff">Getting data out means asking a person</button>
+<button type="button" onClick="{{ jA5 }}" style="font:400 15px/1.3 'IBM Plex Sans',sans-serif;color:#393b34;background:#fffce9;border:1px solid rgba(57,59,52,.2);border-radius:100px;padding:11px 20px;cursor:pointer;text-align:left" style-hover="border-color:#8ea05c;background:#fff">No one owns the architecture end to end</button>
+<button type="button" onClick="{{ jA7 }}" style="font:400 15px/1.3 'IBM Plex Sans',sans-serif;color:#393b34;background:#fffce9;border:1px solid rgba(57,59,52,.2);border-radius:100px;padding:11px 20px;cursor:pointer;text-align:left" style-hover="border-color:#8ea05c;background:#fff">We cannot afford to replace what we have</button>
+</div>
+</div>
+</section>
+
+<section style="max-width:1280px;margin:0 auto;padding:0 48px 80px">
+
+<details id="cap-a1" style="border-bottom:1px solid rgba(57,59,52,.14)">
+<summary style="display:grid;grid-template-columns:56px 1fr 40px;gap:28px;align-items:start;padding:32px 0;list-style:none">
+<span style="font:500 12px/1.6 'IBM Plex Mono',monospace;color:#8ea05c">01</span>
+<span style="display:block">
+<span style="display:block;font:400 14px/1.5 'IBM Plex Mono',monospace;color:#a55c36;margin-bottom:8px">Data arrives from CROs, buckets, APIs, and brokers, in every format anyone ships</span>
+<span style="display:block;font:600 30px/1.2 'Space Grotesk',sans-serif;color:#393b34;letter-spacing:-.01em">Ingestion of heterogeneous data sources</span>
+</span>
+<span class="om-plus" style="justify-self:end;margin-top:10px;font:300 26px/1 'Space Grotesk',sans-serif;color:#8ea05c;transition:transform .2s">+</span>
+</summary>
+<div style="display:grid;grid-template-columns:56px 1fr;gap:28px;padding:0 0 40px">
+<div></div>
+<div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px">
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#8ea05c;text-transform:uppercase;margin-bottom:12px">What we build</div>
+<p style="font:400 16px/1.65 'IBM Plex Sans',sans-serif;color:#4a4d43;margin:0 0 20px;text-wrap:pretty">CSV, XLSX, Parquet, Avro, coming from CROs, cloud storage buckets, APIs, and data brokers. Vendors make breaking schema changes without warning. We have built an ingestion framework that provides stability, quality, harmonization, and fit for purpose data packages, so your data scientists and computational biologists work from good data.</p>
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:500 15px/1 'IBM Plex Sans',sans-serif;color:#a55c36;text-decoration:none;border-bottom:1px solid #a55c36;padding-bottom:3px">Talk about ingestion</a>
+</div>
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#8ea05c;text-transform:uppercase;margin-bottom:12px">Deliverables</div>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px">
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Connectors for CROs, buckets, APIs, brokers</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">CSV, XLSX, Parquet, and Avro handled</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Breaking schema changes caught early</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Fit for purpose data packages</li>
+</ul>
+</div>
+<div>
+<div style="border-left:2px solid #f8a825;padding-left:12px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;color:#a55c36;margin-bottom:6px">CASE SNAPSHOT</div>
+<div style="font:400 13px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43">A biotech client entering Phase I. Five CRO feeds in four file formats, harmonized into one data package their scientists query directly.</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+
+<details id="cap-a2" style="border-bottom:1px solid rgba(57,59,52,.14)">
+<summary style="display:grid;grid-template-columns:56px 1fr 40px;gap:28px;align-items:start;padding:32px 0;list-style:none">
+<span style="font:500 12px/1.6 'IBM Plex Mono',monospace;color:#8ea05c">02</span>
+<span style="display:block">
+<span style="display:block;font:400 14px/1.5 'IBM Plex Mono',monospace;color:#a55c36;margin-bottom:8px">The dataset someone needs already exists, and nobody can find it</span>
+<span style="display:block;font:600 30px/1.2 'Space Grotesk',sans-serif;color:#393b34;letter-spacing:-.01em">Data catalogs your business can actually read</span>
+</span>
+<span class="om-plus" style="justify-self:end;margin-top:10px;font:300 26px/1 'Space Grotesk',sans-serif;color:#8ea05c;transition:transform .2s">+</span>
+</summary>
+<div style="display:grid;grid-template-columns:56px 1fr;gap:28px;padding:0 0 40px">
+<div></div>
+<div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px">
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#8ea05c;text-transform:uppercase;margin-bottom:12px">What we build</div>
+<p style="font:400 16px/1.65 'IBM Plex Sans',sans-serif;color:#4a4d43;margin:0 0 20px;text-wrap:pretty">A catalog that answers four questions without a meeting: what data exists, who owns it, what is inside it, and how to get access. Written for scientists and program leads, not only for the data team.</p>
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:500 15px/1 'IBM Plex Sans',sans-serif;color:#a55c36;text-decoration:none;border-bottom:1px solid #a55c36;padding-bottom:3px">Talk about cataloging</a>
+</div>
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#8ea05c;text-transform:uppercase;margin-bottom:12px">Deliverables</div>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px">
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Searchable dataset inventory</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Named owners and stewards</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Field level descriptions</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Access request path that resolves</li>
+</ul>
+</div>
+<div>
+<div style="border-left:2px solid #f8a825;padding-left:12px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;color:#a55c36;margin-bottom:6px">CASE SNAPSHOT</div>
+<div style="font:400 13px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43">A top-10 pharma company. Three research groups found they had been buying the same external dataset twice.</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+
+<details id="cap-a3" style="border-bottom:1px solid rgba(57,59,52,.14)">
+<summary style="display:grid;grid-template-columns:56px 1fr 40px;gap:28px;align-items:start;padding:32px 0;list-style:none">
+<span style="font:500 12px/1.6 'IBM Plex Mono',monospace;color:#8ea05c">03</span>
+<span style="display:block">
+<span style="display:block;font:400 14px/1.5 'IBM Plex Mono',monospace;color:#a55c36;margin-bottom:8px">Your scientists keep a spreadsheet next to the system of record</span>
+<span style="display:block;font:600 30px/1.2 'Space Grotesk',sans-serif;color:#393b34;letter-spacing:-.01em">Internal apps for the wet lab and the dry lab</span>
+</span>
+<span class="om-plus" style="justify-self:end;margin-top:10px;font:300 26px/1 'Space Grotesk',sans-serif;color:#8ea05c;transition:transform .2s">+</span>
+</summary>
+<div style="display:grid;grid-template-columns:56px 1fr;gap:28px;padding:0 0 40px">
+<div></div>
+<div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px">
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#8ea05c;text-transform:uppercase;margin-bottom:12px">What we build</div>
+<p style="font:400 16px/1.65 'IBM Plex Sans',sans-serif;color:#4a4d43;margin:0 0 20px;text-wrap:pretty">Tools designed next to the bench and next to the notebook: record research, visualize results, annotate data, trigger a workflow. Built around how your team actually runs an experiment, and you own the code.</p>
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:500 15px/1 'IBM Plex Sans',sans-serif;color:#a55c36;text-decoration:none;border-bottom:1px solid #a55c36;padding-bottom:3px">Talk about internal tools</a>
+</div>
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#8ea05c;text-transform:uppercase;margin-bottom:12px">Deliverables</div>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px">
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Working app in front of users early</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Result and annotation views</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Workflow triggers from the UI</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Source code and deploy pipeline</li>
+</ul>
+</div>
+<div>
+<div style="border-left:2px solid #f8a825;padding-left:12px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;color:#a55c36;margin-bottom:6px">CASE SNAPSHOT</div>
+<div style="font:400 13px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43">A biotech client. An idea became a tool their scientists used daily, instead of a year-long platform purchase.</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+
+<details id="cap-a4" style="border-bottom:1px solid rgba(57,59,52,.14)">
+<summary style="display:grid;grid-template-columns:56px 1fr 40px;gap:28px;align-items:start;padding:32px 0;list-style:none">
+<span style="font:500 12px/1.6 'IBM Plex Mono',monospace;color:#8ea05c">04</span>
+<span style="display:block">
+<span style="display:block;font:400 14px/1.5 'IBM Plex Mono',monospace;color:#a55c36;margin-bottom:8px">A three day run fails on hour sixty and starts over</span>
+<span style="display:block;font:600 30px/1.2 'Space Grotesk',sans-serif;color:#393b34;letter-spacing:-.01em">Notebooks turned into production workflows</span>
+</span>
+<span class="om-plus" style="justify-self:end;margin-top:10px;font:300 26px/1 'Space Grotesk',sans-serif;color:#8ea05c;transition:transform .2s">+</span>
+</summary>
+<div style="display:grid;grid-template-columns:56px 1fr;gap:28px;padding:0 0 40px">
+<div></div>
+<div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px">
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#8ea05c;text-transform:uppercase;margin-bottom:12px">What we build</div>
+<p style="font:400 16px/1.65 'IBM Plex Sans',sans-serif;color:#4a4d43;margin:0 0 20px;text-wrap:pretty">We take the Python your computational team already wrote and make it a workflow that runs in parallel, picks CPU or GPU per step, restarts from the failed step, and reports what it cost. The science stays theirs. The operational weight moves to us.</p>
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:500 15px/1 'IBM Plex Sans',sans-serif;color:#a55c36;text-decoration:none;border-bottom:1px solid #a55c36;padding-bottom:3px">Talk about pipelines</a>
+</div>
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#8ea05c;text-transform:uppercase;margin-bottom:12px">Deliverables</div>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px">
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Containerized, parameterized steps</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Right sized CPU and GPU selection</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Retries, checkpoints, run history</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Cost per run, visible to the team</li>
+</ul>
+</div>
+<div>
+<div style="border-left:2px solid #f8a825;padding-left:12px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;color:#a55c36;margin-bottom:6px">CASE SNAPSHOT</div>
+<div style="font:400 13px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43">An AI drug discovery platform. Screening runs went from overnight batches to same day answers.</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+
+<details id="cap-a5" style="border-bottom:1px solid rgba(57,59,52,.14)">
+<summary style="display:grid;grid-template-columns:56px 1fr 40px;gap:28px;align-items:start;padding:32px 0;list-style:none">
+<span style="font:500 12px/1.6 'IBM Plex Mono',monospace;color:#8ea05c">05</span>
+<span style="display:block">
+<span style="display:block;font:400 14px/1.5 'IBM Plex Mono',monospace;color:#a55c36;margin-bottom:8px">Six systems, four owners, no one holding the whole picture</span>
+<span style="display:block;font:600 30px/1.2 'Space Grotesk',sans-serif;color:#393b34;letter-spacing:-.01em">Architecture for end to end data operations</span>
+</span>
+<span class="om-plus" style="justify-self:end;margin-top:10px;font:300 26px/1 'Space Grotesk',sans-serif;color:#8ea05c;transition:transform .2s">+</span>
+</summary>
+<div style="display:grid;grid-template-columns:56px 1fr;gap:28px;padding:0 0 40px">
+<div></div>
+<div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px">
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#8ea05c;text-transform:uppercase;margin-bottom:12px">What we build</div>
+<p style="font:400 16px/1.65 'IBM Plex Sans',sans-serif;color:#4a4d43;margin:0 0 20px;text-wrap:pretty">The design for how information moves through your company: available where it is needed, fit for the purpose it is used for, fast enough to ask a second question, and observable when something breaks. Then we build it with you, in stages you can fund.</p>
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:500 15px/1 'IBM Plex Sans',sans-serif;color:#a55c36;text-decoration:none;border-bottom:1px solid #a55c36;padding-bottom:3px">Talk about architecture</a>
+</div>
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#8ea05c;text-transform:uppercase;margin-bottom:12px">Deliverables</div>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px">
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Current state map, honestly drawn</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Now, Next, and After roadmap</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Infrastructure as code foundation</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Monitoring and on call reality check</li>
+</ul>
+</div>
+<div>
+<div style="border-left:2px solid #f8a825;padding-left:12px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;color:#a55c36;margin-bottom:6px">CASE SNAPSHOT</div>
+<div style="font:400 13px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43">A biotech-focused venture firm. A data operations design their portfolio companies now start from.</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+
+<details id="cap-a6" style="border-bottom:1px solid rgba(57,59,52,.14)">
+<summary style="display:grid;grid-template-columns:56px 1fr 40px;gap:28px;align-items:start;padding:32px 0;list-style:none">
+<span style="font:500 12px/1.6 'IBM Plex Mono',monospace;color:#8ea05c">06</span>
+<span style="display:block">
+<span style="display:block;font:400 14px/1.5 'IBM Plex Mono',monospace;color:#a55c36;margin-bottom:8px">The data is there, and the only way in is a person with a login</span>
+<span style="display:block;font:600 30px/1.2 'Space Grotesk',sans-serif;color:#393b34;letter-spacing:-.01em">APIs into data silos, with access policy built in</span>
+</span>
+<span class="om-plus" style="justify-self:end;margin-top:10px;font:300 26px/1 'Space Grotesk',sans-serif;color:#8ea05c;transition:transform .2s">+</span>
+</summary>
+<div style="display:grid;grid-template-columns:56px 1fr;gap:28px;padding:0 0 40px">
+<div></div>
+<div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px">
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#8ea05c;text-transform:uppercase;margin-bottom:12px">What we build</div>
+<p style="font:400 16px/1.65 'IBM Plex Sans',sans-serif;color:#4a4d43;margin:0 0 20px;text-wrap:pretty">Interfaces that let systems, models, and agents read what they are allowed to read. Access rules live in the service instead of in someone's memory, so opening data up does not mean giving everything away.</p>
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:500 15px/1 'IBM Plex Sans',sans-serif;color:#a55c36;text-decoration:none;border-bottom:1px solid #a55c36;padding-bottom:3px">Talk about access</a>
+</div>
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#8ea05c;text-transform:uppercase;margin-bottom:12px">Deliverables</div>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px">
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Documented service interfaces</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Role and project based policy</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Audit trail of every read</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Agent and MCP ready endpoints</li>
+</ul>
+</div>
+<div>
+<div style="border-left:2px solid #f8a825;padding-left:12px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;color:#a55c36;margin-bottom:6px">CASE SNAPSHOT</div>
+<div style="font:400 13px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43">A top-10 pharma company. A legacy compound store opened to three downstream teams under one policy.</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+
+<details id="cap-a7">
+<summary style="display:grid;grid-template-columns:56px 1fr 40px;gap:28px;align-items:start;padding:32px 0;list-style:none">
+<span style="font:500 12px/1.6 'IBM Plex Mono',monospace;color:#8ea05c">07</span>
+<span style="display:block">
+<span style="display:block;font:400 14px/1.5 'IBM Plex Mono',monospace;color:#a55c36;margin-bottom:8px">You have already bought the tools. Replacing them is not the plan</span>
+<span style="display:block;font:600 30px/1.2 'Space Grotesk',sans-serif;color:#393b34;letter-spacing:-.01em">Working with the ELN, LIMS, and tooling you have</span>
+</span>
+<span class="om-plus" style="justify-self:end;margin-top:10px;font:300 26px/1 'Space Grotesk',sans-serif;color:#8ea05c;transition:transform .2s">+</span>
+</summary>
+<div style="display:grid;grid-template-columns:56px 1fr;gap:28px;padding:0 0 40px">
+<div></div>
+<div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px">
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#8ea05c;text-transform:uppercase;margin-bottom:12px">What we build</div>
+<p style="font:400 16px/1.65 'IBM Plex Sans',sans-serif;color:#4a4d43;margin:0 0 20px;text-wrap:pretty">We connect to the electronic lab notebook, the LIMS, and the bioinformatics tools your scientists already use. Decades of software and data engineering judgement, plus agentic development, MCP tooling, and low code platforms where they genuinely shorten the path.</p>
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:500 15px/1 'IBM Plex Sans',sans-serif;color:#a55c36;text-decoration:none;border-bottom:1px solid #a55c36;padding-bottom:3px">Talk about your stack</a>
+</div>
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#8ea05c;text-transform:uppercase;margin-bottom:12px">Deliverables</div>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px">
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Integrations with current systems</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">A working prototype early</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">A clear buy, build, or connect call</li>
+<li style="font:400 14px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43;padding-left:16px;background:radial-gradient(circle at 4px 9px,#8ea05c 2.5px,transparent 3px)">Handover your engineers can carry</li>
+</ul>
+</div>
+<div>
+<div style="border-left:2px solid #f8a825;padding-left:12px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;color:#a55c36;margin-bottom:6px">CASE SNAPSHOT</div>
+<div style="font:400 13px/1.5 'IBM Plex Sans',sans-serif;color:#4a4d43">A biotech client. A working prototype on top of an ELN everyone had written off as closed.</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+
+<div style="margin-top:56px;display:flex;justify-content:space-between;align-items:center;gap:40px;background:#393b34;border-radius:6px;padding:36px 44px">
+<div style="font:500 24px/1.35 'Space Grotesk',sans-serif;color:#fffce9;max-width:620px;text-wrap:pretty">Not sure which of these you need first? That is what the discovery conversation is for.</div>
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:500 15px/1 'IBM Plex Sans',sans-serif;color:#393b34;background:#f8a825;text-decoration:none;padding:16px 26px;border-radius:100px;white-space:nowrap">Schedule a Discovery Call</a>
+</div>
+</section>
+
+<footer style="background:#22241e">
+<div style="max-width:1280px;margin:0 auto;padding:64px 48px 40px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:56px">
+<div>
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+<img src="assets/logo-icon.png" alt="" style="height:34px;width:34px;display:block">
+<img src="assets/logo-wordmark-light.svg" alt="BitHippie" style="height:28px;display:block;position:relative;top:2.6px">
+</div>
+<p style="font:400 15px/1.6 'IBM Plex Sans',sans-serif;color:#b6bba6;margin:0;max-width:320px">Trusting in Nature's Wisdom, complemented by human ingenuity.</p>
+</div>
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8ea05c;text-transform:uppercase;margin-bottom:16px">Pages</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<a href="index.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Home</a>
+<a href="Capabilities.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Capabilities</a>
+<a href="Outcomes.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Outcomes</a>
+<a href="Engagement.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Engagement</a>
+<a href="Case Studies.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Case studies</a>
+<a href="Team.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Team</a>
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Schedule</a>
+</div>
+</div>
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8ea05c;text-transform:uppercase;margin-bottom:16px">Join the socials</div>
+<p style="font:400 15px/1.6 'IBM Plex Sans',sans-serif;color:#b6bba6;margin:0 0 14px;max-width:300px">Check out the <a href="https://www.youtube.com/@BrainwaveExchange" style="color:#f8a825">Brainwave Exchange Podcast</a> where we talk to humans making their mark on the world.</p>
+<div style="display:flex;gap:16px">
+<a href="https://www.linkedin.com/company/bithippie/" style="font:400 14px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">LinkedIn</a>
+<a href="https://www.youtube.com/@BrainwaveExchange" style="font:400 14px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">YouTube</a>
+<a href="https://open.spotify.com/show/55k8tssP1aOA06aZr3MsVQ" style="font:400 14px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Spotify</a>
+<a href="https://podcasts.apple.com/us/podcast/brainwave-exchange/id1710255399" style="font:400 14px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Apple</a>
+</div>
+</div>
+</div>
+<div style="max-width:1280px;margin:0 auto;padding:0 48px 40px">
+<div style="border-top:1px solid rgba(255,252,233,.12);padding-top:22px;font:400 13px/1 'IBM Plex Sans',sans-serif;color:#7d826f">© 2026 BitHippie LLC. All rights reserved.</div>
+</div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  jump(id) {
+    return (e) => {
+      e.preventDefault();
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.open = true;
+      const prev = el.style.boxShadow;
+      el.style.boxShadow = "0 0 0 2px #f8a825";
+      setTimeout(() => { el.style.boxShadow = prev; }, 1400);
+      try {
+        const r = el.getBoundingClientRect();
+        window.scrollBy({ top: r.top - 140, behavior: "smooth" });
+      } catch (err) {}
+    };
+  }
+  renderVals() {
+    const vals = {};
+    for (let i = 1; i <= 7; i++) vals["jA" + i] = this.jump("cap-a" + i);
+    return vals;
+  }
+}
+</script>
+</body>
+</html>

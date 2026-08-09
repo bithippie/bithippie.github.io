@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;height:100%;background:#fffce9;font-family:'IBM Plex Sans',system-ui,sans-serif}
+a{color:#a55c36;text-decoration:none}a:hover{color:#8ea05c}
+</style>
+<style>
+@media (max-height: 460px) {
+  #bh-scroller { scroll-snap-type: none !important; }
+  #bh-scroller section[data-screen-label] { height: auto !important; padding-bottom: 48px !important; }
+  #bh-scroller section[data-screen-label="02 Data platform"] { height: 560px !important; padding-bottom: 0 !important; }
+}
+</style>
+</helmet>
+
+<div id="bh-scroller" style="height:100dvh;overflow-y:auto;overflow-x:hidden;scroll-snap-type:y mandatory;background:#fffce9">
+
+<div id="bh-nav" style="position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(255,252,233,.94);backdrop-filter:blur(8px)">
+<header style="border-bottom:1px solid rgba(57,59,52,.12)">
+<nav style="max-width:1280px;margin:0 auto;padding:18px 48px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 40px">
+<a href="index.dc.html" style="display:flex;align-items:center;gap:10px">
+<img src="assets/logo-icon.png" alt="" style="height:36px;width:36px;display:block">
+<img src="assets/logo-wordmark.svg" alt="BitHippie" style="height:30px;display:block;position:relative;top:3px">
+</a>
+<div style="display:flex;align-items:center;gap:30px">
+<a href="Capabilities.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#4a4d43">Capabilities</a>
+<a href="Outcomes.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#4a4d43">Outcomes</a>
+<a href="Engagement.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#4a4d43">Engagement</a>
+<a href="Team.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#4a4d43">Team</a>
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:500 14px/1 'IBM Plex Sans',sans-serif;color:#393b34;background:#f8a825;padding:12px 20px;border-radius:100px">Schedule a Call</a>
+</div>
+</nav>
+</header>
+</div>
+
+<section data-screen-label="01 Opening" style="height:100dvh;scroll-snap-align:start;box-sizing:border-box;padding-top:104px;display:grid;grid-template-rows:1fr auto;position:relative;z-index:2;pointer-events:none">
+<div style="max-width:1280px;width:100%;margin:0 auto;padding:0 48px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;gap:34px">
+<h1 style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(28px,6.8vw,104px);line-height:1;color:#393b34;margin:0;letter-spacing:-.035em;white-space:nowrap">Don't Duct Tape Your Data!<sup style="font-size:.24em;font-weight:500;letter-spacing:.06em;vertical-align:super;position:relative;top:-.2em;left:.06em;opacity:.4">TM</sup></h1>
+<div style="font:500 13px/1.9 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#8ea05c;text-transform:uppercase">Drug development is hard enough. Let's not make it harder by being haphazard with our data. <br>Good data systems accelerate research.</div>
+</div>
+<div style="max-width:1280px;width:100%;margin:0 auto;padding:0 48px 40px;box-sizing:border-box;display:flex;align-items:center;gap:14px">
+<span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#a55c36;text-transform:uppercase">Scroll</span>
+<span style="width:44px;height:1px;background:rgba(57,59,52,.3);display:block"></span>
+</div>
+</section>
+
+<section data-screen-label="02 Data platform" style="height:100dvh;scroll-snap-align:start;box-sizing:border-box;padding-top:104px;display:grid;grid-template-rows:auto minmax(0,1fr);pointer-events:none;position:relative;z-index:0"><div id="sec2-head" style="max-width:1280px;width:100%;margin:0 auto;padding:clamp(14px,4vh,44px) 48px 0;box-sizing:border-box;display:grid;grid-template-columns:3fr 1fr;align-items:center;gap:28px 40px;pointer-events:auto">
+<div style="display:flex;flex-direction:column;gap:14px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#a55c36;text-transform:uppercase">What we build</div>
+<h2 style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:min(44px,3.2vw);line-height:1.05;color:#393b34;margin:0;letter-spacing:-.02em;text-wrap:pretty">The Data Platform</h2>
+<div style="font:500 11px/1.7 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#8ea05c;text-transform:uppercase">End-to-End Data Ops for Scientific Research, Target Identification, Drug Discovery and Development, <br>creating efficient business systems for BioTech.</div>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px">
+<a href="Case Studies.dc.html" style="font:500 16px/1 'IBM Plex Sans',sans-serif;color:#393b34;padding:17px 24px;border:1px solid rgba(57,59,52,.28);border-radius:100px;white-space:nowrap">See the case studies</a>
+</div>
+</div>
+<div id="bg-layer" style="position:fixed;left:0;top:220px;width:100%;height:60vh;z-index:1;opacity:.18;pointer-events:none;padding:clamp(8px,2vh,20px) 48px clamp(4px,1vh,10px);box-sizing:border-box;transition:opacity .35s ease">
+<div style="position:relative;width:100%;height:100%">
+<div style="position:absolute;inset:0;pointer-events:none;z-index:2">
+<div id="h-t-ingest" style="position:absolute;left:11.90%;top:1.2%;transform:translateX(-50%);white-space:nowrap;font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:1.8px;color:#393b34;opacity:.5;transition:opacity .3s ease">INGESTION</div>
+<div id="h-t-storage" style="position:absolute;left:32.54%;top:1.2%;transform:translateX(-50%);white-space:nowrap;font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:1.8px;color:#393b34;opacity:.5;transition:opacity .3s ease">STORAGE</div>
+<div id="h-t-analytics" style="position:absolute;left:63.25%;top:1.2%;transform:translateX(-50%);white-space:nowrap;font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:1.8px;color:#393b34;opacity:.5;transition:opacity .3s ease">ANALYTICS AND INTELLIGENCE</div>
+<div id="h-t-human" style="position:absolute;left:92.94%;top:1.2%;transform:translateX(-50%);white-space:nowrap;font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:1.8px;color:#393b34;opacity:.5;transition:opacity .3s ease">HUMAN IN THE LOOP</div>
+</div>
+<svg id="h" viewBox="20 0 1260 560" preserveAspectRatio="none" style="width:100%;height:100%;display:block;cursor:crosshair" aria-hidden="true">
+<defs>
+<clipPath id="h-ingtick-clip"><rect x="20" y="468" width="300" height="70"></rect></clipPath>
+<clipPath id="h-stor-clip"><rect x="328" y="468" width="204" height="70"></rect></clipPath>
+<clipPath id="h-anlog-clip"><rect x="540" y="470" width="554" height="64"></rect></clipPath>
+<clipPath id="h-hlog-clip"><rect x="1102" y="470" width="178" height="68"></rect></clipPath>
+</defs>
+
+<g id="h-m-ingest" style="opacity:.5;transition:opacity .3s ease">
+<rect data-fix="sq" data-cx="29" data-cy="120" data-w="10" data-h="10" x="20" y="115" width="10" height="10" fill="#a55c36"></rect>
+<rect data-fix="sq" data-cx="29" data-cy="220" data-w="10" data-h="10" x="20" y="215" width="10" height="10" fill="#a55c36"></rect>
+<rect data-fix="sq" data-cx="29" data-cy="320" data-w="10" data-h="10" x="20" y="315" width="10" height="10" fill="#a55c36"></rect>
+<path id="h-f1" d="M 44 120 C 150 120 220 175 328 218" fill="none" stroke="#393b34" stroke-opacity=".3" stroke-width="1"></path>
+<path id="h-f2" d="M 44 220 H 328" fill="none" stroke="#393b34" stroke-opacity=".3" stroke-width="1"></path>
+<path id="h-f3" d="M 44 320 C 150 320 220 265 328 222" fill="none" stroke="#393b34" stroke-opacity=".3" stroke-width="1"></path>
+<g id="h-parts-ingest"></g>
+<line x1="20" y1="460" x2="320" y2="460" stroke="#393b34" stroke-opacity=".28" stroke-width="1"></line>
+<g id="h-ingticks" clip-path="url(#h-ingtick-clip)"></g>
+</g>
+
+<g id="h-m-storage" style="opacity:.5;transition:opacity .3s ease">
+<rect x="328" y="131" width="204" height="178" fill="none" stroke="#393b34" stroke-opacity=".38" stroke-width="1"></rect>
+<rect id="h-bar0" x="336" y="139" width="188" height="18" fill="#393b34" fill-opacity=".1"></rect>
+<rect id="h-bar1" x="336" y="163" width="188" height="18" fill="#393b34" fill-opacity=".1"></rect>
+<rect id="h-bar2" x="336" y="187" width="188" height="18" fill="#393b34" fill-opacity=".1"></rect>
+<rect id="h-bar3" x="336" y="211" width="188" height="18" fill="#393b34" fill-opacity=".1"></rect>
+<rect id="h-bar4" x="336" y="235" width="188" height="18" fill="#393b34" fill-opacity=".1"></rect>
+<rect id="h-bar5" x="336" y="259" width="188" height="18" fill="#393b34" fill-opacity=".1"></rect>
+<rect id="h-bar6" x="336" y="283" width="188" height="18" fill="#393b34" fill-opacity=".1"></rect>
+<line x1="328" y1="460" x2="532" y2="460" stroke="#393b34" stroke-opacity=".28" stroke-width="1"></line>
+<g clip-path="url(#h-stor-clip)">
+<path id="h-stor-cold" d="" fill="#393b34" fill-opacity=".16"></path>
+<path id="h-stor-warm" d="" fill="#8ea05c" fill-opacity=".3"></path>
+<path id="h-stor-hot" d="" fill="#a55c36" fill-opacity=".4"></path>
+</g>
+</g>
+
+<g id="h-m-analytics" style="opacity:.5;transition:opacity .3s ease">
+<path id="h-l1" d="M 532 220 C 570 220 574 100 612 100 H 1020" fill="none" stroke="#393b34" stroke-opacity=".3" stroke-width="1"></path>
+<path id="h-l2" d="M 532 220 C 570 220 574 160 612 160 H 1020" fill="none" stroke="#393b34" stroke-opacity=".3" stroke-width="1"></path>
+<path id="h-l3" d="M 532 220 H 1020" fill="none" stroke="#393b34" stroke-opacity=".3" stroke-width="1"></path>
+<path id="h-l4" d="M 532 220 C 570 220 574 280 612 280 H 1020" fill="none" stroke="#393b34" stroke-opacity=".3" stroke-width="1"></path>
+<path id="h-l5" d="M 532 220 C 570 220 574 340 612 340 H 1020" fill="none" stroke="#393b34" stroke-opacity=".3" stroke-width="1"></path>
+<g stroke="#393b34" stroke-opacity=".18" stroke-width="9" stroke-dasharray="1.5 78">
+<line x1="634" y1="100" x2="1014" y2="100"></line>
+<line x1="634" y1="160" x2="1014" y2="160"></line>
+<line x1="634" y1="220" x2="1014" y2="220"></line>
+<line x1="634" y1="280" x2="1014" y2="280"></line>
+<line x1="634" y1="340" x2="1014" y2="340"></line>
+</g>
+<g id="h-parts-analytics"></g>
+<line x1="540" y1="460" x2="1094" y2="460" stroke="#393b34" stroke-opacity=".28" stroke-width="1"></line>
+<g clip-path="url(#h-anlog-clip)">
+<rect id="h-log-0" x="560" y="475" width="120" height="2.6" fill="#a55c36" fill-opacity=".38"></rect>
+<rect id="h-log-1" x="760" y="482" width="200" height="2.6" fill="#393b34" fill-opacity=".18"></rect>
+<rect id="h-log-2" x="650" y="489" width="90" height="2.6" fill="#8ea05c" fill-opacity=".3"></rect>
+<rect id="h-log-3" x="880" y="496" width="150" height="2.6" fill="#393b34" fill-opacity=".16"></rect>
+<rect id="h-log-4" x="600" y="503" width="240" height="2.6" fill="#a55c36" fill-opacity=".3"></rect>
+<rect id="h-log-5" x="960" y="510" width="110" height="2.6" fill="#8ea05c" fill-opacity=".26"></rect>
+<rect id="h-log-6" x="700" y="517" width="180" height="2.6" fill="#393b34" fill-opacity=".2"></rect>
+<rect id="h-log-7" x="820" y="524" width="70" height="2.6" fill="#8ea05c" fill-opacity=".3"></rect>
+</g>
+</g>
+
+<g id="h-m-human" style="opacity:.5;transition:opacity .3s ease">
+<rect x="1102" y="95" width="178" height="120" fill="none" stroke="#393b34" stroke-opacity=".38" stroke-width="1"></rect>
+<rect x="1102" y="95" width="178" height="18" fill="#393b34" fill-opacity=".16"></rect>
+<ellipse data-fix="dot" data-r="2.3" cx="1112" cy="104" rx="2.3" ry="2.3" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="2.3" cx="1121" cy="104" rx="2.3" ry="2.3" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="2.3" cx="1130" cy="104" rx="2.3" ry="2.3" fill="#393b34" fill-opacity=".34"></ellipse>
+<line x1="1158" y1="120" x2="1158" y2="208" stroke="#393b34" stroke-opacity=".16" stroke-width="1"></line>
+<rect x="1112" y="123" width="38" height="5" fill="#393b34" fill-opacity=".22"></rect>
+<rect x="1112" y="134" width="30" height="4" fill="#393b34" fill-opacity=".13"></rect>
+<rect x="1112" y="143" width="36" height="4" fill="#393b34" fill-opacity=".13"></rect>
+<rect x="1112" y="152" width="24" height="4" fill="#393b34" fill-opacity=".13"></rect>
+<rect x="1112" y="167" width="34" height="4" fill="#8ea05c" fill-opacity=".4"></rect>
+<rect x="1112" y="176" width="28" height="4" fill="#a55c36" fill-opacity=".38"></rect>
+<rect x="1112" y="185" width="32" height="4" fill="#393b34" fill-opacity=".22"></rect>
+<rect x="1112" y="194" width="22" height="4" fill="#8ea05c" fill-opacity=".28"></rect>
+<ellipse data-fix="dot" data-r="1.7" cx="1200.6" cy="153.3" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1195.7" cy="153.2" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1182.3" cy="150.9" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1200.7" cy="147.4" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1179.2" cy="145.0" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1182.6" cy="136.2" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1196.3" cy="148.4" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1207.4" cy="154.7" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1204.8" cy="134.9" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1188.7" cy="145.5" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1178.9" cy="140.6" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1208.1" cy="146.8" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1174.6" cy="135.9" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1176.4" cy="133.6" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1191.5" cy="147.8" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1187.7" cy="151.5" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1183.2" cy="151.0" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".55"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1245.1" cy="136.1" rx="1.7" ry="1.7" fill="#a55c36" fill-opacity=".5"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1246.5" cy="131.0" rx="1.7" ry="1.7" fill="#a55c36" fill-opacity=".5"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1263.3" cy="132.5" rx="1.7" ry="1.7" fill="#a55c36" fill-opacity=".5"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1239.5" cy="135.4" rx="1.7" ry="1.7" fill="#a55c36" fill-opacity=".5"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1256.6" cy="135.8" rx="1.7" ry="1.7" fill="#a55c36" fill-opacity=".5"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1273.0" cy="122.6" rx="1.7" ry="1.7" fill="#a55c36" fill-opacity=".5"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1254.2" cy="148.1" rx="1.7" ry="1.7" fill="#a55c36" fill-opacity=".5"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1254.4" cy="120.0" rx="1.7" ry="1.7" fill="#a55c36" fill-opacity=".5"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1259.4" cy="127.4" rx="1.7" ry="1.7" fill="#a55c36" fill-opacity=".5"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1249.6" cy="124.6" rx="1.7" ry="1.7" fill="#a55c36" fill-opacity=".5"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1249.5" cy="127.9" rx="1.7" ry="1.7" fill="#a55c36" fill-opacity=".5"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1237.2" cy="136.2" rx="1.7" ry="1.7" fill="#a55c36" fill-opacity=".5"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1249.1" cy="142.2" rx="1.7" ry="1.7" fill="#a55c36" fill-opacity=".5"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1208.0" cy="176.4" rx="1.7" ry="1.7" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1205.4" cy="179.8" rx="1.7" ry="1.7" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1214.6" cy="185.2" rx="1.7" ry="1.7" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1216.9" cy="193.2" rx="1.7" ry="1.7" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1184.2" cy="173.4" rx="1.7" ry="1.7" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1187.3" cy="186.8" rx="1.7" ry="1.7" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1202.2" cy="193.1" rx="1.7" ry="1.7" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1190.4" cy="196.9" rx="1.7" ry="1.7" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1181.0" cy="181.7" rx="1.7" ry="1.7" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1217.5" cy="190.4" rx="1.7" ry="1.7" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1193.5" cy="191.1" rx="1.7" ry="1.7" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1196.0" cy="179.0" rx="1.7" ry="1.7" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1226.1" cy="181.8" rx="1.7" ry="1.7" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1214.0" cy="194.0" rx="1.7" ry="1.7" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1199.1" cy="179.2" rx="1.7" ry="1.7" fill="#393b34" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1255.8" cy="179.3" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1242.2" cy="175.4" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1239.5" cy="171.5" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1247.6" cy="178.7" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1245.4" cy="175.0" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1258.0" cy="167.5" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1243.4" cy="178.6" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1231.7" cy="167.5" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.7" cx="1255.4" cy="163.9" rx="1.7" ry="1.7" fill="#8ea05c" fill-opacity=".34"></ellipse>
+<ellipse data-fix="dot" data-r="1.4" cx="1231.2" cy="161.7" rx="1.4" ry="1.4" fill="#393b34" fill-opacity=".2"></ellipse>
+<ellipse data-fix="dot" data-r="1.4" cx="1231.0" cy="160.3" rx="1.4" ry="1.4" fill="#393b34" fill-opacity=".2"></ellipse>
+<ellipse data-fix="dot" data-r="1.4" cx="1207.0" cy="146.6" rx="1.4" ry="1.4" fill="#393b34" fill-opacity=".2"></ellipse>
+<ellipse data-fix="dot" data-r="1.4" cx="1201.2" cy="126.9" rx="1.4" ry="1.4" fill="#393b34" fill-opacity=".2"></ellipse>
+<ellipse data-fix="dot" data-r="1.4" cx="1238.4" cy="184.9" rx="1.4" ry="1.4" fill="#393b34" fill-opacity=".2"></ellipse>
+<ellipse data-fix="dot" data-r="1.4" cx="1232.4" cy="136.6" rx="1.4" ry="1.4" fill="#393b34" fill-opacity=".2"></ellipse>
+<line x1="1191" y1="215" x2="1191" y2="235" stroke="#393b34" stroke-opacity=".22" stroke-width="1" stroke-dasharray="2 4"></line>
+<rect x="1102" y="235" width="178" height="120" fill="none" stroke="#393b34" stroke-opacity=".38" stroke-width="1"></rect>
+<rect x="1102" y="235" width="178" height="18" fill="#393b34" fill-opacity=".16"></rect>
+<rect x="1116" y="300" width="18" height="40" fill="#393b34" fill-opacity=".18"></rect>
+<rect x="1146" y="278" width="18" height="62" fill="#393b34" fill-opacity=".2"></rect>
+<rect x="1176" y="312" width="18" height="28" fill="#393b34" fill-opacity=".18"></rect>
+<rect x="1206" y="265" width="18" height="75" fill="#8ea05c" fill-opacity=".4"></rect>
+<rect x="1236" y="290" width="18" height="50" fill="#393b34" fill-opacity=".2"></rect>
+<line x1="1102" y1="460" x2="1280" y2="460" stroke="#393b34" stroke-opacity=".28" stroke-width="1"></line>
+<g clip-path="url(#h-hlog-clip)">
+<rect id="h-alog-0" x="1108" y="474" width="55" height="3" fill="#a55c36" fill-opacity=".4"></rect>
+<rect id="h-alog-1" x="1108" y="482" width="80" height="3" fill="#393b34" fill-opacity=".18"></rect>
+<rect id="h-alog-2" x="1108" y="490" width="35" height="3" fill="#8ea05c" fill-opacity=".32"></rect>
+<rect id="h-alog-3" x="1108" y="497" width="65" height="3" fill="#393b34" fill-opacity=".16"></rect>
+<rect id="h-alog-4" x="1108" y="505" width="45" height="3" fill="#a55c36" fill-opacity=".3"></rect>
+<rect id="h-alog-5" x="1108" y="512" width="70" height="3" fill="#8ea05c" fill-opacity=".28"></rect>
+<rect id="h-alog-6" x="1108" y="520" width="30" height="3" fill="#393b34" fill-opacity=".2"></rect>
+<rect id="h-alog-7" x="1108" y="527" width="60" height="3" fill="#8ea05c" fill-opacity=".3"></rect>
+</g>
+</g>
+
+<g id="h-backprop" style="opacity:.5;transition:opacity .3s ease">
+<path id="h-ret-p1" d="M 1020 340 C 1058 362 1058 398 1020 420 H 470 C 430 420 424 392 430 311" fill="none" stroke="#8ea05c" stroke-opacity=".45" stroke-width="1" stroke-dasharray="3 4"></path>
+<path id="h-ret-p2" d="M 1191 355 V 420 H 470 C 430 420 424 392 430 311" fill="none" stroke="#8ea05c" stroke-opacity=".45" stroke-width="1" stroke-dasharray="3 4"></path>
+<g id="h-parts-ret"></g>
+</g>
+
+<rect id="h-hz-ingest" x="20" y="8" width="300" height="544" fill="transparent"></rect>
+<rect id="h-hz-storage" x="324" y="8" width="208" height="544" fill="transparent"></rect>
+<rect id="h-hz-analytics" x="540" y="8" width="554" height="544" fill="transparent"></rect>
+<rect id="h-hz-human" x="1098" y="8" width="182" height="544" fill="transparent"></rect>
+</svg>
+</div>
+</div>
+
+</section>
+
+<section data-screen-label="03 Closing" style="min-height:100dvh;scroll-snap-align:start;box-sizing:border-box;padding-top:104px;display:grid;grid-template-rows:1fr auto;position:relative;z-index:2;background:#fffce9">
+<div style="max-width:1280px;width:100%;margin:0 auto;padding:0 48px;box-sizing:border-box;display:grid;grid-template-columns:1.2fr 1fr;gap:72px;align-items:center">
+<div style="display:flex;flex-direction:column;gap:26px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#a55c36;text-transform:uppercase">Start here</div>
+<h2 style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:min(58px,4.2vw);line-height:1.03;color:#393b34;margin:0;letter-spacing:-.03em;max-width:16ch;text-wrap:pretty">Tell us what your scientists are working around.</h2>
+<div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:500 16px/1 'IBM Plex Sans',sans-serif;color:#393b34;background:#f8a825;padding:18px 30px;border-radius:100px;white-space:nowrap">Schedule a Discovery Call</a>
+<a href="Case Studies.dc.html" style="font:500 16px/1 'IBM Plex Sans',sans-serif;color:#393b34;padding:18px 26px;border:1px solid rgba(57,59,52,.28);border-radius:100px;white-space:nowrap">See the case studies</a>
+</div>
+</div>
+<div style="border-left:2px solid #8ea05c;padding-left:26px;display:flex;flex-direction:column;gap:2px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#a55c36;text-transform:uppercase;margin-bottom:16px">You bring the bio; we bring the tech.</div>
+<a href="Capabilities.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:20px;padding:13px 0;border-bottom:1px solid rgba(57,59,52,.14);font:400 17px/1.3 'IBM Plex Sans',sans-serif;color:#393b34">Capabilities<span style="font:300 18px/1 'Space Grotesk',sans-serif;color:#8ea05c">→</span></a>
+<a href="Outcomes.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:20px;padding:13px 0;border-bottom:1px solid rgba(57,59,52,.14);font:400 17px/1.3 'IBM Plex Sans',sans-serif;color:#393b34">Outcomes<span style="font:300 18px/1 'Space Grotesk',sans-serif;color:#8ea05c">→</span></a>
+<a href="Case Studies.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:20px;padding:13px 0;border-bottom:1px solid rgba(57,59,52,.14);font:400 17px/1.3 'IBM Plex Sans',sans-serif;color:#393b34">Case studies<span style="font:300 18px/1 'Space Grotesk',sans-serif;color:#8ea05c">→</span></a>
+<a href="Engagement.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:20px;padding:13px 0;border-bottom:1px solid rgba(57,59,52,.14);font:400 17px/1.3 'IBM Plex Sans',sans-serif;color:#393b34">Engagement<span style="font:300 18px/1 'Space Grotesk',sans-serif;color:#8ea05c">→</span></a>
+<a href="Team.dc.html" style="display:flex;justify-content:space-between;align-items:center;gap:20px;padding:13px 0;font:400 17px/1.3 'IBM Plex Sans',sans-serif;color:#393b34">Team<span style="font:300 18px/1 'Space Grotesk',sans-serif;color:#8ea05c">→</span></a>
+</div>
+</div>
+<footer style="box-sizing:border-box;background:#22241e">
+<div style="max-width:1280px;margin:0 auto;padding:32px 48px 20px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:56px;width:100%;box-sizing:border-box">
+<div>
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+<img src="assets/logo-icon.png" alt="" style="height:34px;width:34px;display:block">
+<img src="assets/logo-wordmark-light.svg" alt="BitHippie" style="height:28px;display:block;position:relative;top:2.6px">
+</div>
+<p style="font:400 15px/1.6 'IBM Plex Sans',sans-serif;color:#b6bba6;margin:0;max-width:320px">Trusting in Nature's Wisdom, complemented by human ingenuity.</p>
+</div>
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8ea05c;text-transform:uppercase;margin-bottom:16px">Pages</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<a href="index.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Home</a>
+<a href="Capabilities.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Capabilities</a>
+<a href="Outcomes.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Outcomes</a>
+<a href="Engagement.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Engagement</a>
+<a href="Case Studies.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Case studies</a>
+<a href="Team.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Team</a>
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Schedule</a>
+</div>
+</div>
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8ea05c;text-transform:uppercase;margin-bottom:16px">Join the socials</div>
+<p style="font:400 15px/1.6 'IBM Plex Sans',sans-serif;color:#b6bba6;margin:0 0 14px;max-width:300px">Check out the <a href="https://www.youtube.com/@BrainwaveExchange" style="color:#f8a825">Brainwave Exchange Podcast</a> where we talk to humans making their mark on the world.</p>
+<div style="display:flex;gap:16px">
+<a href="https://www.linkedin.com/company/bithippie/" style="font:400 14px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">LinkedIn</a>
+<a href="https://www.youtube.com/@BrainwaveExchange" style="font:400 14px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">YouTube</a>
+<a href="https://open.spotify.com/show/55k8tssP1aOA06aZr3MsVQ" style="font:400 14px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Spotify</a>
+<a href="https://podcasts.apple.com/us/podcast/brainwave-exchange/id1710255399" style="font:400 14px/1 'IBM Plex Sans',sans-serif;color:#cfd3bd;text-decoration:none">Apple</a>
+</div>
+</div>
+</div>
+<div style="max-width:1280px;margin:0 auto;padding:0 48px 20px;width:100%;box-sizing:border-box">
+<div style="border-top:1px solid rgba(255,252,233,.12);padding-top:16px;font:400 13px/1 'IBM Plex Sans',sans-serif;color:#7d826f">© 2026 BitHippie LLC. All rights reserved.</div>
+</div>
+</footer>
+</section>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;speed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.25,&quot;max&quot;:2.5,&quot;step&quot;:0.25,&quot;unit&quot;:&quot;x&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Sparse&quot;,&quot;Moderate&quot;,&quot;Busy&quot;],&quot;default&quot;:&quot;Moderate&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+const NS = 'http://www.w3.org/2000/svg';
+const INK = '#393b34', RUST = '#a55c36', AMBER = '#f8a825', OLIVE = '#8ea05c';
+const VB_W = 1260, VB_H = 560;
+const g = (id) => document.getElementById(id);
+const hex = (h) => [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)];
+function lerpHex(a, b, t) {
+  const A = hex(a), B = hex(b);
+  return 'rgb(' + Math.round(A[0] + (B[0] - A[0]) * t) + ',' + Math.round(A[1] + (B[1] - A[1]) * t) + ',' + Math.round(A[2] + (B[2] - A[2]) * t) + ')';
+}
+const dots = [];
+function dot(parent, r, fill, op) {
+  const c = document.createElementNS(NS, 'ellipse');
+  c.setAttribute('rx', r); c.setAttribute('ry', r); c.dataset.r = r;
+  c.setAttribute('fill', fill); c.setAttribute('fill-opacity', op == null ? 1 : op);
+  parent.appendChild(c); dots.push(c); return c;
+}
+// the svg is stretched (preserveAspectRatio=none), so anything that must stay round or square
+// gets its geometry divided by the per-axis scale
+function rescaleDots(svg) {
+  const r = svg.getBoundingClientRect();
+  if (!r.width || !r.height) return;
+  const sx = r.width / VB_W, sy = r.height / VB_H;
+  for (const d of dots) { const base = +d.dataset.r; d.setAttribute('rx', (base / sx).toFixed(3)); d.setAttribute('ry', (base / sy).toFixed(3)); }
+  svg.querySelectorAll('[data-fix]').forEach((el) => {
+    if (el.dataset.fix === 'sq') {
+      const w = +el.dataset.w / sx, h = +el.dataset.h / sy;
+      el.setAttribute('width', w.toFixed(2)); el.setAttribute('height', h.toFixed(2));
+      el.setAttribute('x', (+el.dataset.cx - w / 2).toFixed(2)); el.setAttribute('y', (+el.dataset.cy - h / 2).toFixed(2));
+    } else {
+      const rr = +el.dataset.r;
+      el.setAttribute('rx', (rr / sx).toFixed(3)); el.setAttribute('ry', (rr / sy).toFixed(3));
+    }
+  });
+}
+const DENS = { Sparse: 0.6, Moderate: 1, Busy: 1.6 };
+const FADED = '0.5';
+// each module lights itself; the back-propagation line belongs to both of its contributors
+const MODULES = {
+  ingest: ['h-m-ingest', 'h-t-ingest'],
+  storage: ['h-m-storage', 'h-t-storage'],
+  analytics: ['h-m-analytics', 'h-t-analytics', 'h-backprop'],
+  human: ['h-m-human', 'h-t-human', 'h-backprop']
+};
+const ALL_GROUPS = ['h-m-ingest', 'h-m-storage', 'h-m-analytics', 'h-m-human', 'h-backprop',
+  'h-t-ingest', 'h-t-storage', 'h-t-analytics', 'h-t-human'];
+
+class Component extends DCLogic {
+  componentDidMount() {
+    this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.setup();
+    const svg = g('h');
+    if (svg) { this.ro = new ResizeObserver(() => rescaleDots(svg)); this.ro.observe(svg); }
+    let last = performance.now();
+    const tick = (now) => {
+      const dt = Math.min(60, now - last) / 1000 * (this.reduced ? 0 : (this.props.speed ?? 1));
+      last = now;
+      for (const u of this.updaters) { try { u(dt, now); } catch (e) { } }
+      this.raf = requestAnimationFrame(tick);
+    };
+    this.raf = requestAnimationFrame(tick);
+    this.syncNav();
+    this.syncLayer();
+  }
+
+  // the chart is a fixed background layer: it sits exactly where section 2's chart row would be,
+  // so it never moves between screens — only its opacity and hit-testing change
+  syncLayer() {
+    const layer = g('bg-layer'), sc = g('bh-scroller'), nav = g('bh-nav'), head = g('sec2-head');
+    if (!layer || !sc) return;
+    const place = () => {
+      const navH = nav ? nav.getBoundingClientRect().height : 0;
+      const headH = head ? head.getBoundingClientRect().height : 0;
+      const vw = window.innerWidth, vh = window.innerHeight;
+      const w = Math.min(1280, vw);
+      layer.style.left = Math.max(0, (vw - w) / 2) + 'px';
+      layer.style.width = w + 'px';
+      const h = Math.max(160, vh - navH - headH);
+      layer.style.top = (navH + headH) + 'px';
+      layer.style.height = h + 'px';
+      // section 1 parks it centered in the viewport; section 2 is its resting position
+      this.dyHome = (vh - h) / 2 - (navH + headH);
+    };
+    const onScroll = () => {
+      const p = sc.clientHeight ? sc.scrollTop / sc.clientHeight : 0;
+      const op = p <= 1 ? 0.34 + 0.66 * Math.max(0, p) : Math.max(0, 1 - (p - 1) * 1.6);
+      layer.style.opacity = op.toFixed(3);
+      const t = Math.max(0, Math.min(1, p));
+      const ease = t * t * (3 - 2 * t);
+      layer.style.transform = 'translateY(' + ((this.dyHome || 0) * (1 - ease)).toFixed(1) + 'px)';
+      // storage reads far heavier than the rest, so hold it back until page 2
+      const stor = g('h-m-storage');
+      const damp = () => { if (stor) stor.style.opacity = (0.16 + 0.34 * ease).toFixed(3); };
+      const live = p > 0.8 && p < 1.2;
+      if (live !== this.live) {
+        this.live = live;
+        if (!live && this.clearHover) this.clearHover();
+      }
+      if (!live) damp();
+    };
+    place(); onScroll();
+    this.layerRO = new ResizeObserver(() => { place(); onScroll(); });
+    this.layerRO.observe(sc);
+    if (nav) this.layerRO.observe(nav);
+    if (head) this.layerRO.observe(head);
+    // the layer never takes pointer events (that was eating the scroll), so hover is resolved
+    // geometrically: cursor position -> viewBox x -> module zone
+    const ZONES = [['ingest', 20, 322], ['storage', 322, 536], ['analytics', 536, 1096], ['human', 1096, 1280]];
+    if (this._move) window.removeEventListener('mousemove', this._move, true);
+    this._move = (e) => {
+      if (!this.live || !this.setHover) return;
+      const svg = g('h'); if (!svg) return;
+      const r = svg.getBoundingClientRect();
+      if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) {
+        if (this.hoverKey) { this.hoverKey = null; this.setHover(null); }
+        return;
+      }
+      const vx = 20 + (e.clientX - r.left) / r.width * VB_W;
+      const z = ZONES.find((q) => vx >= q[1] && vx < q[2]);
+      const key = z ? z[0] : null;
+      if (key !== this.hoverKey) { this.hoverKey = key; this.setHover(key); }
+    };
+    window.addEventListener('mousemove', this._move, true);
+    this._sc = sc; this._onScroll = onScroll;
+    sc.addEventListener('scroll', onScroll, { passive: true });
+  }
+  // the fixed nav wraps to two rows at narrow widths, so section padding must track its real height
+  syncNav() {
+    const nav = g('bh-nav');
+    if (!nav) return;
+    const apply = () => {
+      const h = Math.ceil(nav.getBoundingClientRect().height);
+      document.querySelectorAll('section[data-screen-label]').forEach((s) => { s.style.paddingTop = h + 'px'; });
+    };
+    apply();
+    this.navRO = new ResizeObserver(apply);
+    this.navRO.observe(nav);
+  }
+  componentDidUpdate(prev) { if (prev.density !== this.props.density) this.setup(); }
+  componentWillUnmount() {
+    cancelAnimationFrame(this.raf);
+    if (this.ro) this.ro.disconnect();
+    if (this.navRO) this.navRO.disconnect();
+    if (this.layerRO) this.layerRO.disconnect();
+    if (this._sc && this._onScroll) this._sc.removeEventListener('scroll', this._onScroll);
+    if (this._move) window.removeEventListener('mousemove', this._move, true);
+  }
+
+  setup() {
+    this.updaters = [];
+    const hosts = ['h-parts-ingest', 'h-parts-analytics', 'h-parts-ret'].map(g);
+    if (!hosts[0]) return;
+    hosts.forEach((n) => { if (n) n.innerHTML = ''; });
+    dots.length = 0;
+    this.k = DENS[this.props.density] ?? 1;
+    this.build(hosts[0], hosts[1], hosts[2]);
+    const svg = g('h'); if (svg) rescaleDots(svg);
+    const t0 = performance.now();
+    for (let i = 0; i < 150; i++) for (const u of this.updaters) { try { u(1 / 30, t0 + i * 33); } catch (e) { } }
+  }
+
+  build(hIngest, hAnalytics, hRet) {
+    const P = (id) => { const el = g(id); return el ? { el, len: el.getTotalLength() } : null; };
+    const feeds = ['h-f1', 'h-f2', 'h-f3'].map(P).filter(Boolean);
+    const lanes = ['h-l1', 'h-l2', 'h-l3', 'h-l4', 'h-l5'].map(P).filter(Boolean);
+    const rets = ['h-ret-p1', 'h-ret-p2'].map(P).filter(Boolean);
+    const barEls = [0, 1, 2, 3, 4, 5, 6].map((i) => g('h-bar' + i)).filter(Boolean);
+    const fill = barEls.map(() => 0.04), pulse = barEls.map(() => 0);
+    let bi = 0;
+    const hit = () => { bi = (bi + 1) % barEls.length; pulse[bi] = 0.5; fill[bi] = Math.min(0.5, fill[bi] + 0.05); };
+
+    const parts = [];
+    const nFeed = Math.max(2, Math.round(4 * this.k)), nLane = Math.max(2, Math.round(5 * this.k)), nRet = Math.max(2, Math.round(5 * this.k));
+    feeds.forEach((p) => { for (let i = 0; i < nFeed; i++) parts.push({ p, t: i / nFeed + Math.random() * 0.05, sp: 0.15 + Math.random() * 0.07, kind: 'feed', el: dot(hIngest, 2.8, RUST, 0.9) }); });
+    lanes.forEach((p) => { for (let i = 0; i < nLane; i++) parts.push({ p, t: Math.random(), sp: 0.1 + Math.random() * 0.06, kind: 'lane', el: dot(hAnalytics, 2.6, AMBER, 0.95) }); });
+    rets.forEach((p) => { for (let i = 0; i < nRet; i++) parts.push({ p, t: i / nRet, sp: 0.07 + Math.random() * 0.03, kind: 'ret', el: dot(hRet, 2.1, OLIVE, 0.7) }); });
+
+    // INGESTION — discrete arrival events: irregular vertical ticks drifting right-to-left,
+    // with clusters and dead gaps, because batches never land on a metronome
+    const ING_X0 = 20, ING_X1 = 320, ING_BASE = 538;
+    const tickHost = g('h-ingticks');
+    const ticks = [];
+    if (tickHost) {
+      let cursor = ING_X0;
+      while (cursor < ING_X1) {
+        const burst = 1 + Math.floor(Math.random() * 4);
+        for (let b = 0; b < burst && cursor < ING_X1; b++) {
+          const big = Math.random() < 0.16;
+          const el = document.createElementNS(NS, 'line');
+          el.setAttribute('stroke', big ? RUST : INK);
+          el.setAttribute('stroke-opacity', big ? '.5' : '.34');
+          el.setAttribute('stroke-width', '1.6');
+          tickHost.appendChild(el);
+          ticks.push({ el, x: cursor, h: (big ? 34 : 10) + Math.random() * (big ? 22 : 22) });
+          cursor += 3 + Math.random() * 7;
+        }
+        cursor += 6 + Math.random() * 26;
+      }
+    }
+    const stepTicks = (dt) => {
+      const speed = 16;
+      let maxX = -Infinity;
+      for (const t of ticks) if (t.x > maxX) maxX = t.x;
+      for (const t of ticks) {
+        t.x -= speed * dt;
+        if (t.x < ING_X0 - 4) {
+          const big = Math.random() < 0.16;
+          t.x = maxX + (Math.random() < 0.45 ? 3 + Math.random() * 7 : 10 + Math.random() * 28);
+          maxX = t.x;
+          t.h = (big ? 34 : 10) + Math.random() * 22;
+          t.el.setAttribute('stroke', big ? RUST : INK);
+          t.el.setAttribute('stroke-opacity', big ? '.5' : '.34');
+        }
+        t.el.setAttribute('x1', t.x.toFixed(1)); t.el.setAttribute('x2', t.x.toFixed(1));
+        t.el.setAttribute('y1', (ING_BASE - t.h).toFixed(1)); t.el.setAttribute('y2', ING_BASE);
+      }
+    };
+
+    // STORAGE — three tiers stacked from the baseline. Hot data lands on top and is jittery,
+    // volume migrates downward into warm and then cold, and cold sawtooths when it archives.
+    const STO_X0 = 328, STO_X1 = 532, STO_BASE = 538, STO_H = 62, STO_N = 30;
+    const storEls = { cold: g('h-stor-cold'), warm: g('h-stor-warm'), hot: g('h-stor-hot') };
+    const mk = (v) => new Array(STO_N).fill(v);
+    let sCold = mk(0.16), sWarm = mk(0.14), sHot = mk(0.1);
+    let cold = 0.16, warm = 0.14, hot = 0.1, storAcc = 0;
+    const stepStorage = (dt) => {
+      if (!storEls.cold) return;
+      storAcc += dt; if (storAcc < 0.2) return; storAcc = 0;
+      hot = Math.max(0.05, Math.min(0.22, hot + (Math.random() - 0.45) * 0.05));
+      const toWarm = hot * 0.06, toCold = warm * 0.035;
+      warm = Math.min(0.3, warm + toWarm - toCold);
+      cold = cold + toCold + 0.004;
+      if (cold > 0.52) { cold = 0.12; }        // archive sweep
+      sCold.shift(); sCold.push(cold);
+      sWarm.shift(); sWarm.push(warm);
+      sHot.shift(); sHot.push(hot);
+      const px = (i) => STO_X0 + (STO_X1 - STO_X0) * i / (STO_N - 1);
+      const band = (lowArr, hiArr) => {
+        let d = 'M ' + px(0).toFixed(1) + ' ' + (STO_BASE - lowArr[0] * STO_H).toFixed(1);
+        for (let i = 1; i < STO_N; i++) d += ' L ' + px(i).toFixed(1) + ' ' + (STO_BASE - lowArr[i] * STO_H).toFixed(1);
+        for (let i = STO_N - 1; i >= 0; i--) d += ' L ' + px(i).toFixed(1) + ' ' + (STO_BASE - hiArr[i] * STO_H).toFixed(1);
+        return d + ' Z';
+      };
+      const zero = mk(0);
+      const lvl1 = sCold;
+      const lvl2 = sCold.map((v, i) => v + sWarm[i]);
+      const lvl3 = lvl2.map((v, i) => v + sHot[i]);
+      storEls.cold.setAttribute('d', band(zero, lvl1));
+      storEls.warm.setAttribute('d', band(lvl1, lvl2));
+      storEls.hot.setAttribute('d', band(lvl2, lvl3));
+    };
+
+    // analytics: horizontal, right-to-left, one bar per lane so lanes can never overlap
+    const makeHLogScroll = (ids, x0, x1, minW, maxW, baseSpeed) => {
+      const rows = ids.map(g).filter(Boolean).map((el, i) => ({ el, x: +el.getAttribute('x'), w: +el.getAttribute('width'), speed: baseSpeed + i * (baseSpeed * 0.12) }));
+      return (dt) => {
+        for (const s of rows) {
+          s.x -= s.speed * dt;
+          if (s.x + s.w < x0) { s.w = minW + Math.random() * (maxW - minW); s.x = x1; s.el.setAttribute('width', s.w.toFixed(1)); }
+          s.el.setAttribute('x', s.x.toFixed(1));
+        }
+      };
+    };
+    const stepAnLogs = makeHLogScroll(['h-log-0', 'h-log-1', 'h-log-2', 'h-log-3', 'h-log-4', 'h-log-5', 'h-log-6', 'h-log-7'], 540, 1094, 60, 300, 40);
+
+    // human: vertical, bottom-to-top; shared speed + fixed phase offset means rows never cross
+    const hashRand = (seed) => { const x = Math.sin(seed * 12.9898) * 43758.5453; return x - Math.floor(x); };
+    const makeVLogScroll = (ids, yTop, yBottom, minW, maxW, baseSpeed) => {
+      const rows = ids.map(g).filter(Boolean);
+      const n = rows.length, span = yBottom - yTop, spacing = span / n;
+      const wrapped = rows.map(() => -1);
+      let pos = 0;
+      return (dt) => {
+        pos += baseSpeed * dt;
+        rows.forEach((el, i) => {
+          const raw = pos + i * spacing;
+          const phase = ((raw % span) + span) % span;
+          const wrapIdx = Math.floor(raw / span);
+          if (wrapIdx !== wrapped[i]) { wrapped[i] = wrapIdx; el.setAttribute('width', (minW + hashRand(wrapIdx * 17 + i * 31) * (maxW - minW)).toFixed(1)); }
+          el.setAttribute('y', (yBottom - phase).toFixed(2));
+        });
+      };
+    };
+    const stepHumanLogs = makeVLogScroll(['h-alog-0', 'h-alog-1', 'h-alog-2', 'h-alog-3', 'h-alog-4', 'h-alog-5', 'h-alog-6', 'h-alog-7'], 474, 534, 20, 100, 12);
+
+    this.updaters.push((dt, now) => {
+      let energy = 0;
+      for (const q of parts) {
+        q.t += q.sp * dt;
+        if (q.t >= 1) { q.t -= 1; if (q.kind === 'feed' || q.kind === 'ret') hit(); }
+        const pt = q.p.el.getPointAtLength(q.t * q.p.len);
+        q.el.setAttribute('cx', pt.x.toFixed(2)); q.el.setAttribute('cy', pt.y.toFixed(2));
+        if (q.kind === 'lane') { q.el.setAttribute('fill', lerpHex(AMBER, OLIVE, Math.min(1, q.t * 1.5))); energy += q.t < 0.5 ? 0.04 : 0.01; }
+      }
+      for (let i = 0; i < barEls.length; i++) {
+        pulse[i] *= Math.exp(-3.2 * dt);
+        fill[i] = Math.max(0.04, fill[i] - 0.012 * dt);
+        barEls[i].setAttribute('fill-opacity', (0.09 + fill[i] + pulse[i]).toFixed(3));
+      }
+      stepTicks(dt);
+      stepStorage(dt);
+      stepAnLogs(dt);
+      stepHumanLogs(dt);
+    });
+
+    const set = (key) => {
+      ALL_GROUPS.forEach((id) => { const n = g(id); if (n) n.style.opacity = FADED; });
+      if (key && MODULES[key]) MODULES[key].forEach((id) => { const n = g(id); if (n) n.style.opacity = '1'; });
+    };
+    Object.keys(MODULES).forEach((key) => {
+      const r = g('h-hz-' + key); if (!r || r.dataset.wired) return;
+      r.dataset.wired = '1';
+      r.addEventListener('mouseenter', () => set(key));
+      r.addEventListener('mouseleave', () => set(null));
+    });
+    this.setHover = (key) => set(key);
+    this.clearHover = () => { this.hoverKey = null; set(null); };
+    const svg = g('h');
+    if (svg && !svg.dataset.wired) { svg.dataset.wired = '1'; svg.addEventListener('mouseleave', () => set(null)); }
+  }
+
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

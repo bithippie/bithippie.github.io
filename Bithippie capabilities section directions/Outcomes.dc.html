@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;height:100%;background:#fffce9;font-family:'IBM Plex Sans',system-ui,sans-serif}
+a{color:#a55c36;text-decoration:none}a:hover{color:#8ea05c}
+</style>
+</helmet>
+
+<div style="min-height:100dvh;background:#fffce9;display:flex;flex-direction:column">
+<div id="bh-nav" style="position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(255,252,233,.94);backdrop-filter:blur(8px)">
+<header style="border-bottom:1px solid rgba(57,59,52,.12)">
+<nav style="max-width:1280px;margin:0 auto;padding:18px 48px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 40px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<a href="index.dc.html" style="display:flex;align-items:center;gap:10px">
+<img src="assets/logo-icon.png" alt="" style="height:36px;width:36px;display:block">
+<img src="assets/logo-wordmark.svg" alt="BitHippie" style="height:30px;display:block;position:relative;top:3px">
+</a>
+<span style="font:500 11px/1.4 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#8ea05c;text-transform:uppercase;white-space:nowrap">You bring the bio; we bring the tech.</span>
+</div>
+<div style="display:flex;align-items:center;gap:30px">
+<a href="Capabilities.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#4a4d43">Capabilities</a>
+<a href="Outcomes.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#4a4d43">Outcomes</a>
+<a href="Engagement.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#4a4d43">Engagement</a>
+<a href="Team.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#4a4d43">Team</a>
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:500 14px/1 'IBM Plex Sans',sans-serif;color:#393b34;background:#f8a825;padding:12px 20px;border-radius:100px">Schedule a Call</a>
+</div>
+</nav>
+</header>
+</div>
+<div id="bh-nav-spacer" style="height:150px"></div>
+<main style="flex:1 0 auto;display:flex;flex-direction:column;gap:72px;padding-bottom:96px">
+<div style="max-width:1280px;width:100%;margin:0 auto;padding:0 48px;box-sizing:border-box;display:flex;flex-direction:column;gap:20px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#a55c36;text-transform:uppercase">Outcomes</div>
+<h1 style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:min(56px,4.4vw);line-height:1.05;color:#393b34;margin:0;letter-spacing:-.025em;max-width:22ch;text-wrap:pretty">What changes for your research when the systems underneath it work</h1>
+</div>
+<div style="max-width:1280px;width:100%;margin:0 auto;padding:0 48px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#a55c36;margin-bottom:14px">01</div>
+<h2 style="font:600 34px/1.15 'Space Grotesk',sans-serif;color:#393b34;margin:0 0 18px;letter-spacing:-.015em;text-wrap:pretty">Turn Data Into Discovery Velocity</h2>
+<p style="font:400 16.5px/1.65 'IBM Plex Sans',sans-serif;color:#4a4d43;margin:0 0 16px;text-wrap:pretty">The most valuable insights emerge when computational predictions connect to experimental results and downstream outcomes. Patterns between early-stage models and assay performance. Correlations linking screening data to toxicology results. Intelligence that only becomes visible when data flows across your research pipeline.</p>
+<p style="font:400 16.5px/1.65 'IBM Plex Sans',sans-serif;color:#4a4d43;margin:0;text-wrap:pretty">We build infrastructure and warehousing strategies that enable cross-functional analysis across computational and wet lab teams. Your scientists discover correlations earlier, refine predictions with real-world results, and make faster decisions, while maintaining appropriate access controls.</p>
+</div>
+<img src="https://www.bithippie.com/assets/images/outcomes/integrated_research.png" alt="Turn Data Into Discovery Velocity" style="width:100%;border-radius:8px;display:block">
+</div>
+<div style="max-width:1280px;width:100%;margin:0 auto;padding:0 48px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+<img src="https://www.bithippie.com/assets/images/outcomes/parallel_compute.png" alt="Eliminate the Latency of Learning" style="width:100%;border-radius:8px;display:block">
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#a55c36;margin-bottom:14px">02</div>
+<h2 style="font:600 34px/1.15 'Space Grotesk',sans-serif;color:#393b34;margin:0 0 18px;letter-spacing:-.015em;text-wrap:pretty">Eliminate the Latency of Learning</h2>
+<p style="font:400 16.5px/1.65 'IBM Plex Sans',sans-serif;color:#4a4d43;margin:0 0 16px;text-wrap:pretty">We've seen brilliant computational scientists sidelined for days by computational bottlenecks. Sequential processing delays discovery. Researchers wait for results instead of learning and iterating. Multi-day computational failures waste time and resources.</p>
+<p style="font:400 16.5px/1.65 'IBM Plex Sans',sans-serif;color:#4a4d43;margin:0;text-wrap:pretty">We build cloud infrastructure that enables parallel processing at scale. Your team gets answers fast, intelligently leveraging CPUs or GPUs to run workloads efficiently and cost-effectively.</p>
+</div>
+</div>
+<div style="max-width:1280px;width:100%;margin:0 auto;padding:0 48px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#a55c36;margin-bottom:14px">03</div>
+<h2 style="font:600 34px/1.15 'Space Grotesk',sans-serif;color:#393b34;margin:0 0 18px;letter-spacing:-.015em;text-wrap:pretty">Workflows Defined by Science, Not Software</h2>
+<p style="font:400 16.5px/1.65 'IBM Plex Sans',sans-serif;color:#4a4d43;margin:0 0 16px;text-wrap:pretty">Off-the-shelf bioinformatics platforms fit nobody perfectly. You pay for unused features, navigate workflows that don't match your science, and lock into expensive licensing.</p>
+<p style="font:400 16.5px/1.65 'IBM Plex Sans',sans-serif;color:#4a4d43;margin:0;text-wrap:pretty">We build custom tools designed alongside your team: internal applications and interactive dashboards that replace bloated SaaS products. You own the code, control the features, and set the direction.</p>
+</div>
+<img src="https://www.bithippie.com/assets/images/outcomes/internal_tools.png" alt="Workflows Defined by Science, Not Software" style="width:100%;border-radius:8px;display:block">
+</div>
+<div style="max-width:1280px;width:100%;margin:0 auto;padding:0 48px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+<img src="https://www.bithippie.com/assets/images/outcomes/sandbox_to_production.png" alt="Research Freedom, Production Discipline" style="width:100%;border-radius:8px;display:block">
+<div>
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#a55c36;margin-bottom:14px">04</div>
+<h2 style="font:600 34px/1.15 'Space Grotesk',sans-serif;color:#393b34;margin:0 0 18px;letter-spacing:-.015em;text-wrap:pretty">Research Freedom, Production Discipline</h2>
+<p style="font:400 16.5px/1.65 'IBM Plex Sans',sans-serif;color:#4a4d43;margin:0 0 16px;text-wrap:pretty">Biotech research demands both speed and rigor. Data scientists need freedom to explore, but ad-hoc VM setups create black boxes: results can't be reproduced, audit trails don't exist, and workflows remain undocumented.</p>
+<p style="font:400 16.5px/1.65 'IBM Plex Sans',sans-serif;color:#4a4d43;margin:0;text-wrap:pretty">We build infrastructure that bridges exploration and production. Infrastructure-as-code gives your team self-service environments that are documented, version-controlled, and auditable. Scientists iterate in sandbox environments, then transition proven workflows to production with full traceability.</p>
+</div>
+</div>
+</main>
+<footer style="border-top:1px solid rgba(57,59,52,.12);flex:0 0 auto">
+<div style="max-width:1280px;width:100%;margin:0 auto;padding:0 48px;box-sizing:border-box;padding-top:26px;padding-bottom:30px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap">
+<span style="font:500 11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#a55c36;text-transform:uppercase">You bring the bio; we bring the tech.</span>
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:500 15px/1 'IBM Plex Sans',sans-serif;color:#fffce9;background:#393b34;padding:15px 26px;border-radius:100px;white-space:nowrap">Schedule a Discovery Call</a>
+</div>
+</footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const nav = document.getElementById('bh-nav');
+    const spacer = document.getElementById('bh-nav-spacer');
+    if (!nav || !spacer) return;
+    const apply = () => { spacer.style.height = Math.ceil(nav.getBoundingClientRect().height) + 32 + 'px'; };
+    apply();
+    this.ro = new ResizeObserver(apply);
+    this.ro.observe(nav);
+  }
+  componentWillUnmount() { if (this.ro) this.ro.disconnect(); }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

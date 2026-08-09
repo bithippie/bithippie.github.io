@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;height:100%;background:#fffce9;font-family:'IBM Plex Sans',system-ui,sans-serif}
+a{color:#a55c36;text-decoration:none}a:hover{color:#8ea05c}
+</style>
+</helmet>
+
+<div style="min-height:100dvh;background:#fffce9;display:flex;flex-direction:column">
+<div id="bh-nav" style="position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(255,252,233,.94);backdrop-filter:blur(8px)">
+<header style="border-bottom:1px solid rgba(57,59,52,.12)">
+<nav style="max-width:1280px;margin:0 auto;padding:18px 48px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 40px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<a href="index.dc.html" style="display:flex;align-items:center;gap:10px">
+<img src="assets/logo-icon.png" alt="" style="height:36px;width:36px;display:block">
+<img src="assets/logo-wordmark.svg" alt="BitHippie" style="height:30px;display:block;position:relative;top:3px">
+</a>
+<span style="font:500 11px/1.4 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#8ea05c;text-transform:uppercase;white-space:nowrap">You bring the bio; we bring the tech.</span>
+</div>
+<div style="display:flex;align-items:center;gap:30px">
+<a href="Capabilities.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#4a4d43">Capabilities</a>
+<a href="Outcomes.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#4a4d43">Outcomes</a>
+<a href="Engagement.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#4a4d43">Engagement</a>
+<a href="Team.dc.html" style="font:400 15px/1 'IBM Plex Sans',sans-serif;color:#4a4d43">Team</a>
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:500 14px/1 'IBM Plex Sans',sans-serif;color:#393b34;background:#f8a825;padding:12px 20px;border-radius:100px">Schedule a Call</a>
+</div>
+</nav>
+</header>
+</div>
+<div id="bh-nav-spacer" style="height:150px"></div>
+<main style="flex:1 0 auto;display:flex;flex-direction:column;gap:56px;padding-bottom:96px">
+<div style="max-width:1280px;width:100%;margin:0 auto;padding:0 48px;box-sizing:border-box;display:flex;flex-direction:column;gap:20px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#a55c36;text-transform:uppercase">Case studies</div>
+<h1 style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:min(64px,5vw);line-height:1.02;color:#393b34;margin:0;letter-spacing:-.03em;max-width:18ch;text-wrap:pretty">Work we can talk about.</h1>
+<p style="font:400 19px/1.6 'IBM Plex Sans',sans-serif;color:#5c6052;margin:0;max-width:60ch;text-wrap:pretty">Engagements with AI-driven drug discovery platforms, clinical trial organizations, and research institutions.</p>
+</div>
+<div style="max-width:1280px;width:100%;margin:0 auto;padding:0 48px;box-sizing:border-box;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+<article style="border:1px solid rgba(57,59,52,.16);border-radius:4px;padding:28px;display:flex;flex-direction:column;gap:22px;background:rgba(255,255,255,.4)">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#393b34;opacity:.45">Case 1</div>
+<div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#a55c36;text-transform:uppercase;border:1px dashed rgba(165,92,54,.45);border-radius:3px;padding:6px 9px;align-self:flex-start">Content needed</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8ea05c;text-transform:uppercase">Client</div>
+<div style="font:400 15px/1.55 'IBM Plex Sans',sans-serif;color:#8a8d80">Organization type and scale.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8ea05c;text-transform:uppercase">The problem</div>
+<div style="font:400 15px/1.55 'IBM Plex Sans',sans-serif;color:#8a8d80">What their scientists were working around.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8ea05c;text-transform:uppercase">What we built</div>
+<div style="font:400 15px/1.55 'IBM Plex Sans',sans-serif;color:#8a8d80">The platform, pipeline, or tool we delivered.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8ea05c;text-transform:uppercase">Outcome</div>
+<div style="font:400 15px/1.55 'IBM Plex Sans',sans-serif;color:#8a8d80">The measurable result.</div>
+</div>
+</article>
+<article style="border:1px solid rgba(57,59,52,.16);border-radius:4px;padding:28px;display:flex;flex-direction:column;gap:22px;background:rgba(255,255,255,.4)">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#393b34;opacity:.45">Case 2</div>
+<div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#a55c36;text-transform:uppercase;border:1px dashed rgba(165,92,54,.45);border-radius:3px;padding:6px 9px;align-self:flex-start">Content needed</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8ea05c;text-transform:uppercase">Client</div>
+<div style="font:400 15px/1.55 'IBM Plex Sans',sans-serif;color:#8a8d80">Organization type and scale.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8ea05c;text-transform:uppercase">The problem</div>
+<div style="font:400 15px/1.55 'IBM Plex Sans',sans-serif;color:#8a8d80">What their scientists were working around.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8ea05c;text-transform:uppercase">What we built</div>
+<div style="font:400 15px/1.55 'IBM Plex Sans',sans-serif;color:#8a8d80">The platform, pipeline, or tool we delivered.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8ea05c;text-transform:uppercase">Outcome</div>
+<div style="font:400 15px/1.55 'IBM Plex Sans',sans-serif;color:#8a8d80">The measurable result.</div>
+</div>
+</article>
+<article style="border:1px solid rgba(57,59,52,.16);border-radius:4px;padding:28px;display:flex;flex-direction:column;gap:22px;background:rgba(255,255,255,.4)">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+<div style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#393b34;opacity:.45">Case 3</div>
+<div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#a55c36;text-transform:uppercase;border:1px dashed rgba(165,92,54,.45);border-radius:3px;padding:6px 9px;align-self:flex-start">Content needed</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8ea05c;text-transform:uppercase">Client</div>
+<div style="font:400 15px/1.55 'IBM Plex Sans',sans-serif;color:#8a8d80">Organization type and scale.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8ea05c;text-transform:uppercase">The problem</div>
+<div style="font:400 15px/1.55 'IBM Plex Sans',sans-serif;color:#8a8d80">What their scientists were working around.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8ea05c;text-transform:uppercase">What we built</div>
+<div style="font:400 15px/1.55 'IBM Plex Sans',sans-serif;color:#8a8d80">The platform, pipeline, or tool we delivered.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8ea05c;text-transform:uppercase">Outcome</div>
+<div style="font:400 15px/1.55 'IBM Plex Sans',sans-serif;color:#8a8d80">The measurable result.</div>
+</div>
+</article>
+</div>
+</main>
+<footer style="border-top:1px solid rgba(57,59,52,.12);flex:0 0 auto">
+<div style="max-width:1280px;width:100%;margin:0 auto;padding:0 48px;box-sizing:border-box;padding-top:26px;padding-bottom:30px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap">
+<span style="font:500 11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#a55c36;text-transform:uppercase">You bring the bio; we bring the tech.</span>
+<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ30HK2RiO6pCj8Uol07xqWiU14qAi3SgveSUNA71At4MPz0Yo3VQZbTPn2eyAfR94LS1vM3oW08?gv=true" style="font:500 15px/1 'IBM Plex Sans',sans-serif;color:#fffce9;background:#393b34;padding:15px 26px;border-radius:100px;white-space:nowrap">Schedule a Discovery Call</a>
+</div>
+</footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const nav = document.getElementById('bh-nav');
+    const spacer = document.getElementById('bh-nav-spacer');
+    if (!nav || !spacer) return;
+    const apply = () => { spacer.style.height = Math.ceil(nav.getBoundingClientRect().height) + 32 + 'px'; };
+    apply();
+    this.ro = new ResizeObserver(apply);
+    this.ro.observe(nav);
+  }
+  componentWillUnmount() { if (this.ro) this.ro.disconnect(); }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

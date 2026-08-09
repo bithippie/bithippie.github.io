@@ -1,7 +1,13 @@
 import "./globals.css";
 
 import localFont from "next/font/local";
-import { Merriweather, EB_Garamond } from "next/font/google";
+import {
+  Merriweather,
+  EB_Garamond,
+  Space_Grotesk,
+  IBM_Plex_Sans,
+  IBM_Plex_Mono,
+} from "next/font/google";
 
 const marcellus = localFont({
   src: "../public/assets/fonts/Marcellus.ttf",
@@ -19,6 +25,28 @@ const merriweather = Merriweather({
 const ebGaramond = EB_Garamond({
   subsets: ["latin"],
   variable: "--font-eb-garamond",
+  display: "swap",
+});
+
+// v2 rebrand. Space Grotesk is a variable font; the Plex faces are not, so
+// their weights are listed explicitly.
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
+
+const plexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  variable: "--font-plex-sans",
+  weight: ["400", "500", "600"],
+  display: "swap",
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  variable: "--font-plex-mono",
+  weight: ["400", "500"],
   display: "swap",
 });
 
@@ -65,7 +93,7 @@ export default function RootLayout({ children }) {
         <meta httpEquiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
       </head>
 
-      <body className={`${marcellus.variable} ${merriweather.variable} ${ebGaramond.variable} antialiased`}>
+      <body className={`${marcellus.variable} ${merriweather.variable} ${ebGaramond.variable} ${spaceGrotesk.variable} ${plexSans.variable} ${plexMono.variable} antialiased`}>
         {children}
       </body>
     </html>
