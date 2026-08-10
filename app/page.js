@@ -5,6 +5,7 @@ import Nav from "@/components/layout/nav_v2";
 import DataPlatformDiagram from "@/components/sections/data_platform_diagram";
 import Container from "@/components/ui/container";
 import Eyebrow from "@/components/ui/eyebrow";
+import PainChips from "@/components/ui/pain_chips";
 import PillLink from "@/components/ui/pill_link";
 
 // Case studies is intentionally absent until the page has real content.
@@ -33,9 +34,8 @@ export default function Home() {
             </sup>
           </h1>
           <p className="font-mono font-medium text-[13px] leading-[1.9] tracking-[.18em] uppercase text-olive">
-            Drug development is hard enough. Let&apos;s not make it harder by being
-            haphazard with our data.{" "}
-            <br className="hidden lg:block" />
+            Drug development is hard enough. Let&apos;s not make it harder by
+            being haphazard with our data. <br className="hidden lg:block" />
             Good data systems accelerate research.
           </p>
         </Container>
@@ -59,14 +59,18 @@ export default function Home() {
                 The Data Platform
               </h2>
               <p className="font-mono font-medium text-[11px] leading-[1.7] tracking-[.18em] uppercase text-olive">
-                End-to-End Data Ops for Scientific Research, Target Identification,
-                Drug Discovery and Development,{" "}
+                End-to-End Data Ops for Scientific Research, Target
+                Identification, Drug Discovery and Development,{" "}
                 <br className="hidden lg:block" />
                 creating efficient business systems for BioTech.
               </p>
             </div>
             <div className="flex lg:justify-center">
-              <PillLink href="/capabilities" variant="outline" className="px-6 py-4 text-base">
+              <PillLink
+                href="/capabilities"
+                variant="outline"
+                className="px-6 py-4 text-base"
+              >
                 See the case studies
               </PillLink>
             </div>
@@ -81,48 +85,63 @@ export default function Home() {
         {/* self-start stops the container stretching to fill the 1fr row —
             it was centring the block, which floated the eyebrow off the
             shared y. items-center still centres the two columns. */}
-        <Container className="self-start grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-[72px] items-center pt-2 lg:pt-8 pb-12">
-          <div className="flex flex-col gap-6">
-            <Eyebrow>Start here</Eyebrow>
-            <h2 className="font-grotesk font-semibold text-ink text-[clamp(32px,4.2vw,58px)] leading-[1.03] tracking-[-.03em] max-w-[16ch] text-pretty">
-              Tell us what your scientists are working around.
-            </h2>
-            <div className="flex flex-wrap gap-3.5 items-center">
+        <Container className="self-start pt-2 lg:pt-8 pb-12">
+          <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-[72px] items-center">
+            <div className="flex flex-col gap-6">
+              <Eyebrow>Start here</Eyebrow>
+              <h2 className="font-grotesk font-semibold text-ink text-[clamp(32px,4.2vw,58px)] leading-[1.03] tracking-[-.03em] max-w-[16ch] text-pretty">
+                Tell us what your scientists are working around.
+              </h2>
+            </div>
+
+            <div className="border-l-2 border-olive pl-6 flex flex-col">
+              <Eyebrow className="tracking-[.14em] mb-4">
+                You bring the bio; we bring the tech.
+              </Eyebrow>
+              {NEXT_PAGES.map((page, i) => (
+                <Link
+                  key={page.href}
+                  href={page.href}
+                  className={`flex justify-between items-center gap-5 py-3.5 font-plex text-[17px] leading-tight text-ink hover:text-rust ${
+                    i < NEXT_PAGES.length - 1 ? "border-b border-ink/[.14]" : ""
+                  }`}
+                >
+                  {page.label}
+                  <span className="font-grotesk font-light text-lg leading-none text-olive">
+                    &rarr;
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Same strip as /capabilities. Each chip deep-links to the
+              capability that answers it. */}
+          <div className="mt-10 lg:mt-12 pt-8 border-t border-ink/[.14]">
+            <Eyebrow className="tracking-[.16em] mb-4">
+              Start where it hurts
+            </Eyebrow>
+            <PainChips />
+
+            <div className="flex flex-wrap gap-3.5 items-center mt-9">
               <PillLink href="/schedule" className="px-7 py-[18px] text-base">
                 Schedule a Discovery Call
               </PillLink>
-              <PillLink href="/capabilities" variant="outline" className="px-6 py-[18px] text-base">
+              <PillLink
+                href="/capabilities"
+                variant="outline"
+                className="px-6 py-[18px] text-base"
+              >
                 See the case studies
               </PillLink>
             </div>
           </div>
-
-          <div className="border-l-2 border-olive pl-6 flex flex-col">
-            <Eyebrow className="tracking-[.14em] mb-4">
-              You bring the bio; we bring the tech.
-            </Eyebrow>
-            {NEXT_PAGES.map((page, i) => (
-              <Link
-                key={page.href}
-                href={page.href}
-                className={`flex justify-between items-center gap-5 py-3.5 font-plex text-[17px] leading-tight text-ink hover:text-rust ${
-                  i < NEXT_PAGES.length - 1 ? "border-b border-ink/[.14]" : ""
-                }`}
-              >
-                {page.label}
-                <span className="font-grotesk font-light text-lg leading-none text-olive">
-                  &rarr;
-                </span>
-              </Link>
-            ))}
-          </div>
         </Container>
 
-        {/* On phones the closing section runs past one screen, and mandatory
-            snap with no target down there would strand the footer. Giving it
-            its own snap point fixes that; on md+ the footer already sits
-            inside the first screen, so it must not be one. */}
-        <div className="snap-start md:snap-align-none">
+        {/* The closing section runs past one screen at every width now that
+            the chip strip is here, so the footer always needs its own snap
+            point — mandatory snap with no target down there strands it. */}
+        <div className="snap-start">
           <Footer />
         </div>
       </section>

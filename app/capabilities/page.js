@@ -3,7 +3,7 @@ import Nav from "@/components/layout/nav_v2";
 import Container from "@/components/ui/container";
 import Eyebrow from "@/components/ui/eyebrow";
 import PageHeader from "@/components/ui/page_header";
-import PainChips from "@/components/ui/pain_chips";
+import PainChips, { OpenHashDetails } from "@/components/ui/pain_chips";
 import PillLink from "@/components/ui/pill_link";
 
 export const metadata = {
@@ -16,7 +16,7 @@ export const metadata = {
 // capability order — it leads with the pain we hear most.
 const CAPABILITIES = [
   {
-    id: "cap-1",
+    id: "data-ingestion",
     kicker:
       "Data arrives from CROs, buckets, APIs, and brokers, in every format anyone ships",
     title: "Ingestion of heterogeneous data sources",
@@ -32,7 +32,7 @@ const CAPABILITIES = [
       "A biotech client entering Phase I. Five CRO feeds in four file formats, harmonized into one data package their scientists query directly.",
   },
   {
-    id: "cap-2",
+    id: "data-catalogs",
     kicker: "The dataset someone needs already exists, and nobody can find it",
     title: "Data catalogs your business can actually read",
     body: "A catalog that answers four questions without a meeting: what data exists, who owns it, what is inside it, and how to get access. Written for scientists and program leads, not only for the data team.",
@@ -47,9 +47,8 @@ const CAPABILITIES = [
       "A top-10 pharma company. Three research groups found they had been buying the same external dataset twice.",
   },
   {
-    id: "cap-3",
-    kicker:
-      "Your scientists keep a spreadsheet next to the system of record",
+    id: "internal-lab-apps",
+    kicker: "Your scientists keep a spreadsheet next to the system of record",
     title: "Internal apps for the wet lab and the dry lab",
     body: "Tools designed next to the bench and next to the notebook: record research, visualize results, annotate data, trigger a workflow. Built around how your team actually runs an experiment, and you own the code.",
     cta: "Talk about internal tools",
@@ -63,7 +62,7 @@ const CAPABILITIES = [
       "A biotech client. An idea became a tool their scientists used daily, instead of a year-long platform purchase.",
   },
   {
-    id: "cap-4",
+    id: "production-workflows",
     kicker: "A three day run fails on hour sixty and starts over",
     title: "Notebooks turned into production workflows",
     body: "We take the Python your computational team already wrote and make it a workflow that runs in parallel, picks CPU or GPU per step, restarts from the failed step, and reports what it cost. The science stays theirs. The operational weight moves to us.",
@@ -78,7 +77,7 @@ const CAPABILITIES = [
       "An AI drug discovery platform. Screening runs went from overnight batches to same day answers.",
   },
   {
-    id: "cap-5",
+    id: "data-architecture",
     kicker: "Six systems, four owners, no one holding the whole picture",
     title: "Architecture for end to end data operations",
     body: "The design for how information moves through your company: available where it is needed, fit for the purpose it is used for, fast enough to ask a second question, and observable when something breaks. Then we build it with you, in stages you can fund.",
@@ -93,7 +92,7 @@ const CAPABILITIES = [
       "A biotech-focused venture firm. A data operations design their portfolio companies now start from.",
   },
   {
-    id: "cap-6",
+    id: "data-access-apis",
     kicker: "The data is there, and the only way in is a person with a login",
     title: "APIs into data silos, with access policy built in",
     body: "Interfaces that let systems, models, and agents read what they are allowed to read. Access rules live in the service instead of in someone's memory, so opening data up does not mean giving everything away.",
@@ -108,7 +107,7 @@ const CAPABILITIES = [
       "A top-10 pharma company. A legacy compound store opened to three downstream teams under one policy.",
   },
   {
-    id: "cap-7",
+    id: "eln-lims-integration",
     kicker: "You have already bought the tools. Replacing them is not the plan",
     title: "Working with the ELN, LIMS, and tooling you have",
     body: "We connect to the electronic lab notebook, the LIMS, and the bioinformatics tools your scientists already use. Decades of software and data engineering judgement, plus agentic development, MCP tooling, and low code platforms where they genuinely shorten the path.",
@@ -124,22 +123,13 @@ const CAPABILITIES = [
   },
 ];
 
-const CHIPS = [
-  { label: "Our scientists are waiting on compute", target: "cap-4" },
-  { label: "Nobody knows what data we already have", target: "cap-2" },
-  { label: "Every CRO sends data in a different shape", target: "cap-1" },
-  { label: "Our tools do not match how we run experiments", target: "cap-3" },
-  { label: "Getting data out means asking a person", target: "cap-6" },
-  { label: "No one owns the architecture end to end", target: "cap-5" },
-  { label: "We cannot afford to replace what we have", target: "cap-7" },
-];
-
 export default function CapabilitiesPage() {
   return (
     <div className="bg-cream min-h-screen flex flex-col">
       <Nav />
 
       <main className="flex-1 pb-20 lg:pb-24">
+        <OpenHashDetails />
         <PageHeader
           eyebrow="Capabilities"
           title="Everything your scientists should never have to think about"
@@ -148,7 +138,7 @@ export default function CapabilitiesPage() {
         <div className="bg-panel border-y border-ink/[.14]">
           <Container className="py-9 flex flex-col gap-5">
             <Eyebrow className="tracking-[.16em]">Start where it hurts</Eyebrow>
-            <PainChips chips={CHIPS} />
+            <PainChips />
           </Container>
         </div>
 
@@ -231,7 +221,10 @@ export default function CapabilitiesPage() {
               Not sure which of these you need first? That is what the discovery
               conversation is for.
             </p>
-            <PillLink href="/schedule" className="self-start px-6 py-4 text-[15px]">
+            <PillLink
+              href="/schedule"
+              className="self-start px-6 py-4 text-[15px]"
+            >
               Schedule a Discovery Call
             </PillLink>
           </div>

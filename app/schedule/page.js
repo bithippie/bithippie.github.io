@@ -222,7 +222,10 @@ export default function SchedulePage() {
 
         <div className="bg-panel border-y border-ink/[.12]">
           <Container className="py-14 lg:py-20">
-            <div className="bg-cream border border-ink/[.14] rounded-lg overflow-hidden max-w-[1024px] mx-auto">
+            {/* Google's embed renders a transparent body, so whatever sits
+                behind it shows through — but it paints the slot grid pure
+                white. bg-white here so the card reads as one surface. */}
+            <div className="bg-white border border-ink/[.14] rounded-lg overflow-hidden max-w-[1024px] mx-auto">
               <iframe
                 src={CALENDAR_URL}
                 title="Schedule a discovery call with BitHippie"
