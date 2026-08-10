@@ -2,6 +2,7 @@ import Footer from "@/components/layout/footer_v2";
 import Nav from "@/components/layout/nav_v2";
 import Container from "@/components/ui/container";
 import Eyebrow from "@/components/ui/eyebrow";
+import PageHeader from "@/components/ui/page_header";
 import PillLink from "@/components/ui/pill_link";
 
 export const metadata = {
@@ -46,16 +47,12 @@ export default function EngagementPage() {
     <div className="bg-cream min-h-screen flex flex-col">
       <Nav />
 
-      <main className="flex-1 flex flex-col gap-12 lg:gap-14 pt-10 lg:pt-16 pb-20 lg:pb-24">
-        <Container className="flex flex-col gap-5">
-          <Eyebrow>Engagement</Eyebrow>
-          <h1 className="font-grotesk font-semibold text-ink text-[clamp(36px,5vw,64px)] leading-[1.02] tracking-[-.03em] max-w-[18ch] text-pretty">
-            How we work together.
-          </h1>
-          <p className="font-plex text-[19px] leading-[1.6] text-ink-muted max-w-[60ch] text-pretty">
-            From first call to handoff, and what you own at the end.
-          </p>
-        </Container>
+      <main className="flex-1 pb-20 lg:pb-24">
+        <PageHeader
+          eyebrow="Engagement"
+          title="How we work together."
+          lead="From first call to handoff, and what you own at the end."
+        />
 
         <Container>
           {STEPS.map((step, i) => (
@@ -78,7 +75,7 @@ export default function EngagementPage() {
           ))}
         </Container>
 
-        <Container>
+        <Container className="mt-12 lg:mt-14">
           <PillLink href="/schedule" className="px-7 py-[18px] text-base">
             Schedule a Discovery Call
           </PillLink>

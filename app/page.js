@@ -49,7 +49,10 @@ export default function Home() {
       {/* 02 Data platform */}
       <section className="h-[100dvh] snap-start pt-[104px] grid grid-rows-[auto_minmax(0,1fr)] relative z-0">
         <div id="sec2-head" className="pointer-events-auto">
-          <Container className="grid gap-7 lg:grid-cols-[3fr_1fr] lg:gap-10 items-center pt-4 md:pt-8">
+          {/* pt matches PageHeader's pt-10 lg:pt-16 once the section's own
+              pt-[104px] and the fixed nav are accounted for, so the eyebrow
+              lands at the same y as on every nested page. */}
+          <Container className="grid gap-7 lg:grid-cols-[3fr_1fr] lg:gap-10 items-center pt-2 lg:pt-8">
             <div className="flex flex-col gap-3.5">
               <Eyebrow>What we build</Eyebrow>
               <h2 className="font-grotesk font-semibold text-ink text-[clamp(30px,3.2vw,44px)] leading-[1.05] tracking-[-.02em] text-pretty">
@@ -75,7 +78,10 @@ export default function Home() {
 
       {/* 03 Closing */}
       <section className="min-h-[100dvh] snap-start pt-[104px] grid md:grid-rows-[1fr_auto] relative z-[2] bg-cream">
-        <Container className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-[72px] items-center py-12">
+        {/* self-start stops the container stretching to fill the 1fr row —
+            it was centring the block, which floated the eyebrow off the
+            shared y. items-center still centres the two columns. */}
+        <Container className="self-start grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-[72px] items-center pt-2 lg:pt-8 pb-12">
           <div className="flex flex-col gap-6">
             <Eyebrow>Start here</Eyebrow>
             <h2 className="font-grotesk font-semibold text-ink text-[clamp(32px,4.2vw,58px)] leading-[1.03] tracking-[-.03em] max-w-[16ch] text-pretty">

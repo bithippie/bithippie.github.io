@@ -4,6 +4,7 @@ import Footer from "@/components/layout/footer_v2";
 import Nav from "@/components/layout/nav_v2";
 import Container from "@/components/ui/container";
 import Eyebrow from "@/components/ui/eyebrow";
+import PageHeader from "@/components/ui/page_header";
 import PillLink from "@/components/ui/pill_link";
 
 export const metadata = {
@@ -108,9 +109,11 @@ const OFF_HOURS = [
   "Lovingly challenging each other's limiting beliefs to help us get out of our own way.",
 ];
 
-function SectionHeading({ children }) {
+// `rule={false}` for a heading that directly follows the page header, whose
+// own bottom rule would otherwise sit a few lines above this one.
+function SectionHeading({ rule = true, children }) {
   return (
-    <div className="border-t-2 border-ink pt-6 mb-9">
+    <div className={`${rule ? "border-t-2 border-ink pt-6" : ""} mb-9`}>
       <h2 className="font-grotesk font-semibold text-ink text-[clamp(26px,3.4vw,34px)] leading-[1.1] tracking-[-.02em]">
         {children}
       </h2>
@@ -124,24 +127,14 @@ export default function TeamPage() {
       <Nav />
 
       <main className="flex-1">
-        <Container className="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-[72px] lg:items-end pt-14 lg:pt-24 pb-16 lg:pb-[76px]">
-          <div>
-            <Eyebrow tone="olive" className="mb-6">
-              The team
-            </Eyebrow>
-            <h1 className="font-grotesk font-semibold text-ink text-[clamp(36px,6vw,68px)] leading-[1.04] tracking-[-.03em] text-pretty">
-              Taking care of ourselves so we can take better care of the world.
-            </h1>
-          </div>
-          <p className="font-plex text-[17px] leading-[1.6] text-ink-muted text-pretty">
-            A small, senior group of engineers and advisors. You work with the
-            people whose names are on this page, not with a bench of contractors
-            you never meet.
-          </p>
-        </Container>
+        <PageHeader
+          eyebrow="The team"
+          title="Taking care of ourselves so we can take better care of the world."
+          lead="A small, senior group of engineers and advisors. You work with the people whose names are on this page, not with a bench of contractors you never meet."
+        />
 
         <Container className="pb-20 lg:pb-[88px]">
-          <SectionHeading>Core team</SectionHeading>
+          <SectionHeading rule={false}>Core team</SectionHeading>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {TEAM.map((member) => (

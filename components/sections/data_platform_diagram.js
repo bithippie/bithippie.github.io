@@ -14,6 +14,9 @@ const OLIVE = "#8ea05c";
 const VB_W = 1260;
 const VB_H = 560;
 
+// Clearance between section 02's subhead and the diagram's column labels.
+const HEAD_GAP = 40;
+
 const DENSITY = { Sparse: 0.6, Moderate: 1, Busy: 1.6 };
 const FADED = "0.5";
 
@@ -426,11 +429,16 @@ export default function DataPlatformDiagram({
       const w = Math.min(1280, vw);
       layer.style.left = `${Math.max(0, (vw - w) / 2)}px`;
       layer.style.width = `${w}px`;
-      const h = Math.max(160, vh - topPad - headH);
-      layer.style.top = `${topPad + headH}px`;
+      // The layer used to butt straight up against the subhead, leaving the
+      // column labels ~19px under it — close enough to read as another line of
+      // that paragraph. The gap comes out of the height, so the diagram scales
+      // down to fit rather than pushing past the section.
+      const top = topPad + headH + HEAD_GAP;
+      const h = Math.max(160, vh - top);
+      layer.style.top = `${top}px`;
       layer.style.height = `${h}px`;
       // Section 1 parks it centred in the viewport; section 2 is its rest.
-      dyHome = (vh - h) / 2 - (topPad + headH);
+      dyHome = (vh - h) / 2 - top;
     };
     const onScroll = () => {
       if (!scroller) return;

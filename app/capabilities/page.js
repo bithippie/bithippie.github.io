@@ -2,6 +2,7 @@ import Footer from "@/components/layout/footer_v2";
 import Nav from "@/components/layout/nav_v2";
 import Container from "@/components/ui/container";
 import Eyebrow from "@/components/ui/eyebrow";
+import PageHeader from "@/components/ui/page_header";
 import PainChips from "@/components/ui/pain_chips";
 import PillLink from "@/components/ui/pill_link";
 
@@ -138,15 +139,13 @@ export default function CapabilitiesPage() {
     <div className="bg-cream min-h-screen flex flex-col">
       <Nav />
 
-      <main className="flex-1 pt-10 lg:pt-16 pb-20 lg:pb-24">
-        <Container className="flex flex-col gap-5 pb-8 border-b-2 border-ink">
-          <Eyebrow tone="olive">Capabilities</Eyebrow>
-          <h1 className="font-grotesk font-semibold text-ink text-[clamp(34px,5.5vw,60px)] leading-[1.03] tracking-[-.025em] max-w-[22ch] text-pretty">
-            Everything your scientists should never have to think about
-          </h1>
-        </Container>
+      <main className="flex-1 pb-20 lg:pb-24">
+        <PageHeader
+          eyebrow="Capabilities"
+          title="Everything your scientists should never have to think about"
+        />
 
-        <div className="bg-panel border-y border-ink/[.14] mt-10">
+        <div className="bg-panel border-y border-ink/[.14]">
           <Container className="py-9 flex flex-col gap-5">
             <Eyebrow className="tracking-[.16em]">Start where it hurts</Eyebrow>
             <PainChips chips={CHIPS} />

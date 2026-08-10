@@ -4,6 +4,7 @@ import Footer from "@/components/layout/footer_v2";
 import Nav from "@/components/layout/nav_v2";
 import Container from "@/components/ui/container";
 import Eyebrow from "@/components/ui/eyebrow";
+import PageHeader from "@/components/ui/page_header";
 
 export const metadata = {
   title: "Outcomes | BitHippie",
@@ -51,15 +52,14 @@ export default function OutcomesPage() {
     <div className="bg-cream min-h-screen flex flex-col">
       <Nav />
 
-      <main className="flex-1 flex flex-col gap-16 lg:gap-[72px] pt-10 lg:pt-16 pb-20 lg:pb-24">
-        <Container className="flex flex-col gap-5">
-          <Eyebrow>Outcomes</Eyebrow>
-          <h1 className="font-grotesk font-semibold text-ink text-[clamp(34px,5.5vw,56px)] leading-[1.05] tracking-[-.025em] max-w-[22ch] text-pretty">
-            What changes for your research when the systems underneath it work
-          </h1>
-        </Container>
+      <main className="flex-1 pb-20 lg:pb-24">
+        <PageHeader
+          eyebrow="Outcomes"
+          title="What changes for your research when the systems underneath it work"
+        />
 
-        {OUTCOMES.map((outcome, i) => (
+        <div className="flex flex-col gap-16 lg:gap-[72px]">
+          {OUTCOMES.map((outcome, i) => (
           <Container
             key={outcome.title}
             className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center"
@@ -89,7 +89,8 @@ export default function OutcomesPage() {
               className={`w-full h-auto rounded-lg ${i % 2 ? "lg:order-first" : ""}`}
             />
           </Container>
-        ))}
+          ))}
+        </div>
       </main>
 
       <Footer />

@@ -4,6 +4,7 @@ import Footer from "@/components/layout/footer_v2";
 import Nav from "@/components/layout/nav_v2";
 import Container from "@/components/ui/container";
 import Eyebrow from "@/components/ui/eyebrow";
+import PageHeader from "@/components/ui/page_header";
 
 export const metadata = {
   title: "Schedule a Discovery Call | BitHippie",
@@ -213,23 +214,11 @@ export default function SchedulePage() {
       <Nav />
 
       <main className="flex-1">
-        <Container className="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:gap-[72px] lg:items-end pt-14 lg:pt-24 pb-12 lg:pb-16">
-          <div>
-            <Eyebrow tone="olive" className="mb-6">
-              Schedule
-            </Eyebrow>
-            <h1 className="font-grotesk font-semibold text-ink text-[clamp(36px,6vw,68px)] leading-[1.04] tracking-[-.03em] text-pretty">
-              Schedule a discovery call.
-            </h1>
-          </div>
-          <p className="font-plex text-[17px] leading-[1.6] text-ink-muted text-pretty">
-            We partner with biotech companies across the spectrum, from
-            venture-backed startups and computational biology companies to
-            AI-driven drug discovery platforms and global pharmaceutical
-            research organizations, building the data infrastructure that
-            accelerates discovery.
-          </p>
-        </Container>
+        <PageHeader
+          eyebrow="Schedule"
+          title="Schedule a discovery call."
+          lead="We partner with biotech companies across the spectrum, from venture-backed startups and computational biology companies to AI-driven drug discovery platforms and global pharmaceutical research organizations, building the data infrastructure that accelerates discovery."
+        />
 
         <div className="bg-panel border-y border-ink/[.12]">
           <Container className="py-14 lg:py-20">
