@@ -77,8 +77,8 @@ export default function PainChips({ className = "" }) {
           aria-current={active === chip.target ? "true" : undefined}
           className={`font-plex text-[15px] leading-snug text-left rounded-full px-5 py-2.5 border transition ${
             active === chip.target
-              ? "border-olive bg-white text-ink font-medium ring-1 ring-olive"
-              : "border-ink/20 bg-cream text-ink hover:border-olive hover:bg-white"
+              ? "border-olive bg-olive/20 text-ink font-medium ring-1 ring-olive"
+              : "border-ink/20 bg-cream text-ink hover:border-olive hover:bg-olive/10"
           }`}
         >
           {chip.label}

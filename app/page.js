@@ -86,12 +86,36 @@ export default function Home() {
             it was centring the block, which floated the eyebrow off the
             shared y. items-center still centres the two columns. */}
         <Container className="self-start pt-2 lg:pt-8 pb-12">
-          <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-[72px] items-center">
+          <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-[72px] items-start">
             <div className="flex flex-col gap-6">
               <Eyebrow>Start here</Eyebrow>
               <h2 className="font-grotesk font-semibold text-ink text-[clamp(32px,4.2vw,58px)] leading-[1.03] tracking-[-.03em] max-w-[16ch] text-pretty">
                 Tell us what your scientists are working around.
               </h2>
+            </div>
+
+            {/* Same strip as /capabilities. Each chip deep-links to the
+                capability that answers it. */}
+            <div>
+              <Eyebrow className="tracking-[.16em] mb-4">
+                Start where it hurts
+              </Eyebrow>
+              <PainChips />
+            </div>
+          </div>
+
+          <div className="mt-10 lg:mt-12 pt-8 border-t border-ink/[.14] grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-[72px] items-start">
+            <div className="flex flex-wrap gap-3.5 items-center">
+              <PillLink href="/schedule" className="px-7 py-[18px] text-base">
+                Schedule a Discovery Call
+              </PillLink>
+              <PillLink
+                href="/capabilities"
+                variant="outline"
+                className="px-6 py-[18px] text-base"
+              >
+                See the case studies
+              </PillLink>
             </div>
 
             <div className="border-l-2 border-olive pl-6 flex flex-col">
@@ -112,28 +136,6 @@ export default function Home() {
                   </span>
                 </Link>
               ))}
-            </div>
-          </div>
-
-          {/* Same strip as /capabilities. Each chip deep-links to the
-              capability that answers it. */}
-          <div className="mt-10 lg:mt-12 pt-8 border-t border-ink/[.14]">
-            <Eyebrow className="tracking-[.16em] mb-4">
-              Start where it hurts
-            </Eyebrow>
-            <PainChips />
-
-            <div className="flex flex-wrap gap-3.5 items-center mt-9">
-              <PillLink href="/schedule" className="px-7 py-[18px] text-base">
-                Schedule a Discovery Call
-              </PillLink>
-              <PillLink
-                href="/capabilities"
-                variant="outline"
-                className="px-6 py-[18px] text-base"
-              >
-                See the case studies
-              </PillLink>
             </div>
           </div>
         </Container>
