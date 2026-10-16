@@ -73,10 +73,11 @@ export default function Team({ backgroundColor }) {
         "I build data pipelines, backend systems, and workflow automation. I've been working in software engineering for 30 years across multiple domains, most recently in health tech.",
     },
     {
-      name: "Matheus",
+      name: "Matheus Henrique",
       image: "/assets/images/team/matheus.jpeg",
       title: "Software & DevOps Engineer",
       linkedin: "https://www.linkedin.com/in/eng-matheus-henrique/",
+      focus: "",
     },
   ];
 
@@ -90,14 +91,14 @@ export default function Team({ backgroundColor }) {
         "Health tech executive who takes data and analytics from idea to impact. Experience leading discovery, delivery, and everything it takes to sustain complex healthcare and life science initiatives.",
     },
     {
-      name: "Michael",
+      name: "Michael Ostrolenk, MA, MFT",
       image: "/assets/images/team/michael.jpeg",
-      title: "Executive Performance Coach & Strategic Advisor for founders & exec teams leading through pressure, complexity & growth | Former SEALFIT Master Coach",
+      title: "Creator, Human Flourishing Architecture | Master Coach & Psychotherapist | Physiological • Psychological • Relational • Environmental | Former SEALFIT Master Coach",
     },
     {
-      name: "Mark",
+      name: "Mark Carrion, MBA",
       image: "/assets/images/team/mark.jpeg",
-      title: "Team Performance Advisor | SEAL Officer",
+      title: "Team Performance Advisor | Special Operations Veteran | Strategy & Operations Professional | Defense Tech | SOTF Fellow | PMP | TS/SCI | Girl Dad",
     },
   ];
 
