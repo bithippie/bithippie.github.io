@@ -53,6 +53,11 @@
     cursor: pointer;
   }
 
+  /* Even out heading line lengths so a wrap never strands one short word. */
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
   h1 {
     @apply text-4xl sm:text-5xl md:text-6xl font-merriweather font-medium;
   }
