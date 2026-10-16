@@ -4,8 +4,8 @@ const WARM_WHITE = "#fdfcfb";
 
 export default function OutcomeCard({ src, title, imageScale = "scale-[1.4]", children }) {
   return (
-    <div className="flex flex-col lg:flex-row rounded-2xl border border-gray-200 shadow-sm overflow-hidden my-4 bg-warm-white">
-      <div className="flex-shrink-0 flex items-center justify-center overflow-hidden w-full h-[260px] lg:w-[360px] lg:h-[360px] bg-warm-white relative">
+    <div className="flex flex-col lg:flex-row rounded-2xl border border-gray-200 shadow-xs overflow-hidden my-4 bg-warm-white">
+      <div className="shrink-0 flex items-center justify-center overflow-hidden w-full h-[260px] lg:w-[360px] lg:h-[360px] bg-warm-white relative">
         <Image
           width={300}
           height={200}

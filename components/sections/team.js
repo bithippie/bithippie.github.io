@@ -142,7 +142,7 @@ export default function Team({ backgroundColor }) {
     >
       <a name="team" />
 
-      <div className="container max-w-screen-xl px-8 mx-auto">
+      <div className="container max-w-(--breakpoint-xl) px-8 mx-auto">
         {/* The Team */}
         <div className="mb-16">
           <div className="text-center mb-12">

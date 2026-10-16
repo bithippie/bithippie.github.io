@@ -41,7 +41,7 @@ export default function Engagement({ backgroundColor }) {
         <h2>Engagement Flow</h2>
       </div>
 
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 py-8 max-w-screen-xl">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 py-8 max-w-(--breakpoint-xl)">
         {/* Engagement Steps */}
         <div className="sm:col-span-1 space-y-6">
           {steps.map((step, i) => (
