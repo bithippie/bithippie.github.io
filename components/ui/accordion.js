@@ -28,7 +28,7 @@ export function Accordion({ accordionItems }) {
                   onClick={() => toggleDisclosure(index)}
                 >
                   <div className="flex items-center justify-between w-full">
-                    <span className="text-lg font-medium text-gray-800 group-data-[hover]:text-gray-600">
+                    <span className="text-lg font-medium text-gray-800 group-data-hover:text-gray-600">
                       {item.title}
                     </span>
                     <ChevronDownIcon
@@ -43,7 +43,7 @@ export function Accordion({ accordionItems }) {
                         static
                         as={Fragment}
                         transition
-                        className="text-base text-gray-600 leading-relaxed origin-top transition duration-300 ease-out data-[closed]:-translate-y-4 data-[closed]:opacity-0"
+                        className="text-base text-gray-600 leading-relaxed origin-top transition duration-300 ease-out data-closed:-translate-y-4 data-closed:opacity-0"
                       >
                         <motion.div
                           initial={{ height: 20, opacity: 0 }}

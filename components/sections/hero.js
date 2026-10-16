@@ -9,7 +9,7 @@ export default function Hero() {
       id="hero"
       className="h-screen min-h-[750px] py-16 md:py-24 bg-hero bg-center bg-cover flex relative"
     >
-      <div className="container flex flex-col items-center self-center text-center max-w-screen-xl">
+      <div className="container flex flex-col items-center self-center text-center max-w-(--breakpoint-xl)">
         <RevealOnScroll>
           <h1 className="text-platinum  text-4xl sm:text-5xl md:text-6xl leading-snug md:leading-snug">
             Good Data Systems<br/>

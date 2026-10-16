@@ -1,8 +1,58 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/*
+  Tailwind 3's `theme.colors` replaced the default palette with the brand colors;
+  flowbite's plugin then extended it with its own palette (gray, red, …), which the
+  site also relies on (text-gray-*, border-gray-*). Reproduce that exactly:
+  wipe the v4 palette, then re-add flowbite's, then the brand colors.
+*/
+@theme {
+  --color-*: initial;
+}
+@import "flowbite-react/plugin/tailwindcss";
+/* Only Avatar and Blockquote are used; scan their theme files instead of the generated class list. */
+@source "../node_modules/flowbite-react/dist/components/Avatar";
+@source "../node_modules/flowbite-react/dist/components/Blockquote";
+/* Divider builds `bg-${backgroundColor}` at runtime (was the v3 safelist). */
+@source inline("bg-{platinum,white,moss,dark-grey,warm-white}");
+
+@theme {
+  --color-transparent: transparent;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-moss: #8E9F5D;
+  --color-old-gold: #D3A946;
+  --color-dark-grey: #393B34;
+  --color-platinum: #E5E3DD;
+  --color-warm-white: #fdfcfb;
+
+  --font-sans: Marcellus, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --background-image-hero: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/assets/images/home/hero.jpg');
+}
+
+/* Font utilities reference the next/font CSS variables set on <body>; declared as
+   utilities (not theme vars) so `--font-merriweather` doesn't refer to itself. */
+@utility font-merriweather {
+  font-family: var(--font-merriweather), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+@utility font-garamond {
+  font-family: var(--font-eb-garamond), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+/* v3 `container: { center: true, padding: "1.25rem" }` */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
 
 @layer base {
+  /* v4 preflight makes buttons `cursor: default`; keep the v3 pointer. */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
   h1 {
     @apply text-4xl sm:text-5xl md:text-6xl font-merriweather font-medium;
   }

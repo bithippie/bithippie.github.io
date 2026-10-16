@@ -12,7 +12,7 @@ export default function Schedule({ backgroundColor }) {
     <section
       className={`relative bg-${backgroundColor} pb-16 lg:pb-24`}
     >
-      <div className="container max-w-screen-xl mx-auto">
+      <div className="container max-w-(--breakpoint-xl) mx-auto">
         <div className="flex flex-col xl:flex-row gap-8">
           <div className="flex flex-col grow w-full text-center xl:text-left">
             <a name="schedule" />
@@ -28,6 +28,7 @@ export default function Schedule({ backgroundColor }) {
             </p>
             
             <Testimonial
+              className="my-6"
               img="/assets/images/testimonials/jacob.jpeg"
               alt="Jacob Oppenheim // Venture Partner"
               attribution="— Jacob Oppenheim // Venture Partner"

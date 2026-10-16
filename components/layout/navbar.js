@@ -37,7 +37,7 @@ export default function NavBar() {
   return (
     <section className="w-full">
       <nav className="py-2.5 absolute bg-transparent w-full flex z-50">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between container">
+        <div className="max-w-(--breakpoint-xl) flex flex-wrap items-center justify-between container">
           <Link href="/">
             <Image
               src="/assets/images/logo.png"
@@ -52,7 +52,7 @@ export default function NavBar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
-            className="md:hidden inline-flex items-center rounded-lg bg-transparent p-2 text-sm text-gray-500 focus:outline-none"
+            className="md:hidden inline-flex items-center rounded-lg bg-transparent p-2 text-sm text-gray-500 focus:outline-hidden"
             aria-expanded={isOpen}
           >
             <span className="sr-only">Open main menu</span>
@@ -81,7 +81,7 @@ export default function NavBar() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.5 }}
-                className="md:hidden w-full bg-gradient-to-b from-transparent to-dark-grey backdrop-blur-md opacity-95"
+                className="md:hidden w-full bg-linear-to-b/srgb from-transparent to-dark-grey backdrop-blur-md opacity-95"
               >
                 <ul className="mt-4 flex flex-col">
                   {navItems.map((item) => (

@@ -13,7 +13,7 @@ export default function Outcomes({ backgroundColor }) {
       className={`relative bg-${backgroundColor} pt-14 pb-28`}
     >
       <a name="outcomes" />
-      <div className="container py-8 flex flex-col max-w-screen-xl">
+      <div className="container py-8 flex flex-col max-w-(--breakpoint-xl)">
         <h2 className="text-dark-grey w-full text-center">
           Tech-Enabled Research
         </h2>

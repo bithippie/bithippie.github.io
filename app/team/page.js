@@ -16,7 +16,7 @@ export default function TeamPage() {
 
         {/* Hero */}
         <section className="bg-hero bg-center bg-cover pt-36 pb-20 md:pt-44 md:pb-28 flex relative">
-          <div className="container flex flex-col items-center text-center max-w-screen-xl">
+          <div className="container flex flex-col items-center text-center max-w-(--breakpoint-xl)">
             <RevealOnScroll>
               <h2 className="text-white">
                 Taking care of ourselves so we can<br/>take better care of the world.
@@ -31,7 +31,7 @@ export default function TeamPage() {
 
         {/* Team Culture */}
         <section className="relative bg-moss pt-8 pb-20 md:pb-28">
-          <div className="container max-w-screen-xl p-8">
+          <div className="container max-w-(--breakpoint-xl) p-8">
             <RevealOnScroll>
               <h2 className="text-dark-grey mb-8 text-center">Beyond the Code</h2>
             </RevealOnScroll>
@@ -72,7 +72,7 @@ export default function TeamPage() {
 
         {/* Join Our Network */}
         <section className="relative bg-white pt-10 pb-20 md:pb-28">
-          <div className="container max-w-screen-xl p-8">
+          <div className="container max-w-(--breakpoint-xl) p-8">
             <RevealOnScroll>
               <h2 className="text-moss mb-12 text-center">Join The BitHippie Network</h2>
             </RevealOnScroll>
