@@ -41,20 +41,12 @@ export default function Team({ backgroundColor }) {
         "I connect science teams with the data engineering and product support their work depends on. Before BitHippie, I spent 15+ years leading growth, operations, and strategy, from early-stage startups to some of the world's largest tech companies.",
     },
     {
-      name: "Andréanne Tétreault",
-      image: "/assets/images/team/andreanne.jpeg",
-      title: "Engagement Manager",
-      linkedin: "https://www.linkedin.com/in/andr%C3%A9anne-t%C3%A9treault-810a0911b",
-      focus:
-        "I manage teams and coordinate objectives to ensure the success of projects. I've been doing this for eight years, primarily in the healthcare sector.",
-    },
-    {
-      name: "Vincent Tellier",
-      image: "/assets/images/team/vincent.jpeg",
+      name: "Matheus Henrique",
+      image: "/assets/images/team/matheus.jpeg",
       title: "Software Engineer",
-      linkedin: "https://www.linkedin.com/in/vtellier",
+      linkedin: "https://www.linkedin.com/in/eng-matheus-henrique/",
       focus:
-        "Senior Software Architect with 15 years of experience building high-performance systems, from embedded sensors to cloud infrastructure, across aerospace, robotics, and deep-tech. I make the structural decisions that let products scale without accumulating debt, and help teams ship faster with more confidence.",
+        "I'm the one you call when something needs building and nobody's sure how yet. I've spent around a decade as an engineer, mostly in biotech and security, and I've learned the problem matters more than the tech.",
     },
     {
       name: "Tadeu Barbosa",
@@ -65,6 +57,14 @@ export default function Team({ backgroundColor }) {
         "I'm a backend software engineer who makes large-scale computational chemistry run reliably in the cloud. I build the pipelines and infrastructure that turn heavy workloads into tools scientists can launch and trust.",
     },
     {
+      name: "Vincent Tellier",
+      image: "/assets/images/team/vincent.jpeg",
+      title: "Software Engineer",
+      linkedin: "https://www.linkedin.com/in/vtellier",
+      focus:
+        "Senior Software Architect with 15 years of experience building high-performance systems, from embedded sensors to cloud infrastructure, across aerospace, robotics, and deep-tech. I make the structural decisions that let products scale without accumulating debt, and help teams ship faster with more confidence.",
+    },
+    {
       name: "Claudio Souza",
       image: "/assets/images/team/claudio.jpeg",
       title: "Consultant",
@@ -73,12 +73,12 @@ export default function Team({ backgroundColor }) {
         "I build data pipelines, backend systems, and workflow automation. I've been working in software engineering for 30 years across multiple domains, most recently in health tech.",
     },
     {
-      name: "Matheus Henrique",
-      image: "/assets/images/team/matheus.jpeg",
-      title: "Software Engineer",
-      linkedin: "https://www.linkedin.com/in/eng-matheus-henrique/",
+      name: "Andréanne Tétreault",
+      image: "/assets/images/team/andreanne.jpeg",
+      title: "Engagement Manager",
+      linkedin: "https://www.linkedin.com/in/andr%C3%A9anne-t%C3%A9treault-810a0911b",
       focus:
-        "I'm the one you call when something needs building and nobody's sure how yet. I've spent around a decade as an engineer, mostly in biotech and security, and I've learned the problem matters more than the tech.",
+        "I manage teams and coordinate objectives to ensure the success of projects. I've been doing this for eight years, primarily in the healthcare sector.",
     },
   ];
 
