@@ -102,7 +102,6 @@ export default function Team({ backgroundColor }) {
       >
         <Avatar
           img={(props) => (
-            // eslint-disable-next-line @next/next/no-img-element
             <img
               {...props}
               src={member.image}
