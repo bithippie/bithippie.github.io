@@ -67,7 +67,7 @@ export default function Team({ backgroundColor }) {
     {
       name: "Claudio Souza",
       image: "/assets/images/team/claudio.jpeg",
-      title: "Consultant",
+      title: "Software Engineer",
       linkedin: "https://www.linkedin.com/in/claudiofsouza/",
       focus:
         "I build data pipelines, backend systems, and workflow automation. I've been working in software engineering for 30 years across multiple domains, most recently in health tech.",
