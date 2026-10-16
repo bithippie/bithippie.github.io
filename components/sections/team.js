@@ -41,6 +41,14 @@ export default function Team({ backgroundColor }) {
         "I connect science teams with the data engineering and product support their work depends on. Before BitHippie, I spent 15+ years leading growth, operations, and strategy, from early-stage startups to some of the world's largest tech companies.",
     },
     {
+      name: "Andréanne Tétreault",
+      image: "/assets/images/team/andreanne.jpeg",
+      title: "Engagement Manager",
+      linkedin: "https://www.linkedin.com/in/andr%C3%A9anne-t%C3%A9treault-810a0911b",
+      focus:
+        "I manage teams and coordinate objectives to ensure the success of projects. I've been doing this for eight years, primarily in the healthcare sector.",
+    },
+    {
       name: "Vincent Tellier",
       image: "/assets/images/team/vincent.jpeg",
       title: "Software Engineer",
