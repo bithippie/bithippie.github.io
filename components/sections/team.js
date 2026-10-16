@@ -75,9 +75,10 @@ export default function Team({ backgroundColor }) {
     {
       name: "Matheus Henrique",
       image: "/assets/images/team/matheus.jpeg",
-      title: "Software & DevOps Engineer",
+      title: "Software Engineer",
       linkedin: "https://www.linkedin.com/in/eng-matheus-henrique/",
-      focus: "",
+      focus:
+        "I'm the one you call when something needs building and nobody's sure how yet. I've spent around a decade as an engineer, mostly in biotech and security, and I've learned the problem matters more than the tech.",
     },
   ];
 
