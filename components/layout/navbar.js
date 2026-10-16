@@ -48,11 +48,11 @@ export default function NavBar() {
             />
           </Link>
 
-          {/* Hamburger button (CSS-hidden on md+) */}
+          {/* Hamburger button (CSS-hidden on lg+) */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
-            className="md:hidden inline-flex items-center rounded-lg bg-transparent p-2 text-sm text-gray-500 focus:outline-hidden"
+            className="lg:hidden inline-flex items-center rounded-lg bg-transparent p-2 text-sm text-gray-500 focus:outline-hidden"
             aria-expanded={isOpen}
           >
             <span className="sr-only">Open main menu</span>
@@ -73,7 +73,7 @@ export default function NavBar() {
             </svg>
           </button>
 
-          {/* Mobile dropdown (full-width flex child, CSS-hidden on md+) */}
+          {/* Mobile dropdown (full-width flex child, CSS-hidden on lg+) */}
           <AnimatePresence>
             {isOpen && (
               <motion.div
@@ -81,7 +81,7 @@ export default function NavBar() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.5 }}
-                className="md:hidden w-full bg-linear-to-b/srgb from-transparent to-dark-grey backdrop-blur-md opacity-95"
+                className="lg:hidden w-full bg-linear-to-b/srgb from-transparent to-dark-grey backdrop-blur-md opacity-95"
               >
                 <ul className="mt-4 flex flex-col">
                   {navItems.map((item) => (
@@ -108,23 +108,23 @@ export default function NavBar() {
             )}
           </AnimatePresence>
 
-          {/* Desktop nav (CSS-hidden below md) */}
-          <div className="hidden md:block w-auto">
-            <ul className="flex mt-0 flex-row space-x-8 text-sm font-medium">
+          {/* Desktop nav (CSS-hidden below lg) */}
+          <div className="hidden lg:block w-auto">
+            <ul className="flex mt-0 flex-row space-x-6 xl:space-x-8 text-sm font-medium">
               {navItems.map((item) => (
                 <li key={item.hash}>
                   <a
-                    className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss cursor-pointer"
+                    className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-xl xl:text-2xl hover:text-moss cursor-pointer"
                     onClick={(e) => handleHashClick(e, item.hash)}
                   >
                     {item.label}
                   </a>
                 </li>
               ))}
-              <li className="text-platinum text-2xl select-none" aria-hidden="true">|</li>
+              <li className="text-platinum text-xl xl:text-2xl select-none" aria-hidden="true">|</li>
               <li>
                 <Link
-                  className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-2xl hover:text-moss"
+                  className="block p-0 border-gray-100 hover:bg-gray-50 border-0 hover:bg-transparent hover:text-cyan-700 text-platinum text-xl xl:text-2xl hover:text-moss"
                   href="/team"
                 >
                   Team

@@ -45,7 +45,7 @@ export default function Schedule({ backgroundColor }) {
             <iframe
               className="
                 w-[599px]
-                lg:w-[1024px]
+                lg:w-full lg:max-w-[1024px]
                 xl:w-[599px]
 
                 min-h-[1240px]
